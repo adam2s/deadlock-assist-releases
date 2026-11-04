@@ -1,0 +1,21 @@
+name: Pomysł
+description: Nowa funkcja albo zmiana działania.
+title: "[Pomysł] "
+labels: [pomysł]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Co by się przydało
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Po co
+      description: W jakiej sytuacji w grze to pomoże.
+  - type: input
+    id: version
+    attributes:
+      label: Wersja aplikacji
+      description: Widać ją obok nazwy aplikacji, np. 1.2.5.
