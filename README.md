@@ -11,7 +11,7 @@
 [![Najnowsza wersja](https://img.shields.io/github/v/release/adam2s/deadlock-assist-releases?label=wersja&color=f2a33a)](https://github.com/adam2s/deadlock-assist-releases/releases/latest)
 [![Pobrania](https://img.shields.io/github/downloads/adam2s/deadlock-assist-releases/total?label=pobrania&color=57c46a)](https://github.com/adam2s/deadlock-assist-releases/releases)
 ![Windows 10/11](https://img.shields.io/badge/Windows-10%20%7C%2011-0e1014)
-[![Wesprzyj](https://img.shields.io/badge/%E2%98%95-Wesprzyj-f2c94c)](#wsparcie)
+[![Wesprzyj na Ko-fi](https://img.shields.io/badge/%E2%98%95-Wesprzyj%20na%20Ko--fi-f2c94c)](https://ko-fi.com/deadlockassist)
 
 <img src="docs/nakladka.png" width="820" alt="Nakładka nad grą: kontry na linii, „Kup teraz”, zegar i timery obozów">
 
@@ -57,7 +57,7 @@ To nieoficjalne narzędzie fanów, niezwiązane z Valve. Valve nie publikuje lis
 
 ## Wsparcie
 
-Aplikacja jest i zostanie darmowa. Jeśli pomaga Ci wygrywać, możesz postawić autorowi kawę: przycisk **„☕ Wesprzyj”** w prawym górnym rogu aplikacji.
+Aplikacja jest i zostanie darmowa. Jeśli pomaga Ci wygrywać, możesz postawić autorowi kawę na **[ko-fi.com/deadlockassist](https://ko-fi.com/deadlockassist)** albo przyciskiem **„☕ Wesprzyj”** w prawym górnym rogu aplikacji.
 
 ---
 
