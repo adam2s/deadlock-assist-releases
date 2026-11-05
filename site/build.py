@@ -306,6 +306,10 @@ CHANGELOG = json.loads(Path(__file__).with_name("changelog.json").read_text())
 
 # Shorter text for the website than in the app, and without developer-only lines; other versions show as in the app.
 SITE_CHANGES = {
+    "1.2.9": {"pl": ["Przycisk „Strona” w aplikacji otwiera deadlock-assist.com."],
+              "en": ["“Website” button in the app opens deadlock-assist.com."]},
+    "1.2.5": {"pl": ["Przycisk „Zaproponuj zmianę” (zgłoszenie na GitHubie) i „☕ Wesprzyj” w oknie aplikacji."],
+              "en": ["“Suggest a change” button (GitHub idea form) and “☕ Support” in the app window."]},
     "1.2.8": {"pl": ["Cała aplikacja i nakładka po angielsku (przełącznik PL / EN). Na start język jak w Windows."],
               "en": ["Full English app and overlay (PL / EN switch). Starts in your Windows language."]},
     "1.2.7": {"pl": ["Historia: przy każdej podpowiedzi widać, skąd się wzięła („Twój build” / „Na wrogów”) i dlaczego."],
