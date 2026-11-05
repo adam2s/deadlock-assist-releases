@@ -67,21 +67,21 @@ PL = {
         "index_title": "Kontry na bohaterów Deadlocka – najlepsze przedmioty na każdego",
         "index_desc": "Jakie przedmioty kupić przeciw każdemu bohaterowi Deadlocka. Dane z meczów rang Emissary+ "
                       "z ostatnich 14 dni, odświeżane co tydzień.",
-        "index_h1": "Kontry na bohaterów",
-        "index_lead": "Wybierz bohatera wroga i zobacz, z jakimi przedmiotami gracze częściej z nim wygrywają.",
+        "index_h1": "Kontry na bohaterów Deadlocka",
+        "index_lead": "Wybierz bohatera wroga i zobacz, z jakimi przedmiotami gracze najczęściej z nim wygrywają.",
         "title": "Kontry na {hero} w Deadlocku – najlepsze przedmioty",
-        "desc": "Przedmioty, z którymi gracze częściej wygrywają przeciw {hero} w Deadlocku. "
-                "Dane z meczów rang Emissary+ z ostatnich 14 dni, odświeżane co tydzień.",
+        "desc": "Najlepsze kontry na {hero}: {top}. Dane z meczów Emissary+ z 14 dni, co tydzień nowe.",
         "h1": "Kontry na {hero}",
-        "lead": "Z tymi przedmiotami gracze wygrywają przeciw {hero} częściej niż zwykle.",
-        "data": "{n} zakupów w meczach rang Emissary+ · 14 dni do {date}",
-        "edge_h": "Przewaga",
-        "explain": "Przewaga: o ile punktów procentowych częściej wygrywają gracze z tym przedmiotem przeciw {hero} "
-                   "niż przeciw innym bohaterom, w porównaniu z przedmiotami tej samej ceny.",
+        "lead": "Przedmioty, z którymi gracze najczęściej wygrywają z {hero}.",
+        "data": "{n} zakupów, mecze Emissary+, ostatnie 14 dni (stan na {date})",
+        "edge_h": "Przewaga nad {hero}",
+        "explain": "{pts} = z {item} wygrywa się z {hero} o {num} punktu procentowego częściej niż zwykle, "
+                   "w porównaniu z przedmiotami w tej samej cenie.",
+        "million": "mln", "alt": "PL",
         "slots": {"weapon": "Broń", "vitality": "Witalność", "spirit": "Duch"},
-        "cta_h": "Doradca robi to na żywo",
-        "cta_p": "Czyta skład wroga z ekranu i podpowiada kontry na całą piątkę naraz.",
-        "others": "Inni bohaterowie",
+        "cta_h": "Kontry na cały skład, na żywo w meczu",
+        "cta_p": "Doradca czyta wrogów z ekranu i mówi, co kupić teraz.",
+        "others": "Kontry na innych bohaterów",
         "souls": "dusz",
     },
     "changes": {
@@ -202,20 +202,20 @@ EN = {
         "index_desc": "Which items to buy against every Deadlock hero. Data from Emissary+ matches of the last 14 days, "
                       "refreshed every week.",
         "index_h1": "Counter items for every hero",
-        "index_lead": "Pick the enemy hero and see which items players win with more often against them.",
+        "index_lead": "Pick the enemy hero and see which items players win with most against them.",
         "title": "{hero} Counter Items in Deadlock – Best Items vs {hero}",
-        "desc": "Items players win with more often against {hero} in Deadlock. Data from Emissary+ matches "
-                "of the last 14 days, refreshed every week.",
+        "desc": "Best counter items vs {hero}: {top}. From Emissary+ matches of the last 14 days, updated weekly.",
         "h1": "{hero} counter items",
-        "lead": "Players win more often than usual against {hero} with these items.",
-        "data": "{n} purchases in Emissary+ matches · 14 days to {date}",
-        "edge_h": "Edge",
-        "explain": "Edge: how many percentage points more often players with the item win against {hero} than "
-                   "against other heroes, compared with items of the same price.",
+        "lead": "Items players win with most against {hero}.",
+        "data": "{n} purchases, Emissary+ matches, last 14 days (as of {date})",
+        "edge_h": "Edge vs {hero}",
+        "explain": "{pts} = players with {item} beat {hero} {num} percentage points more often than usual, "
+                   "compared with items at the same price.",
+        "million": "M", "alt": "",
         "slots": {"weapon": "Weapon", "vitality": "Vitality", "spirit": "Spirit"},
-        "cta_h": "The advisor does this live",
-        "cta_p": "It reads the enemy team from your screen and suggests counters to all five at once.",
-        "others": "Other heroes",
+        "cta_h": "Counters for the whole enemy team, live",
+        "cta_p": "The advisor reads the enemies from your screen and tells you what to buy now.",
+        "others": "Counters for other heroes",
         "souls": "souls",
     },
     "changes": {
@@ -602,7 +602,14 @@ def sub_header(t, T, prefix, home, switch_url):
 def img_src(kind, key, remote, prefix):
     """The icon saved next to the pages, or the remote one until it is downloaded."""
     local = f"img/{kind}/{key}.webp"
-    return prefix + local if (OUT / local).exists() else remote
+    return "/" + local if (OUT / local).exists() else remote
+
+
+def millions(n, lang):
+    """Purchase count rounded to millions, so the sentence needs no plural forms."""
+    c = (PL if lang == "pl" else EN)["counters"]
+    v = f"{n / 1e6:.1f}".replace(".", "," if lang == "pl" else ".")
+    return v + (NB if lang == "pl" else "") + c["million"]
 
 
 def long_date(d, lang):
@@ -641,8 +648,8 @@ def counters_index(t):
 <main id="main" class="wrap counters">
   <h1>{T(c['index_h1'])}</h1>
   <p class="section-lead">{T(c['index_lead'])}</p>
+  <p class="meta">{T(c['data'].format(n=millions(sum(h['matches'] for h in COUNTERS['heroes']), lang), date=long_date(COUNTERS['date'], lang)))}</p>
   <ul class="hero-grid">{cards}</ul>
-  <p class="note">{T(c['data'].format(n=f"{sum(h['matches'] for h in COUNTERS['heroes']):,}".replace(",", " " if lang == "pl" else ","), date=long_date(COUNTERS['date'], lang)))}</p>
 </main>
 """ + foot(t, T, BASE + other["counters"]["path"])
 
@@ -662,7 +669,12 @@ def counter_page(t, hero):
     sep = "," if lang == "pl" else "."
 
     def pts(p):
-        return f"+{p:.1f}".replace(".", sep) + (NB + "p.p." if lang == "pl" else NB + "pp")
+        return f"+{p:.1f}".replace(".", sep) + NB + ('<span class="u">p.p.</span>' if lang == "pl" else '<span class="u">pp</span>')
+
+    def name_of(it):
+        if lang == "pl" and it["pl"] != it["en"]:
+            return f'<strong>{e(it["en"])}</strong>', f' · {c["alt"]}: {e(it["pl"])}'
+        return f'<strong>{e(it["en"])}</strong>', ""
 
     def cost(n):
         return f"{n:,}".replace(",", NB if lang == "pl" else ",")
@@ -674,14 +686,28 @@ def counter_page(t, hero):
         rows.append(
             f'<li class="ci slot-{slot}"><span class="rank">{rank}</span>'
             f'<img src="{img_src("items", i["id"], it["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
-            f'<span class="ci-name"><strong>{e(it[lang])}</strong><small>{T(c["slots"].get(slot, slot))} · {cost(it["cost"])} {T(c["souls"])}</small></span>'
+            f'<span class="ci-name">{name_of(it)[0]}<small>{T(c["slots"].get(slot, slot))} · {cost(it["cost"])} {T(c["souls"])}{name_of(it)[1]}</small></span>'
             f'<span class="ci-edge"><b>{pts(i["points"])}</b><i style="width:{max(8, round(100 * i["points"] / top))}%"></i></span></li>'
         )
+    first = items[str(hero["items"][0]["id"])]
+    num = f'{hero["items"][0]["points"]:.1f}'.replace(".", sep)
+    explain = T(c["explain"].format(pts="{pts}", item=first["en"], hero=name, num=num)).replace(
+        "{pts}", f'<strong>{pts(hero["items"][0]["points"])}</strong>', 1)
+    top3 = ", ".join(items[str(i["id"])]["en"] for i in hero["items"][:3])
     others = "".join(
         f'<li><a href="../{h["slug"]}/"><img src="{img_src("heroes", h["slug"], h["img"], prefix)}" alt="" width="32" height="32" '
         f'loading="lazy" decoding="async">{e(h["name"])}</a></li>'
         for h in COUNTERS["heroes"] if h["slug"] != hero["slug"]
     )
+    n_others = len(COUNTERS["heroes"]) - 1
+
+    def list_item(n, i):
+        it = items[str(i["id"])]
+        img = img_src("items", i["id"], it["img"], prefix)
+        li = {"@type": "ListItem", "position": n, "name": it["en"], "image": BASE + img[1:] if img.startswith("/") else img}
+        if lang == "pl" and it["pl"] != it["en"]:
+            li["alternateName"] = it["pl"]
+        return li
     ld = [
         {
             "@context": "https://schema.org",
@@ -697,14 +723,11 @@ def counter_page(t, hero):
             "@type": "ItemList",
             "name": c["h1"].format(hero=name),
             "itemListOrder": "https://schema.org/ItemListOrderDescending",
-            "itemListElement": [
-                {"@type": "ListItem", "position": n, "name": items[str(i["id"])][lang]}
-                for n, i in enumerate(hero["items"], 1)
-            ],
+            "itemListElement": [list_item(n, i) for n, i in enumerate(hero["items"], 1)],
         },
     ]
-    n = f"{hero['matches']:,}".replace(",", " " if lang == "pl" else ",")
-    return head(t, url, c["title"].format(hero=name), c["desc"].format(hero=name),
+    n = millions(hero["matches"], lang)
+    return head(t, url, c["title"].format(hero=name), c["desc"].format(hero=name, top=top3),
                 f'{BASE}{PL["counters"]["path"]}{hero["slug"]}/', f'{BASE}{EN["counters"]["path"]}{hero["slug"]}/',
                 prefix) + f"""<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <style>{CSS}</style>
@@ -715,11 +738,12 @@ def counter_page(t, hero):
   <nav class="crumbs" aria-label="breadcrumbs"><a href="../">{T(c['index_h1'])}</a> › {e(name)}</nav>
   <div class="hero-head"><img src="{img_src("heroes", hero["slug"], hero["img"], prefix)}" alt="" width="64" height="64"><h1>{T(c['h1'].format(hero=name))}</h1></div>
   <p class="section-lead">{T(c['lead'].format(hero=name))}</p>
-  <p class="meta"><span>{T(c['data'].format(n=n, date=long_date(COUNTERS['date'], lang)))}</span></p>
-  <ol class="ci-list" aria-label="{T(c['edge_h'])}">{"".join(rows)}</ol>
-  <p class="note">{T(c['explain'].format(hero=name))}</p>
+  <p class="meta">{T(c['data'].format(n=n, date=long_date(COUNTERS['date'], lang)))}</p>
+  <p class="ci-cap" id="edge">{T(c['edge_h'].format(hero=name))}</p>
+  <ol class="ci-list" aria-labelledby="edge">{"".join(rows)}</ol>
+  <p class="note">{explain}</p>
   <section class="ci-cta"><h2>{T(c['cta_h'])}</h2><p>{T(c['cta_p'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></section>
-  <section class="ci-others"><h2>{T(c['others'])}</h2><ul>{others}</ul></section>
+  <details class="ci-others"><summary><h2>{T(c['others'])} ({n_others})</h2></summary><ul>{others}</ul></details>
 </main>
 """ + foot(t, T, f'{BASE}{other["counters"]["path"]}{hero["slug"]}/')
 
@@ -780,7 +804,9 @@ def changes_page(t, shown=4):
 
 def not_found():
     rows = "".join(
-        f'<p><a class="btn" href="{BASE}{t["path"]}">{e(t["nf_link"])}</a></p>' for t in (PL, EN)
+        f'<p><a class="btn" href="{BASE}{t["path"]}">{e(t["nf_link"])}</a></p>'
+        f'<p><a class="btn ghost" href="{BASE}{t["counters"]["path"]}">{e(t["counters"]["index_h1"])}</a></p>'
+        for t in (PL, EN)
     )
     return f"""<!doctype html>
 <html lang="pl">
