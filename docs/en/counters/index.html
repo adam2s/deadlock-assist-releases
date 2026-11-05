@@ -367,7 +367,7 @@ h2.ci-cap{margin-top:28px}
 <a class="skip" href="#main">Skip to content</a>
 <header class="top wrap">
   <a class="logo" href="https://deadlock-assist.com/en/"><img src="../../favicon-32.png" srcset="../../icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu"><a href="https://deadlock-assist.com/en/">Home</a><a class="lang" href="https://deadlock-assist.com/kontry/" hreflang="pl"><span class="long">Polski</span><span class="short">PL</span></a><a class="btn sm" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener">Download</a></nav>
+  <nav aria-label="menu"><a href="https://deadlock-assist.com/en/">Home</a><a class="lang" href="https://deadlock-assist.com/kontry/" hreflang="pl"><span class="long">Polski</span><span class="short">PL</span></a><a class="btn sm" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener" data-dl>Download</a></nav>
 </header>
 <main id="main" class="wrap counters">
   <h1>Counter items for every hero</h1>
@@ -379,5 +379,6 @@ h2.ci-cap{margin-top:28px}
   <nav aria-label="links"><a href="https://deadlock-assist.com/en/counters/">Counter items for every hero</a><a href="https://deadlock-assist.com/en/patch-notes/">Deadlock patch notes</a><a href="https://deadlock-assist.com/en/changes/">Changelog</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Suggest an idea</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Report a bug</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Report a vulnerability</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">All versions</a><a href="https://deadlock-assist.com/kontry/" hreflang="pl">Wersja polska</a></nav>
   <p>Deadlock is a trademark of Valve Corporation. Deadlock Assist is an unofficial fan project, not affiliated with Valve. Item data: deadlock-api.com.</p>
 </footer>
+<script>(function(){var a=document.querySelectorAll("a[data-dl]");if(!a.length||!window.fetch)return;fetch("https://api.github.com/repos/adam2s/deadlock-assist-releases/releases/latest").then(function(r){return r.ok?r.json():null}).then(function(j){var f=j&&(j.assets||[]).filter(function(x){return /x64-setup\.exe$/.test(x.name)})[0];if(f)for(var i=0;i<a.length;i++)a[i].href=f.browser_download_url}).catch(function(){})})()</script>
 </body>
 </html>
