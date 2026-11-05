@@ -1,6 +1,7 @@
 """Copies the app's changelog (PL + EN) into site/changelog.json for the "Zmiany" / "Changes" page.
 
 Usage: python3 -I site/sync_changelog.py ../deadlock-assist   (path to the app repo), then rebuild the site.
+Runs automatically in the app's release workflow (adam2s/deadlock-assist, .github/workflows/release.yml).
 """
 import json
 import re
