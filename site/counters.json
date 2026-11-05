@@ -1,0 +1,3067 @@
+{
+ "date": "2026-11-05",
+ "days": 14,
+ "heroes": [
+  {
+   "id": 6,
+   "name": "Abrams",
+   "slug": "abrams",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bull_sm.webp",
+   "matches": 4770599,
+   "items": [
+    {
+     "id": 677738769,
+     "points": 0.72,
+     "matches": 15554
+    },
+    {
+     "id": 3140772621,
+     "points": 0.71,
+     "matches": 8879
+    },
+    {
+     "id": 673001892,
+     "points": 0.65,
+     "matches": 4421
+    },
+    {
+     "id": 2947183272,
+     "points": 0.63,
+     "matches": 44273
+    },
+    {
+     "id": 395944548,
+     "points": 0.55,
+     "matches": 41526
+    },
+    {
+     "id": 2108215830,
+     "points": 0.52,
+     "matches": 8840
+    },
+    {
+     "id": 2037039379,
+     "points": 0.51,
+     "matches": 9097
+    },
+    {
+     "id": 1439347412,
+     "points": 0.5,
+     "matches": 45282
+    }
+   ]
+  },
+  {
+   "id": 77,
+   "name": "Apollo",
+   "slug": "apollo",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/fencer_sm.webp",
+   "matches": 2569206,
+   "items": [
+    {
+     "id": 4204808176,
+     "points": 1.0,
+     "matches": 6281
+    },
+    {
+     "id": 1102081447,
+     "points": 0.8,
+     "matches": 4337
+    },
+    {
+     "id": 3270001687,
+     "points": 0.73,
+     "matches": 13795
+    },
+    {
+     "id": 1396247347,
+     "points": 0.66,
+     "matches": 5564
+    },
+    {
+     "id": 1047818222,
+     "points": 0.65,
+     "matches": 17070
+    },
+    {
+     "id": 865846625,
+     "points": 0.62,
+     "matches": 3518
+    },
+    {
+     "id": 673001892,
+     "points": 0.58,
+     "matches": 2027
+    },
+    {
+     "id": 805079544,
+     "points": 0.52,
+     "matches": 5513
+    }
+   ]
+  },
+  {
+   "id": 88,
+   "name": "Baba",
+   "slug": "baba",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/baba_sm.webp",
+   "matches": 2849064,
+   "items": [
+    {
+     "id": 3331811235,
+     "points": 0.98,
+     "matches": 12356
+    },
+    {
+     "id": 2152872419,
+     "points": 0.98,
+     "matches": 13155
+    },
+    {
+     "id": 1548066885,
+     "points": 0.88,
+     "matches": 33259
+    },
+    {
+     "id": 3294954488,
+     "points": 0.87,
+     "matches": 8590
+    },
+    {
+     "id": 1804594021,
+     "points": 0.84,
+     "matches": 3018
+    },
+    {
+     "id": 3403085434,
+     "points": 0.84,
+     "matches": 19745
+    },
+    {
+     "id": 2061878743,
+     "points": 0.81,
+     "matches": 4221
+    },
+    {
+     "id": 2221211450,
+     "points": 0.75,
+     "matches": 4768
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "name": "Bebop",
+   "slug": "bebop",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bebop_sm.webp",
+   "matches": 6966379,
+   "items": [
+    {
+     "id": 630839635,
+     "points": 0.79,
+     "matches": 6795
+    },
+    {
+     "id": 1378931225,
+     "points": 0.73,
+     "matches": 16090
+    },
+    {
+     "id": 465043967,
+     "points": 0.68,
+     "matches": 55380
+    },
+    {
+     "id": 1047818222,
+     "points": 0.63,
+     "matches": 44985
+    },
+    {
+     "id": 3884003354,
+     "points": 0.59,
+     "matches": 12353
+    },
+    {
+     "id": 3140772621,
+     "points": 0.58,
+     "matches": 10413
+    },
+    {
+     "id": 2617435668,
+     "points": 0.58,
+     "matches": 14081
+    },
+    {
+     "id": 1254091416,
+     "points": 0.47,
+     "matches": 20189
+    }
+   ]
+  },
+  {
+   "id": 72,
+   "name": "Billy",
+   "slug": "billy",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/punkgoat_sm.webp",
+   "matches": 3177173,
+   "items": [
+    {
+     "id": 1932939246,
+     "points": 0.95,
+     "matches": 3324
+    },
+    {
+     "id": 4204808176,
+     "points": 0.78,
+     "matches": 13188
+    },
+    {
+     "id": 805079544,
+     "points": 0.78,
+     "matches": 7767
+    },
+    {
+     "id": 2059712766,
+     "points": 0.78,
+     "matches": 4971
+    },
+    {
+     "id": 3144988365,
+     "points": 0.72,
+     "matches": 3759
+    },
+    {
+     "id": 2533252781,
+     "points": 0.66,
+     "matches": 4954
+    },
+    {
+     "id": 2947183272,
+     "points": 0.61,
+     "matches": 28667
+    },
+    {
+     "id": 951866250,
+     "points": 0.53,
+     "matches": 12149
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "name": "Calico",
+   "slug": "calico",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/nano_sm.webp",
+   "matches": 2808959,
+   "items": [
+    {
+     "id": 805079544,
+     "points": 0.81,
+     "matches": 6227
+    },
+    {
+     "id": 690458959,
+     "points": 0.76,
+     "matches": 12283
+    },
+    {
+     "id": 98582110,
+     "points": 0.7,
+     "matches": 20604
+    },
+    {
+     "id": 393974127,
+     "points": 0.67,
+     "matches": 5891
+    },
+    {
+     "id": 2152872419,
+     "points": 0.6,
+     "matches": 13515
+    },
+    {
+     "id": 3791587546,
+     "points": 0.6,
+     "matches": 7322
+    },
+    {
+     "id": 26002154,
+     "points": 0.58,
+     "matches": 12770
+    },
+    {
+     "id": 2095565695,
+     "points": 0.57,
+     "matches": 9395
+    }
+   ]
+  },
+  {
+   "id": 81,
+   "name": "Celeste",
+   "slug": "celeste",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/unicorn_sm.webp",
+   "matches": 3128833,
+   "items": [
+    {
+     "id": 1219329868,
+     "points": 0.74,
+     "matches": 3295
+    },
+    {
+     "id": 2462046703,
+     "points": 0.73,
+     "matches": 3190
+    },
+    {
+     "id": 2617435668,
+     "points": 0.65,
+     "matches": 7232
+    },
+    {
+     "id": 989206714,
+     "points": 0.64,
+     "matches": 2350
+    },
+    {
+     "id": 1955841979,
+     "points": 0.59,
+     "matches": 6053
+    },
+    {
+     "id": 365620721,
+     "points": 0.59,
+     "matches": 3227
+    },
+    {
+     "id": 673001892,
+     "points": 0.54,
+     "matches": 3104
+    },
+    {
+     "id": 1427630806,
+     "points": 0.53,
+     "matches": 8019
+    }
+   ]
+  },
+  {
+   "id": 78,
+   "name": "Deadman Danny",
+   "slug": "deadman-danny",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_sm.webp",
+   "matches": 6683703,
+   "items": [
+    {
+     "id": 1644605047,
+     "points": 0.93,
+     "matches": 56107
+    },
+    {
+     "id": 1219329868,
+     "points": 0.76,
+     "matches": 6365
+    },
+    {
+     "id": 709540378,
+     "points": 0.69,
+     "matches": 44736
+    },
+    {
+     "id": 951866250,
+     "points": 0.61,
+     "matches": 28382
+    },
+    {
+     "id": 2142980412,
+     "points": 0.55,
+     "matches": 3318
+    },
+    {
+     "id": 2221211450,
+     "points": 0.53,
+     "matches": 12155
+    },
+    {
+     "id": 3294954488,
+     "points": 0.52,
+     "matches": 22324
+    },
+    {
+     "id": 1378931225,
+     "points": 0.51,
+     "matches": 14688
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "name": "Drifter",
+   "slug": "drifter",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/drifter_sm.webp",
+   "matches": 5881919,
+   "items": [
+    {
+     "id": 3294954488,
+     "points": 0.77,
+     "matches": 16777
+    },
+    {
+     "id": 1371725689,
+     "points": 0.75,
+     "matches": 8407
+    },
+    {
+     "id": 4053935515,
+     "points": 0.53,
+     "matches": 24217
+    },
+    {
+     "id": 2010028405,
+     "points": 0.52,
+     "matches": 30660
+    },
+    {
+     "id": 3361811174,
+     "points": 0.47,
+     "matches": 6704
+    },
+    {
+     "id": 1152158042,
+     "points": 0.44,
+     "matches": 6370
+    },
+    {
+     "id": 1932939246,
+     "points": 0.43,
+     "matches": 5721
+    },
+    {
+     "id": 2820116164,
+     "points": 0.43,
+     "matches": 8792
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "name": "Dynamo",
+   "slug": "dynamo",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/sumo_sm.webp",
+   "matches": 2921142,
+   "items": [
+    {
+     "id": 2407033488,
+     "points": 0.78,
+     "matches": 4220
+    },
+    {
+     "id": 3005970438,
+     "points": 0.73,
+     "matches": 27771
+    },
+    {
+     "id": 3028234315,
+     "points": 0.7,
+     "matches": 8862
+    },
+    {
+     "id": 800008313,
+     "points": 0.67,
+     "matches": 7030
+    },
+    {
+     "id": 1797283378,
+     "points": 0.67,
+     "matches": 5825
+    },
+    {
+     "id": 3140772621,
+     "points": 0.58,
+     "matches": 4602
+    },
+    {
+     "id": 2059712766,
+     "points": 0.54,
+     "matches": 4925
+    },
+    {
+     "id": 3190916303,
+     "points": 0.53,
+     "matches": 26321
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "name": "Graves",
+   "slug": "graves",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/necro_sm.webp",
+   "matches": 4487614,
+   "items": [
+    {
+     "id": 4075861416,
+     "points": 0.85,
+     "matches": 7809
+    },
+    {
+     "id": 1378931225,
+     "points": 0.8,
+     "matches": 9720
+    },
+    {
+     "id": 3357231760,
+     "points": 0.78,
+     "matches": 25647
+    },
+    {
+     "id": 3361075077,
+     "points": 0.77,
+     "matches": 3866
+    },
+    {
+     "id": 2820116164,
+     "points": 0.76,
+     "matches": 6915
+    },
+    {
+     "id": 677738769,
+     "points": 0.74,
+     "matches": 14244
+    },
+    {
+     "id": 2922054143,
+     "points": 0.73,
+     "matches": 7900
+    },
+    {
+     "id": 1955841979,
+     "points": 0.68,
+     "matches": 8826
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "name": "Grey Talon",
+   "slug": "grey-talon",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/archer_sm.webp",
+   "matches": 3119824,
+   "items": [
+    {
+     "id": 805079544,
+     "points": 1.01,
+     "matches": 7059
+    },
+    {
+     "id": 710436191,
+     "points": 0.79,
+     "matches": 13237
+    },
+    {
+     "id": 3585132399,
+     "points": 0.69,
+     "matches": 36254
+    },
+    {
+     "id": 3577481646,
+     "points": 0.63,
+     "matches": 11531
+    },
+    {
+     "id": 1292979587,
+     "points": 0.6,
+     "matches": 20133
+    },
+    {
+     "id": 2462046703,
+     "points": 0.58,
+     "matches": 3276
+    },
+    {
+     "id": 2095565695,
+     "points": 0.58,
+     "matches": 10223
+    },
+    {
+     "id": 3791587546,
+     "points": 0.57,
+     "matches": 8244
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "name": "Haze",
+   "slug": "haze",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/haze_sm.webp",
+   "matches": 8215373,
+   "items": [
+    {
+     "id": 1378931225,
+     "points": 1.38,
+     "matches": 44273
+    },
+    {
+     "id": 1371725689,
+     "points": 1.14,
+     "matches": 12755
+    },
+    {
+     "id": 690458959,
+     "points": 0.96,
+     "matches": 34543
+    },
+    {
+     "id": 800008313,
+     "points": 0.83,
+     "matches": 19139
+    },
+    {
+     "id": 381961617,
+     "points": 0.81,
+     "matches": 8036
+    },
+    {
+     "id": 3812615317,
+     "points": 0.77,
+     "matches": 15444
+    },
+    {
+     "id": 2481177645,
+     "points": 0.72,
+     "matches": 52464
+    },
+    {
+     "id": 2407033488,
+     "points": 0.68,
+     "matches": 12747
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "name": "Holliday",
+   "slug": "holliday",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/astro_sm.webp",
+   "matches": 3370703,
+   "items": [
+    {
+     "id": 3491236900,
+     "points": 0.76,
+     "matches": 14637
+    },
+    {
+     "id": 4204808176,
+     "points": 0.73,
+     "matches": 6860
+    },
+    {
+     "id": 1955841979,
+     "points": 0.68,
+     "matches": 6484
+    },
+    {
+     "id": 339443430,
+     "points": 0.67,
+     "matches": 2372
+    },
+    {
+     "id": 1047818222,
+     "points": 0.64,
+     "matches": 23053
+    },
+    {
+     "id": 673001892,
+     "points": 0.53,
+     "matches": 2739
+    },
+    {
+     "id": 2061878743,
+     "points": 0.53,
+     "matches": 5317
+    },
+    {
+     "id": 989206714,
+     "points": 0.49,
+     "matches": 2635
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "name": "Infernus",
+   "slug": "infernus",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/inferno_sm.webp",
+   "matches": 5282080,
+   "items": [
+    {
+     "id": 2226497419,
+     "points": 0.8,
+     "matches": 21216
+    },
+    {
+     "id": 1252627263,
+     "points": 0.68,
+     "matches": 27734
+    },
+    {
+     "id": 630839635,
+     "points": 0.67,
+     "matches": 7359
+    },
+    {
+     "id": 3696726732,
+     "points": 0.63,
+     "matches": 34159
+    },
+    {
+     "id": 1437614329,
+     "points": 0.6,
+     "matches": 42410
+    },
+    {
+     "id": 2481177645,
+     "points": 0.59,
+     "matches": 33004
+    },
+    {
+     "id": 3140772621,
+     "points": 0.56,
+     "matches": 7112
+    },
+    {
+     "id": 2617435668,
+     "points": 0.55,
+     "matches": 12133
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "name": "Ivy",
+   "slug": "ivy",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/tengu_sm.webp",
+   "matches": 3716746,
+   "items": [
+    {
+     "id": 690458959,
+     "points": 0.86,
+     "matches": 15357
+    },
+    {
+     "id": 1770441818,
+     "points": 0.8,
+     "matches": 11185
+    },
+    {
+     "id": 365620721,
+     "points": 0.78,
+     "matches": 3647
+    },
+    {
+     "id": 1235347618,
+     "points": 0.71,
+     "matches": 28201
+    },
+    {
+     "id": 3884003354,
+     "points": 0.68,
+     "matches": 7154
+    },
+    {
+     "id": 673001892,
+     "points": 0.65,
+     "matches": 3375
+    },
+    {
+     "id": 4204808176,
+     "points": 0.63,
+     "matches": 7740
+    },
+    {
+     "id": 1955841979,
+     "points": 0.63,
+     "matches": 6960
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "name": "Kelvin",
+   "slug": "kelvin",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kelvin_sm.webp",
+   "matches": 2791235,
+   "items": [
+    {
+     "id": 2037039379,
+     "points": 0.93,
+     "matches": 5403
+    },
+    {
+     "id": 2971868509,
+     "points": 0.7,
+     "matches": 23267
+    },
+    {
+     "id": 1396247347,
+     "points": 0.68,
+     "matches": 5933
+    },
+    {
+     "id": 673001892,
+     "points": 0.64,
+     "matches": 2368
+    },
+    {
+     "id": 1292979587,
+     "points": 0.6,
+     "matches": 17767
+    },
+    {
+     "id": 3357231760,
+     "points": 0.59,
+     "matches": 13974
+    },
+    {
+     "id": 1439347412,
+     "points": 0.56,
+     "matches": 25315
+    },
+    {
+     "id": 2947183272,
+     "points": 0.5,
+     "matches": 24653
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Lady Geist",
+   "slug": "lady-geist",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/spectre_sm.webp",
+   "matches": 2437698,
+   "items": [
+    {
+     "id": 2221211450,
+     "points": 0.8,
+     "matches": 3858
+    },
+    {
+     "id": 2108215830,
+     "points": 0.71,
+     "matches": 4199
+    },
+    {
+     "id": 2037039379,
+     "points": 0.66,
+     "matches": 5229
+    },
+    {
+     "id": 2533252781,
+     "points": 0.65,
+     "matches": 3771
+    },
+    {
+     "id": 630839635,
+     "points": 0.56,
+     "matches": 3311
+    },
+    {
+     "id": 2481177645,
+     "points": 0.55,
+     "matches": 15477
+    },
+    {
+     "id": 98582110,
+     "points": 0.45,
+     "matches": 18726
+    },
+    {
+     "id": 1414319208,
+     "points": 0.45,
+     "matches": 13793
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "name": "Lash",
+   "slug": "lash",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/lash_sm.webp",
+   "matches": 6302378,
+   "items": [
+    {
+     "id": 677738769,
+     "points": 2.59,
+     "matches": 14726
+    },
+    {
+     "id": 951866250,
+     "points": 0.85,
+     "matches": 29709
+    },
+    {
+     "id": 1644605047,
+     "points": 0.53,
+     "matches": 58037
+    },
+    {
+     "id": 1047818222,
+     "points": 0.51,
+     "matches": 41306
+    },
+    {
+     "id": 2462046703,
+     "points": 0.5,
+     "matches": 6555
+    },
+    {
+     "id": 2037039379,
+     "points": 0.5,
+     "matches": 11885
+    },
+    {
+     "id": 4075861416,
+     "points": 0.49,
+     "matches": 10662
+    },
+    {
+     "id": 2820116164,
+     "points": 0.48,
+     "matches": 9579
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "name": "McGinnis",
+   "slug": "mcginnis",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/engineer_sm.webp",
+   "matches": 1416674,
+   "items": [
+    {
+     "id": 709540378,
+     "points": 0.74,
+     "matches": 8517
+    },
+    {
+     "id": 3791587546,
+     "points": 0.63,
+     "matches": 3676
+    },
+    {
+     "id": 1427630806,
+     "points": 0.59,
+     "matches": 4202
+    },
+    {
+     "id": 4204808176,
+     "points": 0.57,
+     "matches": 2647
+    },
+    {
+     "id": 2064029594,
+     "points": 0.57,
+     "matches": 15705
+    },
+    {
+     "id": 2059712766,
+     "points": 0.53,
+     "matches": 2075
+    },
+    {
+     "id": 2356412290,
+     "points": 0.52,
+     "matches": 15318
+    },
+    {
+     "id": 2480592370,
+     "points": 0.5,
+     "matches": 11145
+    }
+   ]
+  },
+  {
+   "id": 63,
+   "name": "Mina",
+   "slug": "mina",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/vampirebat_sm.webp",
+   "matches": 4547707,
+   "items": [
+    {
+     "id": 3812615317,
+     "points": 0.98,
+     "matches": 9074
+    },
+    {
+     "id": 1371725689,
+     "points": 0.92,
+     "matches": 8054
+    },
+    {
+     "id": 493591231,
+     "points": 0.86,
+     "matches": 4379
+    },
+    {
+     "id": 2519598785,
+     "points": 0.8,
+     "matches": 69876
+    },
+    {
+     "id": 334300056,
+     "points": 0.71,
+     "matches": 42517
+    },
+    {
+     "id": 3919289022,
+     "points": 0.66,
+     "matches": 17360
+    },
+    {
+     "id": 84321454,
+     "points": 0.64,
+     "matches": 42427
+    },
+    {
+     "id": 1932939246,
+     "points": 0.62,
+     "matches": 4676
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "name": "Mirage",
+   "slug": "mirage",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/mirage_sm.webp",
+   "matches": 1335136,
+   "items": [
+    {
+     "id": 395867183,
+     "points": 0.71,
+     "matches": 8059
+    },
+    {
+     "id": 1925087134,
+     "points": 0.71,
+     "matches": 3196
+    },
+    {
+     "id": 2480592370,
+     "points": 0.62,
+     "matches": 9763
+    },
+    {
+     "id": 1437614329,
+     "points": 0.61,
+     "matches": 10868
+    },
+    {
+     "id": 3696726732,
+     "points": 0.57,
+     "matches": 10006
+    },
+    {
+     "id": 805079544,
+     "points": 0.54,
+     "matches": 2980
+    },
+    {
+     "id": 1763073141,
+     "points": 0.54,
+     "matches": 6965
+    },
+    {
+     "id": 3633614685,
+     "points": 0.45,
+     "matches": 18089
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "name": "Mo & Krill",
+   "slug": "mo-and-krill",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/digger_sm.webp",
+   "matches": 3995562,
+   "items": [
+    {
+     "id": 2221211450,
+     "points": 0.85,
+     "matches": 6829
+    },
+    {
+     "id": 2956256701,
+     "points": 0.79,
+     "matches": 2329
+    },
+    {
+     "id": 1414025773,
+     "points": 0.77,
+     "matches": 16386
+    },
+    {
+     "id": 1102081447,
+     "points": 0.75,
+     "matches": 6914
+    },
+    {
+     "id": 1371725689,
+     "points": 0.65,
+     "matches": 6804
+    },
+    {
+     "id": 1055679805,
+     "points": 0.63,
+     "matches": 8547
+    },
+    {
+     "id": 3144988365,
+     "points": 0.58,
+     "matches": 4864
+    },
+    {
+     "id": 1144549437,
+     "points": 0.56,
+     "matches": 9201
+    }
+   ]
+  },
+  {
+   "id": 87,
+   "name": "Nurse Harrow",
+   "slug": "nurse-harrow",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/nurse_sm.webp",
+   "matches": 8223657,
+   "items": [
+    {
+     "id": 1427630806,
+     "points": 1.97,
+     "matches": 12051
+    },
+    {
+     "id": 1254091416,
+     "points": 1.04,
+     "matches": 34397
+    },
+    {
+     "id": 2956256701,
+     "points": 0.79,
+     "matches": 4972
+    },
+    {
+     "id": 2533252781,
+     "points": 0.77,
+     "matches": 10234
+    },
+    {
+     "id": 2407033488,
+     "points": 0.66,
+     "matches": 10482
+    },
+    {
+     "id": 865846625,
+     "points": 0.65,
+     "matches": 10086
+    },
+    {
+     "id": 499683006,
+     "points": 0.63,
+     "matches": 33901
+    },
+    {
+     "id": 3261353684,
+     "points": 0.52,
+     "matches": 172012
+    }
+   ]
+  },
+  {
+   "id": 67,
+   "name": "Paige",
+   "slug": "paige",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bookworm_sm.webp",
+   "matches": 4132393,
+   "items": [
+    {
+     "id": 1925087134,
+     "points": 0.71,
+     "matches": 10494
+    },
+    {
+     "id": 1396247347,
+     "points": 0.71,
+     "matches": 9212
+    },
+    {
+     "id": 3270001687,
+     "points": 0.68,
+     "matches": 24757
+    },
+    {
+     "id": 2059712766,
+     "points": 0.64,
+     "matches": 6621
+    },
+    {
+     "id": 2971868509,
+     "points": 0.58,
+     "matches": 33993
+    },
+    {
+     "id": 1976391348,
+     "points": 0.57,
+     "matches": 20173
+    },
+    {
+     "id": 3294954488,
+     "points": 0.56,
+     "matches": 9931
+    },
+    {
+     "id": 3403085434,
+     "points": 0.55,
+     "matches": 25691
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "name": "Paradox",
+   "slug": "paradox",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/chrono_sm.webp",
+   "matches": 4289238,
+   "items": [
+    {
+     "id": 3577481646,
+     "points": 1.07,
+     "matches": 13437
+    },
+    {
+     "id": 395867183,
+     "points": 0.84,
+     "matches": 24529
+    },
+    {
+     "id": 865958998,
+     "points": 0.78,
+     "matches": 7516
+    },
+    {
+     "id": 3294954488,
+     "points": 0.74,
+     "matches": 10817
+    },
+    {
+     "id": 1797283378,
+     "points": 0.69,
+     "matches": 7693
+    },
+    {
+     "id": 2566692615,
+     "points": 0.67,
+     "matches": 61253
+    },
+    {
+     "id": 1150006784,
+     "points": 0.66,
+     "matches": 23730
+    },
+    {
+     "id": 1371725689,
+     "points": 0.58,
+     "matches": 7622
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "name": "Pocket",
+   "slug": "pocket",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/synth_sm.webp",
+   "matches": 3055054,
+   "items": [
+    {
+     "id": 1797283378,
+     "points": 0.7,
+     "matches": 6136
+    },
+    {
+     "id": 3005970438,
+     "points": 0.65,
+     "matches": 29118
+    },
+    {
+     "id": 1292979587,
+     "points": 0.64,
+     "matches": 19712
+    },
+    {
+     "id": 395944548,
+     "points": 0.62,
+     "matches": 24847
+    },
+    {
+     "id": 2480592370,
+     "points": 0.62,
+     "matches": 23262
+    },
+    {
+     "id": 3270001687,
+     "points": 0.6,
+     "matches": 16839
+    },
+    {
+     "id": 2059712766,
+     "points": 0.59,
+     "matches": 4947
+    },
+    {
+     "id": 709540378,
+     "points": 0.57,
+     "matches": 16113
+    }
+   ]
+  },
+  {
+   "id": 84,
+   "name": "Rat King",
+   "slug": "rat-king",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/ratking_sm.webp",
+   "matches": 7635664,
+   "items": [
+    {
+     "id": 1378931225,
+     "points": 1.23,
+     "matches": 20972
+    },
+    {
+     "id": 2533252781,
+     "points": 0.9,
+     "matches": 11813
+    },
+    {
+     "id": 677738769,
+     "points": 0.88,
+     "matches": 23028
+    },
+    {
+     "id": 989206714,
+     "points": 0.81,
+     "matches": 6050
+    },
+    {
+     "id": 2820116164,
+     "points": 0.81,
+     "matches": 11446
+    },
+    {
+     "id": 3647584222,
+     "points": 0.78,
+     "matches": 9839
+    },
+    {
+     "id": 1047818222,
+     "points": 0.73,
+     "matches": 50335
+    },
+    {
+     "id": 499683006,
+     "points": 0.71,
+     "matches": 32406
+    }
+   ]
+  },
+  {
+   "id": 79,
+   "name": "Rem",
+   "slug": "rem",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/familiar_sm.webp",
+   "matches": 2222178,
+   "items": [
+    {
+     "id": 2095565695,
+     "points": 0.9,
+     "matches": 7661
+    },
+    {
+     "id": 857669956,
+     "points": 0.87,
+     "matches": 6041
+    },
+    {
+     "id": 1252627263,
+     "points": 0.86,
+     "matches": 11889
+    },
+    {
+     "id": 1797283378,
+     "points": 0.83,
+     "matches": 4255
+    },
+    {
+     "id": 800008313,
+     "points": 0.77,
+     "matches": 5310
+    },
+    {
+     "id": 630839635,
+     "points": 0.73,
+     "matches": 2630
+    },
+    {
+     "id": 1672893796,
+     "points": 0.65,
+     "matches": 29738
+    },
+    {
+     "id": 26002154,
+     "points": 0.62,
+     "matches": 10353
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Seven",
+   "slug": "seven",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/gigawatt_sm.webp",
+   "matches": 3417914,
+   "items": [
+    {
+     "id": 1292979587,
+     "points": 0.87,
+     "matches": 23057
+    },
+    {
+     "id": 2739107182,
+     "points": 0.81,
+     "matches": 22136
+    },
+    {
+     "id": 1798666702,
+     "points": 0.67,
+     "matches": 3732
+    },
+    {
+     "id": 3977876567,
+     "points": 0.6,
+     "matches": 13443
+    },
+    {
+     "id": 2037039379,
+     "points": 0.54,
+     "matches": 6920
+    },
+    {
+     "id": 465043967,
+     "points": 0.5,
+     "matches": 31603
+    },
+    {
+     "id": 2617435668,
+     "points": 0.49,
+     "matches": 8623
+    },
+    {
+     "id": 668299740,
+     "points": 0.49,
+     "matches": 53971
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "name": "Shiv",
+   "slug": "shiv",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/shiv_sm.webp",
+   "matches": 5554855,
+   "items": [
+    {
+     "id": 2480592370,
+     "points": 0.83,
+     "matches": 37932
+    },
+    {
+     "id": 690458959,
+     "points": 0.72,
+     "matches": 18047
+    },
+    {
+     "id": 3696726732,
+     "points": 0.67,
+     "matches": 44139
+    },
+    {
+     "id": 2678489038,
+     "points": 0.66,
+     "matches": 11613
+    },
+    {
+     "id": 710436191,
+     "points": 0.61,
+     "matches": 20804
+    },
+    {
+     "id": 3577481646,
+     "points": 0.55,
+     "matches": 19648
+    },
+    {
+     "id": 381961617,
+     "points": 0.53,
+     "matches": 15831
+    },
+    {
+     "id": 2947183272,
+     "points": 0.51,
+     "matches": 48137
+    }
+   ]
+  },
+  {
+   "id": 80,
+   "name": "Silver",
+   "slug": "silver",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/werewolf_sm.webp",
+   "matches": 2634932,
+   "items": [
+    {
+     "id": 1378931225,
+     "points": 1.22,
+     "matches": 8149
+    },
+    {
+     "id": 1371725689,
+     "points": 0.85,
+     "matches": 4433
+    },
+    {
+     "id": 1644605047,
+     "points": 0.69,
+     "matches": 22449
+    },
+    {
+     "id": 951866250,
+     "points": 0.66,
+     "matches": 10915
+    },
+    {
+     "id": 915014646,
+     "points": 0.63,
+     "matches": 19237
+    },
+    {
+     "id": 2061878743,
+     "points": 0.63,
+     "matches": 6108
+    },
+    {
+     "id": 4204808176,
+     "points": 0.62,
+     "matches": 5527
+    },
+    {
+     "id": 3491236900,
+     "points": 0.6,
+     "matches": 11843
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "name": "Sinclair",
+   "slug": "sinclair",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/magician_sm.webp",
+   "matches": 1362130,
+   "items": [
+    {
+     "id": 710436191,
+     "points": 0.89,
+     "matches": 5596
+    },
+    {
+     "id": 2480592370,
+     "points": 0.79,
+     "matches": 10259
+    },
+    {
+     "id": 1144549437,
+     "points": 0.74,
+     "matches": 3455
+    },
+    {
+     "id": 3270001687,
+     "points": 0.68,
+     "matches": 7886
+    },
+    {
+     "id": 709540378,
+     "points": 0.67,
+     "matches": 8619
+    },
+    {
+     "id": 1976391348,
+     "points": 0.65,
+     "matches": 6601
+    },
+    {
+     "id": 98582110,
+     "points": 0.62,
+     "matches": 10381
+    },
+    {
+     "id": 1797283378,
+     "points": 0.6,
+     "matches": 2639
+    }
+   ]
+  },
+  {
+   "id": 85,
+   "name": "Solomon",
+   "slug": "solomon",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/chessmaster_sm.webp",
+   "matches": 2331040,
+   "items": [
+    {
+     "id": 3331811235,
+     "points": 0.89,
+     "matches": 8959
+    },
+    {
+     "id": 2152872419,
+     "points": 0.67,
+     "matches": 9772
+    },
+    {
+     "id": 2221211450,
+     "points": 0.66,
+     "matches": 3986
+    },
+    {
+     "id": 2463960640,
+     "points": 0.65,
+     "matches": 4332
+    },
+    {
+     "id": 1378931225,
+     "points": 0.63,
+     "matches": 5150
+    },
+    {
+     "id": 3977876567,
+     "points": 0.61,
+     "matches": 11794
+    },
+    {
+     "id": 630839635,
+     "points": 0.51,
+     "matches": 2786
+    },
+    {
+     "id": 3731635960,
+     "points": 0.49,
+     "matches": 26656
+    }
+   ]
+  },
+  {
+   "id": 69,
+   "name": "The Doorman",
+   "slug": "the-doorman",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/doorman_sm.webp",
+   "matches": 1466692,
+   "items": [
+    {
+     "id": 4053935515,
+     "points": 0.79,
+     "matches": 6263
+    },
+    {
+     "id": 1797283378,
+     "points": 0.77,
+     "matches": 3003
+    },
+    {
+     "id": 2947183272,
+     "points": 0.73,
+     "matches": 12763
+    },
+    {
+     "id": 3970837787,
+     "points": 0.68,
+     "matches": 13869
+    },
+    {
+     "id": 3577481646,
+     "points": 0.65,
+     "matches": 5919
+    },
+    {
+     "id": 1342610602,
+     "points": 0.59,
+     "matches": 12485
+    },
+    {
+     "id": 2010028405,
+     "points": 0.57,
+     "matches": 7871
+    },
+    {
+     "id": 3074274290,
+     "points": 0.53,
+     "matches": 16282
+    }
+   ]
+  },
+  {
+   "id": 65,
+   "name": "Venator",
+   "slug": "venator",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/priest_sm.webp",
+   "matches": 5802963,
+   "items": [
+    {
+     "id": 3294954488,
+     "points": 1.46,
+     "matches": 13849
+    },
+    {
+     "id": 1378931225,
+     "points": 1.01,
+     "matches": 14661
+    },
+    {
+     "id": 1113837674,
+     "points": 0.99,
+     "matches": 17535
+    },
+    {
+     "id": 1414319208,
+     "points": 0.92,
+     "matches": 28942
+    },
+    {
+     "id": 1282141666,
+     "points": 0.89,
+     "matches": 25139
+    },
+    {
+     "id": 2061878743,
+     "points": 0.87,
+     "matches": 9973
+    },
+    {
+     "id": 3361811174,
+     "points": 0.82,
+     "matches": 6836
+    },
+    {
+     "id": 3403085434,
+     "points": 0.71,
+     "matches": 33986
+    }
+   ]
+  },
+  {
+   "id": 66,
+   "name": "Victor",
+   "slug": "victor",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/frank_sm.webp",
+   "matches": 3544382,
+   "items": [
+    {
+     "id": 710436191,
+     "points": 1.28,
+     "matches": 14595
+    },
+    {
+     "id": 4204808176,
+     "points": 0.87,
+     "matches": 5933
+    },
+    {
+     "id": 811521119,
+     "points": 0.72,
+     "matches": 22195
+    },
+    {
+     "id": 2480592370,
+     "points": 0.62,
+     "matches": 26569
+    },
+    {
+     "id": 1797283378,
+     "points": 0.62,
+     "matches": 3511
+    },
+    {
+     "id": 1396247347,
+     "points": 0.56,
+     "matches": 7884
+    },
+    {
+     "id": 3005970438,
+     "points": 0.55,
+     "matches": 29680
+    },
+    {
+     "id": 112198670,
+     "points": 0.54,
+     "matches": 29161
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Vindicta",
+   "slug": "vindicta",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/hornet_sm.webp",
+   "matches": 4098611,
+   "items": [
+    {
+     "id": 2678489038,
+     "points": 0.88,
+     "matches": 9938
+    },
+    {
+     "id": 690458959,
+     "points": 0.68,
+     "matches": 17347
+    },
+    {
+     "id": 365620721,
+     "points": 0.66,
+     "matches": 4376
+    },
+    {
+     "id": 112198670,
+     "points": 0.65,
+     "matches": 29996
+    },
+    {
+     "id": 3361811174,
+     "points": 0.63,
+     "matches": 4730
+    },
+    {
+     "id": 2922054143,
+     "points": 0.58,
+     "matches": 8087
+    },
+    {
+     "id": 2617435668,
+     "points": 0.57,
+     "matches": 9977
+    },
+    {
+     "id": 857669956,
+     "points": 0.52,
+     "matches": 12262
+    }
+   ]
+  },
+  {
+   "id": 86,
+   "name": "Violet",
+   "slug": "violet",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/artist_sm.webp",
+   "matches": 6828322,
+   "items": [
+    {
+     "id": 1254091416,
+     "points": 0.72,
+     "matches": 20094
+    },
+    {
+     "id": 710436191,
+     "points": 0.62,
+     "matches": 28143
+    },
+    {
+     "id": 3361075077,
+     "points": 0.58,
+     "matches": 5101
+    },
+    {
+     "id": 381961617,
+     "points": 0.55,
+     "matches": 23112
+    },
+    {
+     "id": 1932939246,
+     "points": 0.52,
+     "matches": 7219
+    },
+    {
+     "id": 3361811174,
+     "points": 0.52,
+     "matches": 6719
+    },
+    {
+     "id": 2221211450,
+     "points": 0.44,
+     "matches": 11483
+    },
+    {
+     "id": 811521119,
+     "points": 0.42,
+     "matches": 42839
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "name": "Viscous",
+   "slug": "viscous",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/viscous_sm.webp",
+   "matches": 1760448,
+   "items": [
+    {
+     "id": 2480592370,
+     "points": 0.93,
+     "matches": 12999
+    },
+    {
+     "id": 3919289022,
+     "points": 0.9,
+     "matches": 6871
+    },
+    {
+     "id": 709540378,
+     "points": 0.83,
+     "matches": 10933
+    },
+    {
+     "id": 600033864,
+     "points": 0.69,
+     "matches": 2620
+    },
+    {
+     "id": 1662311306,
+     "points": 0.6,
+     "matches": 3355
+    },
+    {
+     "id": 2152872419,
+     "points": 0.57,
+     "matches": 8156
+    },
+    {
+     "id": 2407033488,
+     "points": 0.52,
+     "matches": 2488
+    },
+    {
+     "id": 2947183272,
+     "points": 0.5,
+     "matches": 15289
+    }
+   ]
+  },
+  {
+   "id": 58,
+   "name": "Vyper",
+   "slug": "vyper",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kali_sm.webp",
+   "matches": 1834503,
+   "items": [
+    {
+     "id": 2095565695,
+     "points": 0.78,
+     "matches": 5787
+    },
+    {
+     "id": 1055679805,
+     "points": 0.7,
+     "matches": 4419
+    },
+    {
+     "id": 1770441818,
+     "points": 0.69,
+     "matches": 5658
+    },
+    {
+     "id": 1282141666,
+     "points": 0.63,
+     "matches": 8036
+    },
+    {
+     "id": 3970837787,
+     "points": 0.62,
+     "matches": 16586
+    },
+    {
+     "id": 1414025773,
+     "points": 0.55,
+     "matches": 8867
+    },
+    {
+     "id": 2739107182,
+     "points": 0.54,
+     "matches": 10570
+    },
+    {
+     "id": 1710079648,
+     "points": 0.48,
+     "matches": 4449
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "name": "Warden",
+   "slug": "warden",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/warden_sm.webp",
+   "matches": 1879342,
+   "items": [
+    {
+     "id": 1644605047,
+     "points": 0.82,
+     "matches": 14967
+    },
+    {
+     "id": 3331811235,
+     "points": 0.76,
+     "matches": 7513
+    },
+    {
+     "id": 951866250,
+     "points": 0.74,
+     "matches": 7539
+    },
+    {
+     "id": 3077079169,
+     "points": 0.66,
+     "matches": 26013
+    },
+    {
+     "id": 2152872419,
+     "points": 0.63,
+     "matches": 8016
+    },
+    {
+     "id": 677738769,
+     "points": 0.57,
+     "matches": 5890
+    },
+    {
+     "id": 2829638276,
+     "points": 0.56,
+     "matches": 30757
+    },
+    {
+     "id": 2566692615,
+     "points": 0.51,
+     "matches": 21811
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Wraith",
+   "slug": "wraith",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/wraith_sm.webp",
+   "matches": 6885692,
+   "items": [
+    {
+     "id": 3491236900,
+     "points": 1.02,
+     "matches": 32295
+    },
+    {
+     "id": 1250307611,
+     "points": 0.71,
+     "matches": 22743
+    },
+    {
+     "id": 3361075077,
+     "points": 0.7,
+     "matches": 6854
+    },
+    {
+     "id": 3028234315,
+     "points": 0.69,
+     "matches": 20098
+    },
+    {
+     "id": 1770441818,
+     "points": 0.66,
+     "matches": 22401
+    },
+    {
+     "id": 1102081447,
+     "points": 0.61,
+     "matches": 11854
+    },
+    {
+     "id": 1955841979,
+     "points": 0.6,
+     "matches": 11738
+    },
+    {
+     "id": 1409190604,
+     "points": 0.58,
+     "matches": 2781
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "name": "Yamato",
+   "slug": "yamato",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/yamato_sm.webp",
+   "matches": 3852388,
+   "items": [
+    {
+     "id": 2533252781,
+     "points": 0.87,
+     "matches": 6073
+    },
+    {
+     "id": 1235347618,
+     "points": 0.71,
+     "matches": 27454
+    },
+    {
+     "id": 2061878743,
+     "points": 0.64,
+     "matches": 5728
+    },
+    {
+     "id": 2922054143,
+     "points": 0.61,
+     "matches": 6724
+    },
+    {
+     "id": 1804594021,
+     "points": 0.61,
+     "matches": 4063
+    },
+    {
+     "id": 1252627263,
+     "points": 0.58,
+     "matches": 18402
+    },
+    {
+     "id": 1662311306,
+     "points": 0.5,
+     "matches": 6765
+    },
+    {
+     "id": 3144988365,
+     "points": 0.49,
+     "matches": 4256
+    }
+   ]
+  }
+ ],
+ "items": {
+  "26002154": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/melee_charge.webp",
+   "en": "Melee Charge",
+   "pl": "Szarża Wręcz",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "84321454": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/quicksilver_reload.webp",
+   "en": "Quicksilver Reload",
+   "pl": "Rtęciowe Przeładowanie",
+   "cost": 1600,
+   "slot": "spirit"
+  },
+  "98582110": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/backstabber.webp",
+   "en": "Stalker",
+   "pl": "Prześladowca",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "112198670": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/spirit_shielding.webp",
+   "en": "Spirit Shielding",
+   "pl": "Osłona Duchowa",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "334300056": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/stamina_mastery.webp",
+   "en": "Stamina Mastery",
+   "pl": "Mistrzowska Wytrzymałość",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "339443430": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/frenzy.webp",
+   "en": "Frenzy",
+   "pl": "Szał Bitewny",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "365620721": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/glass_cannon.webp",
+   "en": "Glass Cannon",
+   "pl": "Szklane Działo",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "381961617": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/active_reload.webp",
+   "en": "Active Reload",
+   "pl": "Aktywne Przeładowanie",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "393974127": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/slowing_bullets.webp",
+   "en": "Slowing Bullets",
+   "pl": "Naboje Spowalniające",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "395867183": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/mystic_shot.webp",
+   "en": "Mystic Shot",
+   "pl": "Mistyczny Strzał",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "395944548": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/torment_pulse.webp",
+   "en": "Torment Pulse",
+   "pl": "Impuls Męki",
+   "cost": 3200,
+   "slot": "spirit"
+  },
+  "465043967": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/spirit_strike.webp",
+   "en": "Spirit Strike",
+   "pl": "Duchowe Uderzenie",
+   "cost": 800,
+   "slot": "spirit"
+  },
+  "493591231": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/lightning_scroll.webp",
+   "en": "Lightning Scroll",
+   "pl": "Zwój Błyskawicy",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "499683006": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/bullet_lifesteal.webp",
+   "en": "Bullet Lifesteal",
+   "pl": "Wampiryczne Naboje",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "600033864": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/majestic_leap.webp",
+   "en": "Majestic Leap",
+   "pl": "Majestatyczny Skok",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "630839635": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/echo_shard.webp",
+   "en": "Echo Shard",
+   "pl": "Odłamek Echa",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "668299740": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/rapid_rounds.webp",
+   "en": "Rapid Rounds",
+   "pl": "Błyskawiczne Kule",
+   "cost": 800,
+   "slot": "weapon"
+  },
+  "673001892": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/armor_piercing_rounds.webp",
+   "en": "Armor Piercer",
+   "pl": "Przebijacz Pancerza",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "677738769": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/refresher.webp",
+   "en": "Refresher",
+   "pl": "Orzeźwiacz",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "690458959": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/express_shot.webp",
+   "en": "Express Shot",
+   "pl": "Ekspresowy Strzał",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "709540378": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/cultist_sacrifice.webp",
+   "en": "Cultist Sacrifice",
+   "pl": "Ofiara Kultysty",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "710436191": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/capacitor.webp",
+   "en": "Capacitor",
+   "pl": "Kondensator",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "800008313": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/crushing_fists.webp",
+   "en": "Crushing Fists",
+   "pl": "Miażdżące Pięści",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "805079544": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/weapon_shielding.webp",
+   "en": "Weapon Shielding",
+   "pl": "Osłona Balistyczna",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "811521119": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/tesla_bullets.webp",
+   "en": "Tesla Bullets",
+   "pl": "Naboje Tesli",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "857669956": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/guardian_ward.webp",
+   "en": "Guardian Ward",
+   "pl": "Obronny Stróż",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "865846625": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/leech.webp",
+   "en": "Leech",
+   "pl": "Pijawka",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "865958998": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/veil_walker.webp",
+   "en": "Veil Walker",
+   "pl": "Wędrowiec Woalu",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "915014646": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/transcendent_cooldown.webp",
+   "en": "Transcendent Cooldown",
+   "pl": "Transcendentne Odnowienie",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "951866250": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/indomitable.webp",
+   "en": "Indomitable",
+   "pl": "Nieugięty",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "989206714": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/blood_tribute.webp",
+   "en": "Blood Tribute",
+   "pl": "Krwawy Hołd",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "1047818222": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/debuff_reducer.webp",
+   "en": "Debuff Reducer",
+   "pl": "Reduktor Osłabień",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "1055679805": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/vampiric_burst.webp",
+   "en": "Vampiric Burst",
+   "pl": "Wampiryczny Wybuch",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "1102081447": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_slow.webp",
+   "en": "Mystic Slow",
+   "pl": "Mistyczne Spowolnienie",
+   "cost": 1600,
+   "slot": "spirit"
+  },
+  "1113837674": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/silencer.webp",
+   "en": "Silencer",
+   "pl": "Uciszacz",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "1144549437": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spirit_shredder_bullets.webp",
+   "en": "Spirit Shredder",
+   "pl": "Amunicja Antyduchowa",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "1150006784": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/arcane_surge.webp",
+   "en": "Arcane Surge",
+   "pl": "Tajemny Przypływ",
+   "cost": 1600,
+   "slot": "spirit"
+  },
+  "1152158042": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/vortex_web.webp",
+   "en": "Vortex Web",
+   "pl": "Wirowa Sieć",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "1219329868": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/spirit_sap.webp",
+   "en": "Spirit Sap",
+   "pl": "Duchowy Drenaż",
+   "cost": 1600,
+   "slot": "spirit"
+  },
+  "1235347618": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/battle_vest.webp",
+   "en": "Battle Vest",
+   "pl": "Kamizelka Bojowa",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "1250307611": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/juggernaut.webp",
+   "en": "Juggernaut",
+   "pl": "Niszczyciel",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "1252627263": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/lifestrike.webp",
+   "en": "Lifestrike",
+   "pl": "Cios Życia",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "1254091416": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/knockdown.webp",
+   "en": "Knockdown",
+   "pl": "Powalenie",
+   "cost": 3200,
+   "slot": "spirit"
+  },
+  "1282141666": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/siphon_bullets.webp",
+   "en": "Siphon Bullets",
+   "pl": "Naboje Wysysające",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "1292979587": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/surge_of_power.webp",
+   "en": "Surge of Power",
+   "pl": "Przypływ Mocy",
+   "cost": 3200,
+   "slot": "spirit"
+  },
+  "1342610602": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/close_quarters.webp",
+   "en": "Close Quarters",
+   "pl": "Walka w Zwarciu",
+   "cost": 800,
+   "slot": "weapon"
+  },
+  "1371725689": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/phantom_strike.webp",
+   "en": "Phantom Strike",
+   "pl": "Widmowe Uderzenie",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "1378931225": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/metal_skin.webp",
+   "en": "Metal Skin",
+   "pl": "Metalowa Skóra",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "1396247347": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/lucky_shot.webp",
+   "en": "Lucky Shot",
+   "pl": "Szczęśliwy Strzał",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "1409190604": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/fury_trance.webp",
+   "en": "Fury Trance",
+   "pl": "Trans Furii",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "1414025773": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/counterspell.webp",
+   "en": "Counterspell",
+   "pl": "Kontrczar",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "1414319208": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/berserker.webp",
+   "en": "Berserker",
+   "pl": "Berserker",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "1427630806": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healing_tempo.webp",
+   "en": "Healing Tempo",
+   "pl": "Uzdrawiające Tempo",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "1437614329": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/melee_lifesteal.webp",
+   "en": "Melee Lifesteal",
+   "pl": "Wampiryczne Pięści",
+   "cost": 800,
+   "slot": "vitality"
+  },
+  "1439347412": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_regen.webp",
+   "en": "Mystic Regeneration",
+   "pl": "Mistyczna Regeneracja",
+   "cost": 800,
+   "slot": "spirit"
+  },
+  "1548066885": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/basic_magazine.webp",
+   "en": "Extended Magazine",
+   "pl": "Rozszerzony Magazynek",
+   "cost": 800,
+   "slot": "weapon"
+  },
+  "1644605047": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/reactive_barrier.webp",
+   "en": "Reactive Barrier",
+   "pl": "Bariera Reaktywna",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "1662311306": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/divine_barrier.webp",
+   "en": "Divine Barrier",
+   "pl": "Święta Bariera",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "1672893796": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/grit.webp",
+   "en": "Grit",
+   "pl": "Zaciekłość",
+   "cost": 800,
+   "slot": "vitality"
+  },
+  "1710079648": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healing_rite.webp",
+   "en": "Healing Rite",
+   "pl": "Seans Uzdrowienia",
+   "cost": 800,
+   "slot": "vitality"
+  },
+  "1763073141": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/recharging_rounds.webp",
+   "en": "Recharging Rush",
+   "pl": "Odnawiający Ostrzał",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "1770441818": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/weakening_headshot.webp",
+   "en": "Weakening Headshot",
+   "pl": "Osłabiający Strzał w Głowę",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "1797283378": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/infuser.webp",
+   "en": "Infuser",
+   "pl": "Infuzor",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "1798666702": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/shadow_weave.webp",
+   "en": "Shadow Weave",
+   "pl": "Cienisty Splot",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "1804594021": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/rescue_beam.webp",
+   "en": "Rescue Beam",
+   "pl": "Promień Ratunkowy",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "1925087134": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/suppressor.webp",
+   "en": "Suppressor",
+   "pl": "Tłumiciel",
+   "cost": 1600,
+   "slot": "spirit"
+  },
+  "1932939246": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/alchemical_fire.webp",
+   "en": "Alchemical Fire",
+   "pl": "Ogień Alchemiczny",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "1955841979": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/spellbreaker.webp",
+   "en": "Spellbreaker",
+   "pl": "Łamacz Czarów",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "1976391348": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/cold_front.webp",
+   "en": "Cold Front",
+   "pl": "Zimny Front",
+   "cost": 1600,
+   "slot": "spirit"
+  },
+  "2010028405": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/headshot_booster.webp",
+   "en": "Headshot Booster",
+   "pl": "Wzmacniacz Strzałów w Głowę",
+   "cost": 800,
+   "slot": "weapon"
+  },
+  "2037039379": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/inhibitor.webp",
+   "en": "Inhibitor",
+   "pl": "Inhibitor",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "2059712766": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/restorative_locket.webp",
+   "en": "Restorative Locket",
+   "pl": "Amulet Pokrzepienia",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "2061878743": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/disarming_hex.webp",
+   "en": "Disarming Hex",
+   "pl": "Rozbrajający Urok",
+   "cost": 3200,
+   "slot": "spirit"
+  },
+  "2064029594": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/opening_rounds.webp",
+   "en": "Opening Rounds",
+   "pl": "Otwierające Kule",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "2095565695": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/point_blank.webp",
+   "en": "Point Blank",
+   "pl": "Bezpośredniość",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "2108215830": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/heroic_aura.webp",
+   "en": "Heroic Aura",
+   "pl": "Heroiczna Aura",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "2142980412": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/focus_lens.webp",
+   "en": "Focus Lens",
+   "pl": "Soczewka Skupiająca",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "2152872419": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/sharp_shooter.webp",
+   "en": "Sharpshooter",
+   "pl": "Strzelec Wyborowy",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "2221211450": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spell_slinger.webp",
+   "en": "Spellslinger",
+   "pl": "Czaromiot",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "2226497419": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spiritual_overflow.webp",
+   "en": "Spiritual Overflow",
+   "pl": "Duchowe Przepełnienie",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "2356412290": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/titanic_magazine.webp",
+   "en": "Titanic Magazine",
+   "pl": "Tytaniczny Magazynek",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "2407033488": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/intensifying_magazine.webp",
+   "en": "Intensifying Magazine",
+   "pl": "Potęgujący Magazynek",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "2462046703": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/goose_egg.webp",
+   "en": "Golden Goose Egg",
+   "pl": "Jajo Złotej Gęsi",
+   "cost": 800,
+   "slot": "spirit"
+  },
+  "2463960640": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/escalating_resilience.webp",
+   "en": "Escalating Resilience",
+   "pl": "Rosnąca Odporność",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "2480592370": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/ricochet.webp",
+   "en": "Ricochet",
+   "pl": "Rykoszet",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "2481177645": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/hunters_aura.webp",
+   "en": "Hunter's Aura",
+   "pl": "Aura Łowcy",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "2519598785": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/boundless_spirit.webp",
+   "en": "Boundless Spirit",
+   "pl": "Bezkresny Duch",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "2533252781": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/ethereal_shift.webp",
+   "en": "Ethereal Shift",
+   "pl": "Eteryczne Przejście",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "2566692615": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healing_booster.webp",
+   "en": "Healing Booster",
+   "pl": "Wzmacniacz Uzdrowienia",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "2617435668": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/curse.webp",
+   "en": "Cursed Relic",
+   "pl": "Przeklęta Relikwia",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "2678489038": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/hollow_point.webp",
+   "en": "Hollow Point",
+   "pl": "Amunicja Grzybkująca",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "2739107182": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/burst_fire.webp",
+   "en": "Burst Fire",
+   "pl": "Ściana Ognia",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "2820116164": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/diviners_kevlar.webp",
+   "en": "Diviner's Kevlar",
+   "pl": "Kevlar Wróżbity",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "2829638276": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/extra_regen.webp",
+   "en": "Extra Regen",
+   "pl": "Dodatkowa Regeneracja",
+   "cost": 800,
+   "slot": "vitality"
+  },
+  "2922054143": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/rusted_barrel.webp",
+   "en": "Rusted Barrel",
+   "pl": "Zardzewiała Lufa",
+   "cost": 800,
+   "slot": "spirit"
+  },
+  "2947183272": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/radiant_regeneration.webp",
+   "en": "Radiant Regeneration",
+   "pl": "Promienna Regeneracja",
+   "cost": 3200,
+   "slot": "spirit"
+  },
+  "2956256701": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healing_nova.webp",
+   "en": "Healing Nova",
+   "pl": "Uzdrawiająca Nowa",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "2971868509": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/bullet_resist_shredder.webp",
+   "en": "Bullet Resist Shredder",
+   "pl": "Rozdzieracz Kuloodporności",
+   "cost": 1600,
+   "slot": "spirit"
+  },
+  "3005970438": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/escalating_exposure.webp",
+   "en": "Escalating Exposure",
+   "pl": "Rosnąca Podatność",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "3028234315": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/witchmail.webp",
+   "en": "Witchmail",
+   "pl": "Wiedźmia Kolczuga",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "3074274290": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/trophy_collector.webp",
+   "en": "Trophy Collector",
+   "pl": "Kolekcjoner Trofeów",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "3077079169": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/high_velocity_rounds.webp",
+   "en": "High-Velocity Rounds",
+   "pl": "Szybkie Kule",
+   "cost": 800,
+   "slot": "weapon"
+  },
+  "3140772621": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/bullet_resilience.webp",
+   "en": "Bullet Resilience",
+   "pl": "Niezłomność Balistyczna",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "3144988365": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/decay.webp",
+   "en": "Decay",
+   "pl": "Rozkład",
+   "cost": 3200,
+   "slot": "spirit"
+  },
+  "3190916303": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/spirit_snatch.webp",
+   "en": "Spirit Snatch",
+   "pl": "Duchowy Chwyt",
+   "cost": 3200,
+   "slot": "spirit"
+  },
+  "3261353684": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/superior_cooldown.webp",
+   "en": "Superior Cooldown",
+   "pl": "Doskonałe Odnowienie",
+   "cost": 3200,
+   "slot": "spirit"
+  },
+  "3270001687": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/warp_stone.webp",
+   "en": "Warp Stone",
+   "pl": "Kamień Teleportacji",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "3294954488": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/alchemical_seal.webp",
+   "en": "Ballistic Enchantment",
+   "pl": "Zaklęcie Balistyczne",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "3331811235": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/long_range.webp",
+   "en": "Long Range",
+   "pl": "Daleki Zasięg",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "3357231760": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/unstoppable.webp",
+   "en": "Unstoppable",
+   "pl": "Nie do Powstrzymania",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "3361075077": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/return_fire.webp",
+   "en": "Return Fire",
+   "pl": "Ogień Zwrotny",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "3361811174": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/cheat_death.webp",
+   "en": "Cheat Death",
+   "pl": "Oszukanie Śmierci",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "3403085434": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/fleetfoot.webp",
+   "en": "Fleetfoot",
+   "pl": "Lekki Krok",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "3491236900": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/plated_armor.webp",
+   "en": "Plated Armor",
+   "pl": "Pancerz Płytowy",
+   "cost": 6400,
+   "slot": "vitality"
+  },
+  "3577481646": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_reverb.webp",
+   "en": "Mystic Reverb",
+   "pl": "Mistyczny Pogłos",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "3585132399": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/fortitude.webp",
+   "en": "Fortitude",
+   "pl": "Zawziętość",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "3633614685": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/extra_health.webp",
+   "en": "Extra Health",
+   "pl": "Dodatkowe Zdrowie",
+   "cost": 800,
+   "slot": "vitality"
+  },
+  "3647584222": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/split_shot.webp",
+   "en": "Split Shot",
+   "pl": "Rozszczepiony Strzał",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "3696726732": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/toxic_bullets.webp",
+   "en": "Toxic Bullets",
+   "pl": "Toksyczne Naboje",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "3731635960": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/debuff_remover.webp",
+   "en": "Dispel Magic",
+   "pl": "Rozproszenie Magii",
+   "cost": 3200,
+   "slot": "vitality"
+  },
+  "3791587546": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/weighted_shots.webp",
+   "en": "Weighted Shots",
+   "pl": "Ciężki Kaliber",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "3812615317": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/arctic_blast.webp",
+   "en": "Arctic Blast",
+   "pl": "Arktyczny Wybuch",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "3884003354": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/crippling_headshot.webp",
+   "en": "Crippling Headshot",
+   "pl": "Okaleczający Strzał w Głowę",
+   "cost": 6400,
+   "slot": "weapon"
+  },
+  "3919289022": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mercurial_magnum.webp",
+   "en": "Mercurial Magnum",
+   "pl": "Merkuryczne Magnum",
+   "cost": 6400,
+   "slot": "spirit"
+  },
+  "3970837787": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/enchanters_emblem.webp",
+   "en": "Enchanter's Emblem",
+   "pl": "Emblemat Czarownika",
+   "cost": 1600,
+   "slot": "vitality"
+  },
+  "3977876567": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/kinetic_dash.webp",
+   "en": "Kinetic Dash",
+   "pl": "Kinetyczny Zryw",
+   "cost": 1600,
+   "slot": "weapon"
+  },
+  "4053935515": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/headhunter.webp",
+   "en": "Headhunter",
+   "pl": "Łowca Głów",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "4075861416": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spellslinger_headshots.webp",
+   "en": "Spirit Rend",
+   "pl": "Duchowe Rozdarcie",
+   "cost": 3200,
+   "slot": "weapon"
+  },
+  "4204808176": {
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/rebuttal.webp",
+   "en": "Rebuttal",
+   "pl": "Odparcie",
+   "cost": 800,
+   "slot": "vitality"
+  }
+ }
+}
