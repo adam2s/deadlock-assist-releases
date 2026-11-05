@@ -6,7 +6,7 @@
 
 **Doradca do Deadlocka, który podpowiada w trakcie meczu, co kupić, i zapisuje Twoją historię gier.**
 
-[Strona projektu](https://adam2s.github.io/deadlock-assist-releases/) · [English](https://adam2s.github.io/deadlock-assist-releases/en/)
+[Strona projektu](https://deadlock-assist.com/) · [English](https://deadlock-assist.com/en/)
 
 [![Pobierz dla Windows](https://img.shields.io/badge/Pobierz-Windows%20.exe-f2a33a?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/adam2s/deadlock-assist-releases/releases/latest)
 

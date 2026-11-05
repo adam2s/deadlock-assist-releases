@@ -9,7 +9,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
-BASE = "https://adam2s.github.io/deadlock-assist-releases/"
+DOMAIN = "deadlock-assist.com"
+BASE = f"https://{DOMAIN}/"
 DOWNLOAD = "https://github.com/adam2s/deadlock-assist-releases/releases/latest"
 REPO = "https://github.com/adam2s/deadlock-assist-releases"
 KOFI = "https://ko-fi.com/deadlockassist"
@@ -501,6 +502,8 @@ def main():
         "</urlset>\n"
     )
     (out / ".nojekyll").write_text("")
+    (out / "CNAME").write_text(DOMAIN + "\n")
+    (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
 
 
 main()
