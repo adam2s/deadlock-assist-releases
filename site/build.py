@@ -72,7 +72,17 @@ PL = {
         "title": "Kontry na {hero} w Deadlocku – najlepsze przedmioty",
         "desc": "Najlepsze kontry na {hero}: {top}. Dane z meczów Emissary+ z 14 dni, co tydzień nowe.",
         "h1": "Kontry na {hero}",
-        "lead": "Przedmioty, z którymi gracze najczęściej wygrywają z {hero}.",
+        "lead": "Co kupuje większość graczy {hero} i czym najlepiej to skontrować.",
+        "build_h": "Typowy build {hero}",
+        "build_note": "Przedmioty, które kupuje i zatrzymuje większość graczy {hero}, w kolejności zakupu. "
+                      "Procent: ilu graczy go kupuje.",
+        "best_h": "Najlepsze kontry na ten build",
+        "more": "Więcej kontr",
+        "min": "min",
+        "home_h": "Przykład: kontry na {hero}",
+        "home_lead": "Typowy build najczęściej granego bohatera i dwa przedmioty, które najlepiej go kontrują.",
+        "home_all": "Kontry na wszystkich {n} bohaterów",
+        "home_one": "Cała strona {hero}",
         "data": "{n} zakupów, mecze Emissary+, ostatnie 14 dni (stan na {date})",
         "edge_h": "Przewaga nad {hero}",
         "explain": "{pts} = z {item} wygrywa się z {hero} o {num} punktu procentowego częściej niż zwykle, "
@@ -206,7 +216,16 @@ EN = {
         "title": "{hero} Counter Items in Deadlock – Best Items vs {hero}",
         "desc": "Best counter items vs {hero}: {top}. From Emissary+ matches of the last 14 days, updated weekly.",
         "h1": "{hero} counter items",
-        "lead": "Items players win with most against {hero}.",
+        "lead": "What most {hero} players buy, and the best items to counter it.",
+        "build_h": "Typical {hero} build",
+        "build_note": "Items most {hero} players buy and keep, in buying order. Percent: how many players buy it.",
+        "best_h": "Best counters to this build",
+        "more": "More counters",
+        "min": "min",
+        "home_h": "Example: {hero} counters",
+        "home_lead": "The typical build of the most played hero and the two items that counter it best.",
+        "home_all": "Counters for all {n} heroes",
+        "home_one": "Full {hero} page",
         "data": "{n} purchases, Emissary+ matches, last 14 days (as of {date})",
         "edge_h": "Edge vs {hero}",
         "explain": "{pts} = players with {item} beat {hero} {num} percentage points more often than usual, "
@@ -555,6 +574,7 @@ def page(t):
   <p class="note">{T(t['proof_note'])}</p>
 </section>
 
+{home_counters(t, prefix, T)}
 <section id="{ids['safety']}" class="wrap">
   <div class="safe">
     <h2>{icon('lock')}{T(t['safe_h'])}</h2>
@@ -618,6 +638,69 @@ def long_date(d, lang):
     return f"{day}{NB}{month} {y}" if lang == "pl" else f"{month}{NB}{day}, {y}"
 
 
+def build_strip(t, hero, prefix, T):
+    """The hero's typical build as a row of item tiles."""
+    c = t["counters"]
+    items = COUNTERS["items"]
+    out = []
+    for b in hero.get("build", []):
+        it = items[str(b["id"])]
+        slot = it.get("slot") or "weapon"
+        img = f'<img src="{img_src("items", b["id"], it["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
+        out.append(f'<li class="slot-{slot}">{img}<b>{e(it["en"])}</b>'
+                   f'<small>{round(b["min"])}{NB}{c["min"]} · {round(100 * b["share"])}%</small></li>')
+    return f'<ol class="build">{"".join(out)}</ol>'
+
+
+def counter_rows(t, hero, prefix, T, start, stop):
+    """Counter items of the hero as ranked rows."""
+    lang = t["lang"]
+    c = t["counters"]
+    items = COUNTERS["items"]
+    top = max(i["points"] for i in hero["items"])
+    rows = []
+    for rank, i in enumerate(hero["items"][start:stop], start + 1):
+        it = items[str(i["id"])]
+        slot = it.get("slot") or "weapon"
+        alt = f' · {c["alt"]}: {e(it["pl"])}' if lang == "pl" and it["pl"] != it["en"] else ""
+        rows.append(
+            f'<li class="ci slot-{slot}"><span class="rank">{rank}</span>'
+            f'<img src="{img_src("items", i["id"], it["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
+            f'<span class="ci-name"><strong>{e(it["en"])}</strong><small>{T(c["slots"].get(slot, slot))} · {cost(it["cost"], lang)} {T(c["souls"])}{alt}</small></span>'
+            f'<span class="ci-edge"><b>{pts(i["points"], lang)}</b><i style="width:{max(8, round(100 * i["points"] / top))}%"></i></span></li>'
+        )
+    return "".join(rows)
+
+
+def pts(p, lang):
+    sep = "," if lang == "pl" else "."
+    return f"+{p:.1f}".replace(".", sep) + NB + ('<span class="u">p.p.</span>' if lang == "pl" else '<span class="u">pp</span>')
+
+
+def cost(n, lang):
+    return f"{n:,}".replace(",", NB if lang == "pl" else ",")
+
+
+def home_counters(t, prefix, T):
+    """Home page example: the most played hero's build and its two best counters."""
+    if not COUNTERS:
+        return ""
+    c = t["counters"]
+    hero = max(COUNTERS["heroes"], key=lambda h: h["matches"])
+    name = hero["name"]
+    link = c["path"].removeprefix("en/")
+    return f"""<section id="{'kontry' if t['lang'] == 'pl' else 'counters'}" class="wrap home-counters">
+  <h2>{T(c['home_h'].format(hero=name))}</h2>
+  <p class="section-lead">{T(c['home_lead'])}</p>
+  <h3 class="ci-cap">{T(c['build_h'].format(hero=name))}</h3>
+  {build_strip(t, hero, prefix, T)}
+  <h3 class="ci-cap">{T(c['best_h'])}</h3>
+  <ol class="ci-list">{counter_rows(t, hero, prefix, T, 0, 2)}</ol>
+  <div class="actions"><a class="btn" href="{link}">{T(c['home_all'].format(n=len(COUNTERS['heroes'])))}</a><a class="btn ghost" href="{link}{hero['slug']}/">{T(c['home_one'].format(hero=name))}</a></div>
+</section>
+"""
+
+
 def counters_index(t):
     lang = t["lang"]
     c = t["counters"]
@@ -665,34 +748,12 @@ def counter_page(t, hero):
     other = EN if lang == "pl" else PL
     name = hero["name"]
     items = COUNTERS["items"]
-    top = max(i["points"] for i in hero["items"])
     sep = "," if lang == "pl" else "."
-
-    def pts(p):
-        return f"+{p:.1f}".replace(".", sep) + NB + ('<span class="u">p.p.</span>' if lang == "pl" else '<span class="u">pp</span>')
-
-    def name_of(it):
-        if lang == "pl" and it["pl"] != it["en"]:
-            return f'<strong>{e(it["en"])}</strong>', f' · {c["alt"]}: {e(it["pl"])}'
-        return f'<strong>{e(it["en"])}</strong>', ""
-
-    def cost(n):
-        return f"{n:,}".replace(",", NB if lang == "pl" else ",")
-
-    rows = []
-    for rank, i in enumerate(hero["items"], 1):
-        it = items[str(i["id"])]
-        slot = it.get("slot") or "weapon"
-        rows.append(
-            f'<li class="ci slot-{slot}"><span class="rank">{rank}</span>'
-            f'<img src="{img_src("items", i["id"], it["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
-            f'<span class="ci-name">{name_of(it)[0]}<small>{T(c["slots"].get(slot, slot))} · {cost(it["cost"])} {T(c["souls"])}{name_of(it)[1]}</small></span>'
-            f'<span class="ci-edge"><b>{pts(i["points"])}</b><i style="width:{max(8, round(100 * i["points"] / top))}%"></i></span></li>'
-        )
     first = items[str(hero["items"][0]["id"])]
     num = f'{hero["items"][0]["points"]:.1f}'.replace(".", sep)
     explain = T(c["explain"].format(pts="{pts}", item=first["en"], hero=name, num=num)).replace(
-        "{pts}", f'<strong>{pts(hero["items"][0]["points"])}</strong>', 1)
+        "{pts}", f'<strong>{pts(hero["items"][0]["points"], lang)}</strong>', 1)
+    rest = len(hero["items"]) - 2
     top3 = ", ".join(items[str(i["id"])]["en"] for i in hero["items"][:3])
     others = "".join(
         f'<li><a href="../{h["slug"]}/"><img src="{img_src("heroes", h["slug"], h["img"], prefix)}" alt="" width="32" height="32" '
@@ -739,9 +800,13 @@ def counter_page(t, hero):
   <div class="hero-head"><img src="{img_src("heroes", hero["slug"], hero["img"], prefix)}" alt="" width="64" height="64"><h1>{T(c['h1'].format(hero=name))}</h1></div>
   <p class="section-lead">{T(c['lead'].format(hero=name))}</p>
   <p class="meta">{T(c['data'].format(n=n, date=long_date(COUNTERS['date'], lang)))}</p>
-  <p class="ci-cap" id="edge">{T(c['edge_h'].format(hero=name))}</p>
-  <ol class="ci-list" aria-labelledby="edge">{"".join(rows)}</ol>
+  <h2 class="ci-cap">{T(c['build_h'].format(hero=name))}</h2>
+  {build_strip(t, hero, prefix, T)}
+  <p class="note">{T(c['build_note'].format(hero=name))}</p>
+  <h2 class="ci-cap" id="edge">{T(c['best_h'])}</h2>
+  <ol class="ci-list" aria-labelledby="edge">{counter_rows(t, hero, prefix, T, 0, 2)}</ol>
   <p class="note">{explain}</p>
+  <details class="ci-more"><summary>{T(c['more'])} ({rest})</summary><ol class="ci-list" start="3">{counter_rows(t, hero, prefix, T, 2, None)}</ol></details>
   <section class="ci-cta"><h2>{T(c['cta_h'])}</h2><p>{T(c['cta_p'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></section>
   <details class="ci-others"><summary><h2>{T(c['others'])} ({n_others})</h2></summary><ul>{others}</ul></details>
 </main>
