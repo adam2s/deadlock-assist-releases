@@ -178,7 +178,7 @@ EN = {
     "switch": ("../", "Polski", "Wersja polska"),
     "changes": {
         "path": "en/changes/", "nav": "Changes", "title": "Deadlock Assist Changelog – Overlay Updates & Release Notes",
-        "description": "What's new in every version of Deadlock Assist, the Deadlock overlay with counter items, builds and timers.",
+        "description": "What’s new in every version of Deadlock Assist, the Deadlock overlay with counter items, builds and timers.",
         "h1": "Changelog", "lead": "What's new in every version.",
         "version": "Version", "older": "Older versions", "home": "Home", "latest": "Latest",
         "highlight": "Highlight: since version 1.2.6 the advisor gets 81% of counters right (was 62%).",
@@ -287,7 +287,7 @@ FONTS = (
 def typeset(s, lang):
     """Glues what must not end a line: Polish one-letter words and short prepositions, numbers, · and →."""
     if lang == "pl":
-        s = re.sub(r"(?<![\w-])([aiouwzAIOUWZ]|na|do|od|po|ze|we|że|co|to|nie|ma|jak) ", "\\1" + NB, s)
+        s = re.sub(r"(?<![\w-])([aiouwz]|na|do|od|po|ze|we|że|co|to|nie|ma|jak) ", "\\1" + NB, s, flags=re.I)
     s = re.sub(r"(\d) (\d{3})\b", "\\1" + NB + "\\2", s)
     s = re.sub(r"\b(Windows|Tier|minute|minuty|top)\s(\d)", "\\1" + NB + "\\2", s)
     s = re.sub(r"(\d+\.) (minuty)", "\\1" + NB + "\\2", s)
@@ -592,7 +592,7 @@ def changes_page(t, shown=4):
 <main id="main" class="wrap changes">
   <h1>{T(c['h1'])}</h1>
   <p class="section-lead">{T(c['lead'])}</p>
-  <p class="highlight"><a href="#v1.2.6">{T(c['highlight'])}</a></p>
+  <p class="highlight"><a href="#v1.2.6">{T(c['highlight']).replace('81%', '<strong>81%</strong>', 1)}</a></p>
   {newest}
   {older}
   <div class="end"><p class="note">{T(c['cta_note'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></div>
