@@ -13,6 +13,16 @@ from pathlib import Path
 DOMAIN = "deadlock-assist.com"
 BASE = f"https://{DOMAIN}/"
 DOWNLOAD = "https://github.com/adam2s/deadlock-assist-releases/releases/latest"
+# Download buttons point at the release page; this swaps them for the latest
+# installer itself (the file name has the version in it, so it is looked up),
+# which GitHub serves as a download. Without the API the release page stays.
+DOWNLOAD_JS = (
+    '<script>(function(){var a=document.querySelectorAll("a[data-dl]");if(!a.length||!window.fetch)return;'
+    'fetch("https://api.github.com/repos/adam2s/deadlock-assist-releases/releases/latest")'
+    '.then(function(r){return r.ok?r.json():null}).then(function(j){var f=j&&(j.assets||[]).filter(function(x){'
+    'return /x64-setup\\.exe$/.test(x.name)})[0];if(f)for(var i=0;i<a.length;i++)a[i].href=f.browser_download_url})'
+    '.catch(function(){})})()</script>'
+)
 REPO = "https://github.com/adam2s/deadlock-assist-releases"
 KOFI = "https://ko-fi.com/deadlockassist"
 IDEA = REPO + "/issues/new?template=pomysl.yml"
@@ -469,7 +479,7 @@ def download_btn(t, label, cls="btn"):
     """Download link to the latest release."""
     ico = icon("windows") if cls == "btn" else ""
     text = f"<span>{label}</span>" if ico else label
-    return f'<a class="{cls}" href="{DOWNLOAD}" rel="noopener">{ico}{text}</a>'
+    return f'<a class="{cls}" href="{DOWNLOAD}" rel="noopener" data-dl>{ico}{text}</a>'
 
 
 def head(t, url, title, desc, pl_url, en_url, prefix, extra=""):
@@ -522,6 +532,7 @@ def foot(t, T, switch_href):
   <nav aria-label="links">{links}</nav>
   <p>{T(t['footer'])}</p>
 </footer>
+{DOWNLOAD_JS}
 </body>
 </html>
 """
