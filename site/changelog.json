@@ -1,5 +1,15 @@
 [
  {
+  "version": "1.3.2",
+  "date": "2026-11-05",
+  "pl": [
+   "„Co teraz” widzi walki wrogów: czerwony pasek życia przy portrecie wroga u góry ekranu znaczy, że ten wróg walczy. Po 10:00, gdy walczy 3 lub więcej wrogów, podpowiada „pchaj inną linię” i nie ostrzega przed dżunglą; gdy nikt nie walczy, a 4 wrogów nie widać na mapie, ostrzega przed wejściem w dżunglę w pojedynkę."
+  ],
+  "en": [
+   "“What now” sees enemy fights: a red health bar next to an enemy's portrait at the top of the screen means that enemy is fighting. After 10:00, with 3 or more enemies fighting it says “push another lane” and drops the jungle warning; with no fights and 4 enemies off the map it warns against jungling alone."
+  ]
+ },
+ {
   "version": "1.3.1",
   "date": "2026-11-05",
   "pl": [
