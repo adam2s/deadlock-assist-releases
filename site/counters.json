@@ -7,89 +7,89 @@
    "name": "Abrams",
    "slug": "abrams",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bull_sm.webp",
-   "matches": 4874801,
+   "matches": 4890820,
    "items": [
     {
      "id": 3140772621,
-     "points": 0.69,
-     "matches": 9102
+     "points": 0.68,
+     "matches": 9147
     },
     {
      "id": 677738769,
-     "points": 0.69,
-     "matches": 15917
-    },
-    {
-     "id": 2947183272,
-     "points": 0.62,
-     "matches": 44753
+     "points": 0.68,
+     "matches": 15971
     },
     {
      "id": 673001892,
-     "points": 0.6,
-     "matches": 4548
+     "points": 0.63,
+     "matches": 4562
+    },
+    {
+     "id": 2947183272,
+     "points": 0.61,
+     "matches": 44820
     },
     {
      "id": 395944548,
-     "points": 0.56,
-     "matches": 42433
+     "points": 0.55,
+     "matches": 42569
     },
     {
      "id": 1439347412,
      "points": 0.53,
-     "matches": 45802
+     "matches": 45878
     },
     {
      "id": 2108215830,
      "points": 0.49,
-     "matches": 9010
+     "matches": 9029
     },
     {
      "id": 915014646,
      "points": 0.49,
-     "matches": 34231
+     "matches": 34354
     }
    ],
    "build": [
     {
      "id": 1342610602,
-     "share": 0.864,
+     "share": 0.865,
      "min": 4.2
     },
     {
      "id": 26002154,
-     "share": 0.938,
+     "share": 0.939,
      "min": 8.0
     },
     {
      "id": 98582110,
-     "share": 0.759,
+     "share": 0.76,
      "min": 8.5
     },
     {
      "id": 2971868509,
-     "share": 0.695,
+     "share": 0.696,
      "min": 12.4
     },
     {
+     "id": 3270001687,
+     "share": 0.496,
+     "min": 16.8
+    },
+    {
      "id": 2481177645,
-     "share": 0.739,
+     "share": 0.74,
      "min": 17.4
     },
     {
      "id": 1252627263,
-     "share": 0.59,
+     "share": 0.591,
      "min": 19.5
     },
     {
      "id": 2717651715,
-     "share": 0.568,
+     "share": 0.569,
      "min": 23.9
-    },
-    {
-     "id": 1371725689,
-     "share": 0.495,
-     "min": 25.6
     }
    ]
   },
@@ -98,47 +98,47 @@
    "name": "Apollo",
    "slug": "apollo",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/fencer_sm.webp",
-   "matches": 2616876,
+   "matches": 2627541,
    "items": [
     {
      "id": 4204808176,
-     "points": 1.03,
-     "matches": 6403
+     "points": 1.06,
+     "matches": 6428
     },
     {
      "id": 1102081447,
-     "points": 0.79,
-     "matches": 4427
+     "points": 0.8,
+     "matches": 4445
     },
     {
-     "id": 1047818222,
+     "id": 865846625,
      "points": 0.69,
-     "matches": 17391
-    },
-    {
-     "id": 1396247347,
-     "points": 0.68,
-     "matches": 5670
+     "matches": 3637
     },
     {
      "id": 3270001687,
      "points": 0.67,
-     "matches": 14064
+     "matches": 14130
     },
     {
-     "id": 865846625,
-     "points": 0.64,
-     "matches": 3620
+     "id": 1047818222,
+     "points": 0.67,
+     "matches": 17464
     },
     {
-     "id": 673001892,
-     "points": 0.56,
-     "matches": 2074
+     "id": 1396247347,
+     "points": 0.65,
+     "matches": 5691
     },
     {
-     "id": 1770441818,
-     "points": 0.56,
-     "matches": 7876
+     "id": 805079544,
+     "points": 0.55,
+     "matches": 5648
+    },
+    {
+     "id": 2417568017,
+     "points": 0.55,
+     "matches": 4053
     }
    ],
    "build": [
@@ -149,12 +149,12 @@
     },
     {
      "id": 26002154,
-     "share": 0.545,
+     "share": 0.547,
      "min": 11.7
     },
     {
      "id": 2566692615,
-     "share": 0.657,
+     "share": 0.658,
      "min": 13.0
     },
     {
@@ -164,22 +164,22 @@
     },
     {
      "id": 3190916303,
-     "share": 0.672,
+     "share": 0.674,
      "min": 15.2
     },
     {
      "id": 2121044373,
-     "share": 0.716,
+     "share": 0.717,
      "min": 22.9
     },
     {
      "id": 2519598785,
-     "share": 0.69,
+     "share": 0.691,
      "min": 24.0
     },
     {
      "id": 3261353684,
-     "share": 0.493,
+     "share": 0.494,
      "min": 25.8
     }
    ]
@@ -189,47 +189,47 @@
    "name": "Baba",
    "slug": "baba",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/baba_sm.webp",
-   "matches": 2879951,
+   "matches": 2883882,
    "items": [
     {
      "id": 2152872419,
-     "points": 1.03,
-     "matches": 13285
+     "points": 1.02,
+     "matches": 13299
     },
     {
      "id": 3331811235,
      "points": 1.02,
-     "matches": 12471
+     "matches": 12483
     },
     {
      "id": 3294954488,
      "points": 0.89,
-     "matches": 8640
+     "matches": 8645
     },
     {
      "id": 1804594021,
      "points": 0.88,
-     "matches": 3055
+     "matches": 3057
     },
     {
      "id": 1548066885,
      "points": 0.85,
-     "matches": 33544
+     "matches": 33578
     },
     {
      "id": 3403085434,
      "points": 0.82,
-     "matches": 19946
+     "matches": 19973
     },
     {
      "id": 2221211450,
      "points": 0.79,
-     "matches": 4814
+     "matches": 4816
     },
     {
      "id": 2061878743,
-     "points": 0.78,
-     "matches": 4257
+     "points": 0.77,
+     "matches": 4265
     }
    ],
    "build": [
@@ -255,7 +255,7 @@
     },
     {
      "id": 395944548,
-     "share": 0.924,
+     "share": 0.925,
      "min": 15.1
     },
     {
@@ -280,53 +280,53 @@
    "name": "Bebop",
    "slug": "bebop",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bebop_sm.webp",
-   "matches": 7085788,
+   "matches": 7107265,
    "items": [
     {
      "id": 630839635,
-     "points": 0.8,
-     "matches": 6931
-    },
-    {
-     "id": 1378931225,
-     "points": 0.73,
-     "matches": 16360
+     "points": 0.77,
+     "matches": 6959
     },
     {
      "id": 465043967,
      "points": 0.72,
-     "matches": 56504
+     "matches": 56693
+    },
+    {
+     "id": 1378931225,
+     "points": 0.7,
+     "matches": 16416
     },
     {
      "id": 1047818222,
-     "points": 0.59,
-     "matches": 45859
+     "points": 0.61,
+     "matches": 46003
     },
     {
      "id": 3884003354,
-     "points": 0.57,
-     "matches": 12646
-    },
-    {
-     "id": 3140772621,
-     "points": 0.56,
-     "matches": 10639
+     "points": 0.59,
+     "matches": 12683
     },
     {
      "id": 2617435668,
      "points": 0.56,
-     "matches": 14409
+     "matches": 14476
+    },
+    {
+     "id": 3140772621,
+     "points": 0.55,
+     "matches": 10681
     },
     {
      "id": 3144988365,
-     "points": 0.47,
-     "matches": 7482
+     "points": 0.48,
+     "matches": 7508
     }
    ],
    "build": [
     {
      "id": 3074274290,
-     "share": 0.48,
+     "share": 0.481,
      "min": 6.8
     },
     {
@@ -341,12 +341,12 @@
     },
     {
      "id": 1813726886,
-     "share": 0.388,
+     "share": 0.389,
      "min": 12.6
     },
     {
      "id": 2447176615,
-     "share": 0.569,
+     "share": 0.57,
      "min": 15.1
     },
     {
@@ -356,12 +356,12 @@
     },
     {
      "id": 3190916303,
-     "share": 0.742,
+     "share": 0.743,
      "min": 18.3
     },
     {
      "id": 2163598980,
-     "share": 0.414,
+     "share": 0.415,
      "min": 24.7
     }
    ]
@@ -371,47 +371,47 @@
    "name": "Billy",
    "slug": "billy",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/punkgoat_sm.webp",
-   "matches": 3253227,
+   "matches": 3266007,
    "items": [
     {
      "id": 1932939246,
-     "points": 0.91,
-     "matches": 3388
+     "points": 0.93,
+     "matches": 3397
     },
     {
      "id": 2059712766,
-     "points": 0.86,
-     "matches": 5048
+     "points": 0.85,
+     "matches": 5058
     },
     {
      "id": 4204808176,
      "points": 0.84,
-     "matches": 13466
-    },
-    {
-     "id": 3144988365,
-     "points": 0.7,
-     "matches": 3874
+     "matches": 13519
     },
     {
      "id": 805079544,
-     "points": 0.7,
-     "matches": 7973
+     "points": 0.73,
+     "matches": 8010
+    },
+    {
+     "id": 3144988365,
+     "points": 0.71,
+     "matches": 3895
     },
     {
      "id": 2947183272,
-     "points": 0.62,
-     "matches": 29025
+     "points": 0.64,
+     "matches": 29078
     },
     {
      "id": 2533252781,
-     "points": 0.62,
-     "matches": 5112
+     "points": 0.61,
+     "matches": 5137
     },
     {
      "id": 951866250,
-     "points": 0.51,
-     "matches": 12466
+     "points": 0.53,
+     "matches": 12517
     }
    ],
    "build": [
@@ -422,12 +422,12 @@
     },
     {
      "id": 709540378,
-     "share": 0.526,
+     "share": 0.527,
      "min": 10.3
     },
     {
      "id": 1252627263,
-     "share": 0.831,
+     "share": 0.832,
      "min": 15.6
     },
     {
@@ -437,22 +437,22 @@
     },
     {
      "id": 3190916303,
-     "share": 0.923,
+     "share": 0.925,
      "min": 17.4
     },
     {
      "id": 787198704,
-     "share": 0.547,
+     "share": 0.548,
      "min": 23.8
     },
     {
      "id": 2163598980,
-     "share": 0.571,
+     "share": 0.572,
      "min": 23.9
     },
     {
      "id": 800008313,
-     "share": 0.526,
+     "share": 0.527,
      "min": 27.4
     }
    ]
@@ -462,47 +462,47 @@
    "name": "Calico",
    "slug": "calico",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/nano_sm.webp",
-   "matches": 2857694,
+   "matches": 2865751,
    "items": [
-    {
-     "id": 690458959,
-     "points": 0.82,
-     "matches": 12465
-    },
     {
      "id": 805079544,
      "points": 0.82,
-     "matches": 6343
+     "matches": 6357
+    },
+    {
+     "id": 690458959,
+     "points": 0.8,
+     "matches": 12500
     },
     {
      "id": 98582110,
-     "points": 0.64,
-     "matches": 21006
+     "points": 0.61,
+     "matches": 21074
     },
     {
      "id": 2152872419,
-     "points": 0.6,
-     "matches": 13756
+     "points": 0.59,
+     "matches": 13803
     },
     {
      "id": 393974127,
-     "points": 0.56,
-     "matches": 6005
-    },
-    {
-     "id": 2059712766,
      "points": 0.55,
-     "matches": 4722
-    },
-    {
-     "id": 2095565695,
-     "points": 0.54,
-     "matches": 9616
+     "matches": 6023
     },
     {
      "id": 865958998,
+     "points": 0.55,
+     "matches": 5439
+    },
+    {
+     "id": 2059712766,
      "points": 0.54,
-     "matches": 5422
+     "matches": 4734
+    },
+    {
+     "id": 1932939246,
+     "points": 0.53,
+     "matches": 2751
     }
    ],
    "build": [
@@ -513,37 +513,37 @@
     },
     {
      "id": 3074274290,
-     "share": 0.661,
+     "share": 0.662,
      "min": 8.2
     },
     {
      "id": 3190916303,
-     "share": 0.945,
+     "share": 0.946,
      "min": 13.0
     },
     {
      "id": 2481177645,
-     "share": 0.498,
+     "share": 0.499,
      "min": 16.9
     },
     {
      "id": 3731635960,
-     "share": 0.48,
+     "share": 0.481,
      "min": 20.7
     },
     {
      "id": 3812615317,
-     "share": 0.863,
+     "share": 0.864,
      "min": 21.8
     },
     {
      "id": 2081037738,
-     "share": 0.479,
+     "share": 0.48,
      "min": 23.4
     },
     {
      "id": 2519598785,
-     "share": 0.466,
+     "share": 0.467,
      "min": 28.6
     }
    ]
@@ -553,88 +553,88 @@
    "name": "Celeste",
    "slug": "celeste",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/unicorn_sm.webp",
-   "matches": 3178405,
+   "matches": 3186971,
    "items": [
     {
      "id": 2462046703,
-     "points": 0.71,
-     "matches": 3220
+     "points": 0.74,
+     "matches": 3225
     },
     {
      "id": 1219329868,
      "points": 0.68,
-     "matches": 3354
+     "matches": 3361
     },
     {
      "id": 989206714,
-     "points": 0.67,
-     "matches": 2395
+     "points": 0.66,
+     "matches": 2400
     },
     {
      "id": 2617435668,
-     "points": 0.61,
-     "matches": 7394
+     "points": 0.64,
+     "matches": 7417
     },
     {
      "id": 365620721,
-     "points": 0.58,
-     "matches": 3280
+     "points": 0.61,
+     "matches": 3296
     },
     {
      "id": 673001892,
      "points": 0.56,
-     "matches": 3167
-    },
-    {
-     "id": 1955841979,
-     "points": 0.53,
-     "matches": 6200
+     "matches": 3183
     },
     {
      "id": 2447176615,
      "points": 0.52,
-     "matches": 44223
+     "matches": 44348
+    },
+    {
+     "id": 1955841979,
+     "points": 0.51,
+     "matches": 6229
     }
    ],
    "build": [
     {
      "id": 2947183272,
-     "share": 0.788,
+     "share": 0.787,
      "min": 9.5
     },
     {
      "id": 2566692615,
-     "share": 0.728,
+     "share": 0.727,
      "min": 11.7
     },
     {
      "id": 112198670,
-     "share": 0.577,
+     "share": 0.578,
      "min": 12.7
     },
     {
      "id": 2603935618,
-     "share": 0.526,
+     "share": 0.527,
      "min": 14.2
     },
     {
      "id": 2064029594,
-     "share": 0.685,
+     "share": 0.686,
      "min": 14.7
     },
     {
      "id": 395944548,
-     "share": 0.899,
+     "share": 0.9,
      "min": 15.6
     },
     {
      "id": 1193964439,
-     "share": 0.839,
+     "share": 0.84,
      "min": 20.9
     },
     {
      "id": 3028234315,
-     "share": 0.567,
+     "share": 0.568,
      "min": 25.3
     }
    ]
@@ -644,47 +644,47 @@
    "name": "Deadman Danny",
    "slug": "deadman-danny",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_sm.webp",
-   "matches": 6737587,
+   "matches": 6748469,
    "items": [
     {
      "id": 1644605047,
-     "points": 0.91,
-     "matches": 56558
+     "points": 0.92,
+     "matches": 56663
     },
     {
      "id": 1219329868,
-     "points": 0.78,
-     "matches": 6420
+     "points": 0.8,
+     "matches": 6427
     },
     {
      "id": 709540378,
      "points": 0.69,
-     "matches": 45067
+     "matches": 45132
     },
     {
      "id": 951866250,
-     "points": 0.62,
-     "matches": 28677
+     "points": 0.63,
+     "matches": 28735
     },
     {
      "id": 2142980412,
-     "points": 0.57,
-     "matches": 3345
+     "points": 0.59,
+     "matches": 3352
     },
     {
      "id": 2221211450,
      "points": 0.56,
-     "matches": 12255
+     "matches": 12271
     },
     {
      "id": 3294954488,
-     "points": 0.53,
-     "matches": 22443
+     "points": 0.52,
+     "matches": 22465
     },
     {
      "id": 1378931225,
      "points": 0.51,
-     "matches": 14802
+     "matches": 14820
     }
    ],
    "build": [
@@ -710,7 +710,7 @@
     },
     {
      "id": 2121044373,
-     "share": 0.875,
+     "share": 0.876,
      "min": 19.5
     },
     {
@@ -720,7 +720,7 @@
     },
     {
      "id": 3261353684,
-     "share": 0.608,
+     "share": 0.609,
      "min": 24.7
     },
     {
@@ -735,53 +735,53 @@
    "name": "Drifter",
    "slug": "drifter",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/drifter_sm.webp",
-   "matches": 5993656,
+   "matches": 6014498,
    "items": [
     {
      "id": 1371725689,
-     "points": 0.79,
-     "matches": 8609
+     "points": 0.82,
+     "matches": 8650
     },
     {
      "id": 3294954488,
      "points": 0.72,
-     "matches": 16992
+     "matches": 17024
+    },
+    {
+     "id": 1152158042,
+     "points": 0.52,
+     "matches": 6547
     },
     {
      "id": 4053935515,
-     "points": 0.52,
-     "matches": 24733
+     "points": 0.51,
+     "matches": 24823
     },
     {
      "id": 1932939246,
      "points": 0.5,
-     "matches": 5817
-    },
-    {
-     "id": 1152158042,
-     "points": 0.49,
-     "matches": 6519
-    },
-    {
-     "id": 2010028405,
-     "points": 0.48,
-     "matches": 31291
+     "matches": 5834
     },
     {
      "id": 3270001687,
-     "points": 0.48,
-     "matches": 32134
+     "points": 0.47,
+     "matches": 32268
+    },
+    {
+     "id": 2010028405,
+     "points": 0.47,
+     "matches": 31396
     },
     {
      "id": 2820116164,
-     "points": 0.44,
-     "matches": 8990
+     "points": 0.43,
+     "matches": 9031
     }
    ],
    "build": [
     {
      "id": 98582110,
-     "share": 0.921,
+     "share": 0.922,
      "min": 5.5
     },
     {
@@ -791,27 +791,27 @@
     },
     {
      "id": 3190916303,
-     "share": 0.738,
+     "share": 0.739,
      "min": 13.2
     },
     {
      "id": 3585132399,
-     "share": 0.493,
+     "share": 0.494,
      "min": 16.7
     },
     {
      "id": 2481177645,
-     "share": 0.676,
+     "share": 0.677,
      "min": 19.8
     },
     {
      "id": 1252627263,
-     "share": 0.356,
+     "share": 0.357,
      "min": 19.9
     },
     {
      "id": 2121044373,
-     "share": 0.495,
+     "share": 0.496,
      "min": 21.4
     },
     {
@@ -826,78 +826,78 @@
    "name": "Dynamo",
    "slug": "dynamo",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/sumo_sm.webp",
-   "matches": 2971103,
+   "matches": 2981029,
    "items": [
     {
      "id": 2407033488,
-     "points": 0.78,
-     "matches": 4297
+     "points": 0.76,
+     "matches": 4317
     },
     {
      "id": 3005970438,
-     "points": 0.72,
-     "matches": 28291
+     "points": 0.71,
+     "matches": 28397
     },
     {
      "id": 800008313,
-     "points": 0.7,
-     "matches": 7194
+     "points": 0.68,
+     "matches": 7224
     },
     {
      "id": 3028234315,
-     "points": 0.66,
-     "matches": 9014
+     "points": 0.65,
+     "matches": 9044
     },
     {
      "id": 1797283378,
-     "points": 0.65,
-     "matches": 5943
+     "points": 0.63,
+     "matches": 5965
     },
     {
      "id": 3140772621,
-     "points": 0.61,
-     "matches": 4674
+     "points": 0.59,
+     "matches": 4692
     },
     {
      "id": 2059712766,
-     "points": 0.54,
-     "matches": 4990
+     "points": 0.51,
+     "matches": 5014
     },
     {
      "id": 3190916303,
      "points": 0.5,
-     "matches": 26879
+     "matches": 26992
     }
    ],
    "build": [
     {
      "id": 3074274290,
-     "share": 0.553,
+     "share": 0.554,
      "min": 7.6
     },
     {
      "id": 1150006784,
-     "share": 0.495,
+     "share": 0.496,
      "min": 9.9
     },
     {
      "id": 787198704,
-     "share": 0.551,
+     "share": 0.552,
      "min": 16.2
     },
     {
      "id": 3270001687,
-     "share": 0.635,
+     "share": 0.636,
      "min": 18.4
     },
     {
      "id": 3261353684,
-     "share": 0.647,
+     "share": 0.649,
      "min": 23.2
     },
     {
      "id": 2717651715,
-     "share": 0.544,
+     "share": 0.545,
      "min": 24.7
     },
     {
@@ -917,78 +917,78 @@
    "name": "Graves",
    "slug": "graves",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/necro_sm.webp",
-   "matches": 4566708,
+   "matches": 4580238,
    "items": [
     {
      "id": 4075861416,
      "points": 0.87,
-     "matches": 7975
+     "matches": 8015
     },
     {
      "id": 3357231760,
-     "points": 0.8,
-     "matches": 26127
+     "points": 0.81,
+     "matches": 26209
     },
     {
      "id": 1378931225,
      "points": 0.79,
-     "matches": 9874
-    },
-    {
-     "id": 2922054143,
-     "points": 0.74,
-     "matches": 8027
+     "matches": 9901
     },
     {
      "id": 2820116164,
      "points": 0.73,
-     "matches": 7060
+     "matches": 7084
     },
     {
      "id": 3361075077,
      "points": 0.7,
-     "matches": 3928
+     "matches": 3939
+    },
+    {
+     "id": 2922054143,
+     "points": 0.69,
+     "matches": 8047
     },
     {
      "id": 677738769,
-     "points": 0.68,
-     "matches": 14530
+     "points": 0.67,
+     "matches": 14585
     },
     {
      "id": 673001892,
      "points": 0.63,
-     "matches": 4358
+     "matches": 4372
     }
    ],
    "build": [
     {
      "id": 3862866912,
-     "share": 0.942,
-     "min": 1.4
+     "share": 0.943,
+     "min": 1.3
     },
     {
      "id": 395867183,
-     "share": 0.527,
+     "share": 0.528,
      "min": 8.6
     },
     {
      "id": 7409189,
-     "share": 0.748,
+     "share": 0.749,
      "min": 14.5
     },
     {
      "id": 395944548,
-     "share": 0.561,
+     "share": 0.562,
      "min": 15.2
     },
     {
      "id": 334300056,
-     "share": 0.78,
+     "share": 0.781,
      "min": 19.0
     },
     {
      "id": 3696726732,
-     "share": 0.827,
+     "share": 0.828,
      "min": 19.9
     },
     {
@@ -998,7 +998,7 @@
     },
     {
      "id": 2163598980,
-     "share": 0.452,
+     "share": 0.453,
      "min": 24.1
     }
    ]
@@ -1008,47 +1008,47 @@
    "name": "Grey Talon",
    "slug": "grey-talon",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/archer_sm.webp",
-   "matches": 3172840,
+   "matches": 3182788,
    "items": [
     {
      "id": 805079544,
-     "points": 1.04,
-     "matches": 7193
+     "points": 1.02,
+     "matches": 7219
     },
     {
      "id": 710436191,
-     "points": 0.79,
-     "matches": 13482
+     "points": 0.78,
+     "matches": 13531
+    },
+    {
+     "id": 2095565695,
+     "points": 0.67,
+     "matches": 10514
     },
     {
      "id": 3585132399,
      "points": 0.65,
-     "matches": 36812
-    },
-    {
-     "id": 2095565695,
-     "points": 0.64,
-     "matches": 10464
+     "matches": 36911
     },
     {
      "id": 3577481646,
-     "points": 0.63,
-     "matches": 11787
+     "points": 0.62,
+     "matches": 11825
     },
     {
      "id": 1292979587,
-     "points": 0.56,
-     "matches": 20424
+     "points": 0.58,
+     "matches": 20492
     },
     {
-     "id": 2462046703,
-     "points": 0.55,
-     "matches": 3327
+     "id": 2152872419,
+     "points": 0.56,
+     "matches": 13418
     },
     {
      "id": 2678489038,
-     "points": 0.55,
-     "matches": 7587
+     "points": 0.56,
+     "matches": 7615
     }
    ],
    "build": [
@@ -1064,12 +1064,12 @@
     },
     {
      "id": 787198704,
-     "share": 0.92,
+     "share": 0.921,
      "min": 18.0
     },
     {
      "id": 2121044373,
-     "share": 0.922,
+     "share": 0.923,
      "min": 18.5
     },
     {
@@ -1084,7 +1084,7 @@
     },
     {
      "id": 2519598785,
-     "share": 0.754,
+     "share": 0.755,
      "min": 25.2
     },
     {
@@ -1099,58 +1099,58 @@
    "name": "Haze",
    "slug": "haze",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/haze_sm.webp",
-   "matches": 8348999,
+   "matches": 8374036,
    "items": [
     {
      "id": 1378931225,
-     "points": 1.36,
-     "matches": 44968
+     "points": 1.37,
+     "matches": 45087
     },
     {
      "id": 1371725689,
-     "points": 1.11,
-     "matches": 13038
+     "points": 1.1,
+     "matches": 13073
     },
     {
      "id": 690458959,
      "points": 0.93,
-     "matches": 34969
+     "matches": 35055
     },
     {
      "id": 800008313,
      "points": 0.81,
-     "matches": 19551
-    },
-    {
-     "id": 381961617,
-     "points": 0.78,
-     "matches": 8171
+     "matches": 19641
     },
     {
      "id": 3812615317,
+     "points": 0.77,
+     "matches": 15750
+    },
+    {
+     "id": 381961617,
      "points": 0.76,
-     "matches": 15702
+     "matches": 8201
     },
     {
      "id": 2481177645,
      "points": 0.74,
-     "matches": 53407
+     "matches": 53588
     },
     {
      "id": 365620721,
-     "points": 0.66,
-     "matches": 8230
+     "points": 0.68,
+     "matches": 8255
     }
    ],
    "build": [
     {
      "id": 381961617,
-     "share": 0.816,
+     "share": 0.817,
      "min": 6.6
     },
     {
      "id": 4104549924,
-     "share": 0.96,
+     "share": 0.961,
      "min": 7.1
     },
     {
@@ -1160,7 +1160,7 @@
     },
     {
      "id": 1292979587,
-     "share": 0.689,
+     "share": 0.69,
      "min": 15.6
     },
     {
@@ -1175,12 +1175,12 @@
     },
     {
      "id": 2739107182,
-     "share": 0.843,
+     "share": 0.844,
      "min": 18.6
     },
     {
      "id": 2480592370,
-     "share": 0.673,
+     "share": 0.674,
      "min": 22.7
     }
    ]
@@ -1190,83 +1190,83 @@
    "name": "Holliday",
    "slug": "holliday",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/astro_sm.webp",
-   "matches": 3435354,
+   "matches": 3446980,
    "items": [
     {
      "id": 3491236900,
      "points": 0.84,
-     "matches": 14943
+     "matches": 15014
     },
     {
      "id": 4204808176,
-     "points": 0.78,
-     "matches": 6987
+     "points": 0.8,
+     "matches": 7009
     },
     {
      "id": 339443430,
-     "points": 0.7,
-     "matches": 2432
+     "points": 0.66,
+     "matches": 2447
     },
     {
      "id": 1955841979,
-     "points": 0.65,
-     "matches": 6650
+     "points": 0.63,
+     "matches": 6672
     },
     {
      "id": 1047818222,
      "points": 0.62,
-     "matches": 23533
+     "matches": 23619
     },
     {
      "id": 989206714,
-     "points": 0.53,
-     "matches": 2673
-    },
-    {
-     "id": 915014646,
-     "points": 0.51,
-     "matches": 24127
+     "points": 0.55,
+     "matches": 2682
     },
     {
      "id": 3361811174,
-     "points": 0.51,
-     "matches": 3836
+     "points": 0.52,
+     "matches": 3853
+    },
+    {
+     "id": 915014646,
+     "points": 0.52,
+     "matches": 24210
     }
    ],
    "build": [
     {
      "id": 3074274290,
-     "share": 0.394,
+     "share": 0.395,
      "min": 9.1
     },
     {
      "id": 787198704,
-     "share": 0.983,
+     "share": 0.984,
      "min": 10.5
     },
     {
      "id": 1763073141,
-     "share": 0.836,
+     "share": 0.837,
      "min": 13.0
     },
     {
      "id": 334300056,
-     "share": 0.867,
+     "share": 0.868,
      "min": 19.4
     },
     {
      "id": 2121044373,
-     "share": 0.703,
+     "share": 0.704,
      "min": 22.8
     },
     {
      "id": 2717651715,
-     "share": 0.6,
+     "share": 0.601,
      "min": 25.0
     },
     {
      "id": 3261353684,
-     "share": 0.377,
+     "share": 0.378,
      "min": 27.0
     },
     {
@@ -1281,53 +1281,53 @@
    "name": "Infernus",
    "slug": "infernus",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/inferno_sm.webp",
-   "matches": 5379066,
+   "matches": 5397245,
    "items": [
     {
      "id": 2226497419,
-     "points": 0.73,
-     "matches": 21635
+     "points": 0.74,
+     "matches": 21708
     },
     {
      "id": 630839635,
-     "points": 0.73,
-     "matches": 7516
+     "points": 0.74,
+     "matches": 7538
     },
     {
      "id": 1252627263,
      "points": 0.64,
-     "matches": 28374
+     "matches": 28478
     },
     {
      "id": 3696726732,
      "points": 0.61,
-     "matches": 34760
+     "matches": 34887
     },
     {
      "id": 2481177645,
-     "points": 0.59,
-     "matches": 33679
+     "points": 0.58,
+     "matches": 33833
     },
     {
      "id": 1437614329,
-     "points": 0.59,
-     "matches": 43369
+     "points": 0.58,
+     "matches": 43537
+    },
+    {
+     "id": 3361811174,
+     "points": 0.56,
+     "matches": 6299
     },
     {
      "id": 3140772621,
-     "points": 0.53,
-     "matches": 7251
-    },
-    {
-     "id": 26002154,
-     "points": 0.53,
-     "matches": 24970
+     "points": 0.54,
+     "matches": 7278
     }
    ],
    "build": [
     {
      "id": 7409189,
-     "share": 0.953,
+     "share": 0.954,
      "min": 6.0
     },
     {
@@ -1337,27 +1337,27 @@
     },
     {
      "id": 2603935618,
-     "share": 0.657,
+     "share": 0.658,
      "min": 10.8
     },
     {
      "id": 2356412290,
-     "share": 0.838,
+     "share": 0.839,
      "min": 11.5
     },
     {
      "id": 3696726732,
-     "share": 0.793,
+     "share": 0.794,
      "min": 18.3
     },
     {
      "id": 2717651715,
-     "share": 0.79,
+     "share": 0.791,
      "min": 21.3
     },
     {
      "id": 3005970438,
-     "share": 0.677,
+     "share": 0.678,
      "min": 25.7
     },
     {
@@ -1372,47 +1372,47 @@
    "name": "Ivy",
    "slug": "ivy",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/tengu_sm.webp",
-   "matches": 3797475,
+   "matches": 3811714,
    "items": [
     {
      "id": 690458959,
-     "points": 0.86,
-     "matches": 15638
+     "points": 0.82,
+     "matches": 15691
     },
     {
      "id": 365620721,
-     "points": 0.8,
-     "matches": 3737
-    },
-    {
-     "id": 1770441818,
-     "points": 0.77,
-     "matches": 11470
+     "points": 0.81,
+     "matches": 3750
     },
     {
      "id": 673001892,
-     "points": 0.75,
-     "matches": 3465
+     "points": 0.8,
+     "matches": 3484
+    },
+    {
+     "id": 1770441818,
+     "points": 0.78,
+     "matches": 11520
     },
     {
      "id": 1235347618,
-     "points": 0.74,
-     "matches": 29030
-    },
-    {
-     "id": 3884003354,
-     "points": 0.65,
-     "matches": 7371
+     "points": 0.73,
+     "matches": 29181
     },
     {
      "id": 1955841979,
-     "points": 0.64,
-     "matches": 7179
+     "points": 0.7,
+     "matches": 7223
+    },
+    {
+     "id": 3884003354,
+     "points": 0.66,
+     "matches": 7399
     },
     {
      "id": 4204808176,
-     "points": 0.63,
-     "matches": 7917
+     "points": 0.61,
+     "matches": 7953
     }
    ],
    "build": [
@@ -1423,22 +1423,22 @@
     },
     {
      "id": 2356412290,
-     "share": 0.772,
+     "share": 0.773,
      "min": 6.2
     },
     {
      "id": 381961617,
-     "share": 0.42,
+     "share": 0.421,
      "min": 13.9
     },
     {
      "id": 2603935618,
-     "share": 0.462,
+     "share": 0.463,
      "min": 15.5
     },
     {
      "id": 710436191,
-     "share": 0.556,
+     "share": 0.557,
      "min": 16.7
     },
     {
@@ -1448,13 +1448,13 @@
     },
     {
      "id": 787198704,
-     "share": 0.297,
+     "share": 0.298,
      "min": 22.4
     },
     {
      "id": 1193964439,
      "share": 0.395,
-     "min": 24.9
+     "min": 25.0
     }
    ]
   },
@@ -1463,53 +1463,53 @@
    "name": "Kelvin",
    "slug": "kelvin",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kelvin_sm.webp",
-   "matches": 2847355,
+   "matches": 2858854,
    "items": [
     {
      "id": 2037039379,
-     "points": 0.9,
-     "matches": 5519
+     "points": 0.95,
+     "matches": 5550
     },
     {
      "id": 673001892,
-     "points": 0.76,
-     "matches": 2428
+     "points": 0.73,
+     "matches": 2442
     },
     {
      "id": 2971868509,
-     "points": 0.68,
-     "matches": 23772
+     "points": 0.71,
+     "matches": 23873
     },
     {
      "id": 1396247347,
-     "points": 0.66,
-     "matches": 6058
+     "points": 0.64,
+     "matches": 6085
     },
     {
      "id": 1292979587,
-     "points": 0.62,
-     "matches": 18085
+     "points": 0.63,
+     "matches": 18165
     },
     {
      "id": 3357231760,
-     "points": 0.61,
-     "matches": 14245
+     "points": 0.6,
+     "matches": 14306
     },
     {
      "id": 1439347412,
-     "points": 0.54,
-     "matches": 25601
+     "points": 0.5,
+     "matches": 25647
     },
     {
      "id": 2108215830,
-     "points": 0.52,
-     "matches": 5112
+     "points": 0.5,
+     "matches": 5128
     }
    ],
    "build": [
     {
      "id": 3074274290,
-     "share": 0.572,
+     "share": 0.574,
      "min": 8.2
     },
     {
@@ -1519,32 +1519,32 @@
     },
     {
      "id": 2603935618,
-     "share": 0.644,
+     "share": 0.646,
      "min": 13.6
     },
     {
      "id": 787198704,
-     "share": 0.697,
+     "share": 0.699,
      "min": 18.4
     },
     {
      "id": 3261353684,
-     "share": 0.661,
+     "share": 0.662,
      "min": 23.0
     },
     {
      "id": 3005970438,
-     "share": 0.627,
+     "share": 0.628,
      "min": 24.9
     },
     {
      "id": 1193964439,
-     "share": 0.519,
+     "share": 0.52,
      "min": 26.6
     },
     {
      "id": 2519598785,
-     "share": 0.604,
+     "share": 0.605,
      "min": 26.6
     }
    ]
@@ -1554,47 +1554,47 @@
    "name": "Lady Geist",
    "slug": "lady-geist",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/spectre_sm.webp",
-   "matches": 2483521,
+   "matches": 2491675,
    "items": [
     {
      "id": 2221211450,
-     "points": 0.78,
-     "matches": 3941
+     "points": 0.76,
+     "matches": 3952
     },
     {
      "id": 2108215830,
-     "points": 0.71,
-     "matches": 4266
+     "points": 0.72,
+     "matches": 4273
     },
     {
      "id": 2037039379,
-     "points": 0.66,
-     "matches": 5334
+     "points": 0.67,
+     "matches": 5349
     },
     {
      "id": 2533252781,
-     "points": 0.65,
-     "matches": 3863
-    },
-    {
-     "id": 2481177645,
-     "points": 0.51,
-     "matches": 15826
-    },
-    {
-     "id": 3977876567,
-     "points": 0.49,
-     "matches": 9421
+     "points": 0.64,
+     "matches": 3875
     },
     {
      "id": 630839635,
-     "points": 0.48,
-     "matches": 3371
+     "points": 0.51,
+     "matches": 3381
     },
     {
-     "id": 1414319208,
-     "points": 0.47,
-     "matches": 14022
+     "id": 3977876567,
+     "points": 0.5,
+     "matches": 9446
+    },
+    {
+     "id": 2481177645,
+     "points": 0.49,
+     "matches": 15887
+    },
+    {
+     "id": 1102081447,
+     "points": 0.48,
+     "matches": 4451
     }
    ],
    "build": [
@@ -1620,12 +1620,12 @@
     },
     {
      "id": 7409189,
-     "share": 0.447,
+     "share": 0.448,
      "min": 16.9
     },
     {
      "id": 2121044373,
-     "share": 0.509,
+     "share": 0.51,
      "min": 17.6
     },
     {
@@ -1635,7 +1635,7 @@
     },
     {
      "id": 2163598980,
-     "share": 0.648,
+     "share": 0.647,
      "min": 20.4
     }
    ]
@@ -1645,47 +1645,47 @@
    "name": "Lash",
    "slug": "lash",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/lash_sm.webp",
-   "matches": 6416053,
+   "matches": 6436845,
    "items": [
     {
      "id": 677738769,
      "points": 2.63,
-     "matches": 15019
+     "matches": 15066
     },
     {
      "id": 951866250,
-     "points": 0.85,
-     "matches": 30292
+     "points": 0.83,
+     "matches": 30400
     },
     {
      "id": 2820116164,
-     "points": 0.53,
-     "matches": 9797
+     "points": 0.52,
+     "matches": 9830
+    },
+    {
+     "id": 4075861416,
+     "points": 0.52,
+     "matches": 10963
     },
     {
      "id": 1047818222,
      "points": 0.51,
-     "matches": 42110
+     "matches": 42237
     },
     {
      "id": 1644605047,
-     "points": 0.5,
-     "matches": 58964
-    },
-    {
-     "id": 4075861416,
      "points": 0.49,
-     "matches": 10912
+     "matches": 59147
     },
     {
-     "id": 2037039379,
+     "id": 805079544,
      "points": 0.47,
-     "matches": 12124
+     "matches": 14140
     },
     {
-     "id": 2533252781,
+     "id": 2462046703,
      "points": 0.47,
-     "matches": 10582
+     "matches": 6675
     }
    ],
    "build": [
@@ -1696,12 +1696,12 @@
     },
     {
      "id": 3776945997,
-     "share": 0.968,
+     "share": 0.969,
      "min": 8.1
     },
     {
      "id": 4053935515,
-     "share": 0.614,
+     "share": 0.615,
      "min": 15.5
     },
     {
@@ -1711,17 +1711,17 @@
     },
     {
      "id": 2121044373,
-     "share": 0.927,
+     "share": 0.928,
      "min": 19.2
     },
     {
      "id": 3261353684,
-     "share": 0.497,
+     "share": 0.498,
      "min": 24.9
     },
     {
      "id": 1193964439,
-     "share": 0.623,
+     "share": 0.624,
      "min": 25.2
     },
     {
@@ -1736,53 +1736,53 @@
    "name": "McGinnis",
    "slug": "mcginnis",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/engineer_sm.webp",
-   "matches": 1449988,
+   "matches": 1457374,
    "items": [
     {
      "id": 709540378,
-     "points": 0.75,
-     "matches": 8701
+     "points": 0.74,
+     "matches": 8751
     },
     {
      "id": 3647584222,
      "points": 0.68,
-     "matches": 2007
+     "matches": 2016
     },
     {
      "id": 3791587546,
-     "points": 0.66,
-     "matches": 3758
+     "points": 0.65,
+     "matches": 3772
     },
     {
      "id": 1427630806,
      "points": 0.64,
-     "matches": 4269
+     "matches": 4286
     },
     {
      "id": 2059712766,
-     "points": 0.6,
-     "matches": 2102
+     "points": 0.61,
+     "matches": 2108
     },
     {
      "id": 2064029594,
-     "points": 0.58,
-     "matches": 16048
+     "points": 0.6,
+     "matches": 16130
     },
     {
      "id": 4204808176,
-     "points": 0.54,
-     "matches": 2708
+     "points": 0.55,
+     "matches": 2720
     },
     {
      "id": 3294954488,
-     "points": 0.52,
-     "matches": 3611
+     "points": 0.51,
+     "matches": 3623
     }
    ],
    "build": [
     {
      "id": 2407033488,
-     "share": 0.476,
+     "share": 0.477,
      "min": 4.9
     },
     {
@@ -1792,32 +1792,32 @@
     },
     {
      "id": 2603935618,
-     "share": 0.54,
-     "min": 15.3
+     "share": 0.541,
+     "min": 15.2
     },
     {
      "id": 2108215830,
-     "share": 0.497,
+     "share": 0.498,
      "min": 17.2
     },
     {
      "id": 787198704,
-     "share": 0.583,
+     "share": 0.584,
      "min": 20.8
     },
     {
      "id": 3005970438,
-     "share": 0.644,
+     "share": 0.645,
      "min": 24.1
     },
     {
      "id": 3261353684,
-     "share": 0.482,
+     "share": 0.483,
      "min": 25.4
     },
     {
      "id": 1193964439,
-     "share": 0.475,
+     "share": 0.476,
      "min": 26.5
     }
    ]
@@ -1827,78 +1827,78 @@
    "name": "Mina",
    "slug": "mina",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/vampirebat_sm.webp",
-   "matches": 4631501,
+   "matches": 4647381,
    "items": [
     {
      "id": 3812615317,
-     "points": 0.99,
-     "matches": 9266
+     "points": 0.98,
+     "matches": 9299
     },
     {
      "id": 1371725689,
-     "points": 0.98,
-     "matches": 8247
+     "points": 0.97,
+     "matches": 8276
     },
     {
      "id": 493591231,
-     "points": 0.92,
-     "matches": 4483
+     "points": 0.91,
+     "matches": 4496
     },
     {
      "id": 2519598785,
-     "points": 0.81,
-     "matches": 71174
+     "points": 0.8,
+     "matches": 71448
     },
     {
      "id": 3919289022,
-     "points": 0.71,
-     "matches": 17770
+     "points": 0.69,
+     "matches": 17845
     },
     {
      "id": 334300056,
      "points": 0.69,
-     "matches": 43292
+     "matches": 43434
     },
     {
      "id": 84321454,
      "points": 0.68,
-     "matches": 43290
+     "matches": 43455
     },
     {
      "id": 1797283378,
      "points": 0.59,
-     "matches": 8865
+     "matches": 8895
     }
    ],
    "build": [
     {
      "id": 84321454,
-     "share": 0.989,
+     "share": 0.99,
      "min": 6.4
     },
     {
      "id": 3731635960,
-     "share": 0.855,
+     "share": 0.856,
      "min": 15.1
     },
     {
      "id": 334300056,
-     "share": 0.962,
+     "share": 0.963,
      "min": 15.9
     },
     {
      "id": 4104549924,
-     "share": 0.455,
+     "share": 0.456,
      "min": 17.7
     },
     {
      "id": 2121044373,
-     "share": 0.966,
+     "share": 0.967,
      "min": 17.7
     },
     {
      "id": 2519598785,
-     "share": 0.853,
+     "share": 0.854,
      "min": 23.2
     },
     {
@@ -1908,7 +1908,7 @@
     },
     {
      "id": 343572757,
-     "share": 0.7,
+     "share": 0.701,
      "min": 27.1
     }
    ]
@@ -1918,83 +1918,83 @@
    "name": "Mirage",
    "slug": "mirage",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/mirage_sm.webp",
-   "matches": 1360053,
+   "matches": 1364514,
    "items": [
     {
      "id": 395867183,
-     "points": 0.74,
-     "matches": 8191
+     "points": 0.71,
+     "matches": 8206
     },
     {
      "id": 2480592370,
-     "points": 0.66,
-     "matches": 9918
+     "points": 0.67,
+     "matches": 9943
     },
     {
      "id": 1437614329,
      "points": 0.6,
-     "matches": 11095
+     "matches": 11136
     },
     {
      "id": 1925087134,
-     "points": 0.56,
-     "matches": 3277
+     "points": 0.59,
+     "matches": 3295
     },
     {
      "id": 710436191,
      "points": 0.54,
-     "matches": 5862
+     "matches": 5881
     },
     {
-     "id": 1763073141,
+     "id": 3696726732,
      "points": 0.53,
-     "matches": 7077
+     "matches": 10244
     },
     {
      "id": 2417568017,
      "points": 0.52,
-     "matches": 2216
+     "matches": 2222
     },
     {
-     "id": 3696726732,
+     "id": 1976391348,
      "points": 0.51,
-     "matches": 10202
+     "matches": 6260
     }
    ],
    "build": [
     {
      "id": 1439347412,
-     "share": 0.917,
+     "share": 0.918,
      "min": 1.9
     },
     {
      "id": 2603935618,
-     "share": 0.857,
+     "share": 0.858,
      "min": 9.2
     },
     {
      "id": 3731635960,
-     "share": 0.627,
+     "share": 0.629,
      "min": 17.8
     },
     {
      "id": 2356412290,
-     "share": 0.587,
+     "share": 0.588,
      "min": 18.2
     },
     {
      "id": 3696726732,
-     "share": 0.913,
+     "share": 0.915,
      "min": 18.8
     },
     {
      "id": 2480592370,
-     "share": 0.839,
+     "share": 0.841,
      "min": 23.8
     },
     {
      "id": 3261353684,
-     "share": 0.608,
+     "share": 0.61,
      "min": 25.2
     },
     {
@@ -2009,58 +2009,58 @@
    "name": "Mo & Krill",
    "slug": "mo-and-krill",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/digger_sm.webp",
-   "matches": 4044972,
+   "matches": 4055030,
    "items": [
     {
      "id": 2221211450,
      "points": 0.87,
-     "matches": 6911
+     "matches": 6925
     },
     {
      "id": 1102081447,
-     "points": 0.81,
-     "matches": 7013
+     "points": 0.82,
+     "matches": 7027
     },
     {
      "id": 2956256701,
      "points": 0.8,
-     "matches": 2374
+     "matches": 2379
     },
     {
      "id": 1414025773,
-     "points": 0.75,
-     "matches": 16623
+     "points": 0.74,
+     "matches": 16673
     },
     {
      "id": 1055679805,
-     "points": 0.6,
-     "matches": 8671
+     "points": 0.62,
+     "matches": 8694
     },
     {
      "id": 1144549437,
      "points": 0.6,
-     "matches": 9339
-    },
-    {
-     "id": 1371725689,
-     "points": 0.56,
-     "matches": 6928
+     "matches": 9360
     },
     {
      "id": 3144988365,
+     "points": 0.55,
+     "matches": 4962
+    },
+    {
+     "id": 2095565695,
      "points": 0.54,
-     "matches": 4950
+     "matches": 12888
     }
    ],
    "build": [
     {
      "id": 84321454,
-     "share": 0.76,
+     "share": 0.761,
      "min": 5.0
     },
     {
      "id": 3074274290,
-     "share": 0.732,
+     "share": 0.733,
      "min": 7.9
     },
     {
@@ -2070,12 +2070,12 @@
     },
     {
      "id": 395944548,
-     "share": 0.931,
+     "share": 0.932,
      "min": 13.0
     },
     {
      "id": 2603935618,
-     "share": 0.625,
+     "share": 0.626,
      "min": 13.9
     },
     {
@@ -2100,47 +2100,47 @@
    "name": "Nurse Harrow",
    "slug": "nurse-harrow",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/nurse_sm.webp",
-   "matches": 8267167,
+   "matches": 8276894,
    "items": [
     {
      "id": 1427630806,
      "points": 1.97,
-     "matches": 12114
+     "matches": 12123
     },
     {
      "id": 1254091416,
-     "points": 1.04,
-     "matches": 34560
+     "points": 1.03,
+     "matches": 34591
     },
     {
      "id": 2956256701,
-     "points": 0.81,
-     "matches": 4999
+     "points": 0.82,
+     "matches": 5003
     },
     {
      "id": 2533252781,
-     "points": 0.72,
-     "matches": 10303
+     "points": 0.71,
+     "matches": 10312
     },
     {
      "id": 2407033488,
      "points": 0.67,
-     "matches": 10544
+     "matches": 10557
     },
     {
      "id": 865846625,
      "points": 0.67,
-     "matches": 10174
+     "matches": 10194
     },
     {
      "id": 499683006,
-     "points": 0.62,
-     "matches": 34130
+     "points": 0.61,
+     "matches": 34194
     },
     {
-     "id": 2717651715,
+     "id": 3261353684,
      "points": 0.52,
-     "matches": 93833
+     "matches": 173079
     }
    ],
    "build": [
@@ -2191,53 +2191,53 @@
    "name": "Paige",
    "slug": "paige",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bookworm_sm.webp",
-   "matches": 4211096,
+   "matches": 4225583,
    "items": [
     {
      "id": 1925087134,
-     "points": 0.76,
-     "matches": 10746
+     "points": 0.78,
+     "matches": 10797
     },
     {
      "id": 3270001687,
-     "points": 0.64,
-     "matches": 25284
+     "points": 0.65,
+     "matches": 25379
     },
     {
      "id": 1396247347,
-     "points": 0.62,
-     "matches": 9394
-    },
-    {
-     "id": 2971868509,
-     "points": 0.58,
-     "matches": 34693
+     "points": 0.61,
+     "matches": 9429
     },
     {
      "id": 1976391348,
+     "points": 0.58,
+     "matches": 20606
+    },
+    {
+     "id": 2971868509,
      "points": 0.57,
-     "matches": 20541
+     "matches": 34821
     },
     {
      "id": 2059712766,
      "points": 0.56,
-     "matches": 6707
+     "matches": 6729
     },
     {
      "id": 3294954488,
-     "points": 0.56,
-     "matches": 10063
+     "points": 0.55,
+     "matches": 10085
     },
     {
-     "id": 710436191,
-     "points": 0.55,
-     "matches": 18121
+     "id": 4053935515,
+     "points": 0.54,
+     "matches": 17946
     }
    ],
    "build": [
     {
      "id": 2064029594,
-     "share": 0.682,
+     "share": 0.683,
      "min": 5.1
     },
     {
@@ -2247,32 +2247,32 @@
     },
     {
      "id": 1254091416,
-     "share": 0.568,
+     "share": 0.569,
      "min": 16.7
     },
     {
      "id": 7409189,
-     "share": 0.458,
+     "share": 0.459,
      "min": 19.7
     },
     {
      "id": 787198704,
-     "share": 0.49,
+     "share": 0.491,
      "min": 22.4
     },
     {
      "id": 1193964439,
-     "share": 0.671,
+     "share": 0.672,
      "min": 25.0
     },
     {
      "id": 1662311306,
-     "share": 0.49,
+     "share": 0.491,
      "min": 26.1
     },
     {
      "id": 2717651715,
-     "share": 0.452,
+     "share": 0.453,
      "min": 26.8
     }
    ]
@@ -2282,53 +2282,53 @@
    "name": "Paradox",
    "slug": "paradox",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/chrono_sm.webp",
-   "matches": 4369178,
+   "matches": 4384316,
    "items": [
     {
      "id": 3577481646,
      "points": 1.04,
-     "matches": 13731
+     "matches": 13771
     },
     {
      "id": 395867183,
-     "points": 0.84,
-     "matches": 24968
+     "points": 0.82,
+     "matches": 25048
     },
     {
      "id": 865958998,
-     "points": 0.81,
-     "matches": 7646
+     "points": 0.82,
+     "matches": 7662
     },
     {
      "id": 1797283378,
-     "points": 0.76,
-     "matches": 7847
+     "points": 0.73,
+     "matches": 7873
     },
     {
      "id": 3294954488,
-     "points": 0.75,
-     "matches": 10952
+     "points": 0.73,
+     "matches": 10980
     },
     {
      "id": 2566692615,
-     "points": 0.71,
-     "matches": 61877
-    },
-    {
-     "id": 1150006784,
-     "points": 0.65,
-     "matches": 24131
+     "points": 0.7,
+     "matches": 61992
     },
     {
      "id": 3977876567,
+     "points": 0.64,
+     "matches": 18555
+    },
+    {
+     "id": 1150006784,
      "points": 0.63,
-     "matches": 18515
+     "matches": 24197
     }
    ],
    "build": [
     {
      "id": 3862866912,
-     "share": 0.517,
+     "share": 0.518,
      "min": 1.7
     },
     {
@@ -2338,7 +2338,7 @@
     },
     {
      "id": 2152872419,
-     "share": 0.792,
+     "share": 0.793,
      "min": 12.5
     },
     {
@@ -2348,7 +2348,7 @@
     },
     {
      "id": 2121044373,
-     "share": 0.828,
+     "share": 0.829,
      "min": 19.3
     },
     {
@@ -2358,12 +2358,12 @@
     },
     {
      "id": 2678489038,
-     "share": 0.482,
+     "share": 0.483,
      "min": 22.5
     },
     {
      "id": 3577481646,
-     "share": 0.603,
+     "share": 0.604,
      "min": 27.1
     }
    ]
@@ -2373,63 +2373,63 @@
    "name": "Pocket",
    "slug": "pocket",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/synth_sm.webp",
-   "matches": 3124648,
+   "matches": 3135843,
    "items": [
     {
      "id": 1797283378,
-     "points": 0.73,
-     "matches": 6300
+     "points": 0.74,
+     "matches": 6320
     },
     {
      "id": 600033864,
+     "points": 0.66,
+     "matches": 2003
+    },
+    {
+     "id": 1292979587,
      "points": 0.65,
-     "matches": 2000
+     "matches": 20179
     },
     {
      "id": 395944548,
      "points": 0.65,
-     "matches": 25361
-    },
-    {
-     "id": 1292979587,
-     "points": 0.64,
-     "matches": 20100
-    },
-    {
-     "id": 709540378,
-     "points": 0.62,
-     "matches": 16431
+     "matches": 25450
     },
     {
      "id": 3005970438,
      "points": 0.61,
-     "matches": 29891
+     "matches": 30014
     },
     {
-     "id": 3270001687,
-     "points": 0.59,
-     "matches": 17228
+     "id": 709540378,
+     "points": 0.6,
+     "matches": 16470
     },
     {
      "id": 2059712766,
      "points": 0.58,
-     "matches": 5021
+     "matches": 5033
+    },
+    {
+     "id": 3270001687,
+     "points": 0.57,
+     "matches": 17307
     }
    ],
    "build": [
     {
      "id": 709540378,
-     "share": 0.859,
+     "share": 0.86,
      "min": 9.6
     },
     {
      "id": 4104549924,
-     "share": 0.771,
+     "share": 0.772,
      "min": 11.4
     },
     {
      "id": 2121044373,
-     "share": 0.945,
+     "share": 0.946,
      "min": 18.4
     },
     {
@@ -2439,7 +2439,7 @@
     },
     {
      "id": 3261353684,
-     "share": 0.88,
+     "share": 0.881,
      "min": 20.6
     },
     {
@@ -2449,12 +2449,12 @@
     },
     {
      "id": 343572757,
-     "share": 0.821,
+     "share": 0.822,
      "min": 24.7
     },
     {
      "id": 1193964439,
-     "share": 0.675,
+     "share": 0.676,
      "min": 27.7
     }
    ]
@@ -2464,59 +2464,59 @@
    "name": "Rat King",
    "slug": "rat-king",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/ratking_sm.webp",
-   "matches": 7689820,
+   "matches": 7699466,
    "items": [
     {
      "id": 1378931225,
      "points": 1.24,
-     "matches": 21102
+     "matches": 21121
     },
     {
      "id": 2533252781,
-     "points": 0.92,
-     "matches": 11935
+     "points": 0.93,
+     "matches": 11951
     },
     {
      "id": 677738769,
-     "points": 0.87,
-     "matches": 23192
+     "points": 0.88,
+     "matches": 23225
     },
     {
      "id": 989206714,
-     "points": 0.82,
-     "matches": 6088
+     "points": 0.83,
+     "matches": 6094
     },
     {
      "id": 3647584222,
      "points": 0.79,
-     "matches": 9894
+     "matches": 9906
     },
     {
      "id": 2820116164,
-     "points": 0.76,
-     "matches": 11574
+     "points": 0.75,
+     "matches": 11601
     },
     {
      "id": 499683006,
      "points": 0.73,
-     "matches": 32713
+     "matches": 32769
     },
     {
      "id": 1047818222,
-     "points": 0.73,
-     "matches": 50671
+     "points": 0.72,
+     "matches": 50727
     }
    ],
    "build": [
     {
      "id": 2064029594,
-     "share": 0.687,
+     "share": 0.688,
      "min": 6.9
     },
     {
      "id": 709540378,
      "share": 0.628,
-     "min": 9.8
+     "min": 9.7
     },
     {
      "id": 4104549924,
@@ -2555,47 +2555,47 @@
    "name": "Rem",
    "slug": "rem",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/familiar_sm.webp",
-   "matches": 2260606,
+   "matches": 2267544,
    "items": [
     {
      "id": 2095565695,
-     "points": 0.91,
-     "matches": 7825
+     "points": 0.92,
+     "matches": 7861
     },
     {
      "id": 857669956,
      "points": 0.91,
-     "matches": 6135
+     "matches": 6155
     },
     {
      "id": 1252627263,
      "points": 0.87,
-     "matches": 12121
+     "matches": 12163
     },
     {
      "id": 1797283378,
-     "points": 0.82,
-     "matches": 4335
+     "points": 0.83,
+     "matches": 4349
     },
     {
      "id": 630839635,
-     "points": 0.78,
-     "matches": 2674
+     "points": 0.82,
+     "matches": 2682
     },
     {
      "id": 800008313,
-     "points": 0.77,
-     "matches": 5431
-    },
-    {
-     "id": 1672893796,
-     "points": 0.67,
-     "matches": 30259
+     "points": 0.75,
+     "matches": 5447
     },
     {
      "id": 1437614329,
+     "points": 0.67,
+     "matches": 18525
+    },
+    {
+     "id": 1672893796,
      "points": 0.66,
-     "matches": 18459
+     "matches": 30345
     }
    ],
    "build": [
@@ -2611,17 +2611,17 @@
     },
     {
      "id": 7409189,
-     "share": 0.694,
+     "share": 0.695,
      "min": 15.8
     },
     {
      "id": 787198704,
-     "share": 0.546,
+     "share": 0.547,
      "min": 18.7
     },
     {
      "id": 3261353684,
-     "share": 0.503,
+     "share": 0.504,
      "min": 24.6
     },
     {
@@ -2631,7 +2631,7 @@
     },
     {
      "id": 1193964439,
-     "share": 0.4,
+     "share": 0.401,
      "min": 25.8
     },
     {
@@ -2646,58 +2646,58 @@
    "name": "Seven",
    "slug": "seven",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/gigawatt_sm.webp",
-   "matches": 3488959,
+   "matches": 3501027,
    "items": [
     {
      "id": 1292979587,
-     "points": 0.89,
-     "matches": 23522
+     "points": 0.87,
+     "matches": 23603
     },
     {
      "id": 2739107182,
-     "points": 0.81,
-     "matches": 22620
+     "points": 0.78,
+     "matches": 22708
     },
     {
      "id": 1798666702,
-     "points": 0.65,
-     "matches": 3869
+     "points": 0.64,
+     "matches": 3888
     },
     {
      "id": 3977876567,
-     "points": 0.58,
-     "matches": 13650
+     "points": 0.59,
+     "matches": 13674
     },
     {
      "id": 2037039379,
-     "points": 0.55,
-     "matches": 7078
+     "points": 0.56,
+     "matches": 7108
     },
     {
      "id": 1439347412,
-     "points": 0.49,
-     "matches": 33034
+     "points": 0.5,
+     "matches": 33081
     },
     {
      "id": 668299740,
      "points": 0.49,
-     "matches": 55075
+     "matches": 55261
     },
     {
      "id": 2947183272,
-     "points": 0.46,
-     "matches": 32562
+     "points": 0.47,
+     "matches": 32608
     }
    ],
    "build": [
     {
      "id": 1150006784,
-     "share": 0.625,
+     "share": 0.626,
      "min": 8.0
     },
     {
      "id": 709540378,
-     "share": 0.711,
+     "share": 0.712,
      "min": 9.5
     },
     {
@@ -2707,7 +2707,7 @@
     },
     {
      "id": 2603935618,
-     "share": 0.791,
+     "share": 0.792,
      "min": 13.3
     },
     {
@@ -2717,17 +2717,17 @@
     },
     {
      "id": 2717651715,
-     "share": 0.652,
+     "share": 0.653,
      "min": 21.7
     },
     {
      "id": 3005970438,
-     "share": 0.884,
+     "share": 0.885,
      "min": 21.8
     },
     {
      "id": 3357231760,
-     "share": 0.534,
+     "share": 0.535,
      "min": 27.2
     }
    ]
@@ -2737,63 +2737,63 @@
    "name": "Shiv",
    "slug": "shiv",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/shiv_sm.webp",
-   "matches": 5658282,
+   "matches": 5676240,
    "items": [
     {
      "id": 2480592370,
-     "points": 0.82,
-     "matches": 38576
+     "points": 0.84,
+     "matches": 38704
     },
     {
      "id": 690458959,
-     "points": 0.75,
-     "matches": 18301
+     "points": 0.74,
+     "matches": 18343
     },
     {
      "id": 3696726732,
      "points": 0.67,
-     "matches": 44956
-    },
-    {
-     "id": 2678489038,
-     "points": 0.66,
-     "matches": 11845
+     "matches": 45098
     },
     {
      "id": 710436191,
-     "points": 0.6,
-     "matches": 21226
+     "points": 0.64,
+     "matches": 21307
+    },
+    {
+     "id": 2678489038,
+     "points": 0.63,
+     "matches": 11887
     },
     {
      "id": 3577481646,
-     "points": 0.56,
-     "matches": 20073
+     "points": 0.54,
+     "matches": 20149
     },
     {
      "id": 381961617,
      "points": 0.54,
-     "matches": 16136
+     "matches": 16189
     },
     {
-     "id": 3862866912,
-     "points": 0.52,
-     "matches": 51764
+     "id": 2947183272,
+     "points": 0.53,
+     "matches": 48549
     }
    ],
    "build": [
     {
      "id": 1342610602,
-     "share": 0.564,
+     "share": 0.565,
      "min": 4.1
     },
     {
      "id": 2971868509,
-     "share": 0.493,
+     "share": 0.494,
      "min": 9.9
     },
     {
      "id": 2947183272,
-     "share": 0.817,
+     "share": 0.816,
      "min": 10.0
     },
     {
@@ -2808,13 +2808,13 @@
     },
     {
      "id": 3731635960,
-     "share": 0.636,
+     "share": 0.637,
      "min": 19.2
     },
     {
      "id": 690458959,
-     "share": 0.479,
-     "min": 20.4
+     "share": 0.48,
+     "min": 20.5
     },
     {
      "id": 2163598980,
@@ -2828,53 +2828,53 @@
    "name": "Silver",
    "slug": "silver",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/werewolf_sm.webp",
-   "matches": 2692187,
+   "matches": 2701006,
    "items": [
     {
      "id": 1378931225,
      "points": 1.3,
-     "matches": 8335
+     "matches": 8359
     },
     {
      "id": 1371725689,
      "points": 0.82,
-     "matches": 4555
+     "matches": 4567
+    },
+    {
+     "id": 2061878743,
+     "points": 0.71,
+     "matches": 6281
     },
     {
      "id": 1644605047,
      "points": 0.69,
-     "matches": 22897
-    },
-    {
-     "id": 2061878743,
-     "points": 0.68,
-     "matches": 6258
+     "matches": 22965
     },
     {
      "id": 4204808176,
-     "points": 0.65,
-     "matches": 5652
+     "points": 0.64,
+     "matches": 5675
     },
     {
      "id": 951866250,
-     "points": 0.65,
-     "matches": 11198
+     "points": 0.63,
+     "matches": 11238
     },
     {
      "id": 3491236900,
-     "points": 0.58,
-     "matches": 12153
+     "points": 0.57,
+     "matches": 12199
     },
     {
      "id": 630839635,
-     "points": 0.56,
-     "matches": 3465
+     "points": 0.57,
+     "matches": 3474
     }
    ],
    "build": [
     {
      "id": 98582110,
-     "share": 0.922,
+     "share": 0.923,
      "min": 6.2
     },
     {
@@ -2909,7 +2909,7 @@
     },
     {
      "id": 1414319208,
-     "share": 0.549,
+     "share": 0.55,
      "min": 24.9
     }
    ]
@@ -2919,47 +2919,47 @@
    "name": "Sinclair",
    "slug": "sinclair",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/magician_sm.webp",
-   "matches": 1383399,
+   "matches": 1386307,
    "items": [
     {
      "id": 710436191,
-     "points": 0.92,
-     "matches": 5694
+     "points": 0.91,
+     "matches": 5716
     },
     {
      "id": 2480592370,
      "points": 0.78,
-     "matches": 10389
+     "matches": 10412
     },
     {
      "id": 1144549437,
-     "points": 0.73,
-     "matches": 3519
+     "points": 0.71,
+     "matches": 3528
     },
     {
      "id": 709540378,
-     "points": 0.69,
-     "matches": 8754
+     "points": 0.7,
+     "matches": 8767
     },
     {
      "id": 1976391348,
-     "points": 0.66,
-     "matches": 6713
+     "points": 0.67,
+     "matches": 6732
     },
     {
      "id": 393974127,
      "points": 0.66,
-     "matches": 2838
+     "matches": 2845
     },
     {
      "id": 3270001687,
      "points": 0.63,
-     "matches": 8025
+     "matches": 8043
     },
     {
      "id": 1150006784,
      "points": 0.57,
-     "matches": 7974
+     "matches": 7987
     }
    ],
    "build": [
@@ -2975,7 +2975,7 @@
     },
     {
      "id": 787198704,
-     "share": 0.761,
+     "share": 0.762,
      "min": 11.0
     },
     {
@@ -2990,17 +2990,17 @@
     },
     {
      "id": 2519598785,
-     "share": 0.596,
+     "share": 0.597,
      "min": 23.9
     },
     {
      "id": 2717651715,
-     "share": 0.651,
+     "share": 0.652,
      "min": 24.8
     },
     {
      "id": 3261353684,
-     "share": 0.519,
+     "share": 0.52,
      "min": 26.1
     }
    ]
@@ -3010,47 +3010,47 @@
    "name": "Solomon",
    "slug": "solomon",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/chessmaster_sm.webp",
-   "matches": 2353847,
+   "matches": 2359792,
    "items": [
     {
      "id": 3331811235,
      "points": 0.83,
-     "matches": 9050
+     "matches": 9063
     },
     {
      "id": 2221211450,
-     "points": 0.67,
-     "matches": 4023
+     "points": 0.66,
+     "matches": 4034
     },
     {
      "id": 3977876567,
      "points": 0.64,
-     "matches": 11861
+     "matches": 11883
     },
     {
      "id": 2463960640,
-     "points": 0.62,
-     "matches": 4357
+     "points": 0.63,
+     "matches": 4367
     },
     {
      "id": 2152872419,
-     "points": 0.6,
-     "matches": 9866
+     "points": 0.61,
+     "matches": 9879
     },
     {
      "id": 1378931225,
-     "points": 0.58,
-     "matches": 5192
+     "points": 0.59,
+     "matches": 5201
     },
     {
      "id": 630839635,
-     "points": 0.57,
-     "matches": 2820
+     "points": 0.58,
+     "matches": 2826
     },
     {
      "id": 3731635960,
-     "points": 0.55,
-     "matches": 26956
+     "points": 0.52,
+     "matches": 27027
     }
    ],
    "build": [
@@ -3061,32 +3061,32 @@
     },
     {
      "id": 857669956,
-     "share": 0.424,
+     "share": 0.425,
      "min": 12.5
     },
     {
      "id": 3970837787,
-     "share": 0.414,
+     "share": 0.415,
      "min": 13.2
     },
     {
      "id": 334300056,
-     "share": 0.591,
+     "share": 0.592,
      "min": 19.2
     },
     {
      "id": 3261353684,
-     "share": 0.871,
+     "share": 0.872,
      "min": 19.8
     },
     {
      "id": 1193964439,
-     "share": 0.855,
+     "share": 0.856,
      "min": 20.0
     },
     {
      "id": 2121044373,
-     "share": 0.705,
+     "share": 0.706,
      "min": 23.0
     },
     {
@@ -3101,47 +3101,47 @@
    "name": "The Doorman",
    "slug": "the-doorman",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/doorman_sm.webp",
-   "matches": 1500936,
+   "matches": 1507082,
    "items": [
     {
      "id": 1797283378,
      "points": 0.81,
-     "matches": 3079
+     "matches": 3089
     },
     {
      "id": 2947183272,
-     "points": 0.76,
-     "matches": 12913
+     "points": 0.75,
+     "matches": 12938
     },
     {
      "id": 4053935515,
      "points": 0.75,
-     "matches": 6424
+     "matches": 6444
     },
     {
      "id": 3577481646,
-     "points": 0.67,
-     "matches": 6076
+     "points": 0.7,
+     "matches": 6101
     },
     {
      "id": 3970837787,
-     "points": 0.64,
-     "matches": 14231
+     "points": 0.66,
+     "matches": 14298
     },
     {
      "id": 395944548,
-     "points": 0.54,
-     "matches": 12008
+     "points": 0.52,
+     "matches": 12056
     },
     {
      "id": 3074274290,
-     "points": 0.53,
-     "matches": 16666
+     "points": 0.51,
+     "matches": 16734
     },
     {
      "id": 3005970438,
-     "points": 0.52,
-     "matches": 14251
+     "points": 0.51,
+     "matches": 14330
     }
    ],
    "build": [
@@ -3152,7 +3152,7 @@
     },
     {
      "id": 787198704,
-     "share": 0.793,
+     "share": 0.794,
      "min": 16.6
     },
     {
@@ -3167,7 +3167,7 @@
     },
     {
      "id": 1193964439,
-     "share": 0.692,
+     "share": 0.693,
      "min": 23.7
     },
     {
@@ -3192,63 +3192,63 @@
    "name": "Venator",
    "slug": "venator",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/priest_sm.webp",
-   "matches": 5903400,
+   "matches": 5922229,
    "items": [
     {
      "id": 3294954488,
-     "points": 1.43,
-     "matches": 13997
+     "points": 1.42,
+     "matches": 14031
     },
     {
      "id": 1378931225,
-     "points": 1.06,
-     "matches": 14900
+     "points": 1.04,
+     "matches": 14933
     },
     {
      "id": 2061878743,
-     "points": 0.94,
-     "matches": 10156
+     "points": 0.92,
+     "matches": 10185
     },
     {
      "id": 1113837674,
-     "points": 0.91,
-     "matches": 17864
+     "points": 0.9,
+     "matches": 17927
     },
     {
      "id": 1282141666,
      "points": 0.9,
-     "matches": 25491
+     "matches": 25557
     },
     {
      "id": 1414319208,
-     "points": 0.9,
-     "matches": 29401
+     "points": 0.89,
+     "matches": 29478
     },
     {
      "id": 3361811174,
-     "points": 0.76,
-     "matches": 7024
+     "points": 0.79,
+     "matches": 7059
     },
     {
-     "id": 1662311306,
-     "points": 0.71,
-     "matches": 10315
+     "id": 3403085434,
+     "points": 0.7,
+     "matches": 34603
     }
    ],
    "build": [
     {
      "id": 709540378,
-     "share": 0.626,
+     "share": 0.627,
      "min": 8.8
     },
     {
      "id": 1235347618,
-     "share": 0.762,
+     "share": 0.763,
      "min": 10.2
     },
     {
      "id": 4104549924,
-     "share": 0.669,
+     "share": 0.67,
      "min": 10.7
     },
     {
@@ -3268,12 +3268,12 @@
     },
     {
      "id": 3403085434,
-     "share": 0.584,
+     "share": 0.585,
      "min": 16.6
     },
     {
      "id": 2163598980,
-     "share": 0.595,
+     "share": 0.596,
      "min": 21.8
     }
    ]
@@ -3283,47 +3283,47 @@
    "name": "Victor",
    "slug": "victor",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/frank_sm.webp",
-   "matches": 3609599,
+   "matches": 3618507,
    "items": [
     {
      "id": 710436191,
      "points": 1.29,
-     "matches": 14922
+     "matches": 14958
     },
     {
      "id": 4204808176,
      "points": 0.86,
-     "matches": 6040
+     "matches": 6052
     },
     {
      "id": 811521119,
-     "points": 0.72,
-     "matches": 22664
+     "points": 0.74,
+     "matches": 22725
     },
     {
      "id": 2480592370,
-     "points": 0.64,
-     "matches": 27032
+     "points": 0.63,
+     "matches": 27100
     },
     {
      "id": 1797283378,
      "points": 0.62,
-     "matches": 3602
+     "matches": 3612
     },
     {
      "id": 1396247347,
-     "points": 0.59,
-     "matches": 8021
+     "points": 0.58,
+     "matches": 8047
     },
     {
      "id": 3005970438,
-     "points": 0.59,
-     "matches": 30355
+     "points": 0.58,
+     "matches": 30435
     },
     {
      "id": 112198670,
-     "points": 0.55,
-     "matches": 29664
+     "points": 0.54,
+     "matches": 29739
     }
    ],
    "build": [
@@ -3334,7 +3334,7 @@
     },
     {
      "id": 395944548,
-     "share": 0.703,
+     "share": 0.704,
      "min": 10.1
     },
     {
@@ -3354,8 +3354,8 @@
     },
     {
      "id": 3005970438,
-     "share": 0.811,
-     "min": 23.5
+     "share": 0.812,
+     "min": 23.4
     },
     {
      "id": 1193964439,
@@ -3364,7 +3364,7 @@
     },
     {
      "id": 3261353684,
-     "share": 0.453,
+     "share": 0.454,
      "min": 26.9
     }
    ]
@@ -3374,63 +3374,63 @@
    "name": "Vindicta",
    "slug": "vindicta",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/hornet_sm.webp",
-   "matches": 4175760,
+   "matches": 4187091,
    "items": [
     {
      "id": 2678489038,
-     "points": 0.93,
-     "matches": 10137
+     "points": 0.94,
+     "matches": 10164
     },
     {
      "id": 690458959,
      "points": 0.65,
-     "matches": 17611
+     "matches": 17653
     },
     {
      "id": 112198670,
      "points": 0.65,
-     "matches": 30516
+     "matches": 30602
     },
     {
      "id": 365620721,
-     "points": 0.62,
-     "matches": 4463
+     "points": 0.64,
+     "matches": 4478
     },
     {
      "id": 2922054143,
      "points": 0.6,
-     "matches": 8252
+     "matches": 8271
     },
     {
      "id": 2617435668,
-     "points": 0.57,
-     "matches": 10225
+     "points": 0.58,
+     "matches": 10262
     },
     {
      "id": 2059712766,
-     "points": 0.55,
-     "matches": 6435
+     "points": 0.57,
+     "matches": 6447
     },
     {
      "id": 339443430,
-     "points": 0.54,
-     "matches": 2913
+     "points": 0.53,
+     "matches": 2920
     }
    ],
    "build": [
     {
      "id": 2064029594,
-     "share": 0.8,
+     "share": 0.801,
      "min": 4.0
     },
     {
      "id": 7409189,
-     "share": 0.651,
+     "share": 0.652,
      "min": 8.8
     },
     {
      "id": 787198704,
-     "share": 0.927,
+     "share": 0.928,
      "min": 11.3
     },
     {
@@ -3440,7 +3440,7 @@
     },
     {
      "id": 4104549924,
-     "share": 0.775,
+     "share": 0.776,
      "min": 14.8
     },
     {
@@ -3450,12 +3450,12 @@
     },
     {
      "id": 2152872419,
-     "share": 0.875,
+     "share": 0.876,
      "min": 19.8
     },
     {
      "id": 2739107182,
-     "share": 0.742,
+     "share": 0.743,
      "min": 22.5
     }
    ]
@@ -3465,47 +3465,47 @@
    "name": "Violet",
    "slug": "violet",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/artist_sm.webp",
-   "matches": 6867762,
+   "matches": 6873623,
    "items": [
     {
      "id": 1254091416,
-     "points": 0.73,
-     "matches": 20176
-    },
-    {
-     "id": 3361075077,
-     "points": 0.61,
-     "matches": 5126
+     "points": 0.72,
+     "matches": 20193
     },
     {
      "id": 710436191,
      "points": 0.61,
-     "matches": 28328
+     "matches": 28352
     },
     {
-     "id": 3361811174,
-     "points": 0.56,
-     "matches": 6764
+     "id": 3361075077,
+     "points": 0.61,
+     "matches": 5127
     },
     {
      "id": 381961617,
+     "points": 0.55,
+     "matches": 23259
+    },
+    {
+     "id": 3361811174,
      "points": 0.54,
-     "matches": 23238
+     "matches": 6774
     },
     {
      "id": 1932939246,
      "points": 0.54,
-     "matches": 7257
+     "matches": 7259
     },
     {
      "id": 3140772621,
      "points": 0.46,
-     "matches": 9980
+     "matches": 9984
     },
     {
-     "id": 2221211450,
-     "points": 0.46,
-     "matches": 11548
+     "id": 2447176615,
+     "points": 0.45,
+     "matches": 96261
     }
    ],
    "build": [
@@ -3521,7 +3521,7 @@
     },
     {
      "id": 395867183,
-     "share": 0.491,
+     "share": 0.492,
      "min": 11.8
     },
     {
@@ -3546,7 +3546,7 @@
     },
     {
      "id": 2519598785,
-     "share": 0.536,
+     "share": 0.537,
      "min": 28.3
     }
    ]
@@ -3556,47 +3556,47 @@
    "name": "Viscous",
    "slug": "viscous",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/viscous_sm.webp",
-   "matches": 1798803,
+   "matches": 1804571,
    "items": [
     {
      "id": 709540378,
      "points": 0.89,
-     "matches": 11132
+     "matches": 11175
     },
     {
      "id": 2480592370,
      "points": 0.87,
-     "matches": 13260
+     "matches": 13292
     },
     {
      "id": 3919289022,
-     "points": 0.87,
-     "matches": 7062
+     "points": 0.84,
+     "matches": 7084
     },
     {
      "id": 600033864,
-     "points": 0.71,
-     "matches": 2697
+     "points": 0.73,
+     "matches": 2716
     },
     {
      "id": 1662311306,
-     "points": 0.66,
-     "matches": 3431
+     "points": 0.67,
+     "matches": 3438
     },
     {
      "id": 2152872419,
      "points": 0.63,
-     "matches": 8301
-    },
-    {
-     "id": 2407033488,
-     "points": 0.52,
-     "matches": 2539
+     "matches": 8330
     },
     {
      "id": 3294954488,
+     "points": 0.51,
+     "matches": 4723
+    },
+    {
+     "id": 2407033488,
      "points": 0.5,
-     "matches": 4711
+     "matches": 2548
     }
    ],
    "build": [
@@ -3607,7 +3607,7 @@
     },
     {
      "id": 3074274290,
-     "share": 0.363,
+     "share": 0.364,
      "min": 9.1
     },
     {
@@ -3617,27 +3617,27 @@
     },
     {
      "id": 3190916303,
-     "share": 0.606,
+     "share": 0.607,
      "min": 19.4
     },
     {
      "id": 2121044373,
-     "share": 0.753,
+     "share": 0.754,
      "min": 19.9
     },
     {
      "id": 3261353684,
-     "share": 0.557,
+     "share": 0.558,
      "min": 25.1
     },
     {
      "id": 1193964439,
-     "share": 0.546,
+     "share": 0.547,
      "min": 26.1
     },
     {
      "id": 2519598785,
-     "share": 0.338,
+     "share": 0.339,
      "min": 28.6
     }
    ]
@@ -3647,53 +3647,53 @@
    "name": "Vyper",
    "slug": "vyper",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kali_sm.webp",
-   "matches": 1869049,
+   "matches": 1875319,
    "items": [
     {
      "id": 2095565695,
      "points": 0.8,
-     "matches": 5930
+     "matches": 5958
     },
     {
      "id": 1770441818,
-     "points": 0.77,
-     "matches": 5783
-    },
-    {
-     "id": 3970837787,
-     "points": 0.64,
-     "matches": 16907
+     "points": 0.76,
+     "matches": 5804
     },
     {
      "id": 1055679805,
      "points": 0.64,
-     "matches": 4528
+     "matches": 4549
+    },
+    {
+     "id": 3970837787,
+     "points": 0.62,
+     "matches": 16962
     },
     {
      "id": 1282141666,
-     "points": 0.61,
-     "matches": 8163
-    },
-    {
-     "id": 1414025773,
-     "points": 0.53,
-     "matches": 9049
-    },
-    {
-     "id": 2739107182,
-     "points": 0.52,
-     "matches": 10790
+     "points": 0.62,
+     "matches": 8182
     },
     {
      "id": 2678489038,
-     "points": 0.52,
-     "matches": 4384
+     "points": 0.5,
+     "matches": 4402
+    },
+    {
+     "id": 2739107182,
+     "points": 0.49,
+     "matches": 10847
+    },
+    {
+     "id": 3884003354,
+     "points": 0.48,
+     "matches": 3636
     }
    ],
    "build": [
     {
      "id": 7409189,
-     "share": 0.43,
+     "share": 0.431,
      "min": 11.3
     },
     {
@@ -3703,7 +3703,7 @@
     },
     {
      "id": 112198670,
-     "share": 0.41,
+     "share": 0.411,
      "min": 13.0
     },
     {
@@ -3713,22 +3713,22 @@
     },
     {
      "id": 3647584222,
-     "share": 0.797,
+     "share": 0.798,
      "min": 13.4
     },
     {
      "id": 2739107182,
-     "share": 0.943,
+     "share": 0.944,
      "min": 14.6
     },
     {
      "id": 334300056,
-     "share": 0.495,
+     "share": 0.496,
      "min": 19.2
     },
     {
      "id": 3919289022,
-     "share": 0.726,
+     "share": 0.727,
      "min": 21.9
     }
    ]
@@ -3738,88 +3738,88 @@
    "name": "Warden",
    "slug": "warden",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/warden_sm.webp",
-   "matches": 1935025,
+   "matches": 1946378,
    "items": [
     {
      "id": 3331811235,
      "points": 0.79,
-     "matches": 7723
+     "matches": 7772
     },
     {
      "id": 1644605047,
-     "points": 0.74,
-     "matches": 15375
+     "points": 0.75,
+     "matches": 15462
     },
     {
      "id": 3077079169,
-     "points": 0.7,
-     "matches": 26690
+     "points": 0.71,
+     "matches": 26856
     },
     {
      "id": 2152872419,
-     "points": 0.66,
-     "matches": 8245
+     "points": 0.64,
+     "matches": 8303
     },
     {
      "id": 677738769,
-     "points": 0.63,
-     "matches": 6088
-    },
-    {
-     "id": 951866250,
-     "points": 0.62,
-     "matches": 7774
+     "points": 0.61,
+     "matches": 6131
     },
     {
      "id": 2829638276,
      "points": 0.6,
-     "matches": 31426
+     "matches": 31581
+    },
+    {
+     "id": 951866250,
+     "points": 0.59,
+     "matches": 7825
     },
     {
      "id": 2566692615,
-     "points": 0.53,
-     "matches": 22221
+     "points": 0.55,
+     "matches": 22296
     }
    ],
    "build": [
     {
      "id": 2064029594,
-     "share": 0.907,
+     "share": 0.909,
      "min": 4.6
     },
     {
      "id": 4104549924,
-     "share": 0.773,
+     "share": 0.775,
      "min": 9.6
     },
     {
      "id": 2356412290,
-     "share": 0.879,
+     "share": 0.881,
      "min": 9.8
     },
     {
      "id": 2447176615,
-     "share": 0.618,
+     "share": 0.62,
      "min": 14.7
     },
     {
      "id": 3403085434,
-     "share": 0.808,
+     "share": 0.81,
      "min": 15.8
     },
     {
      "id": 3919289022,
-     "share": 0.868,
-     "min": 21.1
+     "share": 0.871,
+     "min": 21.0
     },
     {
      "id": 2163598980,
-     "share": 0.512,
+     "share": 0.513,
      "min": 23.3
     },
     {
      "id": 2226497419,
-     "share": 0.554,
+     "share": 0.556,
      "min": 26.8
     }
    ]
@@ -3829,88 +3829,88 @@
    "name": "Wraith",
    "slug": "wraith",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/wraith_sm.webp",
-   "matches": 6993984,
+   "matches": 7015698,
    "items": [
     {
      "id": 3491236900,
-     "points": 1.0,
-     "matches": 32935
+     "points": 1.01,
+     "matches": 33048
     },
     {
      "id": 1250307611,
-     "points": 0.73,
-     "matches": 23173
+     "points": 0.76,
+     "matches": 23276
     },
     {
      "id": 1770441818,
      "points": 0.69,
-     "matches": 22805
-    },
-    {
-     "id": 3028234315,
-     "points": 0.67,
-     "matches": 20424
+     "matches": 22882
     },
     {
      "id": 3361075077,
      "points": 0.67,
-     "matches": 6955
+     "matches": 6969
+    },
+    {
+     "id": 3028234315,
+     "points": 0.66,
+     "matches": 20497
     },
     {
      "id": 1955841979,
      "points": 0.58,
-     "matches": 12042
+     "matches": 12091
     },
     {
      "id": 1047818222,
      "points": 0.57,
-     "matches": 45560
+     "matches": 45730
     },
     {
      "id": 1804594021,
      "points": 0.57,
-     "matches": 7777
+     "matches": 7808
     }
    ],
    "build": [
     {
      "id": 1009965641,
-     "share": 0.92,
+     "share": 0.921,
      "min": 1.7
     },
     {
      "id": 4104549924,
-     "share": 0.822,
+     "share": 0.823,
      "min": 13.5
     },
     {
      "id": 1292979587,
-     "share": 0.823,
+     "share": 0.824,
      "min": 14.4
     },
     {
      "id": 3731635960,
-     "share": 0.728,
+     "share": 0.729,
      "min": 17.4
     },
     {
      "id": 710436191,
-     "share": 0.518,
+     "share": 0.519,
      "min": 22.0
     },
     {
      "id": 2480592370,
-     "share": 0.706,
+     "share": 0.707,
      "min": 23.0
     },
     {
      "id": 3919289022,
-     "share": 0.638,
+     "share": 0.639,
      "min": 24.4
     },
     {
      "id": 2226497419,
-     "share": 0.366,
+     "share": 0.367,
      "min": 29.0
     }
    ]
@@ -3920,47 +3920,47 @@
    "name": "Yamato",
    "slug": "yamato",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/yamato_sm.webp",
-   "matches": 3914777,
+   "matches": 3926578,
    "items": [
     {
      "id": 2533252781,
-     "points": 0.92,
-     "matches": 6204
+     "points": 0.91,
+     "matches": 6226
     },
     {
      "id": 1235347618,
      "points": 0.69,
-     "matches": 28074
+     "matches": 28204
     },
     {
      "id": 2061878743,
-     "points": 0.61,
-     "matches": 5822
+     "points": 0.62,
+     "matches": 5840
     },
     {
      "id": 1804594021,
-     "points": 0.58,
-     "matches": 4127
-    },
-    {
-     "id": 1252627263,
-     "points": 0.54,
-     "matches": 18835
-    },
-    {
-     "id": 2922054143,
-     "points": 0.54,
-     "matches": 6840
+     "points": 0.59,
+     "matches": 4142
     },
     {
      "id": 1770441818,
      "points": 0.53,
-     "matches": 12100
+     "matches": 12141
+    },
+    {
+     "id": 2922054143,
+     "points": 0.53,
+     "matches": 6859
+    },
+    {
+     "id": 1252627263,
+     "points": 0.53,
+     "matches": 18900
     },
     {
      "id": 1662311306,
      "points": 0.5,
-     "matches": 6872
+     "matches": 6890
     }
    ],
    "build": [
@@ -3971,22 +3971,22 @@
     },
     {
      "id": 2947183272,
-     "share": 0.598,
+     "share": 0.597,
      "min": 12.8
     },
     {
      "id": 2603935618,
-     "share": 0.545,
+     "share": 0.547,
      "min": 14.5
     },
     {
      "id": 2566692615,
-     "share": 0.577,
+     "share": 0.576,
      "min": 15.5
     },
     {
      "id": 3190916303,
-     "share": 0.631,
+     "share": 0.633,
      "min": 15.7
     },
     {
