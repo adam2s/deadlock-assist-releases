@@ -27,6 +27,7 @@ Poprawki bezpieczeństwa trafiają tylko do najnowszej wersji. Aplikacja aktuali
 
 - Instalatory są budowane automatycznie przez GitHub Actions i publikowane tylko w [wydaniach tego repo](https://github.com/adam2s/deadlock-assist-releases/releases).
 - Każda aktualizacja jest podpisana kluczem autora. Aplikacja sprawdza podpis przed instalacją i odrzuca pliki bez ważnego podpisu.
+- Każde wydanie ma plik `SHA256SUMS.txt` z sumami kontrolnymi instalatorów. Sprawdzisz pobrany plik w PowerShell: `Get-FileHash .\plik.exe` i porównasz wynik z tym w opisie wydania.
 - Pobieraj aplikację tylko stąd. Kopie z innych stron mogą być zmienione.
 
 ## Czego nie uznajemy za lukę
