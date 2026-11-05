@@ -240,6 +240,127 @@ h2.ci-cap{margin-top:28px}
 .ci-edge i{justify-self:stretch}
 .hero-grid{grid-template-columns:repeat(2,1fr)}
 }
+.patches{padding-top:32px;padding-bottom:56px}
+.patches>*{max-width:880px}
+.patches h1{font-size:clamp(28px,3.4vw,40px);margin:0 0 10px}
+.patches .section-lead{margin:0 0 20px}
+.pn-kind{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--panel-2);color:var(--text-2);border:1px solid var(--border-strong)}
+.pn-count{color:var(--muted);font-size:14px}
+.ps{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.ps img{width:32px;height:32px;border-radius:7px;background:var(--panel-2)}
+.ps .ps-i{border-bottom:2px solid var(--slot)}
+.ps-more{font-size:13px;color:var(--muted);padding-left:4px;font-variant-numeric:tabular-nums}
+.pn-feat{display:grid;gap:10px;padding:20px 22px;border:1px solid rgba(242,163,58,.3);border-radius:var(--r);background:linear-gradient(180deg,rgba(242,163,58,.08),transparent 70%),var(--panel);color:var(--text);text-decoration:none;margin:0 0 8px}
+.pn-feat:hover{border-color:var(--accent)}
+.pn-feat-top{display:flex;gap:8px;align-items:center}
+.pn-feat strong{font-size:24px;letter-spacing:-.015em;line-height:1.2}
+.pn-feat .more-link{color:var(--accent)}
+.pn-year{margin:32px 0 10px}
+.pn-list{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.pn-list a{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"d s" "m s";column-gap:16px;align-items:center;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);background:var(--panel);color:var(--text);text-decoration:none}
+.pn-list a:hover{border-color:var(--accent)}
+.pn-list time{grid-area:d;font-weight:600}
+.pn-list .pn-meta{grid-area:m;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.pn-list .ps{grid-area:s;justify-content:flex-end}
+.pn-sum{margin:0 0 6px;color:var(--text-2);max-width:72ch}
+.pn-src{margin:0 0 20px!important}
+.pn-src a{color:var(--text-2)}
+.pn-nav{position:sticky;top:0;z-index:2;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--border);display:grid;gap:10px}
+.pn-toc{display:flex;flex-wrap:wrap;gap:8px}
+.pn-toc a{padding:6px 12px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text);text-decoration:none;font-size:14px}
+.pn-toc a:hover{border-color:var(--accent)}
+.pn-toc span{color:var(--muted);font-variant-numeric:tabular-nums;margin-left:2px}
+.pn-sec{padding:28px 0 0}
+.pn-sec>h2{font-size:24px;margin:0 0 14px}
+.pn-general{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:6px 22px 16px}
+.pn-general h3{font-size:15px;margin:16px 0 4px;color:var(--accent);letter-spacing:.02em}
+.patch ul{margin:10px 0 0;padding-left:20px;color:var(--text-2);display:grid;gap:6px}
+.patch li{max-width:72ch}
+.patch li::marker{color:var(--muted)}
+.was{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(154,163,178,.6)}
+.now{color:var(--text);font-weight:700}
+.was,.now{font-variant-numeric:tabular-nums}
+.pn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pn-card{background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--slot,var(--border-strong));border-radius:var(--r);padding:14px 16px 16px}
+.pn-card header{display:flex;align-items:center;gap:12px}
+.pn-card header img{border-radius:9px;background:var(--panel-2);flex:none}
+.pn-card header span{display:flex;flex-direction:column;min-width:0}
+.pn-card h3,.pn-card h4{font-size:17px;margin:0}
+.pn-card small{color:var(--muted);font-size:13px}
+.pn-card ul{font-size:15px}
+.pn-heroes{display:grid;gap:12px}
+.pn-hero{border-top-color:var(--accent);padding:16px 20px 18px}
+.pn-hero header img{border-radius:10px}
+.pn-hero h3{font-size:20px}
+.pn-hero .more-link{font-size:14px;text-decoration:none}
+.pn-ab{margin-top:14px;padding-top:12px;border-top:1px solid var(--border)}
+.pn-ab h4{display:flex;align-items:center;gap:10px;margin:0;font-size:15px}
+.pn-ab h4 img{border-radius:6px;background:var(--panel-2);flex:none}
+.pn-ab h4 small{font-weight:400}
+.pn-ab ul{margin-top:6px;padding-left:58px}
+.patch .ci-cta{margin-top:36px}
+.pn-pager{display:flex;justify-content:space-between;gap:10px;margin:28px 0 12px}
+.pn-pager a{display:flex;flex-direction:column;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);color:var(--text);text-decoration:none;font-weight:600}
+.pn-pager a:hover{border-color:var(--accent)}
+.pn-pager small{color:var(--muted);font-weight:400;font-size:13px}
+.pn-next{margin-left:auto;text-align:right}
+@media (max-width:700px){
+.pn-grid{grid-template-columns:1fr}
+.pn-list a{grid-template-columns:1fr;grid-template-areas:"d" "m" "s";row-gap:6px}
+.pn-list .ps{justify-content:flex-start}
+.pn-ab ul{padding-left:20px}
+.pn-general{padding:4px 16px 14px}
+}
+.pn-part h4{padding-left:38px}
+.pn-old{margin-top:10px}
+.pn-old summary{align-items:center;justify-content:flex-start}
+.pn-old summary h2.pn-year{font-size:18px;margin:0;letter-spacing:0;text-transform:none;color:var(--text)}
+.pn-old summary span{color:var(--muted);font-size:14px;font-weight:400;margin-right:auto}
+.pn-old .pn-list{padding-bottom:16px}
+.pn-jump{display:flex;flex-wrap:wrap;gap:4px}
+.pn-jump a{display:block;flex:none;border-radius:8px;border:1px solid transparent}
+.pn-jump a:hover{border-color:var(--accent)}
+.pn-jump img{border-radius:7px;background:var(--panel-2)}
+.pn-hero{scroll-margin-top:24px}
+.pn-slot{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-2);margin:18px 0 8px}
+.pn-slot::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--slot)}
+.pn-slot span{color:var(--muted);letter-spacing:0}
+.pn-sec>h2+.pn-slot{margin-top:0}
+@media (min-width:1100px){
+.patch{display:grid;grid-template-columns:minmax(0,820px) 240px;column-gap:48px;align-items:start}
+.patch>*{grid-column:1;max-width:none}
+.patch>.pn-nav{grid-column:2;grid-row:1/span 40;top:16px;border:1px solid var(--border);border-radius:var(--r);padding:14px;background:var(--panel)}
+.patch .pn-toc{flex-direction:column;align-items:stretch}
+.patch .pn-toc a{border-radius:8px;display:flex;justify-content:space-between}
+.patch .pn-jump{border-top:1px solid var(--border);padding-top:10px}
+.patch .pn-jump img{width:32px;height:32px}
+}
+@media (max-width:700px){
+.pn-toc{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.pn-toc a{white-space:nowrap}
+.pn-jump{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.pn-nav{position:static}
+.pn-jump img{width:32px;height:32px}
+}
+.pn-jump a:focus-visible,.pn-jump a.active{border-color:var(--accent);outline:none;box-shadow:0 0 0 1px var(--accent)}
+.dl .top nav .btn.sm{display:inline-flex;color:var(--on-accent);background:var(--accent)}
+.dl .top nav .btn.sm:hover{background:var(--accent);color:var(--on-accent)}
+.pn-side{display:none}
+.pn-side-cta{border-top:1px solid var(--border);padding-top:12px}
+.pn-side-cta p{margin:0 0 10px;font-size:14px;color:var(--text-2);font-weight:600}
+.pn-recent{margin:-8px 0 20px;font-size:14px}
+.pn-recent a{color:var(--text-2)}
+.pn-recent a:hover{color:var(--accent)}
+@media (min-width:1100px){
+.pn-index{display:grid;grid-template-columns:minmax(0,820px) 240px;column-gap:48px;align-items:start}
+.pn-index>*{grid-column:1;max-width:none}
+.pn-index>.pn-side{display:grid;grid-column:2;grid-row:1/span 40;position:sticky;top:16px;border:1px solid var(--border);border-radius:var(--r);padding:14px;background:var(--panel)}
+.pn-index .pn-toc{flex-direction:column;align-items:stretch}
+.pn-index .pn-toc a{border-radius:8px;display:flex;justify-content:space-between}
+}
+@media (max-width:700px){
+.pn-toc,.pn-jump{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:24px}
+}
 </style>
 </head>
 <body>
@@ -253,6 +374,7 @@ h2.ci-cap{margin-top:28px}
   <div class="hero-head"><img src="/img/heroes/baba.webp" alt="" width="64" height="64"><h1>Kontry na Baba</h1></div>
   <p class="section-lead">Co kupuje większość graczy Baba i czym najlepiej to skontrować.</p>
   <p class="meta">2,9 mln zakupów, mecze Emissary+, ostatnie 14 dni (stan na 5 listopada 2026)</p>
+  <p class="pn-recent"><a href="https://deadlock-assist.com/patche/2026-10-14/#hero-baba">Ostatnie zmiany bohatera Baba: 14 października 2026 →</a></p>
   <h2 class="ci-cap">Typowy build Baba</h2>
   <ol class="build"><li class="slot-spirit"><img src="/img/items/3776945997.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Extra Charge</b><small>2 min · 98%</small></span></li><li class="slot-spirit"><img src="/img/items/2947183272.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Radiant Regeneration</b><small>10 min · 97%</small></span></li><li class="slot-vitality"><img src="/img/items/2566692615.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Healing Booster</b><small>11 min · 79%</small></span></li><li class="slot-vitality"><img src="/img/items/1644605047.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Reactive Barrier</b><small>14 min · 72%</small></span></li><li class="slot-spirit"><img src="/img/items/395944548.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Torment Pulse</b><small>15 min · 92%</small></span></li><li class="slot-spirit"><img src="/img/items/3190916303.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Spirit Snatch</b><small>22 min · 57%</small></span></li><li class="slot-spirit"><img src="/img/items/3261353684.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Superior Cooldown</b><small>23 min · 66%</small></span></li><li class="slot-spirit"><img src="/img/items/2717651715.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Superior Duration</b><small>25 min · 61%</small></span></li></ol>
   <p class="note">Przedmioty, które kupuje i zatrzymuje większość graczy Baba, w kolejności zakupu. Procent: ilu graczy go kupuje.</p>
@@ -264,7 +386,7 @@ h2.ci-cap{margin-top:28px}
   <details class="ci-others"><summary><h2>Kontry na innych bohaterów (43)</h2></summary><ul><li><a href="../abrams/"><img src="/img/heroes/abrams.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Abrams</a></li><li><a href="../apollo/"><img src="/img/heroes/apollo.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Apollo</a></li><li><a href="../bebop/"><img src="/img/heroes/bebop.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Bebop</a></li><li><a href="../billy/"><img src="/img/heroes/billy.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Billy</a></li><li><a href="../calico/"><img src="/img/heroes/calico.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Calico</a></li><li><a href="../celeste/"><img src="/img/heroes/celeste.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Celeste</a></li><li><a href="../deadman-danny/"><img src="/img/heroes/deadman-danny.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Deadman Danny</a></li><li><a href="../drifter/"><img src="/img/heroes/drifter.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Drifter</a></li><li><a href="../dynamo/"><img src="/img/heroes/dynamo.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Dynamo</a></li><li><a href="../graves/"><img src="/img/heroes/graves.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Graves</a></li><li><a href="../grey-talon/"><img src="/img/heroes/grey-talon.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Grey Talon</a></li><li><a href="../haze/"><img src="/img/heroes/haze.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Haze</a></li><li><a href="../holliday/"><img src="/img/heroes/holliday.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Holliday</a></li><li><a href="../infernus/"><img src="/img/heroes/infernus.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Infernus</a></li><li><a href="../ivy/"><img src="/img/heroes/ivy.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Ivy</a></li><li><a href="../kelvin/"><img src="/img/heroes/kelvin.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Kelvin</a></li><li><a href="../lady-geist/"><img src="/img/heroes/lady-geist.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Lady Geist</a></li><li><a href="../lash/"><img src="/img/heroes/lash.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Lash</a></li><li><a href="../mcginnis/"><img src="/img/heroes/mcginnis.webp" alt="" width="32" height="32" loading="lazy" decoding="async">McGinnis</a></li><li><a href="../mina/"><img src="/img/heroes/mina.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Mina</a></li><li><a href="../mirage/"><img src="/img/heroes/mirage.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Mirage</a></li><li><a href="../mo-and-krill/"><img src="/img/heroes/mo-and-krill.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Mo &amp; Krill</a></li><li><a href="../nurse-harrow/"><img src="/img/heroes/nurse-harrow.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Nurse Harrow</a></li><li><a href="../paige/"><img src="/img/heroes/paige.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Paige</a></li><li><a href="../paradox/"><img src="/img/heroes/paradox.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Paradox</a></li><li><a href="../pocket/"><img src="/img/heroes/pocket.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Pocket</a></li><li><a href="../rat-king/"><img src="/img/heroes/rat-king.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Rat King</a></li><li><a href="../rem/"><img src="/img/heroes/rem.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Rem</a></li><li><a href="../seven/"><img src="/img/heroes/seven.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Seven</a></li><li><a href="../shiv/"><img src="/img/heroes/shiv.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Shiv</a></li><li><a href="../silver/"><img src="/img/heroes/silver.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Silver</a></li><li><a href="../sinclair/"><img src="/img/heroes/sinclair.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Sinclair</a></li><li><a href="../solomon/"><img src="/img/heroes/solomon.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Solomon</a></li><li><a href="../the-doorman/"><img src="/img/heroes/the-doorman.webp" alt="" width="32" height="32" loading="lazy" decoding="async">The Doorman</a></li><li><a href="../venator/"><img src="/img/heroes/venator.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Venator</a></li><li><a href="../victor/"><img src="/img/heroes/victor.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Victor</a></li><li><a href="../vindicta/"><img src="/img/heroes/vindicta.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Vindicta</a></li><li><a href="../violet/"><img src="/img/heroes/violet.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Violet</a></li><li><a href="../viscous/"><img src="/img/heroes/viscous.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Viscous</a></li><li><a href="../vyper/"><img src="/img/heroes/vyper.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Vyper</a></li><li><a href="../warden/"><img src="/img/heroes/warden.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Warden</a></li><li><a href="../wraith/"><img src="/img/heroes/wraith.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Wraith</a></li><li><a href="../yamato/"><img src="/img/heroes/yamato.webp" alt="" width="32" height="32" loading="lazy" decoding="async">Yamato</a></li></ul></details>
 </main>
 <footer class="wrap foot">
-  <nav aria-label="links"><a href="https://deadlock-assist.com/kontry/">Kontry na bohaterów Deadlocka</a><a href="https://deadlock-assist.com/zmiany/">Lista zmian</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Zaproponuj pomysł</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Zgłoś błąd</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Zgłoś lukę</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">Wszystkie wersje</a><a href="https://deadlock-assist.com/en/counters/baba/" hreflang="en">English version</a></nav>
+  <nav aria-label="links"><a href="https://deadlock-assist.com/kontry/">Kontry na bohaterów Deadlocka</a><a href="https://deadlock-assist.com/patche/">Patche i aktualizacje Deadlocka</a><a href="https://deadlock-assist.com/zmiany/">Lista zmian</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Zaproponuj pomysł</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Zgłoś błąd</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Zgłoś lukę</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">Wszystkie wersje</a><a href="https://deadlock-assist.com/en/counters/baba/" hreflang="en">English version</a></nav>
   <p>Deadlock jest znakiem towarowym Valve Corporation. Deadlock Assist to nieoficjalny projekt fanów, niezwiązany z Valve. Dane o przedmiotach: deadlock-api.com.</p>
 </footer>
 </body>
