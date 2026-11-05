@@ -100,14 +100,16 @@ figcaption{margin-top:10px;color:var(--text-2);font-size:15px}
 .stat{display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(242,163,58,.07),transparent 55%),var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:22px}
 .stat p{margin:0;color:var(--muted);font-size:15px}
 .stat .stat-num,.stat-num{color:var(--accent);font-size:clamp(32px,3.6vw,42px);font-weight:800;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums lining-nums;margin:0}
-.stat-num .u{font-size:.6em;margin-left:.04em;font-weight:700}
+.stat-num .u{font-size:.6em;margin-left:0;font-weight:700}
 .stat>p:last-child{margin-top:auto}
 .stat .stat-label{color:var(--text);font-weight:600;margin:4px 0 14px}
 .meter{position:relative;height:8px;border-radius:4px;background:var(--panel-2)}
 .meter i{position:absolute;inset:0 auto 0 0;border-radius:4px;background:var(--accent)}
 .meter b{position:absolute;top:-5px;width:3px;height:18px;margin-left:-1px;border-radius:2px;background:#fff}
 .meter-legend{position:relative;height:18px;margin:6px 0 12px;font-size:13px;color:var(--text-2);font-variant-numeric:tabular-nums}
-.meter-legend span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.meter-legend span{position:absolute;white-space:nowrap}.meter-legend .left{transform:translateX(-4px)}.meter-legend .right{transform:translateX(calc(-100% + 4px))}.meter-legend .mid{transform:translateX(-50%)}
+.stat-ref{min-height:38px;margin:0 0 12px!important;font-size:13px!important;color:var(--text-2)!important}
+.nw{white-space:nowrap}
 .safe{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--vitality);border-radius:16px;padding:32px 40px}
 .safe h2{display:flex;align-items:center;gap:12px}
 .safe h2 .ico{margin:0;color:var(--vitality)}
@@ -118,8 +120,7 @@ figcaption{margin-top:10px;color:var(--text-2);font-size:15px}
 .steps li{counter-increment:s;border-top:2px solid var(--border-strong);padding:20px 0 0}
 .steps li::before{content:counter(s);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--on-accent);font-weight:800;margin-bottom:12px}
 .steps p{margin:0;color:var(--muted);font-size:15px}
-.faq{display:grid;gap:10px;margin:24px auto 0;max-width:760px}
-#faq h2{text-align:center}
+.faq{display:grid;gap:10px;margin:24px 0 0;max-width:760px}
 details{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:0 20px}
 summary{cursor:pointer;font-weight:600;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:16px}
 summary::-webkit-details-marker{display:none}
@@ -170,12 +171,12 @@ section{padding-top:48px}
 <main id="main">
 <section class="hero wrap">
   <div class="hero-text">
-    <p class="eyebrow">Nakładka do Deadlocka · Windows 10/11</p>
+    <p class="eyebrow"><span class="nw">Nakładka do Deadlocka</span> · <span class="nw">Windows 10/11</span></p>
     <h1>Kontry na skład wroga w Deadlocku, na żywo</h1>
     <p class="lead">Czyta z ekranu skład i zakupy wrogów, podpowiada, co kupić, i pilnuje timerów obozów i Mid Bossa.</p>
-    <p class="proof-line"><a href="#skutecznosc"><strong>81%</strong> trafnych kontr w teście na 2 020 meczach</a></p>
+    <p class="proof-line"><a href="#skutecznosc"><strong>81%</strong> trafnych kontr w teście na 2020 meczach</a></p>
     <div class="actions"><a class="btn" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3v-6ZM12 4.3 21 3v8.5h-9V4.3ZM3 12.5h7.5v7L3 18.5v-6ZM12 12.5h9V21l-9-1.3v-7.2Z" fill="currentColor" stroke="none"/></svg><span>Pobierz dla Windows</span></a><a class="btn ghost" href="#w-akcji">Zobacz w akcji</a></div>
-    <p class="note">Gra w trybie okna bez ramek · aktualizuje się sama<span class="desk"><br>Windows ostrzega? „Więcej informacji” → „Uruchom mimo to”.</span></p>
+    <p class="note">Deadlock w oknie bez ramek · aktualizuje się sama<span class="desk"><br>Windows ostrzega? „Więcej informacji” → „Uruchom mimo to”.</span></p>
     <ul class="badges"><li>Za darmo</li><li>Bez reklam i konta</li><li>Bez Overwolf</li><li>Nie czyta pamięci gry</li></ul>
   </div>
   <figure class="hero-shot"><picture><source type="image/webp" srcset="deadlock-overlay-counters.webp"><img src="deadlock-overlay-counters.jpg" alt="Nakładka Deadlock Assist w Deadlocku: kontry na linii, panel Kup teraz z najlepszym przedmiotem na wroga oraz zegar z timerami obozów i Mid Bossa" width="842" height="527" fetchpriority="high"></picture></figure>
@@ -183,7 +184,7 @@ section{padding-top:48px}
 
 <section id="funkcje" class="wrap">
   <h2>Kontry, buildy i timery</h2>
-  <div class="grid"><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Kontry na skład wroga</h3><p>Healbane na leczenie, Silencer na umiejętności. Z ceną i powodem.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.4 11h11.2L21 7H6.3"/></svg><h3>„Kup teraz”</h3><p>Jeden najlepszy zakup na teraz, dopasowany do Twojego buildu i dusz.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><h3>Zakupy wrogów</h3><p>Po Tab widzi, co kupił wróg, i od razu zmienia rady.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 10 4M20 20 14 4M12 6v2M12 11v2M12 16v2"/></svg><h3>Kontry na linii</h3><p>Do 10. minuty tanie przedmioty na rywali z Twojej linii.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><h3>Timery obozów i Mid Bossa</h3><p>Obozy w dżungli, Mid Boss, wzmocnienia i urna, ze strzałką kierunku.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="m7 15 4-4 3 3 5-6"/></svg><h3>Analiza meczu</h3><p>Farma minuta po minucie i co poprawić w kolejnym meczu.</p></article></div>
+  <div class="grid"><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Kontry na skład wroga</h3><p>Healbane na leczenie, Silencer na umiejętności. Z ceną i powodem.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.4 11h11.2L21 7H6.3"/></svg><h3>„Kup teraz”</h3><p>Jeden najlepszy zakup na teraz, dopasowany do Twojego buildu i dusz.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><h3>Zakupy wrogów</h3><p>Po Tab widzi, co kupił wróg, i od razu zmienia rady.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 10 4M20 20 14 4M12 6v2M12 11v2M12 16v2"/></svg><h3>Kontry na linii</h3><p>Do 10. minuty tanie przedmioty na rywali z Twojej linii.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><h3>Timery obozów i Mid Bossa</h3><p>Obozy w dżungli, Mid Boss, power-upy i urna, ze strzałką kierunku.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="m7 15 4-4 3 3 5-6"/></svg><h3>Analiza meczu</h3><p>Farma minuta po minucie i co poprawić w kolejnym meczu.</p></article></div>
 </section>
 
 <section id="w-akcji" class="wrap">
@@ -193,8 +194,8 @@ section{padding-top:48px}
 
 <section id="skutecznosc" class="wrap results">
   <h2>Czy doradca naprawdę pomaga?</h2>
-  <p class="section-lead">Test na 2 020 meczach z rang Emissary i wyżej, 33 811 zakupów.</p>
-  <ul class="stats"><li class="stat"><p class="stat-num">81<span class="u">%</span></p><p class="stat-label">trafnych kontr</p><div class="meter" role="img" aria-label="81% · poprzednia wersja: 62%"><i style="width:81%"></i><b style="left:62%"></b></div><div class="meter-legend" aria-hidden="true"><span style="left:62%">poprzednia wersja: 62%</span></div><p>Podpowiedzi, które na ten skład wygrywają częściej niż przeciętny przedmiot.</p></li><li class="stat"><p class="stat-num">29<span class="u">%</span></p><p class="stat-label">zakupów w top 5 doradcy</p><div class="meter" role="img" aria-label="29% · poprzednia wersja: 25%"><i style="width:29%"></i><b style="left:25%"></b></div><div class="meter-legend" aria-hidden="true"><span style="left:25%">poprzednia wersja: 25%</span></div><p>Tyle realnych zakupów graczy było w pierwszej piątce podpowiedzi.</p></li><li class="stat"><p class="stat-num">+3,2<span class="u"> p.p.</span></p><p class="stat-label">wyższy winrate</p><p>Przy tej samej farmie gracze, którzy kupili coś z top 5, wygrywali częściej.</p></li></ul>
+  <p class="section-lead">Test na 2020 meczach z rang Emissary i wyżej, 33 811 zakupów.</p>
+  <ul class="stats"><li class="stat"><p class="stat-num">81<span class="u">%</span></p><p class="stat-label">trafnych kontr</p><div class="meter" role="img" aria-label="81% · poprzednia wersja: 62%"><i style="width:81%"></i><b style="left:62%"></b></div><div class="meter-legend" aria-hidden="true"><span class="mid" style="left:62%">poprzednia wersja: 62%</span></div><p>Podpowiedzi, które na ten skład wygrywają częściej niż przeciętny przedmiot.</p></li><li class="stat"><p class="stat-num">29<span class="u">%</span></p><p class="stat-label">zakupów w top 5 doradcy</p><div class="meter" role="img" aria-label="29% · poprzednia wersja: 25%"><i style="width:29%"></i><b style="left:25%"></b></div><div class="meter-legend" aria-hidden="true"><span class="left" style="left:25%">poprzednia wersja: 25%</span></div><p>Tyle realnych zakupów graczy było w pierwszej piątce podpowiedzi.</p></li><li class="stat"><p class="stat-num">+3,2<span class="u"> p.p.</span></p><p class="stat-label">wyższy odsetek wygranych</p><p class="stat-ref">vs ta sama farma i inny zakup</p><p>Gracze, którzy kupili coś z top 5, wygrywali częściej.</p></li></ul>
   <p class="note">Wyniki z cudzych meczów, nie gwarancja wygranej. Wersja 1.2.6.</p>
 </section>
 
@@ -221,7 +222,7 @@ section{padding-top:48px}
   <h2>Zagraj następny mecz z doradcą</h2>
   <p class="section-lead">Instalacja zajmuje minutę.</p>
   <div class="actions center"><a class="btn" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3v-6ZM12 4.3 21 3v8.5h-9V4.3ZM3 12.5h7.5v7L3 18.5v-6ZM12 12.5h9V21l-9-1.3v-7.2Z" fill="currentColor" stroke="none"/></svg><span>Pobierz dla Windows</span></a><a class="btn kofi" href="https://ko-fi.com/deadlockassist" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><span>Wesprzyj na Ko-fi</span></a></div>
-  <p class="note">Windows 10/11 · gra w trybie okna bez ramek · aktualizuje się sama<br>Windows ostrzega? „Więcej informacji” → „Uruchom mimo to”.</p>
+  <p class="note">Deadlock w oknie bez ramek · aktualizuje się sama<br>Windows ostrzega? „Więcej informacji” → „Uruchom mimo to”.</p>
 </section>
 </main>
 <footer class="wrap foot">

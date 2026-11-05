@@ -64,11 +64,11 @@ PL = {
     "eyebrow": "Nakładka do Deadlocka · Windows 10/11",
     "h1": "Kontry na skład wroga w Deadlocku, na żywo",
     "lead": "Czyta z ekranu skład i zakupy wrogów, podpowiada, co kupić, i pilnuje timerów obozów i Mid Bossa.",
-    "proof_line": ("81%", "trafnych kontr w teście na 2 020 meczach"),
+    "proof_line": ("81%", "trafnych kontr w teście na 2020 meczach"),
     "cta": "Pobierz dla Windows",
     "cta_short": "Pobierz",
-    "cta_note": "Windows 10/11 · gra w trybie okna bez ramek · aktualizuje się sama",
-    "hero_note": "Gra w trybie okna bez ramek · aktualizuje się sama",
+    "cta_note": "Deadlock w oknie bez ramek · aktualizuje się sama",
+    "hero_note": "Deadlock w oknie bez ramek · aktualizuje się sama",
     "cta2": "Zobacz w akcji",
     "shot_alt": (
         "Nakładka Deadlock Assist w Deadlocku: kontry na linii, panel Kup teraz z najlepszym przedmiotem "
@@ -81,7 +81,7 @@ PL = {
         ("cart", "„Kup teraz”", "Jeden najlepszy zakup na teraz, dopasowany do Twojego buildu i dusz."),
         ("eye", "Zakupy wrogów", "Po Tab widzi, co kupił wróg, i od razu zmienia rady."),
         ("lane", "Kontry na linii", "Do 10. minuty tanie przedmioty na rywali z Twojej linii."),
-        ("clock", "Timery obozów i Mid Bossa", "Obozy w dżungli, Mid Boss, wzmocnienia i urna, ze strzałką kierunku."),
+        ("clock", "Timery obozów i Mid Bossa", "Obozy w dżungli, Mid Boss, power-upy i urna, ze strzałką kierunku."),
         ("chart", "Analiza meczu", "Farma minuta po minucie i co poprawić w kolejnym meczu."),
     ],
     "gallery_h": "Nakładka w grze",
@@ -94,14 +94,14 @@ PL = {
          "Historia: farma na minutę i kolejność zakupów"),
     ],
     "proof_h": "Czy doradca naprawdę pomaga?",
-    "proof_lead": "Test na 2 020 meczach z rang Emissary i wyżej, 33 811 zakupów.",
+    "proof_lead": "Test na 2020 meczach z rang Emissary i wyżej, 33 811 zakupów.",
     "proof": [
         ("81%", 81, 62, "trafnych kontr", "Podpowiedzi, które na ten skład wygrywają częściej niż przeciętny przedmiot.",
          "poprzednia wersja: 62%"),
         ("29%", 29, 25, "zakupów w top 5 doradcy", "Tyle realnych zakupów graczy było w pierwszej piątce podpowiedzi.",
          "poprzednia wersja: 25%"),
-        ("+3,2 p.p.", None, None, "wyższy winrate", "Przy tej samej farmie gracze, którzy kupili coś z top 5, wygrywali częściej.",
-         None),
+        ("+3,2 p.p.", None, None, "wyższy odsetek wygranych", "Gracze, którzy kupili coś z top 5, wygrywali częściej.",
+         "vs ta sama farma i inny zakup"),
     ],
     "proof_note": "Wyniki z cudzych meczów, nie gwarancja wygranej. Wersja 1.2.6.",
     "safe_h": "Bezpieczeństwo",
@@ -169,8 +169,8 @@ EN = {
     "proof_line": ("81%", "good counters, tested on 2,020 matches"),
     "cta": "Download for Windows",
     "cta_short": "Download",
-    "cta_note": "Windows 10/11 · game in borderless window · updates itself",
-    "hero_note": "Game in borderless window · updates itself",
+    "cta_note": "Deadlock in borderless window · updates itself",
+    "hero_note": "Deadlock in borderless window · updates itself",
     "cta2": "See it in action",
     "shot_alt": (
         "Deadlock Assist overlay in Deadlock: lane counters, the Buy now panel with the best item against the "
@@ -202,8 +202,8 @@ EN = {
          "previous version: 62%"),
         ("29%", 29, 25, "of real buys in its top 5", "Share of players' actual purchases that were in the advisor's top 5.",
          "previous version: 25%"),
-        ("+3.2 pp", None, None, "higher win rate", "At equal farm, players who bought from the top 5 won more often.",
-         None),
+        ("+3.2 pp", None, None, "higher win rate", "Players who bought from the top 5 won more often.",
+         "vs equal farm, other item"),
     ],
     "proof_note": "Results from other players' matches, not a guarantee. Version 1.2.6.",
     "safe_h": "Safety",
@@ -324,12 +324,15 @@ def page(t):
 
     def stat(n, now, before, lab, text, was):
         meter = ""
+        side = "left" if (before or 0) < 35 else "right" if (before or 0) > 65 else "mid"
         if now is not None:
             meter = (
                 f'<div class="meter" role="img" aria-label="{T(n)} · {T(was)}"><i style="width:{now}%"></i>'
                 f'<b style="left:{before}%"></b></div>'
-                f'<div class="meter-legend" aria-hidden="true"><span style="left:{before}%">{T(was)}</span></div>'
+                f'<div class="meter-legend" aria-hidden="true"><span class="{side}" style="left:{before}%">{T(was)}</span></div>'
             )
+        elif was:
+            meter = f'<p class="stat-ref">{T(was)}</p>'
         return (
             f'<li class="stat"><p class="stat-num">{unit(T(n))}</p><p class="stat-label">{T(lab)}</p>{meter}'
             f"<p>{T(text)}</p></li>"
@@ -390,7 +393,7 @@ def page(t):
 <main id="main">
 <section class="hero wrap">
   <div class="hero-text">
-    <p class="eyebrow">{T(t['eyebrow'])}</p>
+    <p class="eyebrow">{' · '.join(f'<span class="nw">{T(x)}</span>' for x in t['eyebrow'].split(' · '))}</p>
     <h1>{T(t['h1'])}</h1>
     <p class="lead">{T(t['lead'])}</p>
     <p class="proof-line"><a href="#{ids['results']}"><strong>{T(t['proof_line'][0])}</strong> {T(t['proof_line'][1])}</a></p>

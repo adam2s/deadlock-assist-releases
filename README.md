@@ -15,7 +15,7 @@
 ![Windows 10/11](https://img.shields.io/badge/Windows-10%20%7C%2011-0e1014)
 [![Wesprzyj na Ko-fi](https://img.shields.io/badge/%E2%98%95-Wesprzyj%20na%20Ko--fi-f2c94c)](https://ko-fi.com/deadlockassist)
 
-<img src="docs/nakladka.png" width="820" alt="Nakładka nad grą: kontry na linii, „Kup teraz”, zegar i timery obozów">
+<img src="docs/deadlock-overlay-counters.jpg" width="820" alt="Nakładka nad grą: kontry na linii, „Kup teraz”, zegar i timery obozów">
 
 </div>
 
@@ -29,8 +29,8 @@
 - **Działa sama.** Mecz startuje, gdy zegar gry pokaże pierwszą minutę; aplikacja aktualizuje się sama.
 
 <p align="center">
-  <img src="docs/nakladka-tab.png" width="49%" alt="Nakładka po wciśnięciu Tab">
-  <img src="docs/historia.png" width="49%" alt="Historia meczów">
+  <img src="docs/deadlock-overlay-tab.webp" width="49%" alt="Nakładka po wciśnięciu Tab">
+  <img src="docs/deadlock-match-history@2x.webp" width="49%" alt="Historia meczów">
 </p>
 
 ## Instalacja
