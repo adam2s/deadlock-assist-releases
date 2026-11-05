@@ -1,0 +1,51 @@
+# Refreshes the "Kontry" / "Counters" pages with the last 14 days of match data every Monday,
+# and whenever the site sources change on main.
+name: Refresh counter pages
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["site/**"]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: refresh-counters
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download stats and icons
+        run: python3 -I site/counters.py docs
+      - name: Build the site
+        run: python3 -I site/build.py docs
+      - name: Commit if anything changed
+        id: commit
+        run: |
+          git add site/counters.json docs
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Site: refresh counter pages ($(date -u +%F))"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Publish
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"

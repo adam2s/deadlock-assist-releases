@@ -62,6 +62,28 @@ PL = {
     "nav": [("funkcje", "Funkcje"), ("skutecznosc", "Skuteczność"), ("bezpieczenstwo", "Bezpieczeństwo"),
             ("faq", "FAQ")],
     "switch": ("en/", "English", "English version"),
+    "counters": {
+        "path": "kontry/", "nav": "Kontry",
+        "index_title": "Kontry na bohaterów Deadlocka – najlepsze przedmioty na każdego",
+        "index_desc": "Jakie przedmioty kupić przeciw każdemu bohaterowi Deadlocka. Dane z meczów rang Emissary+ "
+                      "z ostatnich 14 dni, odświeżane co tydzień.",
+        "index_h1": "Kontry na bohaterów",
+        "index_lead": "Wybierz bohatera wroga i zobacz, z jakimi przedmiotami gracze częściej z nim wygrywają.",
+        "title": "Kontry na {hero} w Deadlocku – najlepsze przedmioty",
+        "desc": "Przedmioty, z którymi gracze częściej wygrywają przeciw {hero} w Deadlocku. "
+                "Dane z meczów rang Emissary+ z ostatnich 14 dni, odświeżane co tydzień.",
+        "h1": "Kontry na {hero}",
+        "lead": "Z tymi przedmiotami gracze wygrywają przeciw {hero} częściej niż zwykle.",
+        "data": "{n} zakupów w meczach rang Emissary+ · 14 dni do {date}",
+        "edge_h": "Przewaga",
+        "explain": "Przewaga: o ile punktów procentowych częściej wygrywają gracze z tym przedmiotem przeciw {hero} "
+                   "niż przeciw innym bohaterom, w porównaniu z przedmiotami tej samej ceny.",
+        "slots": {"weapon": "Broń", "vitality": "Witalność", "spirit": "Duch"},
+        "cta_h": "Doradca robi to na żywo",
+        "cta_p": "Czyta skład wroga z ekranu i podpowiada kontry na całą piątkę naraz.",
+        "others": "Inni bohaterowie",
+        "souls": "dusz",
+    },
     "changes": {
         "path": "zmiany/", "nav": "Zmiany", "title": "Lista zmian Deadlock Assist – nowe wersje nakładki do Deadlocka",
         "description": "Co nowego w każdej wersji Deadlock Assist, nakładki do Deadlocka z kontrami, buildami i timerami.",
@@ -174,6 +196,28 @@ EN = {
             "start": "get-started", "faq": "faq"},
     "nav": [("features", "Features"), ("results", "Results"), ("safety", "Safety"), ("faq", "FAQ")],
     "switch": ("../", "Polski", "Wersja polska"),
+    "counters": {
+        "path": "en/counters/", "nav": "Counters",
+        "index_title": "Deadlock Counter Items for Every Hero – Best Items to Buy",
+        "index_desc": "Which items to buy against every Deadlock hero. Data from Emissary+ matches of the last 14 days, "
+                      "refreshed every week.",
+        "index_h1": "Counter items for every hero",
+        "index_lead": "Pick the enemy hero and see which items players win with more often against them.",
+        "title": "{hero} Counter Items in Deadlock – Best Items vs {hero}",
+        "desc": "Items players win with more often against {hero} in Deadlock. Data from Emissary+ matches "
+                "of the last 14 days, refreshed every week.",
+        "h1": "{hero} counter items",
+        "lead": "Players win more often than usual against {hero} with these items.",
+        "data": "{n} purchases in Emissary+ matches · 14 days to {date}",
+        "edge_h": "Edge",
+        "explain": "Edge: how many percentage points more often players with the item win against {hero} than "
+                   "against other heroes, compared with items of the same price.",
+        "slots": {"weapon": "Weapon", "vitality": "Vitality", "spirit": "Spirit"},
+        "cta_h": "The advisor does this live",
+        "cta_p": "It reads the enemy team from your screen and suggests counters to all five at once.",
+        "others": "Other heroes",
+        "souls": "souls",
+    },
     "changes": {
         "path": "en/changes/", "nav": "Changes", "title": "Deadlock Assist Changelog – Overlay Updates & Release Notes",
         "description": "What’s new in every version of Deadlock Assist, the Deadlock overlay with counter items, builds and timers.",
@@ -390,7 +434,8 @@ def head(t, url, title, desc, pl_url, en_url, prefix, extra=""):
 
 def foot(t, T, switch_href):
     lang = t["lang"]
-    links = f'<a href="{BASE}{t["changes"]["path"]}">{T(t["changes"]["h1"])}</a>'
+    links = f'<a href="{BASE}{t["counters"]["path"]}">{T(t["counters"]["index_h1"])}</a>'
+    links += f'<a href="{BASE}{t["changes"]["path"]}">{T(t["changes"]["h1"])}</a>'
     links += "".join(f'<a href="{e(h)}" rel="noopener">{T(l)}</a>' for h, l in t["links"])
     links += f'<a href="{switch_href}" hreflang="{"en" if lang == "pl" else "pl"}">{T(t["switch"][2])}</a>'
     return f"""<footer class="wrap foot">
@@ -477,7 +522,7 @@ def page(t):
 <a class="skip" href="#main">{T(t['skip'])}</a>
 <header class="top wrap">
   <a class="logo" href="./"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu">{nav}<a href="{t['changes']['path'].removeprefix('en/')}">{T(t['changes']['nav'])}</a><a class="lang" href="{t['switch'][0]}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
+  <nav aria-label="menu">{nav}<a href="{t['counters']['path'].removeprefix('en/')}">{T(t['counters']['nav'])}</a><a href="{t['changes']['path'].removeprefix('en/')}">{T(t['changes']['nav'])}</a><a class="lang" href="{t['switch'][0]}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
 </header>
 <main id="main">
 <section class="hero wrap">
@@ -537,6 +582,146 @@ def page(t):
 </section>
 </main>
 """ + foot(t, T, t["switch"][0])
+
+
+COUNTERS_FILE = Path(__file__).with_name("counters.json")
+COUNTERS = json.loads(COUNTERS_FILE.read_text()) if COUNTERS_FILE.exists() else None
+OUT = Path("docs")
+
+
+def sub_header(t, T, prefix, home, switch_url):
+    """Header of the pages under the home page: logo, home link, language switch, download."""
+    other = "en" if t["lang"] == "pl" else "pl"
+    return f"""<a class="skip" href="#main">{T(t['skip'])}</a>
+<header class="top wrap">
+  <a class="logo" href="{home}"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
+  <nav aria-label="menu"><a href="{home}">{T(t['changes']['home'])}</a><a class="lang" href="{switch_url}" hreflang="{other}"><span class="long">{T(t['switch'][1])}</span><span class="short">{other.upper()}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
+</header>"""
+
+
+def img_src(kind, key, remote, prefix):
+    """The icon saved next to the pages, or the remote one until it is downloaded."""
+    local = f"img/{kind}/{key}.webp"
+    return prefix + local if (OUT / local).exists() else remote
+
+
+def long_date(d, lang):
+    y, m, day = (int(x) for x in d.split("-"))
+    month = (PL if lang == "pl" else EN)["changes"]["months"][m - 1]
+    return f"{day}{NB}{month} {y}" if lang == "pl" else f"{month}{NB}{day}, {y}"
+
+
+def counters_index(t):
+    lang = t["lang"]
+    c = t["counters"]
+    T = lambda s: html.escape(typeset(s, lang), quote=True)  # noqa: E731
+    prefix = "../" * c["path"].count("/")
+    url = BASE + c["path"]
+    home = BASE + t["path"]
+    other = EN if lang == "pl" else PL
+    cards = "".join(
+        f'<li><a href="{h["slug"]}/"><img src="{img_src("heroes", h["slug"], h["img"], prefix)}" alt="" width="48" height="48" '
+        f'loading="lazy" decoding="async"><span>{e(h["name"])}</span></a></li>'
+        for h in COUNTERS["heroes"]
+    )
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Deadlock Assist", "item": home},
+            {"@type": "ListItem", "position": 2, "name": c["index_h1"], "item": url},
+        ],
+    }
+    return head(t, url, c["index_title"], c["index_desc"], BASE + PL["counters"]["path"], BASE + EN["counters"]["path"],
+                prefix) + f"""<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}</style>
+</head>
+<body>
+{sub_header(t, T, prefix, home, BASE + other["counters"]["path"])}
+<main id="main" class="wrap counters">
+  <h1>{T(c['index_h1'])}</h1>
+  <p class="section-lead">{T(c['index_lead'])}</p>
+  <ul class="hero-grid">{cards}</ul>
+  <p class="note">{T(c['data'].format(n=f"{sum(h['matches'] for h in COUNTERS['heroes']):,}".replace(",", " " if lang == "pl" else ","), date=long_date(COUNTERS['date'], lang)))}</p>
+</main>
+""" + foot(t, T, BASE + other["counters"]["path"])
+
+
+def counter_page(t, hero):
+    lang = t["lang"]
+    c = t["counters"]
+    T = lambda s: html.escape(typeset(s, lang), quote=True)  # noqa: E731
+    prefix = "../" * (c["path"].count("/") + 1)
+    path = f'{c["path"]}{hero["slug"]}/'
+    url = BASE + path
+    home = BASE + t["path"]
+    other = EN if lang == "pl" else PL
+    name = hero["name"]
+    items = COUNTERS["items"]
+    top = max(i["points"] for i in hero["items"])
+    sep = "," if lang == "pl" else "."
+
+    def pts(p):
+        return f"+{p:.1f}".replace(".", sep) + (NB + "p.p." if lang == "pl" else NB + "pp")
+
+    def cost(n):
+        return f"{n:,}".replace(",", NB if lang == "pl" else ",")
+
+    rows = []
+    for rank, i in enumerate(hero["items"], 1):
+        it = items[str(i["id"])]
+        slot = it.get("slot") or "weapon"
+        rows.append(
+            f'<li class="ci slot-{slot}"><span class="rank">{rank}</span>'
+            f'<img src="{img_src("items", i["id"], it["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
+            f'<span class="ci-name"><strong>{e(it[lang])}</strong><small>{T(c["slots"].get(slot, slot))} · {cost(it["cost"])} {T(c["souls"])}</small></span>'
+            f'<span class="ci-edge"><b>{pts(i["points"])}</b><i style="width:{max(8, round(100 * i["points"] / top))}%"></i></span></li>'
+        )
+    others = "".join(
+        f'<li><a href="../{h["slug"]}/"><img src="{img_src("heroes", h["slug"], h["img"], prefix)}" alt="" width="32" height="32" '
+        f'loading="lazy" decoding="async">{e(h["name"])}</a></li>'
+        for h in COUNTERS["heroes"] if h["slug"] != hero["slug"]
+    )
+    ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Deadlock Assist", "item": home},
+                {"@type": "ListItem", "position": 2, "name": c["index_h1"], "item": BASE + c["path"]},
+                {"@type": "ListItem", "position": 3, "name": name, "item": url},
+            ],
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": c["h1"].format(hero=name),
+            "itemListOrder": "https://schema.org/ItemListOrderDescending",
+            "itemListElement": [
+                {"@type": "ListItem", "position": n, "name": items[str(i["id"])][lang]}
+                for n, i in enumerate(hero["items"], 1)
+            ],
+        },
+    ]
+    n = f"{hero['matches']:,}".replace(",", " " if lang == "pl" else ",")
+    return head(t, url, c["title"].format(hero=name), c["desc"].format(hero=name),
+                f'{BASE}{PL["counters"]["path"]}{hero["slug"]}/', f'{BASE}{EN["counters"]["path"]}{hero["slug"]}/',
+                prefix) + f"""<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}</style>
+</head>
+<body>
+{sub_header(t, T, prefix, home, f'{BASE}{other["counters"]["path"]}{hero["slug"]}/')}
+<main id="main" class="wrap counters">
+  <nav class="crumbs" aria-label="breadcrumbs"><a href="../">{T(c['index_h1'])}</a> › {e(name)}</nav>
+  <div class="hero-head"><img src="{img_src("heroes", hero["slug"], hero["img"], prefix)}" alt="" width="64" height="64"><h1>{T(c['h1'].format(hero=name))}</h1></div>
+  <p class="section-lead">{T(c['lead'].format(hero=name))}</p>
+  <p class="meta"><span>{T(c['data'].format(n=n, date=long_date(COUNTERS['date'], lang)))}</span></p>
+  <ol class="ci-list" aria-label="{T(c['edge_h'])}">{"".join(rows)}</ol>
+  <p class="note">{T(c['explain'].format(hero=name))}</p>
+  <section class="ci-cta"><h2>{T(c['cta_h'])}</h2><p>{T(c['cta_p'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></section>
+  <section class="ci-others"><h2>{T(c['others'])}</h2><ul>{others}</ul></section>
+</main>
+""" + foot(t, T, f'{BASE}{other["counters"]["path"]}{hero["slug"]}/')
 
 
 def changes_page(t, shown=4):
@@ -619,7 +804,8 @@ def not_found():
 
 
 def main():
-    out = Path(sys.argv[1])
+    global OUT
+    out = OUT = Path(sys.argv[1])
     (out / "en").mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(page(PL))
     (out / "en" / "index.html").write_text(page(EN))
@@ -627,6 +813,13 @@ def main():
     for t in (PL, EN):
         (out / t["changes"]["path"]).mkdir(parents=True, exist_ok=True)
         (out / t["changes"]["path"] / "index.html").write_text(changes_page(t))
+        if COUNTERS:
+            base = out / t["counters"]["path"]
+            base.mkdir(parents=True, exist_ok=True)
+            (base / "index.html").write_text(counters_index(t))
+            for hero in COUNTERS["heroes"]:
+                (base / hero["slug"]).mkdir(exist_ok=True)
+                (base / hero["slug"] / "index.html").write_text(counter_page(t, hero))
     def entry(pl, en, day):
         alt = (
             f'    <xhtml:link rel="alternate" hreflang="pl" href="{BASE}{pl}"/>\n'
@@ -640,6 +833,9 @@ def main():
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
         + entry("", "en/", CHANGELOG[0]["date"])
         + entry(PL["changes"]["path"], EN["changes"]["path"], CHANGELOG[0]["date"])
+        + (entry(PL["counters"]["path"], EN["counters"]["path"], COUNTERS["date"])
+           + "".join(entry(f'{PL["counters"]["path"]}{h["slug"]}/', f'{EN["counters"]["path"]}{h["slug"]}/', COUNTERS["date"])
+                     for h in COUNTERS["heroes"]) if COUNTERS else "")
         + "</urlset>\n"
     )
     (out / ".nojekyll").write_text("")

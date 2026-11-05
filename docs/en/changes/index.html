@@ -177,6 +177,46 @@ section{padding-top:48px}
 .older .release:first-of-type{border-top:0}
 .changes .end{margin-top:40px}
 .changes .end .note{margin:0 0 14px}
+.counters{padding-top:32px;padding-bottom:56px}
+.counters>*{max-width:820px}
+.counters h1{font-size:clamp(28px,3.4vw,40px);margin:0}
+.crumbs{font-size:14px;color:var(--muted);margin-bottom:12px}
+.crumbs a{color:var(--muted)}
+.hero-head{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.hero-head img{border-radius:12px;background:var(--panel-2);flex:none}
+.counters .section-lead{margin:0 0 12px}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 20px;font-size:14px;color:var(--muted)}
+.ci-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.ci{display:grid;grid-template-columns:28px 40px 1fr minmax(120px,30%);align-items:center;gap:12px;background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--slot,var(--border));border-radius:var(--r);padding:10px 14px}
+.slot-weapon{--slot:#e8a33d}.slot-vitality{--slot:#6cc04a}.slot-spirit{--slot:#b07ce8}
+.ci .rank{color:var(--muted);font-variant-numeric:tabular-nums;text-align:center}
+.ci img{border-radius:8px;background:var(--panel-2)}
+.ci-name{display:flex;flex-direction:column;min-width:0}
+.ci-name strong{font-weight:600}
+.ci-name small{color:var(--muted);font-size:13px}
+.ci-edge{display:grid;gap:6px;justify-items:end}
+.ci-edge b{color:var(--accent);font-variant-numeric:tabular-nums}
+.ci-edge i{display:block;height:6px;border-radius:3px;background:var(--accent);justify-self:stretch;max-width:100%}
+.counters .note{margin:14px 0 0}
+.ci-cta{margin-top:36px;padding-top:22px;padding:22px;border:1px solid rgba(242,163,58,.3);border-radius:var(--r);background:rgba(242,163,58,.06)}
+.ci-cta h2{font-size:20px;margin:0 0 6px}
+.ci-cta p{margin:0 0 14px;color:var(--text-2)}
+.ci-others{margin-top:40px;padding-top:0}
+.ci-others h2{font-size:20px;margin:0 0 12px}
+.ci-others ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.ci-others a{display:inline-flex;align-items:center;gap:8px;padding:6px 10px 6px 6px;border:1px solid var(--border);border-radius:999px;color:var(--text);text-decoration:none;font-size:14px}
+.ci-others a:hover{border-color:var(--accent)}
+.ci-others img{border-radius:50%;background:var(--panel-2)}
+.hero-grid{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;max-width:none!important}
+.hero-grid a{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--r);background:var(--panel);color:var(--text);text-decoration:none;font-weight:600}
+.hero-grid a:hover{border-color:var(--accent)}
+.hero-grid img{border-radius:8px;background:var(--panel-2);flex:none}
+@media (max-width:600px){
+.ci{grid-template-columns:22px 36px 1fr;padding:10px}
+.ci img{width:36px;height:36px}
+.ci-edge{grid-column:2/-1;justify-items:start;grid-template-columns:auto 1fr;align-items:center;gap:10px}
+.hero-grid{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
 <body>
@@ -194,7 +234,7 @@ section{padding-top:48px}
   <div class="end"><p class="note">The app updates itself. You only download it once.</p><div class="actions"><a class="btn" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3v-6ZM12 4.3 21 3v8.5h-9V4.3ZM3 12.5h7.5v7L3 18.5v-6ZM12 12.5h9V21l-9-1.3v-7.2Z" fill="currentColor" stroke="none"/></svg><span>Download for Windows</span></a></div></div>
 </main>
 <footer class="wrap foot">
-  <nav aria-label="links"><a href="https://deadlock-assist.com/en/changes/">Changelog</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Suggest an idea</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Report a bug</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Report a vulnerability</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">All versions</a><a href="https://deadlock-assist.com/zmiany/" hreflang="pl">Wersja polska</a></nav>
+  <nav aria-label="links"><a href="https://deadlock-assist.com/en/counters/">Counter items for every hero</a><a href="https://deadlock-assist.com/en/changes/">Changelog</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Suggest an idea</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Report a bug</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Report a vulnerability</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">All versions</a><a href="https://deadlock-assist.com/zmiany/" hreflang="pl">Wersja polska</a></nav>
   <p>Deadlock is a trademark of Valve Corporation. Deadlock Assist is an unofficial fan project, not affiliated with Valve. Item data: deadlock-api.com.</p>
 </footer>
 </body>
