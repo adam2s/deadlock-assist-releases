@@ -48,7 +48,7 @@ PL = {
         "timery obozów i Mid Bossa oraz historia meczów z analizą farmy. Bez Overwolf, bez reklam, "
         "bez czytania pamięci gry."
     ),
-    "nav": [("#funkcje", "Funkcje"), ("#bezpieczenstwo", "Bezpieczeństwo"), ("#faq", "FAQ")],
+    "nav": [("#funkcje", "Funkcje"), ("#skutecznosc", "Skuteczność"), ("#bezpieczenstwo", "Bezpieczeństwo"), ("#faq", "FAQ")],
     "switch": ("en/", "English"),
     "eyebrow": "Darmowa nakładka do Deadlocka · Windows 10/11",
     "h1": "Kontry, buildy i timery w Deadlocku, podpowiadane w trakcie meczu",
@@ -97,6 +97,31 @@ PL = {
          "Mecz startuje, gdy zegar gry pokaże pierwszą minutę, a F10 go kończy i zapisuje. Nakładka nie "
          "przechwytuje myszy, a nowe wersje instalują się jednym kliknięciem."),
     ],
+    "proof_h": "Czy doradca naprawdę pomaga?",
+    "proof_lead": (
+        "Sprawdziliśmy doradcę na 2020 prawdziwych meczach graczy z wysokich rang (Emissary i wyżej) z ostatnich "
+        "14 dni. Przy każdym z 33 811 zakupów doradca dostał to, co gracz widział w tej chwili: swoje przedmioty, "
+        "skład wroga i jego zakupy z Tab. Statystyki, z których korzysta, pochodzą z wcześniejszych meczów niż te "
+        "sprawdzane."
+    ),
+    "proof": [
+        ("81%", 81, 62, "trafnych kontr",
+         "Tyle podpowiedzi to przedmioty, z którymi gracze przeciw takiemu składowi wroga wygrywają co najmniej "
+         "tak często jak ze środkowego przedmiotu tego samego poziomu, przy wyrównanej farmie.",
+         "poprzednia wersja: 62%"),
+        ("29%", 29, 25, "zgodności z najlepszymi",
+         "W tylu zakupach graczy z wysokich rang kupiony przedmiot był w pierwszej piątce doradcy, choć doradca "
+         "wybiera z ponad 150 przedmiotów.",
+         "poprzednia wersja: 25%"),
+        ("+3,2 pkt", None, None, "częstsze wygrane",
+         "Gracze, których zakup był w pierwszej piątce doradcy, wygrywali o 3,2 punktu procentowego częściej "
+         "niż gracze z taką samą farmą w tej chwili, którzy kupili coś innego.",
+         "porównanie przy tej samej farmie"),
+    ],
+    "proof_note": (
+        "To wyniki z cudzych meczów, a nie obietnica wygranej: na wynik najbardziej wpływa farma i gra drużyny. "
+        "Wyniki dotyczą trybu „Zrównoważony”, domyślnego od wersji 1.2.6."
+    ),
     "how_h": "Jak to działa",
     "how": [
         ("Zainstaluj", "Pobierz instalator, uruchom go i włącz Deadlocka w trybie okna bez ramek (Borderless)."),
@@ -184,7 +209,7 @@ EN = {
         "Free Deadlock helper for Windows: counter items for the enemy team, what to buy next, jungle camp "
         "and Mid Boss timers, and match history with farm analysis. No Overwolf, no ads, no memory reading."
     ),
-    "nav": [("#features", "Features"), ("#safety", "Safety"), ("#faq", "FAQ")],
+    "nav": [("#features", "Features"), ("#results", "Results"), ("#safety", "Safety"), ("#faq", "FAQ")],
     "switch": ("../", "Polski"),
     "eyebrow": "Free Deadlock overlay · Windows 10/11",
     "h1": "Deadlock counter items, builds and timers, live in your match",
@@ -233,6 +258,31 @@ EN = {
          "A match starts when the game clock shows the first minute, and F10 ends and saves it. The overlay "
          "never captures your mouse, and new versions install in one click."),
     ],
+    "proof_h": "Does the advisor actually help?",
+    "proof_lead": (
+        "We tested the advisor on 2,020 real high-rank matches (Emissary and above) from the last 14 days. For "
+        "each of 33,811 purchases the advisor got what the player could see at that moment: their own items, the "
+        "enemy team and the enemies' items from Tab. The statistics it relies on come from earlier matches than "
+        "the ones tested."
+    ),
+    "proof": [
+        ("81%", 81, 62, "good counters",
+         "This share of suggestions are items that win at least as often against that enemy team as the middle "
+         "item of the same tier, with the buyers' farm evened out.",
+         "previous version: 62%"),
+        ("29%", 29, 25, "match what top players buy",
+         "In this share of high-rank purchases, the item bought was in the advisor's top 5, picked from over 150 "
+         "items.",
+         "previous version: 25%"),
+        ("+3.2 pts", None, None, "more wins",
+         "Players whose purchase was in the advisor's top 5 won 3.2 percentage points more often than players "
+         "with the same farm at that moment who bought something else.",
+         "compared at equal farm"),
+    ],
+    "proof_note": (
+        "These are results from other players' matches, not a promise of a win: farm and teamwork matter most. "
+        "Results are for the “Balanced” mode, the default since version 1.2.6."
+    ),
     "how_h": "How it works",
     "how": [
         ("Install", "Download the installer, run it and set Deadlock to borderless window mode."),
@@ -323,6 +373,7 @@ def page(t):
     url = BASE + t["path"]
     feat_id = "funkcje" if t["lang"] == "pl" else "features"
     safe_id = "bezpieczenstwo" if t["lang"] == "pl" else "safety"
+    proof_id = "skutecznosc" if t["lang"] == "pl" else "results"
     ld_app = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -356,6 +407,18 @@ def page(t):
         f"<figcaption>{e(c)}</figcaption></figure>"
         for f, a, c in t["gallery"]
     )
+    def stat(n, now, before, lab, text, was):
+        meter = (
+            f'<div class="meter" aria-hidden="true"><i style="width:{now}%"></i><b style="left:{before}%"></b></div>'
+            if now is not None
+            else ""
+        )
+        return (
+            f'<li class="stat"><p class="stat-num">{e(n)}</p><p class="stat-label">{e(lab)}</p>{meter}'
+            f'<p>{e(text)}</p><p class="stat-before">{e(was)}</p></li>'
+        )
+
+    proof = "".join(stat(*p) for p in t["proof"])
     why = "".join(f"<li><h3>{e(h)}</h3><p>{e(p)}</p></li>" for h, p in t["why"])
     safe = "".join(f"<li>{e(s)}</li>" for s in t["safe"])
     faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in t["faq"])
@@ -413,6 +476,13 @@ def page(t):
   <h2>{e(t['features_h'])}</h2>
   <p class="section-lead">{e(t['features_lead'])}</p>
   <div class="grid">{feats}</div>
+</section>
+
+<section id="{proof_id}" class="wrap">
+  <h2>{e(t['proof_h'])}</h2>
+  <p class="section-lead">{e(t['proof_lead'])}</p>
+  <ul class="stats">{proof}</ul>
+  <p class="note">{e(t['proof_note'])}</p>
 </section>
 
 <section class="wrap">

@@ -100,13 +100,23 @@ details p{margin:0 0 18px;color:var(--muted)}
 .safe{flex-direction:column;padding:24px}
 .top nav a:not(.lang){display:none}
 }
+.stats{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:22px}
+.stat p{margin:0;color:var(--muted);font-size:15px}
+.stat .stat-num{color:var(--accent);font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.stat .stat-label{color:var(--text);font-weight:600;margin:4px 0 14px}
+.stat .stat-before{margin-top:10px;font-size:13px}
+.meter{position:relative;height:8px;border-radius:4px;background:var(--panel-2);margin-bottom:14px}
+.meter i{position:absolute;inset:0 auto 0 0;border-radius:4px;background:var(--accent)}
+.meter b{position:absolute;top:-4px;width:2px;height:16px;background:var(--text-2)}
+@media (max-width:860px){.stats{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top wrap">
   <a class="logo" href="./"><img src="../icon.png" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu"><a href="#features">Features</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a class="lang" href="../" hreflang="pl">Polski</a></nav>
+  <nav aria-label="menu"><a href="#features">Features</a><a href="#results">Results</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a class="lang" href="../" hreflang="pl">Polski</a></nav>
 </header>
 <main id="main">
 <section class="hero wrap">
@@ -125,6 +135,13 @@ details p{margin:0 0 18px;color:var(--muted)}
   <h2>What Deadlock Assist does</h2>
   <p class="section-lead">Everything you would normally look up on build and tier list sites between fights is on your screen the moment you need it.</p>
   <div class="grid"><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Counter items for the enemy team</h3><p>Recognises the six enemies from the top bar and suggests the items that work best against them: Healbane against healing, Silencer against ability heroes, Spirit Resilience against spirit damage. Each counter shows its price and the reason.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.4 11h11.2L21 7H6.3"/></svg><h3>“Buy now” and next purchases</h3><p>An item build from thousands of matches on your hero, adjusted to what you already own and what you can afford. When you have the souls, it shows the single best purchase, not a list to scroll.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 10 4M20 20 14 4M12 6v2M12 11v2M12 16v2"/></svg><h3>Lane counters</h3><p>Until minute 10 it suggests cheap items against your lane opponents, because that is when the farm is won or lost.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><h3>Enemy purchases, live</h3><p>Hold Tab and it remembers what every enemy has bought. When someone buys Leech or Unstoppable, the advice changes right away and the overlay warns you.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><h3>Clock, jungle camp and Mid Boss timers</h3><p>Spots killed jungle camps on the minimap and counts down their respawn. It also tracks the Mid Boss, power-ups and the soul urn, with the direction to go.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="m7 15 4-4 3 3 5-6"/></svg><h3>Match history and review</h3><p>Every match goes to your history: result, teams, purchase order and souls per minute compared with a typical player. At the end you get a short summary of what to improve.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z"/><path d="M19 19v2H6"/><path d="M9 7h6M9 11h6"/></svg><h3>Hero and item browser</h3><p>Browse heroes and items with filters like “what counters healing” or “items with silence”. After every patch you see what changed for your heroes and items.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg><h3>Runs by itself</h3><p>A match starts when the game clock shows the first minute, and F10 ends and saves it. The overlay never captures your mouse, and new versions install in one click.</p></article></div>
+</section>
+
+<section id="results" class="wrap">
+  <h2>Does the advisor actually help?</h2>
+  <p class="section-lead">We tested the advisor on 2,020 real high-rank matches (Emissary and above) from the last 14 days. For each of 33,811 purchases the advisor got what the player could see at that moment: their own items, the enemy team and the enemies&#x27; items from Tab. The statistics it relies on come from earlier matches than the ones tested.</p>
+  <ul class="stats"><li class="stat"><p class="stat-num">81%</p><p class="stat-label">good counters</p><div class="meter" aria-hidden="true"><i style="width:81%"></i><b style="left:62%"></b></div><p>This share of suggestions are items that win at least as often against that enemy team as the middle item of the same tier, with the buyers&#x27; farm evened out.</p><p class="stat-before">previous version: 62%</p></li><li class="stat"><p class="stat-num">29%</p><p class="stat-label">match what top players buy</p><div class="meter" aria-hidden="true"><i style="width:29%"></i><b style="left:25%"></b></div><p>In this share of high-rank purchases, the item bought was in the advisor&#x27;s top 5, picked from over 150 items.</p><p class="stat-before">previous version: 25%</p></li><li class="stat"><p class="stat-num">+3.2 pts</p><p class="stat-label">more wins</p><p>Players whose purchase was in the advisor&#x27;s top 5 won 3.2 percentage points more often than players with the same farm at that moment who bought something else.</p><p class="stat-before">compared at equal farm</p></li></ul>
+  <p class="note">These are results from other players&#x27; matches, not a promise of a win: farm and teamwork matter most. Results are for the “Balanced” mode, the default since version 1.2.6.</p>
 </section>
 
 <section class="wrap">

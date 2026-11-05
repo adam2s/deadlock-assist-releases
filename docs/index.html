@@ -100,13 +100,23 @@ details p{margin:0 0 18px;color:var(--muted)}
 .safe{flex-direction:column;padding:24px}
 .top nav a:not(.lang){display:none}
 }
+.stats{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:22px}
+.stat p{margin:0;color:var(--muted);font-size:15px}
+.stat .stat-num{color:var(--accent);font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.stat .stat-label{color:var(--text);font-weight:600;margin:4px 0 14px}
+.stat .stat-before{margin-top:10px;font-size:13px}
+.meter{position:relative;height:8px;border-radius:4px;background:var(--panel-2);margin-bottom:14px}
+.meter i{position:absolute;inset:0 auto 0 0;border-radius:4px;background:var(--accent)}
+.meter b{position:absolute;top:-4px;width:2px;height:16px;background:var(--text-2)}
+@media (max-width:860px){.stats{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="top wrap">
   <a class="logo" href="./"><img src="icon.png" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu"><a href="#funkcje">Funkcje</a><a href="#bezpieczenstwo">Bezpieczeństwo</a><a href="#faq">FAQ</a><a class="lang" href="en/" hreflang="en">English</a></nav>
+  <nav aria-label="menu"><a href="#funkcje">Funkcje</a><a href="#skutecznosc">Skuteczność</a><a href="#bezpieczenstwo">Bezpieczeństwo</a><a href="#faq">FAQ</a><a class="lang" href="en/" hreflang="en">English</a></nav>
 </header>
 <main id="main">
 <section class="hero wrap">
@@ -125,6 +135,13 @@ details p{margin:0 0 18px;color:var(--muted)}
   <h2>Co robi Deadlock Assist</h2>
   <p class="section-lead">Wszystko, czego zwykle szukasz w przerwie między walkami na stronach z buildami i tier listami, masz na ekranie w chwili, gdy jest potrzebne.</p>
   <div class="grid"><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Kontrprzedmioty pod skład wroga</h3><p>Rozpoznaje sześciu wrogów z górnego paska i podpowiada przedmioty, które najlepiej na nich działają: Healbane na leczenie, Silencer na bohaterów od umiejętności, Spirit Resilience na obrażenia duchowe. Przy każdej kontrze widzisz cenę i powód.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.4 11h11.2L21 7H6.3"/></svg><h3>„Kup teraz” i następne zakupy</h3><p>Plan buildu z tysięcy meczów graczy na Twoim bohaterze, dopasowany do tego, co już masz i na co Cię stać. Gdy masz dość dusz, aplikacja pokazuje jeden najlepszy zakup, a nie listę do przewijania.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 10 4M20 20 14 4M12 6v2M12 11v2M12 16v2"/></svg><h3>Kontry na linii</h3><p>Do 10. minuty podpowiada tanie przedmioty na rywali z Twojej linii, bo to wtedy wygrywa się lub przegrywa farmę.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><h3>Zakupy wrogów na bieżąco</h3><p>Po wciśnięciu Tab zapamiętuje przedmioty przeciwników. Gdy ktoś kupi np. Leech albo Unstoppable, doradca od razu zmienia rady i ostrzega Cię w nakładce.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><h3>Zegar, timery obozów i Mid Boss</h3><p>Widzi na minimapie, które obozy w dżungli zostały zabite, i odlicza ich odrodzenie. Pilnuje też Mid Bossa, wzmocnień i urny dusz, z kierunkiem, w którą stronę iść.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="m7 15 4-4 3 3 5-6"/></svg><h3>Historia meczów i analiza</h3><p>Każdy mecz trafia do historii: wynik, skład, kolejność zakupów i farma minuta po minucie w porównaniu z typowym graczem. Na końcu dostajesz krótkie podsumowanie, co poprawić.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z"/><path d="M19 19v2H6"/><path d="M9 7h6M9 11h6"/></svg><h3>Dane gry po polsku i angielsku</h3><p>Przeglądarka bohaterów i przedmiotów z filtrami typu „co kontruje leczenie” albo „przedmioty z wyciszeniem”. Po każdym patchu widzisz, co się zmieniło w Twoich bohaterach i przedmiotach.</p></article><article class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg><h3>Działa sama</h3><p>Mecz startuje, gdy zegar gry pokaże pierwszą minutę, a F10 go kończy i zapisuje. Nakładka nie przechwytuje myszy, a nowe wersje instalują się jednym kliknięciem.</p></article></div>
+</section>
+
+<section id="skutecznosc" class="wrap">
+  <h2>Czy doradca naprawdę pomaga?</h2>
+  <p class="section-lead">Sprawdziliśmy doradcę na 2020 prawdziwych meczach graczy z wysokich rang (Emissary i wyżej) z ostatnich 14 dni. Przy każdym z 33 811 zakupów doradca dostał to, co gracz widział w tej chwili: swoje przedmioty, skład wroga i jego zakupy z Tab. Statystyki, z których korzysta, pochodzą z wcześniejszych meczów niż te sprawdzane.</p>
+  <ul class="stats"><li class="stat"><p class="stat-num">81%</p><p class="stat-label">trafnych kontr</p><div class="meter" aria-hidden="true"><i style="width:81%"></i><b style="left:62%"></b></div><p>Tyle podpowiedzi to przedmioty, z którymi gracze przeciw takiemu składowi wroga wygrywają co najmniej tak często jak ze środkowego przedmiotu tego samego poziomu, przy wyrównanej farmie.</p><p class="stat-before">poprzednia wersja: 62%</p></li><li class="stat"><p class="stat-num">29%</p><p class="stat-label">zgodności z najlepszymi</p><div class="meter" aria-hidden="true"><i style="width:29%"></i><b style="left:25%"></b></div><p>W tylu zakupach graczy z wysokich rang kupiony przedmiot był w pierwszej piątce doradcy, choć doradca wybiera z ponad 150 przedmiotów.</p><p class="stat-before">poprzednia wersja: 25%</p></li><li class="stat"><p class="stat-num">+3,2 pkt</p><p class="stat-label">częstsze wygrane</p><p>Gracze, których zakup był w pierwszej piątce doradcy, wygrywali o 3,2 punktu procentowego częściej niż gracze z taką samą farmą w tej chwili, którzy kupili coś innego.</p><p class="stat-before">porównanie przy tej samej farmie</p></li></ul>
+  <p class="note">To wyniki z cudzych meczów, a nie obietnica wygranej: na wynik najbardziej wpływa farma i gra drużyny. Wyniki dotyczą trybu „Zrównoważony”, domyślnego od wersji 1.2.6.</p>
 </section>
 
 <section class="wrap">
