@@ -14,8 +14,6 @@ BASE = f"https://{DOMAIN}/"
 DOWNLOAD = "https://github.com/adam2s/deadlock-assist-releases/releases/latest"
 REPO = "https://github.com/adam2s/deadlock-assist-releases"
 KOFI = "https://ko-fi.com/deadlockassist"
-# Visit counter without cookies (goatcounter.com, site code "deadlock-assist"); "" turns it off.
-GOATCOUNTER = "https://deadlock-assist.goatcounter.com/count"
 IDEA = REPO + "/issues/new?template=pomysl.yml"
 BUG = REPO + "/issues/new?template=blad.yml"
 
@@ -154,7 +152,7 @@ PL = {
               (REPO + "/releases", "Wszystkie wersje")],
     "footer": (
         "Deadlock jest znakiem towarowym Valve Corporation. Deadlock Assist to nieoficjalny projekt fanów, "
-        "niezwiązany z Valve. Dane o przedmiotach: deadlock-api.com. Statystyki odwiedzin bez cookies: GoatCounter."
+        "niezwiązany z Valve. Dane o przedmiotach: deadlock-api.com."
     ),
     "skip": "Przejdź do treści",
     "smartscreen": "Windows ostrzega? „Więcej informacji” → „Uruchom mimo to”.",
@@ -265,7 +263,7 @@ EN = {
               (REPO + "/releases", "All versions")],
     "footer": (
         "Deadlock is a trademark of Valve Corporation. Deadlock Assist is an unofficial fan project, not "
-        "affiliated with Valve. Item data: deadlock-api.com. Cookie-free visit stats: GoatCounter."
+        "affiliated with Valve. Item data: deadlock-api.com."
     ),
     "skip": "Skip to content",
     "smartscreen": "Windows warning? “More info” → “Run anyway”.",
@@ -344,16 +342,11 @@ def site_changes(r, lang):
     return SITE_CHANGES.get(r["version"], {}).get(lang) or r[lang]
 
 
-def counter():
-    return f'<script data-goatcounter="{GOATCOUNTER}" async src="https://gc.zgo.at/count.js"></script>\n' if GOATCOUNTER else ""
-
-
 def download_btn(t, label, cls="btn"):
-    """Download link; GoatCounter counts its clicks as "download"."""
+    """Download link to the latest release."""
     ico = icon("windows") if cls == "btn" else ""
     text = f"<span>{label}</span>" if ico else label
-    return (f'<a class="{cls}" href="{DOWNLOAD}" rel="noopener" data-goatcounter-click="download" '
-            f'data-goatcounter-title="{t["lang"]}">{ico}{text}</a>')
+    return f'<a class="{cls}" href="{DOWNLOAD}" rel="noopener">{ico}{text}</a>'
 
 
 def head(t, url, title, desc, pl_url, en_url, prefix, extra=""):
@@ -392,7 +385,7 @@ def head(t, url, title, desc, pl_url, en_url, prefix, extra=""):
 <meta name="twitter:image" content="{og_image}">
 <meta name="twitter:image:alt" content="{e(t['shot_alt'])}">
 {FONTS}
-{counter()}"""
+"""
 
 
 def foot(t, T, switch_href):
