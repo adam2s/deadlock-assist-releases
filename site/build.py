@@ -1,7 +1,8 @@
 """Builds the Deadlock Assist landing page (PL at /, EN at /en/) into <out>/.
 
 Usage: python3 -I site/build.py docs   (edit texts here, then rebuild; GitHub Pages serves docs/)
-The changelog page reads site/changelog.json: refresh it with site/sync_changelog.py after an app release.
+The changelog page reads site/changelog.json. The app's release workflow refreshes it with
+site/sync_changelog.py on every new version; the push to site/ then rebuilds and publishes the site.
 """
 import html
 import json

@@ -1,5 +1,25 @@
 [
  {
+  "version": "1.3.0",
+  "date": "2026-11-05",
+  "pl": [
+   "Czytelniejszy interfejs we wszystkich zakładkach: jednolite nagłówki, kolory, przyciski i odstępy.",
+   "Powody doradcy i podsumowanie meczu podają nazwy bohaterów i przedmiotów po polsku, także w starych meczach. Powtarzające się powody w historii zwijają się do jednej linii.",
+   "Nakładka: pod Tab karty kontr nie zasłaniają panelu ostatniej śmierci, a obozy i inne panele chowają się przed tablicą wyników. Krótsze powody w karcie „Kup teraz”.",
+   "Ustawienia nakładki: wybrany panel w skali 100% pod podglądem, suwaki ze skalą, tryby doradcy jako wyraźne karty, „Kup teraz” wyżej.",
+   "Historia: zakupy w ciągu 30 s to jeden znacznik na osi, legenda kolorów, mecze bez wyniku na liście ostatnich, pierwsze 12 zakupów z przyciskiem „Pokaż wszystkie”.",
+   "Dane gry: statystyki z jednostkami i w grupach, polskie „Poziom” zamiast „Tier”, równe kafle przedmiotów."
+  ],
+  "en": [
+   "Clearer interface in every tab: one style for headings, colours, buttons and spacing.",
+   "Advisor reasons and the match summary use hero and item names in your language, also for old matches. Repeated reasons in the history fold into one line.",
+   "Overlay: under Tab the counter cards no longer cover the last-death panel, and camps and other panels hide from the scoreboard. Shorter reasons on the “Buy now” card.",
+   "Overlay settings: the selected panel at 100% under the preview, sliders with a scale, advisor modes as clear cards, “Buy now” higher up.",
+   "History: purchases within 30 s are one mark on the timeline, a colour legend, matches without a result in the recent list, the first 12 purchases with “Show all”.",
+   "Game data: stats with units and in groups, equal item tiles."
+  ]
+ },
+ {
   "version": "1.2.9",
   "date": "2026-11-05",
   "pl": [
@@ -40,11 +60,11 @@
    "Doradca przedmiotów: etykieta „Wygrana” porównuje przedmioty przy wyrównanej farmie kupujących. Wcześniej drogie przedmioty, które kupują gracze z przewagą, wyglądały na lepsze, niż są. Na 2020 prawdziwych meczach z ostatnich 2 tygodni dobre przeciw składowi jest 81% propozycji zamiast 62%.",
    "Doradca nie proponuje już przedmiotów, których prawie nikt na Twoim bohaterze nie kupuje na tym etapie meczu (brak danych o wygranych).",
    "Doradca trafia teraz prawdziwy następny zakup graczy w 29% przypadków zamiast 25%.",
-   "Doradca ocenia leczenie, kontrolę tłumu, wytrzymałość i mobilność bohaterów także z opisów ich umiejętności (np. ogłuszenia Dynamo i Mo & Krill).",
-   "Karta „Kup teraz” ma dwa wiersze: „Twój build” (następny przedmiot buildu, ile dusz brakuje i mniej więcej za ile je zbierzesz) oraz „Na wrogów” (jeden przedmiot na największe zagrożenie całego składu, np. „leczenie u wroga: Abrams, Ivy”).",
-   "Do 10:00 wiersz „Na wrogów” odpowiada na dwóch wrogów z Twojej linii (np. „na linii, leczenie u wroga: Lash”), potem na cały skład. Osobna sekcja „Na linii” zniknęła.",
-   "Gdy jeden wróg ma dużo więcej dusz niż reszta (odczyt spod portretów), karta pokazuje go z przedmiotem przeciw niemu.",
-   "Ustawienia doradcy: trzy tryby („Mój build”, „Zrównoważony”, „Kontry”) zamiast suwaków; suwaki są w sekcji „Zaawansowane”, z prostszymi nazwami.",
+   "Doradca ocenia leczenie, kontrolę tłumu, wytrzymałość i mobilność bohaterów także z opisów ich umiejętności (np. ogłuszenia Dynamo oraz Mo i Kryla).",
+   "Karta „Kup teraz” ma dwa wiersze: „Twój build” (następny przedmiot buildu, ile dusz brakuje i mniej więcej za ile je zbierzesz) oraz „Na wrogów” (jeden przedmiot na największe zagrożenie całego składu, np. „leczenie: Abrams, Ivy”).",
+   "Do 10:00 wiersz „Na wrogów” odpowiada na dwóch wrogów z Twojej linii (np. „leczenie: Lash (Twoja linia)”), potem na cały skład. Osobna sekcja „Na linii” zniknęła.",
+   "Gdy jeden wróg ma dużo więcej dusz niż reszta (odczyt spod portretów), karta pokazuje go razem z kontrą.",
+   "Ustawienia doradcy: trzy tryby („Twój build”, „Zrównoważony”, „Kontry”) zamiast suwaków; suwaki są w sekcji „Zaawansowane”, z prostszymi nazwami.",
    "Powody na karcie w trakcie gry są krótsze i bez punktów procentowych; liczby zostają w widoku z Tab.",
    "Styl gry (broń, duch, wytrzymałość) doradca rozpoznaje z kupionych przedmiotów, także zanim odczyta statystyki z HUD."
   ],
