@@ -68,15 +68,16 @@ PL = {
     "cta": "Pobierz dla Windows",
     "cta_short": "Pobierz",
     "cta_note": "Windows 10/11 · gra w trybie okna bez ramek · aktualizuje się sama",
+    "hero_note": "Gra w trybie okna bez ramek · aktualizuje się sama",
     "cta2": "Zobacz w akcji",
     "shot_alt": (
         "Nakładka Deadlock Assist w Deadlocku: kontry na linii, panel Kup teraz z najlepszym przedmiotem "
         "na wroga oraz zegar z timerami obozów i Mid Bossa"
     ),
     "badges": ["Za darmo", "Bez reklam i konta", "Bez Overwolf", "Nie czyta pamięci gry"],
-    "features_h": "Kontry, zakupy i timery",
+    "features_h": "Kontry, buildy i timery",
     "features": [
-        ("counter", "Kontry na skład wroga", "Przedmioty na tych wrogów: Healbane na leczenie, Silencer na umiejętności. Z ceną i powodem."),
+        ("counter", "Kontry na skład wroga", "Healbane na leczenie, Silencer na umiejętności. Z ceną i powodem."),
         ("cart", "„Kup teraz”", "Jeden najlepszy zakup na teraz, dopasowany do Twojego buildu i dusz."),
         ("eye", "Zakupy wrogów", "Po Tab widzi, co kupił wróg, i od razu zmienia rady."),
         ("lane", "Kontry na linii", "Do 10. minuty tanie przedmioty na rywali z Twojej linii."),
@@ -85,10 +86,10 @@ PL = {
     ],
     "gallery_h": "Nakładka w grze",
     "gallery": [
-        ("deadlock-overlay-tab.webp", "nakladka-tab.png",
+        ("deadlock-overlay-tab.webp", "deadlock-overlay-tab.webp",
          "Nakładka Deadlock Assist po wciśnięciu Tab: przedmioty wszystkich graczy i kontry na każdego wroga",
          "Tab: co kupił każdy wróg i czym go skontrować"),
-        ("deadlock-match-history.webp", "historia.png",
+        ("deadlock-match-history.webp", "deadlock-match-history@2x.webp",
          "Historia meczów Deadlock Assist: wyniki, przeciwnicy, farma i kolejność zakupów",
          "Historia: farma na minutę i kolejność zakupów"),
     ],
@@ -96,9 +97,9 @@ PL = {
     "proof_lead": "Test na 2 020 meczach z rang Emissary i wyżej, 33 811 zakupów.",
     "proof": [
         ("81%", 81, 62, "trafnych kontr", "Podpowiedzi, które na ten skład wygrywają częściej niż przeciętny przedmiot.",
-         "poprzednio 62%"),
+         "poprzednia wersja: 62%"),
         ("29%", 29, 25, "zakupów w top 5 doradcy", "Tyle realnych zakupów graczy było w pierwszej piątce podpowiedzi.",
-         "poprzednio 25%"),
+         "poprzednia wersja: 25%"),
         ("+3,2 p.p.", None, None, "wyższy winrate", "Przy tej samej farmie gracze, którzy kupili coś z top 5, wygrywali częściej.",
          None),
     ],
@@ -114,15 +115,15 @@ PL = {
     "safe_note": "Nieoficjalne narzędzie fanów. Valve nie publikuje listy dozwolonych programów.",
     "how_h": "Jak zacząć",
     "how": [
-        ("Zainstaluj", "Ustaw w Deadlocku tryb okna bez ramek (Borderless)."),
+        ("Zainstaluj", "Uruchom instalator i ustaw w Deadlocku tryb okna bez ramek (Borderless)."),
         ("Graj", "Mecz wykrywa się sam. Co jakiś czas przytrzymaj Tab."),
         ("Analizuj", "Po meczu wciśnij F10 i zobacz podsumowanie w Historii."),
     ],
     "faq_h": "Pytania o Deadlock Assist",
     "faq": [
         ("Czy można dostać bana?",
-         "Aplikacja nie dotyka procesu gry: robi tylko zrzuty ekranu, jak OBS czy Discord. Valve nie daje gwarancji "
-         "żadnym narzędziom, więc korzystasz na własną odpowiedzialność."),
+         "Aplikacja nie dotyka procesu gry: robi tylko zrzuty ekranu, jak OBS czy Discord. Valve nie zatwierdza "
+         "żadnych zewnętrznych narzędzi, więc korzystasz na własną odpowiedzialność."),
         ("Działa w pełnym ekranie?",
          "Nie. Ustaw w Deadlocku tryb okna bez ramek (Borderless), inaczej nakładka nie będzie widoczna."),
         ("Dlaczego Windows pokazuje ostrzeżenie?",
@@ -131,7 +132,7 @@ PL = {
         ("Skąd wie, co kupić?",
          "Ze statystyk deadlock-api.com i z tego, co widzi na ekranie: składu wroga, jego zakupów i Twoich dusz."),
         ("Jakie są wymagania?",
-         "Windows 10 lub 11 (64-bit). Interfejs po polsku lub angielsku, przełączasz go w nagłówku aplikacji."),
+         "Windows 10 lub 11 (64-bit) i Deadlock w trybie okna bez ramek. Interfejs PL lub EN, do przełączenia w aplikacji."),
     ],
     "final_h": "Zagraj następny mecz z doradcą",
     "final_lead": "Instalacja zajmuje minutę.",
@@ -169,6 +170,7 @@ EN = {
     "cta": "Download for Windows",
     "cta_short": "Download",
     "cta_note": "Windows 10/11 · game in borderless window · updates itself",
+    "hero_note": "Game in borderless window · updates itself",
     "cta2": "See it in action",
     "shot_alt": (
         "Deadlock Assist overlay in Deadlock: lane counters, the Buy now panel with the best item against the "
@@ -177,7 +179,7 @@ EN = {
     "badges": ["Free", "No ads, no account", "No Overwolf", "No memory reading"],
     "features_h": "Counter items, builds and timers",
     "features": [
-        ("counter", "Counter items for the enemy team", "Items for these enemies: Healbane vs healing, Silencer vs abilities. With price and reason."),
+        ("counter", "Counter items for the enemy team", "Healbane vs healing, Silencer vs abilities. With price and reason."),
         ("cart", "“Buy now”", "The single best purchase right now, fitted to your build and souls."),
         ("eye", "Enemy purchases", "Hold Tab and it sees what enemies bought, then updates the advice."),
         ("lane", "Lane counters", "Until minute 10, cheap items against your lane opponents."),
@@ -186,10 +188,10 @@ EN = {
     ],
     "gallery_h": "In-game overlay",
     "gallery": [
-        ("deadlock-overlay-tab.webp", "nakladka-tab.png",
+        ("deadlock-overlay-tab.webp", "deadlock-overlay-tab.webp",
          "Deadlock Assist overlay with Tab held: every player's items and counters to each enemy",
          "Tab: what every enemy bought and how to counter it"),
-        ("deadlock-match-history.webp", "historia.png",
+        ("deadlock-match-history.webp", "deadlock-match-history@2x.webp",
          "Deadlock Assist match history: results, opponents, farm and purchase order",
          "History: farm per minute and purchase order"),
     ],
@@ -197,9 +199,9 @@ EN = {
     "proof_lead": "Tested on 2,020 Emissary+ matches, 33,811 purchases.",
     "proof": [
         ("81%", 81, 62, "good counters", "Picks that win more often vs that team than an average item.",
-         "before: 62%"),
+         "previous version: 62%"),
         ("29%", 29, 25, "of real buys in its top 5", "Share of players' actual purchases that were in the advisor's top 5.",
-         "before: 25%"),
+         "previous version: 25%"),
         ("+3.2 pp", None, None, "higher win rate", "At equal farm, players who bought from the top 5 won more often.",
          None),
     ],
@@ -215,15 +217,15 @@ EN = {
     "safe_note": "Unofficial fan tool. Valve does not publish a list of allowed programs.",
     "how_h": "Get started",
     "how": [
-        ("Install", "Set Deadlock to borderless window mode."),
+        ("Install", "Run the installer and set Deadlock to borderless window mode."),
         ("Play", "It detects the match on its own. Hold Tab now and then."),
         ("Review", "After the match, press F10 for the summary in History."),
     ],
     "faq_h": "Deadlock Assist FAQ",
     "faq": [
         ("Can I get banned?",
-         "It never touches the game process; it only takes screenshots, like OBS or Discord. Valve guarantees no "
-         "third-party tool, so use it at your own risk."),
+         "It never touches the game process; it only takes screenshots, like OBS or Discord. Valve doesn't approve "
+         "any third-party tools, so use it at your own risk."),
         ("Does it work in fullscreen?",
          "No. Set Deadlock to borderless window, otherwise the overlay can't show."),
         ("Why does Windows show a warning?",
@@ -231,7 +233,7 @@ EN = {
         ("How does it know what to buy?",
          "From deadlock-api.com stats and what it sees on screen: the enemy team, their purchases and your souls."),
         ("What are the requirements?",
-         "Windows 10 or 11 (64-bit). The interface is in English or Polish; switch it in the app header."),
+         "Windows 10 or 11 (64-bit) and Deadlock in borderless window. Interface in English or Polish, switchable in the app."),
     ],
     "final_h": "Play your next match with an advisor",
     "final_lead": "Installing takes a minute.",
@@ -253,7 +255,9 @@ CSS = Path(__file__).with_name("style.css").read_text()
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap">'
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" '
+    'media="print" onload="this.media=\'all\'">\n'
+    '<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap"></noscript>'
 )
 
 
@@ -265,7 +269,12 @@ def typeset(s, lang):
     s = re.sub(r"\b(Windows|Tier|minute|minuty|top)\s(\d)", "\\1" + NB + "\\2", s)
     s = re.sub(r"(\d+\.) (minuty)", "\\1" + NB + "\\2", s)
     s = re.sub(r"([„“])([^”]{1,24})”", lambda m: m.group(1) + m.group(2).replace(" ", NB) + "”", s)
-    return s.replace(" ·", NB + "·").replace(" →", NB + "→").replace(" p.p.", NB + "p.p.").replace(" pp", NB + "pp")
+    return s.replace(" ·", NB + "·").replace(" → ", NB + "→" + NB).replace(" p.p.", NB + "p.p.").replace(" pp", NB + "pp")
+
+
+def unit(n):
+    """Smaller unit after a big stat number: 81<span>%</span>, +3,2<span> p.p.</span>."""
+    return re.sub(r"(%|\u00a0p\.p\.|\u00a0pp)$", r'<span class="u">\1</span>', n)
 
 
 def page(t):
@@ -284,6 +293,7 @@ def page(t):
         "operatingSystem": "Windows 10, Windows 11",
         "inLanguage": ["pl", "en"],
         "isAccessibleForFree": True,
+        "dateModified": date.today().isoformat(),
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "downloadUrl": DOWNLOAD,
         "featureList": t["feature_list"],
@@ -321,7 +331,7 @@ def page(t):
                 f'<div class="meter-legend" aria-hidden="true"><span style="left:{before}%">{T(was)}</span></div>'
             )
         return (
-            f'<li class="stat"><p class="stat-num">{T(n)}</p><p class="stat-label">{T(lab)}</p>{meter}'
+            f'<li class="stat"><p class="stat-num">{unit(T(n))}</p><p class="stat-label">{T(lab)}</p>{meter}'
             f"<p>{T(text)}</p></li>"
         )
 
@@ -348,7 +358,7 @@ def page(t):
 <link rel="icon" type="image/png" sizes="32x32" href="{prefix}favicon-32.png">
 <link rel="icon" type="image/png" sizes="256x256" href="{prefix}icon.png">
 <link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png">
-<link rel="preload" as="image" href="{prefix}deadlock-overlay-counters.webp" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="{prefix}deadlock-overlay-counters.webp" fetchpriority="high">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Deadlock Assist">
 <meta property="og:title" content="{e(t['title'])}">
@@ -385,7 +395,7 @@ def page(t):
     <p class="lead">{T(t['lead'])}</p>
     <p class="proof-line"><a href="#{ids['results']}"><strong>{T(t['proof_line'][0])}</strong> {T(t['proof_line'][1])}</a></p>
     <div class="actions">{cta}<a class="btn ghost" href="#{ids['gallery']}">{T(t['cta2'])}</a></div>
-    <p class="note">{T(t['cta_note'])}<br>{T(t['smartscreen'])}</p>
+    <p class="note">{T(t['hero_note'])}<span class="desk"><br>{T(t['smartscreen'])}</span></p>
     <ul class="badges">{badges}</ul>
   </div>
   <figure class="hero-shot"><picture><source type="image/webp" srcset="{prefix}deadlock-overlay-counters.webp"><img src="{prefix}deadlock-overlay-counters.jpg" alt="{T(t['shot_alt'])}" width="842" height="527" fetchpriority="high"></picture></figure>
