@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className+=" js"</script>
 <title>Deadlock Patch Notes April 17, 2025 – Hero &amp; Item Changes</title>
 <meta name="description" content="Deadlock changes from April 17, 2025: Sinclair, Grey Talon, Kelvin, Haze, Holliday, Mo &amp; Krill… Every hero, ability and item change with icons.">
 <link rel="canonical" href="https://deadlock-assist.com/en/patch-notes/2025-04-17/">
@@ -52,15 +53,23 @@ h1{margin:0;font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.025
 h2{margin:0 0 8px;font-size:clamp(26px,3vw,34px);line-height:1.2;letter-spacing:-.015em}
 h3{margin:0 0 6px;font-size:19px;line-height:1.3;letter-spacing:-.005em}
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0}
-.logo{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:800;letter-spacing:.06em;white-space:nowrap}
+.logo{display:flex;flex-shrink:0;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:800;letter-spacing:.06em;white-space:nowrap}
 .logo span{color:var(--accent)}
 .logo img{border-radius:8px}
-.top nav{display:flex;gap:4px;align-items:center}
+.top{position:relative;z-index:5}
+.top nav,.menu-links{display:flex;gap:4px;align-items:center}
 .top nav a{color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:8px;font-size:14px}
-.top nav a:hover{color:var(--text);background:var(--panel)}
+.top nav a:hover,.top nav a[aria-current]{color:var(--text);background:var(--panel)}
 .top nav .lang{border:1px solid var(--border-strong);color:var(--text)}
-.top nav .btn.sm{display:none}
+.top nav .btn.sm,.menu-btn{display:none}
+.menu-sep{display:block;width:1px;height:18px;margin:0 6px;background:var(--border-strong)}
 .top nav .short{display:none}
+.menu-btn{width:44px;height:44px;align-items:center;justify-content:center;padding:0;border:1px solid var(--border-strong);border-radius:8px;background:var(--panel);color:var(--text);cursor:pointer}
+.menu-btn .ico{width:22px;height:22px;margin:0;stroke:currentColor;stroke-width:2;stroke-linecap:round;fill:none}
+.menu-btn path{transition:transform .2s,opacity .2s;transform-origin:12px 12px}
+.menu-btn[aria-expanded=true] .m1{transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded=true] .m2{opacity:0}
+.menu-btn[aria-expanded=true] .m3{transform:translateY(-5px) rotate(-45deg)}
 .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:32px 0 64px}
 .eyebrow{margin:0 0 14px;color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 .lead{margin:20px 0 16px;font-size:18px;color:var(--text-2);max-width:46ch}
@@ -92,8 +101,27 @@ main>section:last-child{padding-bottom:72px}
 .gallery figure{margin:0}
 .gallery a{display:block;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);background:var(--panel);transition:border-color .15s}
 .gallery a:hover{border-color:var(--accent)}
-.gallery img{aspect-ratio:842/527;object-fit:cover;object-position:top;width:100%}
+.gallery a{cursor:zoom-in}
+.gallery img{aspect-ratio:842/527;object-fit:cover;object-position:top;width:100%;transition:transform .25s}
+.gallery a:hover img{transform:scale(1.02)}
 figcaption{margin-top:10px;color:var(--text-2);font-size:15px}
+.gallery figcaption strong{display:block;color:var(--text);font-size:17px;line-height:1.35;margin:6px 0 2px}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(242,163,58,.12);color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.lb{padding:0;border:0;background:transparent;color:var(--text);max-width:100vw;max-height:100dvh;width:100vw;height:100dvh;overflow:hidden}
+html:has(dialog.lb[open]){overflow:hidden}
+.lb::backdrop{background:rgba(6,7,10,.95);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.lb figure{margin:0;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:56px 72px 48px}
+.lb img{max-width:100%;max-height:calc(100dvh - 190px);width:auto;border-radius:var(--r);border:1px solid var(--border-strong);cursor:default;touch-action:pinch-zoom}
+.lb figcaption{max-width:72ch;text-align:center;margin:0}
+.lb figcaption strong{display:block;color:var(--text);font-size:17px;margin:6px 0 2px}
+.lb button{position:absolute;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid var(--border-strong);border-radius:999px;background:var(--panel);color:var(--text);font:400 30px/1 system-ui,sans-serif;cursor:pointer}
+.lb button:hover{border-color:var(--accent);color:var(--accent)}
+.lb-x{top:12px;right:12px}
+.lb-prev{left:12px;top:50%;margin-top:-24px}
+.lb-next{right:12px;top:50%;margin-top:-24px}
+.lb-n{position:absolute;top:24px;left:0;right:0;margin:0;text-align:center;color:var(--muted);font-size:14px;pointer-events:none}
+@media (max-width:600px){.lb figure{padding:60px 8px 80px;gap:8px}.lb-prev,.lb-next{top:auto;bottom:16px;margin:0}.lb-prev{left:calc(50% - 60px)}.lb-next{right:calc(50% - 60px)}.lb img{max-height:calc(100dvh - 220px)}}
+@media (prefers-reduced-motion:reduce){.gallery img{transition:none}.gallery a:hover img{transform:none}}
 .stats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .stat{display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(242,163,58,.07),transparent 55%),var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:22px}
 .stat p{margin:0;color:var(--muted);font-size:15px}
@@ -141,12 +169,30 @@ h1{line-height:1.15}
 .stat{padding:18px}
 .steps{gap:16px}
 .safe{padding:24px}
-.top nav a:not(.lang):not(.sm){display:none}
-.top nav .long{display:none}.top nav .short{display:inline}
+}
+@media (max-width:1100px){
+.top{padding:12px 0}
+.top.sticky{position:sticky;top:0;background:rgba(14,16,20,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);width:100%;padding-inline:max(16px,(100% - 1120px)/2);border-bottom:1px solid var(--border)}
+html:has(.top.sticky){scroll-padding-top:84px}
+.top nav{gap:8px}
+.menu-btn{display:inline-flex}
+.menu-links{display:none;max-height:calc(100dvh - 90px);overflow-y:auto;overscroll-behavior:contain;position:absolute;top:calc(100% + 6px);right:0;left:0;flex-direction:column;align-items:stretch;gap:2px;padding:8px;background:var(--panel);border:1px solid var(--border-strong);border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.top.sticky .menu-links{left:16px;right:16px}
+.menu-links.open{display:flex;animation:menu-in .16s ease-out}
+.top nav .menu-links a{display:flex;align-items:center;min-height:46px;padding:0 14px;font-size:16px;color:var(--text-2);border-radius:8px}
+.top nav .menu-links a:hover,.top nav .menu-links a[aria-current]{background:var(--panel-2);color:var(--text)}
+.top nav .menu-links a[aria-current]{box-shadow:inset 3px 0 0 var(--accent)}
+.menu-sep{display:block;width:auto;height:1px;margin:6px 6px;background:var(--border)}
+.top nav .menu-links .lang{border:0;margin-top:6px;border-top:1px solid var(--border);border-radius:0 0 8px 8px}
 .logo{font-size:15px;letter-spacing:.04em}
-.top nav .btn.sm{display:inline-flex;color:var(--on-accent);background:var(--accent)}
+.top nav .btn.sm{display:inline-flex;min-height:44px;color:var(--on-accent);background:var(--accent)}
 .top nav .btn.sm:hover{background:var(--accent)}
 }
+@media (max-width:1100px) and (prefers-reduced-motion:reduce){.menu-links.open{animation:none}.menu-btn path{transition:none}}
+@keyframes menu-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:360px){.logo{font-size:12px;gap:6px;letter-spacing:.02em}.logo img{width:26px;height:26px}.top nav{gap:4px}.top nav .btn.sm{padding-inline:10px;font-size:13px}.menu-btn{width:42px}}
+html:not(.js) .menu-btn{display:none!important}
+@media (max-width:1100px){html:not(.js) .top{flex-wrap:wrap}html:not(.js) .menu-links{display:flex;position:static;flex-direction:row;flex-wrap:wrap;width:100%;max-height:none;padding:4px;box-shadow:none}html:not(.js) .top nav{flex-wrap:wrap}html:not(.js) .menu-sep{display:none}html:not(.js) .top nav .menu-links .lang{margin:0;border-top:0}}
 @media (max-width:600px){
 .hero .desk{display:none}
 .hero .badges{display:none}
@@ -238,7 +284,7 @@ h2.ci-cap{margin-top:28px}
 .ci img{width:36px;height:36px}
 .ci-edge{grid-column:2/-1;justify-items:start;grid-template-columns:auto 1fr;align-items:center;gap:10px}
 .ci-edge i{justify-self:stretch}
-.hero-grid{grid-template-columns:repeat(2,1fr)}
+.hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid span{min-width:0;overflow-wrap:anywhere}
 }
 .patches{padding-top:32px;padding-bottom:56px}
 .patches>*{max-width:880px}
@@ -361,13 +407,14 @@ h2.ci-cap{margin-top:28px}
 @media (max-width:700px){
 .pn-toc,.pn-jump{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:24px}
 }
+@media (max-height:500px){.top nav .menu-links a{min-height:38px}.lb figure{padding:12px 72px}.lb figcaption>span,.lb figcaption .tag{display:none}.lb img{max-height:calc(100dvh - 70px)}}
 </style>
 </head>
 <body class="dl">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top wrap">
   <a class="logo" href="https://deadlock-assist.com/en/"><img src="../../../favicon-32.png" srcset="../../../icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu"><a href="https://deadlock-assist.com/en/">Home</a><a class="lang" href="https://deadlock-assist.com/patche/2025-04-17/" hreflang="pl"><span class="long">Polski</span><span class="short">PL</span></a><a class="btn sm" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener" data-dl>Download</a></nav>
+  <nav aria-label="menu"><a class="btn sm" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener" data-dl>Download</a><button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu-links" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path class="m1" d="M4 7h16"/><path class="m2" d="M4 12h16"/><path class="m3" d="M4 17h16"/></svg></button><div class="menu-links" id="menu-links"><a href="https://deadlock-assist.com/en/">Home</a><span class="menu-sep" aria-hidden="true"></span><a href="https://deadlock-assist.com/en/counters/">Counters</a><a href="https://deadlock-assist.com/en/patch-notes/" aria-current="page">Patch notes</a><a href="https://deadlock-assist.com/en/changes/">Changes</a><a class="lang" href="https://deadlock-assist.com/patche/2025-04-17/" hreflang="pl" lang="pl"><span class="long">Polski</span><span class="short">PL</span></a></div></nav>
 </header>
 <main id="main" class="wrap patches patch">
   <nav class="crumbs" aria-label="breadcrumbs"><a href="../">Deadlock patch notes</a> › April 17, 2025</nav>
@@ -388,6 +435,6 @@ document.querySelectorAll(".pn-hero").forEach(function(h){io.observe(h)})})()</s
   <nav aria-label="links"><a href="https://deadlock-assist.com/en/counters/">Counter items for every hero</a><a href="https://deadlock-assist.com/en/patch-notes/">Deadlock patch notes</a><a href="https://deadlock-assist.com/en/changes/">Changelog</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Suggest an idea</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Report a bug</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Report a vulnerability</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">All versions</a><a href="https://deadlock-assist.com/patche/2025-04-17/" hreflang="pl">Wersja polska</a></nav>
   <p>Deadlock is a trademark of Valve Corporation. Deadlock Assist is an unofficial fan project, not affiliated with Valve. Item data: deadlock-api.com.</p>
 </footer>
-<script>(function(){var a=document.querySelectorAll("a[data-dl]");if(!a.length||!window.fetch)return;fetch("https://api.github.com/repos/adam2s/deadlock-assist-releases/releases/latest").then(function(r){return r.ok?r.json():null}).then(function(j){var f=j&&(j.assets||[]).filter(function(x){return /x64-setup\.exe$/.test(x.name)})[0];if(f)for(var i=0;i<a.length;i++)a[i].href=f.browser_download_url}).catch(function(){})})()</script>
+<script>(function(){var a=document.querySelectorAll("a[data-dl]");if(!a.length||!window.fetch)return;fetch("https://api.github.com/repos/adam2s/deadlock-assist-releases/releases/latest").then(function(r){return r.ok?r.json():null}).then(function(j){var f=j&&(j.assets||[]).filter(function(x){return /x64-setup\.exe$/.test(x.name)})[0];if(f)for(var i=0;i<a.length;i++)a[i].href=f.browser_download_url}).catch(function(){})})()</script><script>(function(){var b=document.querySelector(".menu-btn"),l=document.getElementById("menu-links");if(!b||!l)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");l.classList.toggle("open",o)}b.addEventListener("click",function(){set(b.getAttribute("aria-expanded")!=="true")});l.addEventListener("click",function(e){if(e.target.closest("a"))set(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&l.classList.contains("open")){set(false);b.focus()}});document.addEventListener("click",function(e){if(!e.target.closest(".top nav"))set(false)});l.addEventListener("focusout",function(e){if(!e.relatedTarget||!e.relatedTarget.closest(".top nav"))set(false)})})()</script>
 </body>
 </html>

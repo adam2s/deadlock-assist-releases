@@ -23,6 +23,26 @@ DOWNLOAD_JS = (
     'return /x64-setup\\.exe$/.test(x.name)})[0];if(f)for(var i=0;i<a.length;i++)a[i].href=f.browser_download_url})'
     '.catch(function(){})})()</script>'
 )
+# Gallery shots open large in a dialog, with arrows, swipes and keys to go through them.
+# Without JS (or <dialog>) the links open the full picture.
+LIGHTBOX_JS = (
+    '<script>(function(){var d=document.querySelector("dialog.lb");if(!d||!d.showModal)return;'
+    'var a=[].slice.call(document.querySelectorAll(".gallery a[data-i]")),img=d.querySelector("img"),'
+    'cap=d.querySelector("figcaption"),n=d.querySelector(".lb-n"),k=0,x0=null;'
+    'function show(i){k=(i+a.length)%a.length;var s=a[k],g=s.querySelector("img");img.src=s.href;img.alt=g.alt;'
+    'cap.replaceChildren.apply(cap,[].slice.call(s.parentNode.querySelector("figcaption").cloneNode(true).childNodes));'
+    'n.textContent=(k+1)+" "+n.dataset.of+" "+a.length}'
+    'a.forEach(function(s,i){s.addEventListener("click",function(e){if(e.ctrlKey||e.metaKey||e.shiftKey)return;'
+    'e.preventDefault();show(i);d.showModal()})});'
+    'd.querySelector(".lb-x").onclick=function(){d.close()};d.querySelector(".lb-prev").onclick=function(){show(k-1)};'
+    'd.querySelector(".lb-next").onclick=function(){show(k+1)};'
+    'd.addEventListener("click",function(e){if(e.target===d||e.target.tagName==="FIGURE")d.close()});'
+    'd.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")show(k-1);if(e.key==="ArrowRight")show(k+1)});'
+    'd.addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});'
+    'd.addEventListener("touchend",function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;'
+    'if(Math.abs(dx)>50)show(k+(dx<0?1:-1))});'
+    'd.addEventListener("close",function(){a[k].focus()})})()</script>'
+)
 REPO = "https://github.com/adam2s/deadlock-assist-releases"
 KOFI = "https://ko-fi.com/deadlockassist"
 IDEA = REPO + "/issues/new?template=pomysl.yml"
@@ -70,7 +90,7 @@ PL = {
     ),
     "ids": {"features": "funkcje", "gallery": "w-akcji", "results": "skutecznosc", "safety": "bezpieczenstwo",
             "start": "start", "faq": "faq"},
-    "nav": [("funkcje", "Funkcje"), ("skutecznosc", "Skuteczność"), ("bezpieczenstwo", "Bezpieczeństwo"),
+    "nav": [("funkcje", "Funkcje"), ("w-akcji", "W akcji"), ("skutecznosc", "Skuteczność"), ("bezpieczenstwo", "Bezpieczeństwo"),
             ("faq", "FAQ")],
     "switch": ("en/", "English", "English version"),
     "counters": {
@@ -168,15 +188,30 @@ PL = {
         ("clock", "Timery obozów i Mid Bossa", "Obozy w dżungli, Mid Boss, power-upy i urna, ze strzałką kierunku."),
         ("chart", "Analiza meczu", "Farma minuta po minucie i co poprawić w kolejnym meczu."),
     ],
-    "gallery_h": "Nakładka w grze",
+    "gallery_h": "Zobacz, co potrafi",
+    "gallery_lead": "Zrzuty z aplikacji. Kliknij, żeby powiększyć.",
     "gallery": [
         ("deadlock-overlay-tab.webp", "deadlock-overlay-tab.webp",
          "Nakładka Deadlock Assist po wciśnięciu Tab: przedmioty wszystkich graczy i kontry na każdego wroga",
-         "Tab: co kupił każdy wróg i czym go skontrować"),
+         "W grze", "Tab: kontry na każdego wroga", "Widzisz, co kupił każdy wróg, i czym go najlepiej skontrować."),
+        ("deadlock-overlay-settings.webp", "deadlock-overlay-settings@2x.webp",
+         "Ustawienia nakładki Deadlock Assist z podglądem w grze: panele Kup teraz, zegar, zakupy wrogów",
+         "W grze", "Nakładka po Twojemu", "Wybierasz panele, ich rozmiar i miejsce. Podgląd od razu pokazuje efekt."),
+        ("deadlock-match-review.webp", "deadlock-match-review@2x.webp",
+         "Podsumowanie meczu w Deadlock Assist: farma na tle typowego gracza, niewydane dusze, pominięte kontry",
+         "Po meczu", "Co poprawić w kolejnym meczu", "Konkretne rady: farma, niewydane dusze i kontry, których nie kupiłeś."),
+        ("deadlock-farm-chart.webp", "deadlock-farm-chart@2x.webp",
+         "Wykres farmy w Deadlock Assist: dusze w przedmiotach minuta po minucie na tle sojuszników i wrogów",
+         "Po meczu", "Farma minuta po minucie", "Twoje dusze na tle sojuszników, wrogów i typowego gracza."),
         ("deadlock-match-history.webp", "deadlock-match-history@2x.webp",
          "Historia meczów Deadlock Assist: wyniki, przeciwnicy, farma i kolejność zakupów",
-         "Historia: farma na minutę i kolejność zakupów"),
+         "Historia", "Wszystkie Twoje mecze", "Wyniki, bohaterowie, przeciwnicy i kolejność zakupów w każdym meczu."),
+        ("deadlock-heroes-items.webp", "deadlock-heroes-items@2x.webp",
+         "Zakładka Dane gry w Deadlock Assist: wszyscy bohaterowie i przedmioty Deadlocka z filtrami",
+         "Dane gry", "Bohaterowie i przedmioty", "Opisy, statystyki i kontry każdego bohatera i przedmiotu, po polsku."),
     ],
+    "lightbox": {"close": "Zamknij", "prev": "Poprzedni zrzut", "next": "Następny zrzut", "menu": "Menu",
+                 "of": "z"},
     "proof_h": "Czy doradca naprawdę pomaga?",
     "proof_lead": "Test na 2020 meczach z rang Emissary i wyżej, 33 811 zakupów.",
     "proof": [
@@ -245,7 +280,7 @@ EN = {
     ),
     "ids": {"features": "features", "gallery": "in-action", "results": "results", "safety": "safety",
             "start": "get-started", "faq": "faq"},
-    "nav": [("features", "Features"), ("results", "Results"), ("safety", "Safety"), ("faq", "FAQ")],
+    "nav": [("features", "Features"), ("in-action", "In action"), ("results", "Results"), ("safety", "Safety"), ("faq", "FAQ")],
     "switch": ("../", "Polski", "Wersja polska"),
     "counters": {
         "path": "en/counters/", "nav": "Counters",
@@ -340,15 +375,30 @@ EN = {
         ("clock", "Camp and Mid Boss timers", "Jungle camps, Mid Boss, power-ups and the urn, with a direction arrow."),
         ("chart", "Match review", "Farm minute by minute and what to improve next match."),
     ],
-    "gallery_h": "In-game overlay",
+    "gallery_h": "See what it does",
+    "gallery_lead": "Screenshots from the app, shown with the Polish interface (English is one click away). Click to enlarge.",
     "gallery": [
         ("deadlock-overlay-tab.webp", "deadlock-overlay-tab.webp",
          "Deadlock Assist overlay with Tab held: every player's items and counters to each enemy",
-         "Tab: what every enemy bought and how to counter it"),
+         "In game", "Tab: counters for every enemy", "See what each enemy bought and the best item against them."),
+        ("deadlock-overlay-settings.webp", "deadlock-overlay-settings@2x.webp",
+         "Deadlock Assist overlay settings with an in-game preview: Buy now, clock and enemy purchase panels",
+         "In game", "Your overlay, your way", "Pick the panels, their size and place. The preview shows the result."),
+        ("deadlock-match-review.webp", "deadlock-match-review@2x.webp",
+         "Deadlock Assist match summary: farm vs a typical player, unspent souls, skipped counter items",
+         "After the match", "What to improve next match", "Concrete tips: farm, unspent souls and counters you skipped."),
+        ("deadlock-farm-chart.webp", "deadlock-farm-chart@2x.webp",
+         "Deadlock Assist farm chart: souls in items minute by minute vs allies and enemies",
+         "After the match", "Farm minute by minute", "Your souls next to your allies, enemies and a typical player."),
         ("deadlock-match-history.webp", "deadlock-match-history@2x.webp",
          "Deadlock Assist match history: results, opponents, farm and purchase order",
-         "History: farm per minute and purchase order"),
+         "History", "Every match you played", "Results, heroes, opponents and purchase order for each match."),
+        ("deadlock-heroes-items.webp", "deadlock-heroes-items@2x.webp",
+         "Deadlock Assist Game data tab: every Deadlock hero and item with filters",
+         "Game data", "Heroes and items", "Descriptions, stats and counters for every hero and item."),
     ],
+    "lightbox": {"close": "Close", "prev": "Previous screenshot", "next": "Next screenshot", "menu": "Menu",
+                 "of": "of"},
     "proof_h": "Does the advisor actually help?",
     "proof_lead": "Tested on 2,020 Emissary+ matches, 33,811 purchases.",
     "proof": [
@@ -490,6 +540,7 @@ def head(t, url, title, desc, pl_url, en_url, prefix, extra=""):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className+=" js"</script>
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{url}">
@@ -532,7 +583,7 @@ def foot(t, T, switch_href):
   <nav aria-label="links">{links}</nav>
   <p>{T(t['footer'])}</p>
 </footer>
-{DOWNLOAD_JS}
+{DOWNLOAD_JS}{MENU_JS}
 </body>
 </html>
 """
@@ -559,8 +610,7 @@ def page(t):
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "downloadUrl": DOWNLOAD,
         "featureList": t["feature_list"],
-        "screenshot": [BASE + "deadlock-overlay-counters.jpg", BASE + "deadlock-overlay-tab.webp",
-                       BASE + "deadlock-match-history.webp"],
+        "screenshot": [BASE + "deadlock-overlay-counters.jpg"] + [BASE + g[0] for g in t["gallery"]],
         "image": BASE + "icon.png",
         "author": {"@type": "Person", "name": "adam2s", "url": "https://github.com/adam2s"},
     }
@@ -571,18 +621,24 @@ def page(t):
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in t["faq"]
         ],
     }
-    nav = "".join(f'<a href="#{i}">{T(l)}</a>' for i, l in t["nav"])
     badges = "".join(f"<li>{T(b)}</li>" for b in t["badges"])
     feats = "".join(
         f'<article class="card">{icon(i)}<h3>{T(h)}</h3><p>{T(p)}</p></article>' for i, h, p in t["features"]
     )
     how = "".join(f"<li><h3>{T(h)}</h3><p>{T(p)}</p></li>" for h, p in t["how"])
-    gallery = "".join(
-        f'<figure><a href="{prefix}{full}" target="_blank" rel="noopener">'
-        f'<img src="{prefix}{f}" alt="{T(a)}" width="842" height="527" loading="lazy" decoding="async"></a>'
-        f"<figcaption>{T(c)}</figcaption></figure>"
-        for f, full, a, c in t["gallery"]
-    )
+    def shot(i, g):
+        f, full, a, tag, h, p = g
+        srcset = f' srcset="{prefix}{f} 842w, {prefix}{full} 1440w" sizes="(max-width:600px) calc(100vw - 32px), 540px"' if full != f else ""
+        return (f'<figure><a href="{prefix}{full}" data-i="{i}">'
+                f'<img src="{prefix}{f}"{srcset} alt="{T(a)}" width="842" height="527" loading="lazy" decoding="async"></a>'
+                f'<figcaption><span class="tag">{T(tag)}</span><strong>{T(h)}</strong> {T(p)}</figcaption></figure>')
+    gallery = "".join(shot(i, g) for i, g in enumerate(t["gallery"]))
+    lb = t["lightbox"]
+    lightbox = (f'<dialog class="lb" aria-label="{T(t["gallery_h"])}" aria-describedby="lb-cap"><figure><img alt=""><figcaption id="lb-cap"></figcaption></figure>'
+                f'<button type="button" class="lb-x" aria-label="{T(lb["close"])}">×</button>'
+                f'<button type="button" class="lb-prev" aria-label="{T(lb["prev"])}">‹</button>'
+                f'<button type="button" class="lb-next" aria-label="{T(lb["next"])}">›</button>'
+                f'<p class="lb-n" aria-live="polite" data-of="{T(lb["of"])}"></p></dialog>')
 
     def stat(n, now, before, lab, text, was):
         meter = ""
@@ -610,11 +666,7 @@ def page(t):
 <style>{CSS}</style>
 </head>
 <body>
-<a class="skip" href="#main">{T(t['skip'])}</a>
-<header class="top wrap">
-  <a class="logo" href="./"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu">{nav}<a href="{t['counters']['path'].removeprefix('en/')}">{T(t['counters']['nav'])}</a><a href="{t['patches']['path'].removeprefix('en/')}">{T(t['patches']['nav'])}</a><a href="{t['changes']['path'].removeprefix('en/')}">{T(t['changes']['nav'])}</a><a class="lang" href="{t['switch'][0]}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
-</header>
+{site_header(t, T, prefix, '', t['switch'][0], sticky=True)}
 <main id="main">
 <section class="hero wrap">
   <div class="hero-text">
@@ -636,7 +688,9 @@ def page(t):
 
 <section id="{ids['gallery']}" class="wrap">
   <h2>{T(t['gallery_h'])}</h2>
+  <p class="section-lead">{T(t['gallery_lead'])}</p>
   <div class="gallery">{gallery}</div>
+  {lightbox}
 </section>
 
 <section id="{ids['results']}" class="wrap results">
@@ -673,6 +727,7 @@ def page(t):
   <p class="note">{T(t['cta_note'])}<br>{T(t['smartscreen'])}</p>
 </section>
 </main>
+{LIGHTBOX_JS}
 """ + foot(t, T, t["switch"][0])
 
 
@@ -681,14 +736,44 @@ COUNTERS = json.loads(COUNTERS_FILE.read_text()) if COUNTERS_FILE.exists() else 
 OUT = Path("docs")
 
 
-def sub_header(t, T, prefix, home, switch_url):
-    """Header of the pages under the home page: logo, home link, language switch, download."""
+MENU_ICON = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path class="m1" d="M4 7h16"/>'
+             '<path class="m2" d="M4 12h16"/><path class="m3" d="M4 17h16"/></svg>')
+# The menu button opens the links as a panel under the header on narrow screens. It closes on a link,
+# Escape or a click outside. Without JS the header keeps the logo and the download button.
+MENU_JS = (
+    '<script>(function(){var b=document.querySelector(".menu-btn"),l=document.getElementById("menu-links");'
+    'if(!b||!l)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");l.classList.toggle("open",o)}'
+    'b.addEventListener("click",function(){set(b.getAttribute("aria-expanded")!=="true")});'
+    'l.addEventListener("click",function(e){if(e.target.closest("a"))set(false)});'
+    'document.addEventListener("keydown",function(e){if(e.key==="Escape"&&l.classList.contains("open")){set(false);b.focus()}});'
+    'document.addEventListener("click",function(e){if(!e.target.closest(".top nav"))set(false)});'
+    'l.addEventListener("focusout",function(e){if(!e.relatedTarget||!e.relatedTarget.closest(".top nav"))set(false)})})()</script>'
+)
+
+
+def site_header(t, T, prefix, home, switch_url, here=None, sticky=False):
+    """Logo and menu of every page. On the home page `home` is "" and the section links stay on the page."""
     other = "en" if t["lang"] == "pl" else "pl"
+    links = [(f"{home}#{i}", l, None) for i, l in t["nav"]] if home == "" else [(home, t["changes"]["home"], None)]
+    pages = [(t[k]["path"].removeprefix("en/") if home == "" else BASE + t[k]["path"], t[k]["nav"], k)
+             for k in ("counters", "patches", "changes")]
+    def a(h, l, k):
+        cur = ' aria-current="page"' if k and k == here else ""
+        return f'<a href="{h}"{cur}>{T(l)}</a>'
+    menu = ("".join(a(*x) for x in links) + '<span class="menu-sep" aria-hidden="true"></span>'
+            + "".join(a(*x) for x in pages)
+            + f'<a class="lang" href="{switch_url}" hreflang="{other}" lang="{other}"><span class="long">{T(t["switch"][1])}</span>'
+              f'<span class="short">{other.upper()}</span></a>')
     return f"""<a class="skip" href="#main">{T(t['skip'])}</a>
-<header class="top wrap">
-  <a class="logo" href="{home}"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu"><a href="{home}">{T(t['changes']['home'])}</a><a class="lang" href="{switch_url}" hreflang="{other}"><span class="long">{T(t['switch'][1])}</span><span class="short">{other.upper()}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
+<header class="top wrap{' sticky' if sticky else ''}">
+  <a class="logo" href="{home or './'}"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
+  <nav aria-label="menu">{download_btn(t, T(t['cta_short']), 'btn sm')}<button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu-links" aria-label="{T(t['lightbox']['menu'])}">{MENU_ICON}</button><div class="menu-links" id="menu-links">{menu}</div></nav>
 </header>"""
+
+
+def sub_header(t, T, prefix, home, switch_url, here=None):
+    """Header of the pages under the home page."""
+    return site_header(t, T, prefix, home, switch_url, here)
 
 
 def img_src(kind, key, remote, prefix):
@@ -803,7 +888,7 @@ def counters_index(t):
 <style>{CSS}</style>
 </head>
 <body>
-{sub_header(t, T, prefix, home, BASE + other["counters"]["path"])}
+{sub_header(t, T, prefix, home, BASE + other["counters"]["path"], "counters")}
 <main id="main" class="wrap counters">
   <h1>{T(c['index_h1'])}</h1>
   <p class="section-lead">{T(c['index_lead'])}</p>
@@ -882,7 +967,7 @@ def counter_page(t, hero):
 <style>{CSS}</style>
 </head>
 <body>
-{sub_header(t, T, prefix, home, f'{BASE}{other["counters"]["path"]}{hero["slug"]}/')}
+{sub_header(t, T, prefix, home, f'{BASE}{other["counters"]["path"]}{hero["slug"]}/', "counters")}
 <main id="main" class="wrap counters">
   <nav class="crumbs" aria-label="breadcrumbs"><a href="../">{T(c['index_h1'])}</a> › {e(name)}</nav>
   <div class="hero-head"><img src="{img_src("heroes", hero["slug"], hero["img"], prefix)}" alt="" width="64" height="64"><h1>{T(c['h1'].format(hero=name))}</h1></div>
@@ -939,11 +1024,7 @@ def changes_page(t, shown=4):
 <style>{CSS}</style>
 </head>
 <body>
-<a class="skip" href="#main">{T(t['skip'])}</a>
-<header class="top wrap">
-  <a class="logo" href="{home}"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu"><a href="{home}">{T(c['home'])}</a><a class="lang" href="{BASE}{switch}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
-</header>
+{site_header(t, T, prefix, home, BASE + switch, 'changes')}
 <main id="main" class="wrap changes">
   <h1>{T(c['h1'])}</h1>
   <p class="section-lead">{T(c['lead'])}</p>
@@ -1127,7 +1208,7 @@ def patches_index(t):
 <style>{CSS}</style>
 </head>
 <body class="dl">
-{sub_header(t, T, prefix, home, BASE + other["patches"]["path"])}
+{sub_header(t, T, prefix, home, BASE + other["patches"]["path"], "patches")}
 <main id="main" class="wrap patches pn-index">
   <h1>{T(c['index_h1'])}</h1>
   <p class="section-lead">{T(c['index_lead'])}</p>
@@ -1253,7 +1334,7 @@ def patch_page(t, p, older, newer):
 <style>{CSS}</style>
 </head>
 <body class="dl">
-{sub_header(t, T, prefix, home, patch_url(other, p))}
+{sub_header(t, T, prefix, home, patch_url(other, p), "patches")}
 <main id="main" class="wrap patches patch">
   <nav class="crumbs" aria-label="breadcrumbs"><a href="../">{T(c['index_h1'])}</a> › {label}</nav>
   <h1>{T(c['h1'].format(date=label))}</h1>
