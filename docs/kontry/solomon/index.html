@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kontry na Solomon w Deadlocku – najlepsze przedmioty</title>
-<meta name="description" content="Najlepsze kontry na Solomon: Long Range, Spellslinger, Kinetic Dash. Dane z meczów Emissary+ z 14 dni, co tydzień nowe.">
+<title>Kontry i build Solomon w Deadlocku – najlepsze przedmioty</title>
+<meta name="description" content="Typowy build Solomon i najlepsze kontry: Long Range, Spellslinger, Kinetic Dash. Mecze Emissary+ z 14 dni, co tydzień nowe.">
 <link rel="canonical" href="https://deadlock-assist.com/kontry/solomon/">
 <link rel="alternate" hreflang="pl" href="https://deadlock-assist.com/kontry/solomon/">
 <link rel="alternate" hreflang="en" href="https://deadlock-assist.com/en/counters/solomon/">
@@ -15,8 +15,8 @@
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Deadlock Assist">
-<meta property="og:title" content="Kontry na Solomon w Deadlocku – najlepsze przedmioty">
-<meta property="og:description" content="Najlepsze kontry na Solomon: Long Range, Spellslinger, Kinetic Dash. Dane z meczów Emissary+ z 14 dni, co tydzień nowe.">
+<meta property="og:title" content="Kontry i build Solomon w Deadlocku – najlepsze przedmioty">
+<meta property="og:description" content="Typowy build Solomon i najlepsze kontry: Long Range, Spellslinger, Kinetic Dash. Mecze Emissary+ z 14 dni, co tydzień nowe.">
 <meta property="og:url" content="https://deadlock-assist.com/kontry/solomon/">
 <meta property="og:image" content="https://deadlock-assist.com/deadlock-overlay-counters.jpg">
 <meta property="og:image:width" content="842">
@@ -26,8 +26,8 @@
 <meta property="og:locale" content="pl_PL">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kontry na Solomon w Deadlocku – najlepsze przedmioty">
-<meta name="twitter:description" content="Najlepsze kontry na Solomon: Long Range, Spellslinger, Kinetic Dash. Dane z meczów Emissary+ z 14 dni, co tydzień nowe.">
+<meta name="twitter:title" content="Kontry i build Solomon w Deadlocku – najlepsze przedmioty">
+<meta name="twitter:description" content="Typowy build Solomon i najlepsze kontry: Long Range, Spellslinger, Kinetic Dash. Mecze Emissary+ z 14 dni, co tydzień nowe.">
 <meta name="twitter:image" content="https://deadlock-assist.com/deadlock-overlay-counters.jpg">
 <meta name="twitter:image:alt" content="Nakładka Deadlock Assist w Deadlocku: kontry na linii, panel Kup teraz z najlepszym przedmiotem na wroga oraz zegar z timerami obozów i Mid Bossa">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -187,7 +187,7 @@ section{padding-top:48px}
 .hero-head img{border-radius:12px;background:var(--panel-2);flex:none}
 .counters .section-lead{margin:0 0 12px}
 .counters .note,.counters .meta{max-width:68ch}
-.ci-cap{margin:0 0 8px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.ci-cap{margin:0 0 8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 20px;font-size:14px;color:var(--muted)}
 .ci-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .ci{display:grid;grid-template-columns:28px 40px 1fr minmax(120px,30%);align-items:center;gap:12px;background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--slot,var(--border));border-radius:var(--r);padding:10px 14px}
@@ -218,14 +218,18 @@ section{padding-top:48px}
 h2.ci-cap{margin-top:28px}
 .counters .meta+h2.ci-cap{margin-top:8px}
 .build{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.build li{display:grid;grid-template-columns:40px 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--slot,var(--border));border-radius:var(--r);padding:8px 10px}
-.build li img{grid-row:1/3;border-radius:8px;background:var(--panel-2)}
+.build li{display:grid;grid-template-columns:40px 1fr;column-gap:10px;align-items:center;background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--slot,var(--border));border-radius:var(--r);padding:8px 10px}
+.build li img{border-radius:8px;background:var(--panel-2)}
+.build .bt{display:flex;flex-direction:column;min-width:0}
 .build b{font-weight:600;font-size:14px;line-height:1.25;min-width:0;overflow-wrap:anywhere}
-.build small{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.build small{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
 .ci-more{margin-top:20px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .ci-more summary{font-weight:600}
 .ci-more .ci-list{padding-bottom:16px}
 .home-counters>*{max-width:820px}
+.home-counters>.build{max-width:none}
+.home-counters .actions{align-items:center}
+.more-link{font-weight:600}
 .home-counters h3.ci-cap{margin:20px 0 8px}
 .home-counters .actions{margin-top:20px}
 @media (max-width:860px){.build{grid-template-columns:repeat(2,1fr)}}
@@ -250,9 +254,9 @@ h2.ci-cap{margin-top:28px}
   <p class="section-lead">Co kupuje większość graczy Solomon i czym najlepiej to skontrować.</p>
   <p class="meta">2,4 mln zakupów, mecze Emissary+, ostatnie 14 dni (stan na 5 listopada 2026)</p>
   <h2 class="ci-cap">Typowy build Solomon</h2>
-  <ol class="build"><li class="slot-weapon"><img src="/img/items/2064029594.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Opening Rounds</b><small>5 min · 72%</small></li><li class="slot-vitality"><img src="/img/items/857669956.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Guardian Ward</b><small>12 min · 42%</small></li><li class="slot-vitality"><img src="/img/items/3970837787.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Enchanter&#x27;s Emblem</b><small>13 min · 41%</small></li><li class="slot-vitality"><img src="/img/items/334300056.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Stamina Mastery</b><small>19 min · 59%</small></li><li class="slot-spirit"><img src="/img/items/3261353684.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Superior Cooldown</b><small>20 min · 87%</small></li><li class="slot-spirit"><img src="https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/greater_expansion.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Greater Expansion</b><small>20 min · 86%</small></li><li class="slot-spirit"><img src="https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/tankbuster.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Tankbuster</b><small>23 min · 70%</small></li><li class="slot-spirit"><img src="/img/items/2519598785.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Boundless Spirit</b><small>27 min · 58%</small></li></ol>
+  <ol class="build"><li class="slot-weapon"><img src="/img/items/2064029594.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Opening Rounds</b><small>5 min · 72%</small></span></li><li class="slot-vitality"><img src="/img/items/857669956.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Guardian Ward</b><small>12 min · 42%</small></span></li><li class="slot-vitality"><img src="/img/items/3970837787.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Enchanter&#x27;s Emblem</b><small>13 min · 41%</small></span></li><li class="slot-vitality"><img src="/img/items/334300056.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Stamina Mastery</b><small>19 min · 59%</small></span></li><li class="slot-spirit"><img src="/img/items/3261353684.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Superior Cooldown</b><small>20 min · 87%</small></span></li><li class="slot-spirit"><img src="https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/greater_expansion.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Greater Expansion</b><small>20 min · 86%</small></span></li><li class="slot-spirit"><img src="https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/tankbuster.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Tankbuster</b><small>23 min · 70%</small></span></li><li class="slot-spirit"><img src="/img/items/2519598785.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="bt"><b>Boundless Spirit</b><small>27 min · 58%</small></span></li></ol>
   <p class="note">Przedmioty, które kupuje i zatrzymuje większość graczy Solomon, w kolejności zakupu. Procent: ilu graczy go kupuje.</p>
-  <h2 class="ci-cap" id="edge">Najlepsze kontry na ten build</h2>
+  <h2 class="ci-cap" id="edge">Najlepsze kontry na Solomon</h2>
   <ol class="ci-list" aria-labelledby="edge"><li class="ci slot-weapon"><span class="rank">1</span><img src="/img/items/3331811235.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="ci-name"><strong>Long Range</strong><small>Broń · 1 600 dusz · PL: Daleki Zasięg</small></span><span class="ci-edge"><b>+0,8 <span class="u">p.p.</span></b><i style="width:100%"></i></span></li><li class="ci slot-weapon"><span class="rank">2</span><img src="/img/items/2221211450.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="ci-name"><strong>Spellslinger</strong><small>Broń · 6 400 dusz · PL: Czaromiot</small></span><span class="ci-edge"><b>+0,7 <span class="u">p.p.</span></b><i style="width:81%"></i></span></li></ol>
   <p class="note"><strong>+0,8 <span class="u">p.p.</span></strong> = z Long Range wygrywa się z Solomon o 0,8 punktu procentowego częściej niż zwykle, w porównaniu z przedmiotami w tej samej cenie.</p>
   <details class="ci-more"><summary>Więcej kontr (6)</summary><ol class="ci-list" start="3"><li class="ci slot-weapon"><span class="rank">3</span><img src="/img/items/3977876567.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="ci-name"><strong>Kinetic Dash</strong><small>Broń · 1 600 dusz · PL: Kinetyczny Zryw</small></span><span class="ci-edge"><b>+0,6 <span class="u">p.p.</span></b><i style="width:77%"></i></span></li><li class="ci slot-weapon"><span class="rank">4</span><img src="/img/items/2463960640.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="ci-name"><strong>Escalating Resilience</strong><small>Broń · 3 200 dusz · PL: Rosnąca Odporność</small></span><span class="ci-edge"><b>+0,6 <span class="u">p.p.</span></b><i style="width:75%"></i></span></li><li class="ci slot-weapon"><span class="rank">5</span><img src="/img/items/2152872419.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="ci-name"><strong>Sharpshooter</strong><small>Broń · 3 200 dusz · PL: Strzelec Wyborowy</small></span><span class="ci-edge"><b>+0,6 <span class="u">p.p.</span></b><i style="width:72%"></i></span></li><li class="ci slot-vitality"><span class="rank">6</span><img src="/img/items/1378931225.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="ci-name"><strong>Metal Skin</strong><small>Witalność · 3 200 dusz · PL: Metalowa Skóra</small></span><span class="ci-edge"><b>+0,6 <span class="u">p.p.</span></b><i style="width:70%"></i></span></li><li class="ci slot-spirit"><span class="rank">7</span><img src="/img/items/630839635.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="ci-name"><strong>Echo Shard</strong><small>Duch · 6 400 dusz · PL: Odłamek Echa</small></span><span class="ci-edge"><b>+0,6 <span class="u">p.p.</span></b><i style="width:69%"></i></span></li><li class="ci slot-vitality"><span class="rank">8</span><img src="/img/items/3731635960.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="ci-name"><strong>Dispel Magic</strong><small>Witalność · 3 200 dusz · PL: Rozproszenie Magii</small></span><span class="ci-edge"><b>+0,6 <span class="u">p.p.</span></b><i style="width:66%"></i></span></li></ol></details>

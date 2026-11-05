@@ -69,18 +69,19 @@ PL = {
                       "z ostatnich 14 dni, odświeżane co tydzień.",
         "index_h1": "Kontry na bohaterów Deadlocka",
         "index_lead": "Wybierz bohatera wroga i zobacz, z jakimi przedmiotami gracze najczęściej z nim wygrywają.",
-        "title": "Kontry na {hero} w Deadlocku – najlepsze przedmioty",
-        "desc": "Najlepsze kontry na {hero}: {top}. Dane z meczów Emissary+ z 14 dni, co tydzień nowe.",
+        "title": "Kontry i build {hero} w Deadlocku – najlepsze przedmioty",
+        "desc": "Typowy build {hero} i najlepsze kontry: {top}. Mecze Emissary+ z 14 dni, co tydzień nowe.",
         "h1": "Kontry na {hero}",
         "lead": "Co kupuje większość graczy {hero} i czym najlepiej to skontrować.",
         "build_h": "Typowy build {hero}",
         "build_note": "Przedmioty, które kupuje i zatrzymuje większość graczy {hero}, w kolejności zakupu. "
                       "Procent: ilu graczy go kupuje.",
-        "best_h": "Najlepsze kontry na ten build",
+        "best_h": "Najlepsze kontry na {hero}",
         "more": "Więcej kontr",
         "min": "min",
         "home_h": "Przykład: kontry na {hero}",
-        "home_lead": "Typowy build najczęściej granego bohatera i dwa przedmioty, które najlepiej go kontrują.",
+        "home_lead": "Typowy build najczęściej granego bohatera i dwa przedmioty, z którymi najczęściej się z nim wygrywa.",
+        "home_legend": "Minuta zakupu · % graczy, którzy go kupują. {pts} = o tyle częściej wygrywa się z {hero} z {item}.",
         "home_all": "Kontry na wszystkich {n} bohaterów",
         "home_one": "Cała strona {hero}",
         "data": "{n} zakupów, mecze Emissary+, ostatnie 14 dni (stan na {date})",
@@ -213,17 +214,18 @@ EN = {
                       "refreshed every week.",
         "index_h1": "Counter items for every hero",
         "index_lead": "Pick the enemy hero and see which items players win with most against them.",
-        "title": "{hero} Counter Items in Deadlock – Best Items vs {hero}",
-        "desc": "Best counter items vs {hero}: {top}. From Emissary+ matches of the last 14 days, updated weekly.",
+        "title": "{hero} Build & Counter Items in Deadlock – Best Items vs {hero}",
+        "desc": "Typical {hero} build and best counters: {top}. Emissary+ matches, last 14 days, updated weekly.",
         "h1": "{hero} counter items",
         "lead": "What most {hero} players buy, and the best items to counter it.",
         "build_h": "Typical {hero} build",
         "build_note": "Items most {hero} players buy and keep, in buying order. Percent: how many players buy it.",
-        "best_h": "Best counters to this build",
+        "best_h": "Best counters to {hero}",
         "more": "More counters",
         "min": "min",
         "home_h": "Example: {hero} counters",
-        "home_lead": "The typical build of the most played hero and the two items that counter it best.",
+        "home_lead": "The most played hero's typical build and the two items that win most against it.",
+        "home_legend": "Buy minute · % of players who buy it. {pts} = how much more often players with {item} beat {hero}.",
         "home_all": "Counters for all {n} heroes",
         "home_one": "Full {hero} page",
         "data": "{n} purchases, Emissary+ matches, last 14 days (as of {date})",
@@ -647,8 +649,8 @@ def build_strip(t, hero, prefix, T):
         it = items[str(b["id"])]
         slot = it.get("slot") or "weapon"
         img = f'<img src="{img_src("items", b["id"], it["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
-        out.append(f'<li class="slot-{slot}">{img}<b>{e(it["en"])}</b>'
-                   f'<small>{round(b["min"])}{NB}{c["min"]} · {round(100 * b["share"])}%</small></li>')
+        out.append(f'<li class="slot-{slot}">{img}<span class="bt"><b>{e(it["en"])}</b>'
+                   f'<small>{round(b["min"])}{NB}{c["min"]} · {round(100 * b["share"])}%</small></span></li>')
     return f'<ol class="build">{"".join(out)}</ol>'
 
 
@@ -689,14 +691,18 @@ def home_counters(t, prefix, T):
     hero = max(COUNTERS["heroes"], key=lambda h: h["matches"])
     name = hero["name"]
     link = c["path"].removeprefix("en/")
+    first = COUNTERS["items"][str(hero["items"][0]["id"])]["en"]
+    legend = T(c["home_legend"].format(pts="{pts}", hero=name, item=first)).replace(
+        "{pts}", f'<strong>{pts(hero["items"][0]["points"], t["lang"])}</strong>', 1)
     return f"""<section id="{'kontry' if t['lang'] == 'pl' else 'counters'}" class="wrap home-counters">
   <h2>{T(c['home_h'].format(hero=name))}</h2>
   <p class="section-lead">{T(c['home_lead'])}</p>
   <h3 class="ci-cap">{T(c['build_h'].format(hero=name))}</h3>
   {build_strip(t, hero, prefix, T)}
-  <h3 class="ci-cap">{T(c['best_h'])}</h3>
+  <h3 class="ci-cap">{T(c['best_h'].format(hero=name))}</h3>
   <ol class="ci-list">{counter_rows(t, hero, prefix, T, 0, 2)}</ol>
-  <div class="actions"><a class="btn" href="{link}">{T(c['home_all'].format(n=len(COUNTERS['heroes'])))}</a><a class="btn ghost" href="{link}{hero['slug']}/">{T(c['home_one'].format(hero=name))}</a></div>
+  <p class="note">{legend}</p>
+  <div class="actions"><a class="btn ghost" href="{link}">{T(c['home_all'].format(n=len(COUNTERS['heroes'])))}</a><a class="more-link" href="{link}{hero['slug']}/">{T(c['home_one'].format(hero=name))} →</a></div>
 </section>
 """
 
@@ -803,7 +809,7 @@ def counter_page(t, hero):
   <h2 class="ci-cap">{T(c['build_h'].format(hero=name))}</h2>
   {build_strip(t, hero, prefix, T)}
   <p class="note">{T(c['build_note'].format(hero=name))}</p>
-  <h2 class="ci-cap" id="edge">{T(c['best_h'])}</h2>
+  <h2 class="ci-cap" id="edge">{T(c['best_h'].format(hero=name))}</h2>
   <ol class="ci-list" aria-labelledby="edge">{counter_rows(t, hero, prefix, T, 0, 2)}</ol>
   <p class="note">{explain}</p>
   <details class="ci-more"><summary>{T(c['more'])} ({rest})</summary><ol class="ci-list" start="3">{counter_rows(t, hero, prefix, T, 2, None)}</ol></details>
