@@ -2,6 +2,8 @@
 
 Usage: python3 -I site/counters.py docs   (downloads stats and icons, writes site/counters.json and docs/img/)
 
+A hero's typical build: the items most of its players buy and keep, in buying order.
+
 Data: deadlock-api `analytics/item-stats?bucket=enemy_hero`, matches of the last 14 days whose players
 average Emissary or higher, the same source the app's advisor uses. An item's edge against a hero is
 how many percentage points more often its buyers win against that hero than they do in general,
@@ -23,6 +25,8 @@ K_ENEMY = 5000.0
 SHOWN = 8
 MIN_MATCHES = 2000  # an item needs this many matches against the hero to be shown
 MIN_HERO_MATCHES = 200_000  # heroes with fewer item purchases against them are left out (new, rare)
+BUILD = 8  # items in a hero's typical build
+KEPT = 0.5  # an item sold in more than this share of matches is a lane item, not part of the build
 
 
 def get(url, attempts=4):
@@ -78,12 +82,34 @@ def edges(rows, cost_of):
     return out
 
 
+def builds(rows, hero_matches, items_en):
+    """{hero id: [(item id, share of the hero's matches, buy minute)]}: the items most players of the hero
+    buy and keep, in the order they are bought."""
+    by_hero = defaultdict(list)
+    for r in rows:
+        if r["item_id"] in items_en and r["matches"] and r["sold"] / r["matches"] <= KEPT:
+            by_hero[r["bucket"]].append(r)
+    out = {}
+    for hero, rs in by_hero.items():
+        n = hero_matches.get(hero)
+        if not n:
+            continue
+        top = sorted(rs, key=lambda r: -r["matches"])[:BUILD]
+        top.sort(key=lambda r: r["avg_buy_time_s"])
+        out[hero] = [(r["item_id"], r["matches"] / n, r["avg_buy_time_s"] / 60) for r in top]
+    return out
+
+
 def main():
     out = Path(sys.argv[1])
     now = int(time.time())
     since = (now - DAYS * 86400) // 86400 * 86400
     rows = get_json(f"{API}/analytics/item-stats?bucket=enemy_hero&min_average_badge={MIN_BADGE}"
                     f"&min_matches=1&min_unix_timestamp={since}")
+    own = get_json(f"{API}/analytics/item-stats?bucket=hero&min_average_badge={MIN_BADGE}"
+                   f"&min_matches=1&min_unix_timestamp={since}")
+    hero_matches = {h["hero_id"]: h["matches"] for h in get_json(
+        f"{API}/analytics/hero-stats?min_average_badge={MIN_BADGE}&min_unix_timestamp={since}")}
     heroes = [h for h in get_json(f"{API}/assets/heroes") if h.get("player_selectable") and not h.get("disabled")]
     items_en = {i["id"]: i for i in get_json(f"{API}/assets/items") if i.get("shopable") and i.get("type") == "upgrade"}
     items_pl = {i["id"]: i for i in get_json(f"{API}/assets/items?language=polish")}
@@ -93,6 +119,7 @@ def main():
     for r in rows:
         matches[r["bucket"]] += r["matches"]
     found = edges(rows, cost_of)
+    build_of = builds(own, hero_matches, items_en)
 
     img = out / "img"
     (img / "heroes").mkdir(parents=True, exist_ok=True)
@@ -118,12 +145,14 @@ def main():
         if matches[h["id"]] < MIN_HERO_MATCHES:
             continue
         top = [(p, i, m) for p, i, m in found.get(h["id"], []) if p > 0][:SHOWN]
-        if len(top) < 4:
+        build = build_of.get(h["id"], [])
+        if len(top) < 4 or len(build) < BUILD:
             continue
         s = slug(h["name"])
         hero_img = icon(h["images"].get("icon_image_small_webp") or h["images"].get("icon_image_small"),
                         img / "heroes" / f"{s}.webp")
         used_items.update(i for _, i, _ in top)
+        used_items.update(i for i, _, _ in build)
         result.append({
             "id": h["id"],
             "name": h["name"],
@@ -131,6 +160,7 @@ def main():
             "img": hero_img,
             "matches": round(matches[h["id"]]),
             "items": [{"id": i, "points": round(p, 2), "matches": round(m)} for p, i, m in top],
+            "build": [{"id": i, "share": round(sh, 3), "min": round(mi, 1)} for i, sh, mi in build],
         })
     items = {}
     for i in sorted(used_items):
