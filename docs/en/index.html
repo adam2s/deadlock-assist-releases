@@ -35,7 +35,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap"></noscript>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Deadlock Assist", "description": "Free Deadlock overlay for Windows: counter items vs the enemy team, what to buy now, jungle camp & Mid Boss timers, match review. No Overwolf, no ads.", "url": "https://deadlock-assist.com/en/", "applicationCategory": "GameApplication", "operatingSystem": "Windows 10, Windows 11", "inLanguage": ["pl", "en"], "isAccessibleForFree": true, "dateModified": "2026-11-05", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://github.com/adam2s/deadlock-assist-releases/releases/latest", "featureList": "Counter items vs the enemy team; Buy now advisor; Enemy purchases; Lane counters; Jungle camp and Mid Boss timers; Match review", "screenshot": ["https://deadlock-assist.com/deadlock-overlay-counters.jpg", "https://deadlock-assist.com/deadlock-overlay-tab.webp", "https://deadlock-assist.com/deadlock-match-history.webp"], "image": "https://deadlock-assist.com/icon.png", "author": {"@type": "Person", "name": "adam2s", "url": "https://github.com/adam2s"}}</script>
+<script data-goatcounter="https://deadlock-assist.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Deadlock Assist", "description": "Free Deadlock overlay for Windows: counter items vs the enemy team, what to buy now, jungle camp & Mid Boss timers, match review. No Overwolf, no ads.", "url": "https://deadlock-assist.com/en/", "applicationCategory": "GameApplication", "operatingSystem": "Windows 10, Windows 11", "inLanguage": ["pl", "en"], "isAccessibleForFree": true, "softwareVersion": "1.2.9", "dateModified": "2026-11-05", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://github.com/adam2s/deadlock-assist-releases/releases/latest", "featureList": "Counter items vs the enemy team; Buy now advisor; Enemy purchases; Lane counters; Jungle camp and Mid Boss timers; Match review", "screenshot": ["https://deadlock-assist.com/deadlock-overlay-counters.jpg", "https://deadlock-assist.com/deadlock-overlay-tab.webp", "https://deadlock-assist.com/deadlock-match-history.webp"], "image": "https://deadlock-assist.com/icon.png", "author": {"@type": "Person", "name": "adam2s", "url": "https://github.com/adam2s"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I get banned?", "acceptedAnswer": {"@type": "Answer", "text": "It never touches the game process; it only takes screenshots, like OBS or Discord. Valve doesn't approve any third-party tools, so use it at your own risk."}}, {"@type": "Question", "name": "Does it work in fullscreen?", "acceptedAnswer": {"@type": "Answer", "text": "No. Set Deadlock to borderless window, otherwise the overlay can't show."}}, {"@type": "Question", "name": "Why does Windows show a warning?", "acceptedAnswer": {"@type": "Answer", "text": "SmartScreen flags new apps. Click “More info” → “Run anyway”. Every update is signed."}}, {"@type": "Question", "name": "How does it know what to buy?", "acceptedAnswer": {"@type": "Answer", "text": "From deadlock-api.com stats and what it sees on screen: the enemy team, their purchases and your souls."}}, {"@type": "Question", "name": "What are the requirements?", "acceptedAnswer": {"@type": "Answer", "text": "Windows 10 or 11 (64-bit) and Deadlock in borderless window. Interface in English or Polish, switchable in the app."}}]}</script>
 <style>:root{--bg:#0e1014;--panel:#171a21;--panel-2:#1f232c;--border:#262b35;--border-strong:#343a46;--text:#e8eaed;--text-2:#cfd5df;--muted:#9aa3b2;--accent:#f2a33a;--gold:#f2c94c;--on-accent:#14161a;--vitality:#57c46a;--r:10px;color-scheme:dark}
 @font-face{font-family:"Inter Fallback";src:local("Segoe UI"),local("Arial");size-adjust:107%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
@@ -160,13 +161,32 @@ section{padding-top:48px}
 .card h3{margin:0 0 4px}
 }
 #results .note{margin-top:16px}
+.changes{padding-top:40px;padding-bottom:56px}
+.changes>*{max-width:760px}
+.changes h1{font-size:clamp(28px,3.4vw,40px);margin:0 0 10px}
+.changes h1+p{margin:0 0 20px;color:var(--muted)}
+.highlight{margin:0 0 16px}
+.highlight a{display:inline-block;padding:10px 14px;border:1px solid rgba(242,163,58,.3);border-radius:var(--r);background:rgba(242,163,58,.08);color:var(--text);text-decoration:none;font-weight:400}
+.highlight strong{color:var(--accent);font-weight:700}
+.highlight a:hover{border-color:var(--accent)}
+.release{padding:22px 0;border-top:1px solid var(--border)}
+.release:first-of-type{border-top:0}
+.release h2{font-size:20px;margin:0 0 10px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}
+.release time{font-size:14px;font-weight:400;color:var(--muted)}
+.release ul{margin:0;padding-left:20px;color:var(--text-2);display:grid;gap:8px;max-width:68ch}
+.tag{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:rgba(242,163,58,.12);color:var(--accent);border:1px solid rgba(242,163,58,.3);letter-spacing:0}
+.older{margin-top:24px}
+.older summary{color:var(--text)}
+.older .release:first-of-type{border-top:0}
+.changes .end{margin-top:40px}
+.changes .end .note{margin:0 0 14px}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top wrap">
   <a class="logo" href="./"><img src="../favicon-32.png" srcset="../icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu"><a href="#features">Features</a><a href="#results">Results</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a class="lang" href="../" hreflang="pl"><span class="long">Polski</span><span class="short">PL</span></a><a class="btn sm" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener">Download</a></nav>
+  <nav aria-label="menu"><a href="#features">Features</a><a href="#results">Results</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a href="changes/">Changes</a><a class="lang" href="../" hreflang="pl"><span class="long">Polski</span><span class="short">PL</span></a><a class="btn sm" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener" data-goatcounter-click="download" data-goatcounter-title="en">Download</a></nav>
 </header>
 <main id="main">
 <section class="hero wrap">
@@ -175,7 +195,7 @@ section{padding-top:48px}
     <h1>Deadlock counter items for the enemy team, live</h1>
     <p class="lead">Reads the enemy team and their items from your screen, tells you what to buy and tracks camp and Mid Boss timers.</p>
     <p class="proof-line"><a href="#results"><strong>81%</strong> good counters, tested on 2,020 matches</a></p>
-    <div class="actions"><a class="btn" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3v-6ZM12 4.3 21 3v8.5h-9V4.3ZM3 12.5h7.5v7L3 18.5v-6ZM12 12.5h9V21l-9-1.3v-7.2Z" fill="currentColor" stroke="none"/></svg><span>Download for Windows</span></a><a class="btn ghost" href="#in-action">See it in action</a></div>
+    <div class="actions"><a class="btn" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener" data-goatcounter-click="download" data-goatcounter-title="en"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3v-6ZM12 4.3 21 3v8.5h-9V4.3ZM3 12.5h7.5v7L3 18.5v-6ZM12 12.5h9V21l-9-1.3v-7.2Z" fill="currentColor" stroke="none"/></svg><span>Download for Windows</span></a><a class="btn ghost" href="#in-action">See it in action</a></div>
     <p class="note">Deadlock in borderless window · updates itself<span class="desk"><br>Windows warning? “More info” → “Run anyway”.</span></p>
     <ul class="badges"><li>Free</li><li>No ads, no account</li><li>No Overwolf</li><li>No memory reading</li></ul>
   </div>
@@ -189,14 +209,14 @@ section{padding-top:48px}
 
 <section id="in-action" class="wrap">
   <h2>In-game overlay</h2>
-  <div class="gallery"><figure><a href="../deadlock-overlay-tab.webp" target="_blank" rel="noopener"><img src="../deadlock-overlay-tab.webp" alt="Deadlock Assist overlay with Tab held: every player&#x27;s items and counters to each enemy" width="842" height="527" loading="lazy" decoding="async"></a><figcaption>Tab: what every enemy bought and how to counter it</figcaption></figure><figure><a href="../deadlock-match-history@2x.webp" target="_blank" rel="noopener"><img src="../deadlock-match-history.webp" alt="Deadlock Assist match history: results, opponents, farm and purchase order" width="842" height="527" loading="lazy" decoding="async"></a><figcaption>History: farm per minute and purchase order</figcaption></figure></div>
+  <div class="gallery"><figure><a href="../deadlock-overlay-tab.webp" target="_blank" rel="noopener"><img src="../deadlock-overlay-tab.webp" alt="Deadlock Assist overlay with Tab held: every player’s items and counters to each enemy" width="842" height="527" loading="lazy" decoding="async"></a><figcaption>Tab: what every enemy bought and how to counter it</figcaption></figure><figure><a href="../deadlock-match-history@2x.webp" target="_blank" rel="noopener"><img src="../deadlock-match-history.webp" alt="Deadlock Assist match history: results, opponents, farm and purchase order" width="842" height="527" loading="lazy" decoding="async"></a><figcaption>History: farm per minute and purchase order</figcaption></figure></div>
 </section>
 
 <section id="results" class="wrap results">
   <h2>Does the advisor actually help?</h2>
   <p class="section-lead">Tested on 2,020 Emissary+ matches, 33,811 purchases.</p>
-  <ul class="stats"><li class="stat"><p class="stat-num">81<span class="u">%</span></p><p class="stat-label">good counters</p><div class="meter" role="img" aria-label="81% · previous version: 62%"><i style="width:81%"></i><b style="left:62%"></b></div><div class="meter-legend" aria-hidden="true"><span class="mid" style="left:62%">previous version: 62%</span></div><p>Picks that win more often vs that team than an average item.</p></li><li class="stat"><p class="stat-num">29<span class="u">%</span></p><p class="stat-label">of real buys in its top 5</p><div class="meter" role="img" aria-label="29% · previous version: 25%"><i style="width:29%"></i><b style="left:25%"></b></div><div class="meter-legend" aria-hidden="true"><span class="left" style="left:25%">previous version: 25%</span></div><p>Share of players&#x27; actual purchases that were in the advisor&#x27;s top 5.</p></li><li class="stat"><p class="stat-num">+3.2<span class="u"> pp</span></p><p class="stat-label">higher win rate</p><p class="stat-ref">at equal farm</p><p>Players who bought from the top 5 won more often.</p></li></ul>
-  <p class="note">Results from other players&#x27; matches, not a guarantee. Version 1.2.6.</p>
+  <ul class="stats"><li class="stat"><p class="stat-num">81<span class="u">%</span></p><p class="stat-label">good counters</p><div class="meter" role="img" aria-label="81% · previous version: 62%"><i style="width:81%"></i><b style="left:62%"></b></div><div class="meter-legend" aria-hidden="true"><span class="mid" style="left:62%">previous version: 62%</span></div><p>Picks that win more often vs that team than an average item.</p></li><li class="stat"><p class="stat-num">29<span class="u">%</span></p><p class="stat-label">of real buys in its top 5</p><div class="meter" role="img" aria-label="29% · previous version: 25%"><i style="width:29%"></i><b style="left:25%"></b></div><div class="meter-legend" aria-hidden="true"><span class="left" style="left:25%">previous version: 25%</span></div><p>Share of players’ actual purchases that were in the advisor’s top 5.</p></li><li class="stat"><p class="stat-num">+3.2<span class="u"> pp</span></p><p class="stat-label">higher win rate</p><p class="stat-ref">at equal farm</p><p>Players who bought from the top 5 won more often.</p></li></ul>
+  <p class="note">Results from other players’ matches, not a guarantee. Version 1.2.6.</p>
 </section>
 
 <section id="safety" class="wrap">
@@ -210,24 +230,24 @@ section{padding-top:48px}
 
 <section id="get-started" class="wrap">
   <h2>Get started</h2>
-  <ol class="steps"><li><h3>Install</h3><p>Run the installer and set Deadlock to borderless window mode.</p></li><li><h3>Play</h3><p>It detects the match on its own. Hold Tab now and then.</p></li><li><h3>Review</h3><p>After the match, press F10 for the summary in History.</p></li></ol>
+  <ol class="steps"><li><h3>Install</h3><p>Run the installer and set Deadlock to borderless window mode.</p></li><li><h3>Play</h3><p>It detects the match on its own. Hold Tab now and then.</p></li><li><h3>Review</h3><p>After the match, press F10 for the summary in History.</p></li></ol>
 </section>
 
 <section id="faq" class="wrap">
   <h2>Deadlock Assist FAQ</h2>
-  <div class="faq"><details><summary>Can I get banned?</summary><p>It never touches the game process; it only takes screenshots, like OBS or Discord. Valve doesn&#x27;t approve any third-party tools, so use it at your own risk.</p></details><details><summary>Does it work in fullscreen?</summary><p>No. Set Deadlock to borderless window, otherwise the overlay can&#x27;t show.</p></details><details><summary>Why does Windows show a warning?</summary><p>SmartScreen flags new apps. Click “More info” → “Run anyway”. Every update is signed.</p></details><details><summary>How does it know what to buy?</summary><p>From deadlock-api.com stats and what it sees on screen: the enemy team, their purchases and your souls.</p></details><details><summary>What are the requirements?</summary><p>Windows 10 or 11 (64-bit) and Deadlock in borderless window. Interface in English or Polish, switchable in the app.</p></details></div>
+  <div class="faq"><details><summary>Can I get banned?</summary><p>It never touches the game process; it only takes screenshots, like OBS or Discord. Valve doesn’t approve any third-party tools, so use it at your own risk.</p></details><details><summary>Does it work in fullscreen?</summary><p>No. Set Deadlock to borderless window, otherwise the overlay can’t show.</p></details><details><summary>Why does Windows show a warning?</summary><p>SmartScreen flags new apps. Click “More info” → “Run anyway”. Every update is signed.</p></details><details><summary>How does it know what to buy?</summary><p>From deadlock-api.com stats and what it sees on screen: the enemy team, their purchases and your souls.</p></details><details><summary>What are the requirements?</summary><p>Windows 10 or 11 (64-bit) and Deadlock in borderless window. Interface in English or Polish, switchable in the app.</p></details></div>
 </section>
 
 <section class="wrap final">
   <h2>Play your next match with an advisor</h2>
   <p class="section-lead">Installing takes a minute.</p>
-  <div class="actions center"><a class="btn" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3v-6ZM12 4.3 21 3v8.5h-9V4.3ZM3 12.5h7.5v7L3 18.5v-6ZM12 12.5h9V21l-9-1.3v-7.2Z" fill="currentColor" stroke="none"/></svg><span>Download for Windows</span></a><a class="btn kofi" href="https://ko-fi.com/deadlockassist" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><span>Support on Ko-fi</span></a></div>
+  <div class="actions center"><a class="btn" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener" data-goatcounter-click="download" data-goatcounter-title="en"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3v-6ZM12 4.3 21 3v8.5h-9V4.3ZM3 12.5h7.5v7L3 18.5v-6ZM12 12.5h9V21l-9-1.3v-7.2Z" fill="currentColor" stroke="none"/></svg><span>Download for Windows</span></a><a class="btn kofi" href="https://ko-fi.com/deadlockassist" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><span>Support on Ko-fi</span></a></div>
   <p class="note">Deadlock in borderless window · updates itself<br>Windows warning? “More info” → “Run anyway”.</p>
 </section>
 </main>
 <footer class="wrap foot">
-  <nav aria-label="links"><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Suggest an idea</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Report a bug</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Report a vulnerability</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">All versions</a><a href="../" hreflang="pl">Wersja polska</a></nav>
-  <p>Deadlock is a trademark of Valve Corporation. Deadlock Assist is an unofficial fan project, not affiliated with Valve. Item data: deadlock-api.com.</p>
+  <nav aria-label="links"><a href="https://deadlock-assist.com/en/changes/">Changelog</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Suggest an idea</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Report a bug</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Report a vulnerability</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">All versions</a><a href="../" hreflang="pl">Wersja polska</a></nav>
+  <p>Deadlock is a trademark of Valve Corporation. Deadlock Assist is an unofficial fan project, not affiliated with Valve. Item data: deadlock-api.com. Cookie-free visit stats: GoatCounter.</p>
 </footer>
 </body>
 </html>

@@ -1,12 +1,12 @@
 """Builds the Deadlock Assist landing page (PL at /, EN at /en/) into <out>/.
 
 Usage: python3 -I site/build.py docs   (edit texts here, then rebuild; GitHub Pages serves docs/)
+The changelog page reads site/changelog.json: refresh it with site/sync_changelog.py after an app release.
 """
 import html
 import json
 import re
 import sys
-from datetime import date
 from pathlib import Path
 
 DOMAIN = "deadlock-assist.com"
@@ -14,6 +14,8 @@ BASE = f"https://{DOMAIN}/"
 DOWNLOAD = "https://github.com/adam2s/deadlock-assist-releases/releases/latest"
 REPO = "https://github.com/adam2s/deadlock-assist-releases"
 KOFI = "https://ko-fi.com/deadlockassist"
+# Visit counter without cookies (goatcounter.com, site code "deadlock-assist"); "" turns it off.
+GOATCOUNTER = "https://deadlock-assist.goatcounter.com/count"
 IDEA = REPO + "/issues/new?template=pomysl.yml"
 BUG = REPO + "/issues/new?template=blad.yml"
 
@@ -62,6 +64,16 @@ PL = {
     "nav": [("funkcje", "Funkcje"), ("skutecznosc", "Skuteczność"), ("bezpieczenstwo", "Bezpieczeństwo"),
             ("faq", "FAQ")],
     "switch": ("en/", "English", "English version"),
+    "changes": {
+        "path": "zmiany/", "nav": "Zmiany", "title": "Lista zmian Deadlock Assist – nowe wersje nakładki do Deadlocka",
+        "description": "Co nowego w każdej wersji Deadlock Assist, nakładki do Deadlocka z kontrami, buildami i timerami.",
+        "h1": "Lista zmian", "lead": "Co nowego w każdej wersji.",
+        "version": "Wersja", "older": "Starsze wersje", "home": "Strona główna", "latest": "Najnowsza",
+        "highlight": "Najważniejsze: od wersji 1.2.6 doradca trafia 81% kontr (wcześniej 62%).",
+        "cta_note": "Aplikacja aktualizuje się sama. Pobierasz ją tylko raz.",
+        "months": ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia",
+                   "września", "października", "listopada", "grudnia"],
+    },
     "eyebrow": "Nakładka do Deadlocka · Windows 10/11",
     "h1": "Kontry na skład wroga w Deadlocku, na żywo",
     "lead": "Czyta z ekranu skład i zakupy wrogów, podpowiada, co kupić, i pilnuje timerów obozów i Mid Bossa.",
@@ -142,7 +154,7 @@ PL = {
               (REPO + "/releases", "Wszystkie wersje")],
     "footer": (
         "Deadlock jest znakiem towarowym Valve Corporation. Deadlock Assist to nieoficjalny projekt fanów, "
-        "niezwiązany z Valve. Dane o przedmiotach: deadlock-api.com."
+        "niezwiązany z Valve. Dane o przedmiotach: deadlock-api.com. Statystyki odwiedzin bez cookies: GoatCounter."
     ),
     "skip": "Przejdź do treści",
     "smartscreen": "Windows ostrzega? „Więcej informacji” → „Uruchom mimo to”.",
@@ -164,6 +176,16 @@ EN = {
             "start": "get-started", "faq": "faq"},
     "nav": [("features", "Features"), ("results", "Results"), ("safety", "Safety"), ("faq", "FAQ")],
     "switch": ("../", "Polski", "Wersja polska"),
+    "changes": {
+        "path": "en/changes/", "nav": "Changes", "title": "Deadlock Assist Changelog – Overlay Updates & Release Notes",
+        "description": "What’s new in every version of Deadlock Assist, the Deadlock overlay with counter items, builds and timers.",
+        "h1": "Changelog", "lead": "What's new in every version.",
+        "version": "Version", "older": "Older versions", "home": "Home", "latest": "Latest",
+        "highlight": "Highlight: since version 1.2.6 the advisor gets 81% of counters right (was 62%).",
+        "cta_note": "The app updates itself. You only download it once.",
+        "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+                   "October", "November", "December"],
+    },
     "eyebrow": "Deadlock overlay · Windows 10/11",
     "h1": "Deadlock counter items for the enemy team, live",
     "lead": "Reads the enemy team and their items from your screen, tells you what to buy and tracks camp and Mid Boss timers.",
@@ -243,7 +265,7 @@ EN = {
               (REPO + "/releases", "All versions")],
     "footer": (
         "Deadlock is a trademark of Valve Corporation. Deadlock Assist is an unofficial fan project, not "
-        "affiliated with Valve. Item data: deadlock-api.com."
+        "affiliated with Valve. Item data: deadlock-api.com. Cookie-free visit stats: GoatCounter."
     ),
     "skip": "Skip to content",
     "smartscreen": "Windows warning? “More info” → “Run anyway”.",
@@ -265,17 +287,126 @@ FONTS = (
 def typeset(s, lang):
     """Glues what must not end a line: Polish one-letter words and short prepositions, numbers, · and →."""
     if lang == "pl":
-        s = re.sub(r"(?<![\w-])([aiouwzAIOUWZ]|na|do|od|po|ze|we|że|co|to|nie|ma|jak) ", "\\1" + NB, s)
+        s = re.sub(r"(?<![\w-])([aiouwz]|na|do|od|po|ze|we|że|co|to|nie|ma|jak) ", "\\1" + NB, s, flags=re.I)
     s = re.sub(r"(\d) (\d{3})\b", "\\1" + NB + "\\2", s)
     s = re.sub(r"\b(Windows|Tier|minute|minuty|top)\s(\d)", "\\1" + NB + "\\2", s)
     s = re.sub(r"(\d+\.) (minuty)", "\\1" + NB + "\\2", s)
     s = re.sub(r"([„“])([^”]{1,24})”", lambda m: m.group(1) + m.group(2).replace(" ", NB) + "”", s)
+    s = re.sub(r"(?<=\w)'(?=\w)|(?<=s)'(?=\s)", "’", s)
+    s = re.sub(r"(?<![\d.,])(\d{1,3}) (?=[^\W\d_])", "\\1" + NB, s)
     return s.replace(" ·", NB + "·").replace(" → ", NB + "→" + NB).replace(" p.p.", NB + "p.p.").replace(" pp", NB + "pp")
 
 
 def unit(n):
     """Smaller unit after a big stat number: 81<span>%</span>, +3,2<span> p.p.</span>."""
     return re.sub(r"(%|\u00a0p\.p\.|\u00a0pp)$", r'<span class="u">\1</span>', n)
+
+
+CHANGELOG = json.loads(Path(__file__).with_name("changelog.json").read_text())
+
+# Shorter text for the website than in the app, and without developer-only lines; other versions show as in the app.
+SITE_CHANGES = {
+    "1.2.9": {"pl": ["Przycisk „Strona” w aplikacji otwiera deadlock-assist.com."],
+              "en": ["“Website” button in the app opens deadlock-assist.com."]},
+    "1.2.5": {"pl": ["Przycisk „Zaproponuj zmianę” (zgłoszenie na GitHubie) i „☕ Wesprzyj” w oknie aplikacji."],
+              "en": ["“Suggest a change” button (GitHub idea form) and “☕ Support” in the app window."]},
+    "1.2.8": {"pl": ["Cała aplikacja i nakładka po angielsku (przełącznik PL / EN). Na start język jak w Windows."],
+              "en": ["Full English app and overlay (PL / EN switch). Starts in your Windows language."]},
+    "1.2.7": {"pl": ["Historia: przy każdej podpowiedzi widać, skąd się wzięła („Twój build” / „Na wrogów”) i dlaczego."],
+              "en": ["History: each suggestion shows where it came from (“Your build” / “Vs enemies”) and why."]},
+    "1.2.6": {"pl": ["Doradca porównuje przedmioty przy równej farmie: 81% trafnych kontr zamiast 62% (test na 2020 meczach).",
+                     "29% prawdziwych zakupów graczy jest w top 5 doradcy (wcześniej 25%).",
+                     "Karta „Kup teraz” ma dwa wiersze: „Twój build” i „Na wrogów”. Do 10:00 kontruje wrogów z Twojej linii.",
+                     "Karta pokazuje wroga z dużą przewagą dusz i przedmiot przeciw niemu.",
+                     "Trzy tryby doradcy: „Mój build”, „Zrównoważony”, „Kontry”."],
+              "en": ["The advisor compares items at equal farm: 81% good counters instead of 62% (test on 2,020 matches).",
+                     "29% of players' real buys are in the advisor's top 5 (was 25%).",
+                     "The “Buy now” card has two rows: “Your build” and “Vs enemies”. Until 10:00 it counters your lane.",
+                     "The card shows an enemy far ahead in souls and an item against them.",
+                     "Three advisor modes: “My build”, “Balanced”, “Counters”."]},
+    "1.2.4": {"pl": ["Zakładka „Nakładka”: podgląd ekranu na środku, kliknięcie panelu przewija do jego ustawień.",
+                     "Zegar w nakładce: „Co teraz” ze strzałką kierunku, obozy z paskiem do odrodzenia."],
+              "en": ["“Overlay” tab: screen preview in the middle; clicking a panel scrolls to its settings.",
+                     "Overlay clock: “What now” with a direction arrow, camps with a respawn bar."]},
+    "1.2.3": {"pl": ["Wykres farmy nie gubi już prawdziwych odczytów, gdy dusze szybko rosną."],
+              "en": ["The farm chart no longer drops real readings when souls grow fast."]},
+    "1.2.2": {"pl": ["Historia: wykres farmy minuta po minucie dla każdego gracza i obu drużyn.",
+                     "Historia: przyrost farmy co 5 minut i podsumowanie meczu z tym, co poprawić."],
+              "en": ["History: minute-by-minute farm chart for every player and both teams.",
+                     "History: farm gain every 5 minutes and a match summary with what to improve."]},
+    "1.2.1": {"pl": ["Szybsze działanie w tle."], "en": ["Faster in the background."]},
+    "1.1.9": {"pl": ["Poprawka błędu przy starcie aplikacji."], "en": ["Fixed an error at app start."]},
+    "1.1.8": {"pl": ["Poprawki instalatora."], "en": ["Installer fixes."]},
+}
+
+
+def site_changes(r, lang):
+    return SITE_CHANGES.get(r["version"], {}).get(lang) or r[lang]
+
+
+def counter():
+    return f'<script data-goatcounter="{GOATCOUNTER}" async src="https://gc.zgo.at/count.js"></script>\n' if GOATCOUNTER else ""
+
+
+def download_btn(t, label, cls="btn"):
+    """Download link; GoatCounter counts its clicks as "download"."""
+    ico = icon("windows") if cls == "btn" else ""
+    text = f"<span>{label}</span>" if ico else label
+    return (f'<a class="{cls}" href="{DOWNLOAD}" rel="noopener" data-goatcounter-click="download" '
+            f'data-goatcounter-title="{t["lang"]}">{ico}{text}</a>')
+
+
+def head(t, url, title, desc, pl_url, en_url, prefix, extra=""):
+    alt_locale = "en_US" if t["lang"] == "pl" else "pl_PL"
+    og_image = BASE + "deadlock-overlay-counters.jpg"
+    return f"""<!doctype html>
+<html lang="{t['lang']}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(title)}</title>
+<meta name="description" content="{e(desc)}">
+<link rel="canonical" href="{url}">
+<link rel="alternate" hreflang="pl" href="{pl_url}">
+<link rel="alternate" hreflang="en" href="{en_url}">
+<link rel="alternate" hreflang="x-default" href="{en_url}">
+<meta name="theme-color" content="#0e1014">
+<link rel="icon" type="image/png" sizes="32x32" href="{prefix}favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="{prefix}icon.png">
+<link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png">
+{extra}<meta property="og:type" content="website">
+<meta property="og:site_name" content="Deadlock Assist">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{og_image}">
+<meta property="og:image:width" content="842">
+<meta property="og:image:height" content="527">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="{e(t['shot_alt'])}">
+<meta property="og:locale" content="{t['locale']}">
+<meta property="og:locale:alternate" content="{alt_locale}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}">
+<meta name="twitter:image" content="{og_image}">
+<meta name="twitter:image:alt" content="{e(t['shot_alt'])}">
+{FONTS}
+{counter()}"""
+
+
+def foot(t, T, switch_href):
+    lang = t["lang"]
+    links = f'<a href="{BASE}{t["changes"]["path"]}">{T(t["changes"]["h1"])}</a>'
+    links += "".join(f'<a href="{e(h)}" rel="noopener">{T(l)}</a>' for h, l in t["links"])
+    links += f'<a href="{switch_href}" hreflang="{"en" if lang == "pl" else "pl"}">{T(t["switch"][2])}</a>'
+    return f"""<footer class="wrap foot">
+  <nav aria-label="links">{links}</nav>
+  <p>{T(t['footer'])}</p>
+</footer>
+</body>
+</html>
+"""
 
 
 def page(t):
@@ -294,7 +425,8 @@ def page(t):
         "operatingSystem": "Windows 10, Windows 11",
         "inLanguage": ["pl", "en"],
         "isAccessibleForFree": True,
-        "dateModified": date.today().isoformat(),
+        "softwareVersion": CHANGELOG[0]["version"],
+        "dateModified": CHANGELOG[0]["date"],
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "downloadUrl": DOWNLOAD,
         "featureList": t["feature_list"],
@@ -342,46 +474,9 @@ def page(t):
     proof = "".join(stat(*p) for p in t["proof"])
     safe = "".join(f"<li>{T(s)}</li>" for s in t["safe"])
     faq = "".join(f"<details><summary>{T(q)}</summary><p>{T(a)}</p></details>" for q, a in t["faq"])
-    links = "".join(f'<a href="{e(h)}" rel="noopener">{T(l)}</a>' for h, l in t["links"])
-    links += f'<a href="{t["switch"][0]}" hreflang="{"en" if lang == "pl" else "pl"}">{T(t["switch"][2])}</a>'
-    cta = f'<a class="btn" href="{DOWNLOAD}" rel="noopener">{icon("windows")}<span>{T(t["cta"])}</span></a>'
-    alt_locale = "en_US" if lang == "pl" else "pl_PL"
-    og_image = BASE + "deadlock-overlay-counters.jpg"
-    return f"""<!doctype html>
-<html lang="{lang}">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(t['title'])}</title>
-<meta name="description" content="{e(t['description'])}">
-<link rel="canonical" href="{url}">
-<link rel="alternate" hreflang="pl" href="{BASE}">
-<link rel="alternate" hreflang="en" href="{BASE}en/">
-<link rel="alternate" hreflang="x-default" href="{BASE}en/">
-<meta name="theme-color" content="#0e1014">
-<link rel="icon" type="image/png" sizes="32x32" href="{prefix}favicon-32.png">
-<link rel="icon" type="image/png" sizes="256x256" href="{prefix}icon.png">
-<link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png">
-<link rel="preload" as="image" type="image/webp" href="{prefix}deadlock-overlay-counters.webp" fetchpriority="high">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Deadlock Assist">
-<meta property="og:title" content="{e(t['title'])}">
-<meta property="og:description" content="{e(t['description'])}">
-<meta property="og:url" content="{url}">
-<meta property="og:image" content="{og_image}">
-<meta property="og:image:width" content="842">
-<meta property="og:image:height" content="527">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:alt" content="{e(t['shot_alt'])}">
-<meta property="og:locale" content="{t['locale']}">
-<meta property="og:locale:alternate" content="{alt_locale}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{e(t['title'])}">
-<meta name="twitter:description" content="{e(t['description'])}">
-<meta name="twitter:image" content="{og_image}">
-<meta name="twitter:image:alt" content="{e(t['shot_alt'])}">
-{FONTS}
-<script type="application/ld+json">{json.dumps(ld_app, ensure_ascii=False)}</script>
+    cta = download_btn(t, T(t["cta"]))
+    preload = f'<link rel="preload" as="image" type="image/webp" href="{prefix}deadlock-overlay-counters.webp" fetchpriority="high">\n'
+    return head(t, url, t["title"], t["description"], BASE, BASE + "en/", prefix, preload) + f"""<script type="application/ld+json">{json.dumps(ld_app, ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(ld_faq, ensure_ascii=False)}</script>
 <style>{CSS}</style>
 </head>
@@ -389,7 +484,7 @@ def page(t):
 <a class="skip" href="#main">{T(t['skip'])}</a>
 <header class="top wrap">
   <a class="logo" href="./"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu">{nav}<a class="lang" href="{t['switch'][0]}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a><a class="btn sm" href="{DOWNLOAD}" rel="noopener">{T(t['cta_short'])}</a></nav>
+  <nav aria-label="menu">{nav}<a href="{t['changes']['path'].removeprefix('en/')}">{T(t['changes']['nav'])}</a><a class="lang" href="{t['switch'][0]}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
 </header>
 <main id="main">
 <section class="hero wrap">
@@ -448,13 +543,61 @@ def page(t):
   <p class="note">{T(t['cta_note'])}<br>{T(t['smartscreen'])}</p>
 </section>
 </main>
-<footer class="wrap foot">
-  <nav aria-label="links">{links}</nav>
-  <p>{T(t['footer'])}</p>
-</footer>
-</body>
-</html>
-"""
+""" + foot(t, T, t["switch"][0])
+
+
+def changes_page(t, shown=4):
+    """Changelog page from site/changelog.json: the newest versions open, the rest folded."""
+    lang = t["lang"]
+    c = t["changes"]
+    T = lambda s: html.escape(typeset(s, lang), quote=True)  # noqa: E731
+    prefix = "../" * c["path"].count("/")
+    url = BASE + c["path"]
+    pl_url, en_url = BASE + PL["changes"]["path"], BASE + EN["changes"]["path"]
+    home = BASE + t["path"]
+
+    def when(d):
+        y, m, day = (int(x) for x in d.split("-"))
+        month = c["months"][m - 1]
+        return f"{day}{NB}{month} {y}" if lang == "pl" else f"{month}{NB}{day}, {y}"
+
+    def release(r):
+        items = "".join(f"<li>{T(x)}</li>" for x in site_changes(r, lang))
+        tag = f' <span class="tag">{T(c["latest"])}</span>' if r is CHANGELOG[0] else ""
+        return (f'<article class="release" id="v{r["version"]}"><h2>{T(c["version"])} {r["version"]}{tag}'
+                f' <time datetime="{r["date"]}">{when(r["date"])}</time></h2><ul>{items}</ul></article>')
+
+    newest = "".join(release(r) for r in CHANGELOG[:shown])
+    rest = CHANGELOG[shown:]
+    older = (f'<details class="older"><summary>{T(c["older"])} ({rest[-1]["version"]}–{rest[0]["version"]})</summary>'
+             + "".join(release(r) for r in rest) + "</details>") if rest else ""
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Deadlock Assist", "item": home},
+            {"@type": "ListItem", "position": 2, "name": c["h1"], "item": url},
+        ],
+    }
+    switch = (EN if lang == "pl" else PL)["changes"]["path"]
+    return head(t, url, c["title"], c["description"], pl_url, en_url, prefix) + f"""<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}</style>
+</head>
+<body>
+<a class="skip" href="#main">{T(t['skip'])}</a>
+<header class="top wrap">
+  <a class="logo" href="{home}"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
+  <nav aria-label="menu"><a href="{home}">{T(c['home'])}</a><a class="lang" href="{BASE}{switch}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
+</header>
+<main id="main" class="wrap changes">
+  <h1>{T(c['h1'])}</h1>
+  <p class="section-lead">{T(c['lead'])}</p>
+  <p class="highlight"><a href="#v1.2.6">{T(c['highlight']).replace('81%', '<strong>81%</strong>', 1)}</a></p>
+  {newest}
+  {older}
+  <div class="end"><p class="note">{T(c['cta_note'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></div>
+</main>
+""" + foot(t, T, BASE + switch)
 
 
 def not_found():
@@ -488,18 +631,23 @@ def main():
     (out / "index.html").write_text(page(PL))
     (out / "en" / "index.html").write_text(page(EN))
     (out / "404.html").write_text(not_found())
-    alt = (
-        f'    <xhtml:link rel="alternate" hreflang="pl" href="{BASE}"/>\n'
-        f'    <xhtml:link rel="alternate" hreflang="en" href="{BASE}en/"/>\n'
-        f'    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE}en/"/>\n'
-    )
-    lm = f"    <lastmod>{date.today().isoformat()}</lastmod>\n"
+    for t in (PL, EN):
+        (out / t["changes"]["path"]).mkdir(parents=True, exist_ok=True)
+        (out / t["changes"]["path"] / "index.html").write_text(changes_page(t))
+    def entry(pl, en, day):
+        alt = (
+            f'    <xhtml:link rel="alternate" hreflang="pl" href="{BASE}{pl}"/>\n'
+            f'    <xhtml:link rel="alternate" hreflang="en" href="{BASE}{en}"/>\n'
+            f'    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE}{en}"/>\n'
+        )
+        return "".join(f"  <url>\n    <loc>{BASE}{p}</loc>\n    <lastmod>{day}</lastmod>\n{alt}  </url>\n" for p in (pl, en))
+
     (out / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
-        f"  <url>\n    <loc>{BASE}</loc>\n{lm}{alt}  </url>\n"
-        f"  <url>\n    <loc>{BASE}en/</loc>\n{lm}{alt}  </url>\n"
-        "</urlset>\n"
+        + entry("", "en/", CHANGELOG[0]["date"])
+        + entry(PL["changes"]["path"], EN["changes"]["path"], CHANGELOG[0]["date"])
+        + "</urlset>\n"
     )
     (out / ".nojekyll").write_text("")
     (out / "CNAME").write_text(DOMAIN + "\n")

@@ -1,0 +1,266 @@
+[
+ {
+  "version": "1.2.9",
+  "date": "2026-11-05",
+  "pl": [
+   "Przycisk „Strona” w nagłówku otwiera stronę projektu deadlock-assist.com (w wersji angielskiej po przełączeniu na EN)."
+  ],
+  "en": [
+   "“Website” button in the header opens the project website deadlock-assist.com (the English page when the app is in English)."
+  ]
+ },
+ {
+  "version": "1.2.8",
+  "date": "2026-11-05",
+  "pl": [
+   "Interfejs po angielsku: przełącznik PL / EN w nagłówku zmienia język okna, nakładki, porad doradcy, podpowiedzi „Co teraz” i nazw z gry. Przy pierwszym uruchomieniu język wybiera się według języka Windows.",
+   "Lista zmian w „Aktualizacjach” ma też wersję angielską."
+  ],
+  "en": [
+   "English interface: the PL / EN switch in the header changes the language of the window, the overlay, the advisor's reasons, “What now” hints and game names. On first start the language follows Windows.",
+   "The list of changes in “Updates” is in English too."
+  ]
+ },
+ {
+  "version": "1.2.7",
+  "date": "2026-11-05",
+  "pl": [
+   "Historia meczu: przy każdej podpowiedzi doradcy widać, dlaczego ją dostałeś: z którego wiersza karty była („Twój build” albo „Na wrogów”) i jakie miała powody (zagrożenie u wrogów, szansa na wygraną, popularność na bohaterze, build, drużyna).",
+   "Pod tabelą podpowiedzi jest rozwijane objaśnienie, co znaczy każdy rodzaj powodu. Mecze sprzed tej wersji nie mają zapisanych powodów."
+  ],
+  "en": [
+   "Match history: every advisor suggestion shows why you got it: which card row it was on (“Your build” or “Vs enemies”) and its reasons (enemy threat, chance to win, popularity on your hero, build, team).",
+   "Below the suggestions table, an expandable note explains each kind of reason. Matches from before this version have no saved reasons."
+  ]
+ },
+ {
+  "version": "1.2.6",
+  "date": "2026-11-05",
+  "pl": [
+   "Doradca przedmiotów: etykieta „Wygrana” porównuje przedmioty przy wyrównanej farmie kupujących. Wcześniej drogie przedmioty, które kupują gracze z przewagą, wyglądały na lepsze, niż są. Na 2020 prawdziwych meczach z ostatnich 2 tygodni dobre przeciw składowi jest 81% propozycji zamiast 62%.",
+   "Doradca nie proponuje już przedmiotów, których prawie nikt na Twoim bohaterze nie kupuje na tym etapie meczu (brak danych o wygranych).",
+   "Doradca trafia teraz prawdziwy następny zakup graczy w 29% przypadków zamiast 25%.",
+   "Doradca ocenia leczenie, kontrolę tłumu, wytrzymałość i mobilność bohaterów także z opisów ich umiejętności (np. ogłuszenia Dynamo i Mo & Krill).",
+   "Karta „Kup teraz” ma dwa wiersze: „Twój build” (następny przedmiot buildu, ile dusz brakuje i mniej więcej za ile je zbierzesz) oraz „Na wrogów” (jeden przedmiot na największe zagrożenie całego składu, np. „leczenie u wroga: Abrams, Ivy”).",
+   "Do 10:00 wiersz „Na wrogów” odpowiada na dwóch wrogów z Twojej linii (np. „na linii, leczenie u wroga: Lash”), potem na cały skład. Osobna sekcja „Na linii” zniknęła.",
+   "Gdy jeden wróg ma dużo więcej dusz niż reszta (odczyt spod portretów), karta pokazuje go z przedmiotem przeciw niemu.",
+   "Ustawienia doradcy: trzy tryby („Mój build”, „Zrównoważony”, „Kontry”) zamiast suwaków; suwaki są w sekcji „Zaawansowane”, z prostszymi nazwami.",
+   "Powody na karcie w trakcie gry są krótsze i bez punktów procentowych; liczby zostają w widoku z Tab.",
+   "Styl gry (broń, duch, wytrzymałość) doradca rozpoznaje z kupionych przedmiotów, także zanim odczyta statystyki z HUD."
+  ],
+  "en": [
+   "Item advisor: the “Win” label compares items with the buyers' farm evened out. Before, expensive items bought by players already ahead looked better than they are. On 2020 real matches from the last 2 weeks, 81% of suggestions are good against the enemy team instead of 62%.",
+   "The advisor no longer suggests items almost nobody on your hero buys at this stage of the match (no win data).",
+   "The advisor now matches players' real next purchase 29% of the time instead of 25%.",
+   "The advisor also judges heroes' healing, crowd control, durability and mobility from their ability descriptions (e.g. Dynamo's and Mo & Krill's stuns).",
+   "The “Buy now” card has two rows: “Your build” (the build's next item, how many souls are missing and roughly when you will have them) and “Vs enemies” (one item against the whole team's biggest threat, e.g. “enemy healing: Abrams, Ivy”).",
+   "Until 10:00 the “Vs enemies” row answers the two enemies in your lane (e.g. “in lane, enemy healing: Lash”), then the whole team. The separate “In lane” section is gone.",
+   "When one enemy has far more souls than the rest (read from under the portraits), the card shows them with an item against them.",
+   "Advisor settings: three modes (“My build”, “Balanced”, “Counters”) instead of sliders; the sliders are under “Advanced”, with simpler names.",
+   "Reasons on the card during the game are shorter and without percentage points; the numbers stay in the Tab view.",
+   "The advisor recognises your play style (weapon, spirit, durability) from the items you buy, even before it reads stats from the HUD."
+  ]
+ },
+ {
+  "version": "1.2.5",
+  "date": "2026-11-04",
+  "pl": [
+   "Przycisk „Zaproponuj zmianę” obok zakładek: krótki formularz otwiera w przeglądarce gotowe zgłoszenie pomysłu na GitHubie.",
+   "Przycisk „☕ Wesprzyj” w prawym górnym rogu okna aplikacji (nie w nakładce nad grą)."
+  ],
+  "en": [
+   "“Suggest a change” button next to the tabs: a short form opens a ready idea report on GitHub in your browser.",
+   "“☕ Support” button in the top right corner of the app window (not in the in-game overlay)."
+  ]
+ },
+ {
+  "version": "1.2.4",
+  "date": "2026-11-04",
+  "pl": [
+   "Zakładka „Nakładka”: podgląd ekranu jest na środku, a ustawienia po obu stronach; podgląd zostaje na miejscu przy przewijaniu, więc ostatnie opcje ustawiasz, widząc cały ekran.",
+   "Kliknięcie panelu w podglądzie przewija do jego ustawień.",
+   "Panel zegara w nakładce: podpowiedzi „Co teraz” mają ikonę ze strzałką kierunku i drugą linię z tym, co zrobić; obozy mają znacznik, w której części mapy leżą, i pasek do odrodzenia; timery są podzielone na „Obozy i bossowie” i „Wydarzenia”."
+  ],
+  "en": [
+   "“Overlay” tab: the screen preview is in the middle with settings on both sides; the preview stays in place while you scroll, so you set the last options while seeing the whole screen.",
+   "Clicking a panel in the preview scrolls to its settings.",
+   "Clock panel in the overlay: “What now” hints have an icon with a direction arrow and a second line with what to do; camps show which part of the map they are in and a bar until respawn; timers are split into “Camps and bosses” and “Events”."
+  ]
+ },
+ {
+  "version": "1.2.3",
+  "date": "2026-11-04",
+  "pl": [
+   "Wykres farmy nie odrzuca już prawdziwych odczytów spod portretów, gdy dusze szybko rosną (np. na początku meczu); odrzuca tylko pomyłki odczytu.",
+   "Testy porównujące farmę z górnego paska z farmą liczoną z przedmiotów na nagranym meczu."
+  ],
+  "en": [
+   "The farm chart no longer drops real readings from under the portraits when souls grow fast (e.g. early in the match); it only drops misreads.",
+   "Tests comparing top bar farm with farm counted from items on a recorded match."
+  ]
+ },
+ {
+  "version": "1.2.2",
+  "date": "2026-11-04",
+  "pl": [
+   "Historia: wykres farmy w kolejnych minutach meczu, dla Ciebie, średniej obu drużyn i każdego gracza, z porównaniem do typowego gracza.",
+   "Asystent co pół minuty odczytuje dusze wszystkich graczy spod portretów na górnym pasku; starsze mecze liczą farmę z cen przedmiotów z Tab.",
+   "Historia: tabela przyrostu farmy co 5 minut (dusze na minutę).",
+   "Historia: podsumowanie na końcu meczu z tym, co poprawić w kolejnym (farma, niewydane dusze, podpowiedzi doradcy, duże zakupy wrogów).",
+   "Asystent zapisuje teraz co pół minuty Twoje niewydane dusze, do podsumowania meczu."
+  ],
+  "en": [
+   "History: farm chart by match minute, for you, both team averages and every player, compared with a typical player.",
+   "Every half minute the assistant reads all players' souls from under the top bar portraits; older matches count farm from item prices from Tab.",
+   "History: table of farm gain every 5 minutes (souls per minute).",
+   "History: a summary at the end of the match with what to improve next time (farm, unspent souls, advisor hints, big enemy purchases).",
+   "The assistant now saves your unspent souls every half minute, for the match summary."
+  ]
+ },
+ {
+  "version": "1.2.1",
+  "date": "2026-11-04",
+  "pl": [
+   "Szybsze działanie w tle: słownik gry i historia meczów są trzymane w pamięci zamiast czytane z bazy przy każdej poradzie.",
+   "Mniej danych przesyłanych do okien aplikacji i nakładki.",
+   "Porządki w kodzie bez zmian w działaniu."
+  ],
+  "en": [
+   "Faster in the background: the game dictionary and match history are kept in memory instead of read from the database for every piece of advice.",
+   "Less data sent to the app and overlay windows.",
+   "Code cleanup with no change in behaviour."
+  ]
+ },
+ {
+  "version": "1.2.0",
+  "date": "2026-11-04",
+  "pl": [
+   "Nowa zakładka „Aktualizacje” z listą zmian w każdej wersji."
+  ],
+  "en": [
+   "New “Updates” tab with the list of changes in every version."
+  ]
+ },
+ {
+  "version": "1.1.9",
+  "date": "2026-11-04",
+  "pl": [
+   "Naprawiony błąd „state not managed” przy starcie aplikacji."
+  ],
+  "en": [
+   "Fixed the “state not managed” error at app start."
+  ]
+ },
+ {
+  "version": "1.1.8",
+  "date": "2026-11-04",
+  "pl": [
+   "Instalator zamyka działającą aplikację poleceniem taskkill.",
+   "Zamykanie aplikacji widać w „Show details” instalatora."
+  ],
+  "en": [
+   "The installer closes the running app with taskkill.",
+   "Closing the app is shown in the installer's “Show details”."
+  ]
+ },
+ {
+  "version": "1.1.7",
+  "date": "2026-11-04",
+  "pl": [
+   "Instalator zamyka uruchomione kopie aplikacji przed instalacją."
+  ],
+  "en": [
+   "The installer closes running copies of the app before installing."
+  ]
+ },
+ {
+  "version": "1.1.6",
+  "date": "2026-11-04",
+  "pl": [
+   "Czytelniejszy napis na przycisku podczas pobierania aktualizacji."
+  ],
+  "en": [
+   "Clearer button text while an update downloads."
+  ]
+ },
+ {
+  "version": "1.1.5",
+  "date": "2026-11-04",
+  "pl": [
+   "Instalator aktualizacji startuje dopiero po zamknięciu aplikacji."
+  ],
+  "en": [
+   "The update installer starts only after the app has closed."
+  ]
+ },
+ {
+  "version": "1.1.4",
+  "date": "2026-11-04",
+  "pl": [
+   "Podpowiedź po najechaniu na numer wersji w nagłówku."
+  ],
+  "en": [
+   "Tooltip on the version number in the header."
+  ]
+ },
+ {
+  "version": "1.1.3",
+  "date": "2026-11-04",
+  "pl": [
+   "Wersje publikowane w publicznym repozytorium deadlock-assist-releases."
+  ],
+  "en": [
+   "Versions are published in the public deadlock-assist-releases repository."
+  ]
+ },
+ {
+  "version": "1.1.2",
+  "date": "2026-11-04",
+  "pl": [
+   "Numer zainstalowanej wersji w nagłówku aplikacji."
+  ],
+  "en": [
+   "Installed version number in the app header."
+  ]
+ },
+ {
+  "version": "1.1.1",
+  "date": "2026-11-04",
+  "pl": [
+   "Instalator w języku angielskim."
+  ],
+  "en": [
+   "Installer in English."
+  ]
+ },
+ {
+  "version": "1.1.0",
+  "date": "2026-11-04",
+  "pl": [
+   "Aktualizacje z GitHuba: aplikacja sama sprawdza nową wersję i instaluje ją jednym kliknięciem."
+  ],
+  "en": [
+   "Updates from GitHub: the app checks for a new version by itself and installs it in one click."
+  ]
+ },
+ {
+  "version": "1.0.0",
+  "date": "2026-11-04",
+  "pl": [
+   "Pierwszy instalator dla Windows.",
+   "Własna ikona aplikacji.",
+   "Nakładka w grze: co kupić teraz, kontry na wrogów pod Tab, zakupy wrogów, zegar i obozy.",
+   "Doradca przedmiotów liczony ze statystyk, buildów innych graczy i win rate przeciw wrogom.",
+   "Historia meczów z przedmiotami obu drużyn i kolejnością zakupów.",
+   "Dane gry: bohaterowie, przedmioty i zmiany po patchach."
+  ],
+  "en": [
+   "First installer for Windows.",
+   "Custom app icon.",
+   "In-game overlay: what to buy now, counters to enemies under Tab, enemy purchases, clock and camps.",
+   "Item advisor based on statistics, other players' builds and win rates against enemies.",
+   "Match history with both teams' items and purchase order.",
+   "Game data: heroes, items and patch changes."
+  ]
+ }
+]
