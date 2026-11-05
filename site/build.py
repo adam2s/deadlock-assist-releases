@@ -736,8 +736,8 @@ COUNTERS = json.loads(COUNTERS_FILE.read_text()) if COUNTERS_FILE.exists() else 
 OUT = Path("docs")
 
 
-MENU_ICON = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path class="m1" d="M4 7h16"/>'
-             '<path class="m2" d="M4 12h16"/><path class="m3" d="M4 17h16"/></svg>')
+MENU_ICON = ('<svg class="ico i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
+             '<svg class="ico i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>')
 # The menu button opens the links as a panel under the header on narrow screens. It closes on a link,
 # Escape or a click outside. Without JS the header keeps the logo and the download button.
 MENU_JS = (
