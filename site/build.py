@@ -456,12 +456,12 @@ EN = {
 }
 
 CSS = Path(__file__).with_name("style.css").read_text()
+# Inter is served from the site and preloaded, so it is there for the first paint. With
+# font-display:optional a slow connection keeps the fallback for that visit instead of
+# swapping fonts mid-load, which made the text jump.
 FONTS = (
-    '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
-    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" '
-    'media="print" onload="this.media=\'all\'">\n'
-    '<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap"></noscript>'
+    '<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
+    '<link rel="preload" href="/fonts/inter-pl.woff2" as="font" type="font/woff2" crossorigin>'
 )
 
 
