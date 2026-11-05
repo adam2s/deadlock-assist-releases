@@ -7,7 +7,6 @@ import html
 import json
 import re
 import sys
-from datetime import date
 from pathlib import Path
 
 DOMAIN = "deadlock-assist.com"
@@ -66,10 +65,12 @@ PL = {
             ("faq", "FAQ")],
     "switch": ("en/", "English", "English version"),
     "changes": {
-        "path": "zmiany/", "nav": "Zmiany", "title": "Lista zmian – Deadlock Assist",
+        "path": "zmiany/", "nav": "Zmiany", "title": "Lista zmian Deadlock Assist – nowe wersje nakładki do Deadlocka",
         "description": "Co nowego w każdej wersji Deadlock Assist, nakładki do Deadlocka z kontrami, buildami i timerami.",
-        "h1": "Lista zmian", "lead": "Co nowego w każdej wersji. Aplikacja aktualizuje się sama.",
-        "version": "Wersja", "older": "Starsze wersje", "home": "Strona główna",
+        "h1": "Lista zmian", "lead": "Co nowego w każdej wersji.",
+        "version": "Wersja", "older": "Starsze wersje", "home": "Strona główna", "latest": "Najnowsza",
+        "highlight": "Najważniejsze: od wersji 1.2.6 doradca trafia 81% kontr (wcześniej 62%).",
+        "cta_note": "Aplikacja aktualizuje się sama. Pobierasz ją tylko raz.",
         "months": ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia",
                    "września", "października", "listopada", "grudnia"],
     },
@@ -176,10 +177,12 @@ EN = {
     "nav": [("features", "Features"), ("results", "Results"), ("safety", "Safety"), ("faq", "FAQ")],
     "switch": ("../", "Polski", "Wersja polska"),
     "changes": {
-        "path": "en/changes/", "nav": "Changes", "title": "Changelog – Deadlock Assist",
+        "path": "en/changes/", "nav": "Changes", "title": "Deadlock Assist Changelog – Overlay Updates & Release Notes",
         "description": "What's new in every version of Deadlock Assist, the Deadlock overlay with counter items, builds and timers.",
-        "h1": "Changelog", "lead": "What's new in every version. The app updates itself.",
-        "version": "Version", "older": "Older versions", "home": "Home",
+        "h1": "Changelog", "lead": "What's new in every version.",
+        "version": "Version", "older": "Older versions", "home": "Home", "latest": "Latest",
+        "highlight": "Highlight: since version 1.2.6 the advisor gets 81% of counters right (was 62%).",
+        "cta_note": "The app updates itself. You only download it once.",
         "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
                    "October", "November", "December"],
     },
@@ -289,6 +292,8 @@ def typeset(s, lang):
     s = re.sub(r"\b(Windows|Tier|minute|minuty|top)\s(\d)", "\\1" + NB + "\\2", s)
     s = re.sub(r"(\d+\.) (minuty)", "\\1" + NB + "\\2", s)
     s = re.sub(r"([„“])([^”]{1,24})”", lambda m: m.group(1) + m.group(2).replace(" ", NB) + "”", s)
+    s = re.sub(r"(?<=\w)'(?=\w)|(?<=s)'(?=\s)", "’", s)
+    s = re.sub(r"(?<![\d.,])(\d{1,3}) (?=[^\W\d_])", "\\1" + NB, s)
     return s.replace(" ·", NB + "·").replace(" → ", NB + "→" + NB).replace(" p.p.", NB + "p.p.").replace(" pp", NB + "pp")
 
 
@@ -298,6 +303,41 @@ def unit(n):
 
 
 CHANGELOG = json.loads(Path(__file__).with_name("changelog.json").read_text())
+
+# Shorter text for the website than in the app, and without developer-only lines; other versions show as in the app.
+SITE_CHANGES = {
+    "1.2.8": {"pl": ["Cała aplikacja i nakładka po angielsku (przełącznik PL / EN). Na start język jak w Windows."],
+              "en": ["Full English app and overlay (PL / EN switch). Starts in your Windows language."]},
+    "1.2.7": {"pl": ["Historia: przy każdej podpowiedzi widać, skąd się wzięła („Twój build” / „Na wrogów”) i dlaczego."],
+              "en": ["History: each suggestion shows where it came from (“Your build” / “Vs enemies”) and why."]},
+    "1.2.6": {"pl": ["Doradca porównuje przedmioty przy równej farmie: 81% trafnych kontr zamiast 62% (test na 2020 meczach).",
+                     "29% prawdziwych zakupów graczy jest w top 5 doradcy (wcześniej 25%).",
+                     "Karta „Kup teraz” ma dwa wiersze: „Twój build” i „Na wrogów”. Do 10:00 kontruje wrogów z Twojej linii.",
+                     "Karta pokazuje wroga z dużą przewagą dusz i przedmiot przeciw niemu.",
+                     "Trzy tryby doradcy: „Mój build”, „Zrównoważony”, „Kontry”."],
+              "en": ["The advisor compares items at equal farm: 81% good counters instead of 62% (test on 2,020 matches).",
+                     "29% of players' real buys are in the advisor's top 5 (was 25%).",
+                     "The “Buy now” card has two rows: “Your build” and “Vs enemies”. Until 10:00 it counters your lane.",
+                     "The card shows an enemy far ahead in souls and an item against them.",
+                     "Three advisor modes: “My build”, “Balanced”, “Counters”."]},
+    "1.2.4": {"pl": ["Zakładka „Nakładka”: podgląd ekranu na środku, kliknięcie panelu przewija do jego ustawień.",
+                     "Zegar w nakładce: „Co teraz” ze strzałką kierunku, obozy z paskiem do odrodzenia."],
+              "en": ["“Overlay” tab: screen preview in the middle; clicking a panel scrolls to its settings.",
+                     "Overlay clock: “What now” with a direction arrow, camps with a respawn bar."]},
+    "1.2.3": {"pl": ["Wykres farmy nie gubi już prawdziwych odczytów, gdy dusze szybko rosną."],
+              "en": ["The farm chart no longer drops real readings when souls grow fast."]},
+    "1.2.2": {"pl": ["Historia: wykres farmy minuta po minucie dla każdego gracza i obu drużyn.",
+                     "Historia: przyrost farmy co 5 minut i podsumowanie meczu z tym, co poprawić."],
+              "en": ["History: minute-by-minute farm chart for every player and both teams.",
+                     "History: farm gain every 5 minutes and a match summary with what to improve."]},
+    "1.2.1": {"pl": ["Szybsze działanie w tle."], "en": ["Faster in the background."]},
+    "1.1.9": {"pl": ["Poprawka błędu przy starcie aplikacji."], "en": ["Fixed an error at app start."]},
+    "1.1.8": {"pl": ["Poprawki instalatora."], "en": ["Installer fixes."]},
+}
+
+
+def site_changes(r, lang):
+    return SITE_CHANGES.get(r["version"], {}).get(lang) or r[lang]
 
 
 def counter():
@@ -381,7 +421,8 @@ def page(t):
         "operatingSystem": "Windows 10, Windows 11",
         "inLanguage": ["pl", "en"],
         "isAccessibleForFree": True,
-        "dateModified": date.today().isoformat(),
+        "softwareVersion": CHANGELOG[0]["version"],
+        "dateModified": CHANGELOG[0]["date"],
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "downloadUrl": DOWNLOAD,
         "featureList": t["feature_list"],
@@ -501,7 +542,7 @@ def page(t):
 """ + foot(t, T, t["switch"][0])
 
 
-def changes_page(t, shown=3):
+def changes_page(t, shown=4):
     """Changelog page from site/changelog.json: the newest versions open, the rest folded."""
     lang = t["lang"]
     c = t["changes"]
@@ -517,8 +558,9 @@ def changes_page(t, shown=3):
         return f"{day}{NB}{month} {y}" if lang == "pl" else f"{month}{NB}{day}, {y}"
 
     def release(r):
-        items = "".join(f"<li>{T(x)}</li>" for x in r[lang])
-        return (f'<article class="release" id="v{r["version"]}"><h2>{T(c["version"])} {r["version"]}'
+        items = "".join(f"<li>{T(x)}</li>" for x in site_changes(r, lang))
+        tag = f' <span class="tag">{T(c["latest"])}</span>' if r is CHANGELOG[0] else ""
+        return (f'<article class="release" id="v{r["version"]}"><h2>{T(c["version"])} {r["version"]}{tag}'
                 f' <time datetime="{r["date"]}">{when(r["date"])}</time></h2><ul>{items}</ul></article>')
 
     newest = "".join(release(r) for r in CHANGELOG[:shown])
@@ -546,9 +588,10 @@ def changes_page(t, shown=3):
 <main id="main" class="wrap changes">
   <h1>{T(c['h1'])}</h1>
   <p class="section-lead">{T(c['lead'])}</p>
+  <p class="highlight"><a href="#v1.2.6">{T(c['highlight'])}</a></p>
   {newest}
   {older}
-  <div class="actions">{download_btn(t, T(t['cta']))}</div>
+  <div class="end"><p class="note">{T(c['cta_note'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></div>
 </main>
 """ + foot(t, T, BASE + switch)
 
@@ -598,7 +641,7 @@ def main():
     (out / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
-        + entry("", "en/", date.today().isoformat())
+        + entry("", "en/", CHANGELOG[0]["date"])
         + entry(PL["changes"]["path"], EN["changes"]["path"], CHANGELOG[0]["date"])
         + "</urlset>\n"
     )
