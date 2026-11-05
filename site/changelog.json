@@ -1,5 +1,17 @@
 [
  {
+  "version": "1.3.3",
+  "date": "2026-11-05",
+  "pl": [
+   "Odczyt przedmiotów z HUD widzi też ciemne ikony (np. Uciszacz), więc doradca nie poleca już przedmiotu, który kupiłeś, a historia meczu go pokazuje.",
+   "Wykres farmy w historii poprawia błędne odczyty dusz spod portretów: „7,3 tys.” odczytane jako 73 tys. i „17 tys.” z miętowej ramki odczytane jako 175 są naprawiane albo pomijane."
+  ],
+  "en": [
+   "HUD item reading also sees dark icons (e.g. Silencer), so the advisor no longer suggests an item you bought, and the match history shows it.",
+   "The farm chart in the history mends misread souls under the portraits: “7.3k” read as 73k and “17k” on a mint box read as 175 are fixed or left out."
+  ]
+ },
+ {
   "version": "1.3.2",
   "date": "2026-11-05",
   "pl": [
