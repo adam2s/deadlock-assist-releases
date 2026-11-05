@@ -1,5 +1,19 @@
 [
  {
+  "version": "1.3.1",
+  "date": "2026-11-05",
+  "pl": [
+   "Doradca znów rozpoznaje Szczurzego Króla i Drętwiaka Danny’ego, którym patch zmienił nazwy w danych gry.",
+   "Po patchu „Odśwież dane gry” pobiera od nowa statystyki graczy (buildy, skuteczność przedmiotów na wrogów) i liczy je od dnia patcha, więc doradca szybciej przestawia się na nową metę.",
+   "Odczyt HUD: kółka obrażeń, mocy duchowej i zdrowia innego gracza z Tab nie są już brane za Twoje, a posiadane przedmioty nie znikają i nie wracają co kilka sekund (doradca nie poleca już kupionych)."
+  ],
+  "en": [
+   "The advisor recognises Rat King and Deadman Danny again, renamed in the game data by the patch.",
+   "After a patch, “Refresh game data” downloads player stats again (builds, item win rates against enemies) and counts them from the patch day, so the advisor moves to the new meta sooner.",
+   "HUD reading: another player's weapon, spirit and health circles shown under Tab are no longer taken as yours, and owned items no longer come and go every few seconds (the advisor stops suggesting items you have)."
+  ]
+ },
+ {
   "version": "1.3.0",
   "date": "2026-11-05",
   "pl": [
