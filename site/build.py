@@ -96,6 +96,35 @@ PL = {
         "others": "Kontry na innych bohaterów",
         "souls": "dusz",
     },
+    "patches": {
+        "path": "patche/", "nav": "Patche",
+        "index_title": "Patche i aktualizacje Deadlocka – zmiany bohaterów i przedmiotów (patch notes)",
+        "index_desc": "Patch notes Deadlocka w jednym miejscu: każda aktualizacja ze zmianami bohaterów, umiejętności "
+                      "i przedmiotów, z ikonami, od najnowszej.",
+        "index_h1": "Patche i aktualizacje Deadlocka",
+        "index_lead": "Każda aktualizacja gry z podziałem na bohaterów, ich umiejętności i przedmioty.",
+        "title": "Patch Deadlocka {date} – zmiany bohaterów i przedmiotów",
+        "desc": "Zmiany w Deadlocku z {date}: {names}. Wszystkie zmiany bohaterów, umiejętności i przedmiotów z ikonami.",
+        "h1": "Patch {date}",
+        "latest": "Najnowszy patch", "open": "Zobacz wszystkie zmiany",
+        "general": "Zmiany ogólne", "items": "Przedmioty", "heroes": "Bohaterowie",
+        "n_heroes": ("bohater", "bohaterów", "bohaterów"), "n_items": ("przedmiot", "przedmioty", "przedmiotów"),
+        "n_general": ("zmiana ogólna", "zmiany ogólne", "zmian ogólnych"),
+        "hero_lab": "Hero Labs", "second": "Aktualizacja {n}",
+        "slots": {"weapon": "Broń", "vitality": "Witalność", "spirit": "Duch"}, "jump": "Przejdź do bohatera", "years": "Lata",
+        "summary": "Patch z {date} zmienia {parts}.", "and": "i",
+        "most": "Najwięcej zmian: {list}.",
+        "parts": {"heroes": ("bohatera", "bohaterów", "bohaterów"), "items": ("przedmiot", "przedmioty", "przedmiotów"),
+                  "general": ("zmianę ogólną", "zmiany ogólne", "zmian ogólnych")},
+        "lang_note": "Treść zmian po angielsku, tak jak w oficjalnych notatkach.",
+        "source": "Oficjalne ogłoszenie", "archive": "Archiwum deadlock-wiki",
+        "hero_gen": "Bohater", "counters": "Kontry na {hero}",
+        "older": "Starszy patch", "newer": "Nowszy patch", "all": "Wszystkie patche",
+        "souls": "dusz", "updated": "Aktualizowane codziennie, ostatnio {date}.",
+        "on_page": "Na tej stronie",
+        "cta_h": "Co kupić po tym patchu?", "cta_p": "Doradca w grze liczy kontry na aktualnych danych i mówi, co kupić teraz.",
+        "hero_recent": "Ostatnie zmiany bohatera {hero}: {date}", "cta_index": "Co kupić po najnowszym patchu?",
+    },
     "changes": {
         "path": "zmiany/", "nav": "Zmiany", "title": "Lista zmian Deadlock Assist – nowe wersje nakładki do Deadlocka",
         "description": "Co nowego w każdej wersji Deadlock Assist, nakładki do Deadlocka z kontrami, buildami i timerami.",
@@ -239,6 +268,34 @@ EN = {
         "cta_p": "The advisor reads the enemies from your screen and tells you what to buy now.",
         "others": "Counters for other heroes",
         "souls": "souls",
+    },
+    "patches": {
+        "path": "en/patch-notes/", "nav": "Patch notes",
+        "index_title": "Deadlock Patch Notes – Every Update, Hero & Item Change",
+        "index_desc": "Every Deadlock patch in one place: hero, ability and item changes with icons, newest update first.",
+        "index_h1": "Deadlock patch notes",
+        "index_lead": "Every game update, split into heroes, their abilities and items.",
+        "title": "Deadlock Patch Notes {date} – Hero & Item Changes",
+        "desc": "Deadlock changes from {date}: {names}. Every hero, ability and item change with icons.",
+        "h1": "Patch {date}",
+        "latest": "Latest patch", "open": "See all changes",
+        "general": "General changes", "items": "Items", "heroes": "Heroes",
+        "n_heroes": ("hero", "heroes", "heroes"), "n_items": ("item", "items", "items"),
+        "n_general": ("general change", "general changes", "general changes"),
+        "hero_lab": "Hero Labs", "second": "Update {n}",
+        "slots": {"weapon": "Weapon", "vitality": "Vitality", "spirit": "Spirit"}, "jump": "Jump to a hero", "years": "Years",
+        "summary": "The {date} patch changes {parts}.", "and": "and",
+        "most": "Most changes: {list}.",
+        "parts": {"heroes": ("hero", "heroes", "heroes"), "items": ("item", "items", "items"),
+                  "general": ("general change", "general changes", "general changes")},
+        "lang_note": "",
+        "source": "Official post", "archive": "deadlock-wiki archive",
+        "hero_gen": "Hero", "counters": "{hero} counters",
+        "older": "Older patch", "newer": "Newer patch", "all": "All patches",
+        "souls": "souls", "updated": "Updated daily, last on {date}.",
+        "on_page": "On this page",
+        "cta_h": "What to buy after this patch?", "cta_p": "The in-game advisor counts counters on current data and tells you what to buy now.",
+        "hero_recent": "Last {hero} changes: {date}", "cta_index": "What to buy after the latest patch?",
     },
     "changes": {
         "path": "en/changes/", "nav": "Changes", "title": "Deadlock Assist Changelog – Overlay Updates & Release Notes",
@@ -457,6 +514,7 @@ def head(t, url, title, desc, pl_url, en_url, prefix, extra=""):
 def foot(t, T, switch_href):
     lang = t["lang"]
     links = f'<a href="{BASE}{t["counters"]["path"]}">{T(t["counters"]["index_h1"])}</a>'
+    links += f'<a href="{BASE}{t["patches"]["path"]}">{T(t["patches"]["index_h1"])}</a>'
     links += f'<a href="{BASE}{t["changes"]["path"]}">{T(t["changes"]["h1"])}</a>'
     links += "".join(f'<a href="{e(h)}" rel="noopener">{T(l)}</a>' for h, l in t["links"])
     links += f'<a href="{switch_href}" hreflang="{"en" if lang == "pl" else "pl"}">{T(t["switch"][2])}</a>'
@@ -544,7 +602,7 @@ def page(t):
 <a class="skip" href="#main">{T(t['skip'])}</a>
 <header class="top wrap">
   <a class="logo" href="./"><img src="{prefix}favicon-32.png" srcset="{prefix}icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu">{nav}<a href="{t['counters']['path'].removeprefix('en/')}">{T(t['counters']['nav'])}</a><a href="{t['changes']['path'].removeprefix('en/')}">{T(t['changes']['nav'])}</a><a class="lang" href="{t['switch'][0]}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
+  <nav aria-label="menu">{nav}<a href="{t['counters']['path'].removeprefix('en/')}">{T(t['counters']['nav'])}</a><a href="{t['patches']['path'].removeprefix('en/')}">{T(t['patches']['nav'])}</a><a href="{t['changes']['path'].removeprefix('en/')}">{T(t['changes']['nav'])}</a><a class="lang" href="{t['switch'][0]}" hreflang="{'en' if lang == 'pl' else 'pl'}"><span class="long">{T(t['switch'][1])}</span><span class="short">{'EN' if lang == 'pl' else 'PL'}</span></a>{download_btn(t, T(t['cta_short']), 'btn sm')}</nav>
 </header>
 <main id="main">
 <section class="hero wrap">
@@ -744,6 +802,18 @@ def counters_index(t):
 """ + foot(t, T, BASE + other["counters"]["path"])
 
 
+def recent_patch(t, hero, T):
+    """Link from a counter page to the latest patch that changed the hero."""
+    if not PATCHES:
+        return ""
+    for p in PATCHES["patches"]:
+        if any(PATCHES["heroes"][str(h["id"])]["slug"] == hero["slug"] for h in p["heroes"]):
+            c = t["patches"]
+            return (f'\n  <p class="pn-recent"><a href="{patch_url(t, p)}#hero-{hero["slug"]}">'
+                    f'{T(c["hero_recent"].format(hero=hero["name"], date=patch_label(t, p)))} →</a></p>')
+    return ""
+
+
 def counter_page(t, hero):
     lang = t["lang"]
     c = t["counters"]
@@ -806,7 +876,7 @@ def counter_page(t, hero):
   <nav class="crumbs" aria-label="breadcrumbs"><a href="../">{T(c['index_h1'])}</a> › {e(name)}</nav>
   <div class="hero-head"><img src="{img_src("heroes", hero["slug"], hero["img"], prefix)}" alt="" width="64" height="64"><h1>{T(c['h1'].format(hero=name))}</h1></div>
   <p class="section-lead">{T(c['lead'].format(hero=name))}</p>
-  <p class="meta">{T(c['data'].format(n=n, date=long_date(COUNTERS['date'], lang)))}</p>
+  <p class="meta">{T(c['data'].format(n=n, date=long_date(COUNTERS['date'], lang)))}</p>{recent_patch(t, hero, T)}
   <h2 class="ci-cap">{T(c['build_h'].format(hero=name))}</h2>
   {build_strip(t, hero, prefix, T)}
   <p class="note">{T(c['build_note'].format(hero=name))}</p>
@@ -874,6 +944,323 @@ def changes_page(t, shown=4):
 """ + foot(t, T, BASE + switch)
 
 
+PATCHES_FILE = Path(__file__).with_name("patches.json")
+PATCHES = json.loads(PATCHES_FILE.read_text()) if PATCHES_FILE.exists() else None
+NUM = r"[+\-−]?\d[\d.,]*(?:[/+]\d[\d.,]*)*(?:%|s|m|k|m/s)?"
+THIN = 3  # patches with fewer changed lines are not worth a search result: noindex, left out of the sitemap
+
+
+def plural(n, forms, lang):
+    """1 bohater, 2 bohaterów → Polish needs three forms; English two."""
+    if lang != "pl":
+        return forms[0] if n == 1 else forms[1]
+    if n == 1:
+        return forms[0]
+    return forms[1] if n % 10 in (2, 3, 4) and n % 100 not in (12, 13, 14) else forms[2]
+
+
+def note_line(s):
+    """One line of the official notes: old value muted, new value bold ("from <s>26s</s> to <b>28s</b>")."""
+    s = e(s)
+    if "→" in s or "-&gt;" in s:  # ranges like "18m→54m": the text already shows the change
+        return s
+    # "from 6s Unstoppable to 5s": a few words may sit between the old value and "to"
+    return re.sub(rf"\bfrom ({NUM})((?: [A-Za-z][\w-]*){{0,3}})? to ({NUM})(?![\w.])",
+                  r'from <span class="was">\1</span>\2 to <b class="now">\3</b>', s)
+
+
+def short_date(d, lang):
+    y, m, day = d.split("-")
+    return f"{int(day)}.{m}.{y}" if lang == "pl" else f"{y}-{m}-{day}"
+
+
+def general_count(p):
+    return sum(len(x) for g in p["general"] for x in g["paras"])
+
+
+def hero_count(h):
+    return len(h["lines"]) + sum(len(a["lines"]) for a in h["abilities"])
+
+
+def is_thin(p):
+    return general_count(p) + sum(len(i["lines"]) for i in p["items"]) + sum(hero_count(h) for h in p["heroes"]) < THIN
+
+
+def patch_names(p):
+    """Heroes first, then items: what the patch is about, for titles and descriptions."""
+    out = [PATCHES["heroes"][str(h["id"])]["name"] for h in p["heroes"]]
+    out += [PATCHES["items"][str(i["id"])]["en"] for i in p["items"]]
+    return out
+
+
+def patch_counts(t, p, T):
+    c = t["patches"]
+    lang = t["lang"]
+    parts = []
+    for n, forms in ((len(p["heroes"]), c["n_heroes"]), (len(p["items"]), c["n_items"]), (general_count(p), c["n_general"])):
+        if n:
+            parts.append(f"{n}{NB}{plural(n, forms, lang).replace(' ', NB)}")
+    return " · ".join(parts)
+
+
+def patch_kind(t, p):
+    """What tells a patch apart from another one on the same day: Hero Labs, or the second update that day."""
+    c = t["patches"]
+    if p.get("hero_lab"):
+        return c["hero_lab"]
+    m = re.search(r"-(\d+)$", p["slug"][10:])
+    return c["second"].format(n=int(m.group(1)) + 1) if m else None
+
+
+def patch_label(t, p):
+    """"16 września 2026", or "18 października 2024 (Aktualizacja 2)" for a second patch that day."""
+    kind = patch_kind(t, p)
+    when = long_date(p["date"], t["lang"])
+    return f"{when} ({kind})" if kind else when
+
+
+def summary(t, p):
+    """Two sentences of the page's own: how much the patch changes and what changed most."""
+    c = t["patches"]
+    lang = t["lang"]
+    parts = [f"{n} {plural(n, c['parts'][k], lang)}" for k, n in
+             (("heroes", len(p["heroes"])), ("items", len(p["items"])), ("general", general_count(p))) if n]
+    joined = parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + f" {c['and']} " + parts[-1]
+    out = c["summary"].format(date=long_date(p["date"], lang), parts=joined)
+    sizes = [(hero_count(h), PATCHES["heroes"][str(h["id"])]["name"]) for h in p["heroes"]]
+    sizes += [(len(i["lines"]), PATCHES["items"][str(i["id"])]["en"]) for i in p["items"]]
+    sizes = sorted((x for x in sizes if x[0] > 1), key=lambda x: (-x[0], x[1]))[:4]
+    if sizes:
+        out += " " + c["most"].format(list=", ".join(f"{name} ({n})" for n, name in sizes))
+    return out
+
+
+def hero_img(h, prefix, size, extra=""):
+    hh = PATCHES["heroes"][str(h["id"])]
+    return (f'<img src="{img_src("heroes", hh["slug"], hh["img"], prefix)}" alt="{extra}" width="{size}" height="{size}" '
+            f'loading="lazy" decoding="async">')
+
+
+def icon_strip(p, prefix, limit=12):
+    """Portraits of the changed heroes, then item icons, as one row."""
+    imgs = []
+    for h in p["heroes"]:
+        hh = PATCHES["heroes"][str(h["id"])]
+        imgs.append(f'<img class="ps-h" src="{img_src("heroes", hh["slug"], hh["img"], prefix)}" alt="{e(hh["name"])}" title="{e(hh["name"])}" '
+                    f'width="32" height="32" loading="lazy" decoding="async">')
+    for i in p["items"]:
+        it = PATCHES["items"][str(i["id"])]
+        imgs.append(f'<img class="ps-i slot-{it["slot"]}" src="{img_src("items", i["id"], it["img"], prefix)}" alt="{e(it["en"])}" '
+                    f'title="{e(it["en"])}" width="32" height="32" loading="lazy" decoding="async">')
+    more = len(imgs) - limit
+    tail = f'<span class="ps-more">+{more}</span>' if more > 0 else ""
+    return f'<span class="ps">{"".join(imgs[:limit])}{tail}</span>' if imgs else ""
+
+
+def patch_url(t, p):
+    return f'{BASE}{t["patches"]["path"]}{p["slug"]}/'
+
+
+def patches_index(t):
+    lang = t["lang"]
+    c = t["patches"]
+    T = lambda s: html.escape(typeset(s, lang), quote=True)  # noqa: E731
+    prefix = "../" * c["path"].count("/")
+    url = BASE + c["path"]
+    home = BASE + t["path"]
+    other = EN if lang == "pl" else PL
+    ps = PATCHES["patches"]
+    first = ps[0]
+    kind = patch_kind(t, first)
+    featured = (
+        f'<a class="pn-feat" href="{first["slug"]}/"><span class="pn-feat-top"><span class="tag">{T(c["latest"])}</span>'
+        f'{f"<span class=pn-kind>{T(kind)}</span>" if kind else ""}</span>'
+        f'<strong>{long_date(first["date"], lang)}</strong>'
+        f'<span class="pn-count">{T(patch_counts(t, first, T))}</span>{icon_strip(first, prefix, 16)}'
+        f'<span class="more-link">{T(c["open"])} →</span></a>'
+    )
+    rows, year = [], None
+    this_year = first["date"][:4]
+    for p in ps[1:]:
+        y = p["date"][:4]
+        if y != year:
+            if year:
+                rows.append("</ol>" if year == this_year else "</ol></details>")
+            n = sum(1 for x in ps[1:] if x["date"][:4] == y)
+            # The current year stays open; older years fold so the page does not run for metres.
+            rows.append(f'<h2 class="ci-cap pn-year" id="y{y}">{y}</h2><ol class="pn-list">' if y == this_year else
+                        f'<details class="pn-old" id="y{y}"><summary><h2 class="pn-year">{y}</h2><span>{n}</span></summary><ol class="pn-list">')
+            year = y
+        k = patch_kind(t, p)
+        rows.append(
+            f'<li><a href="{p["slug"]}/"><time datetime="{p["date"]}">{long_date(p["date"], lang)}</time>'
+            f'<span class="pn-meta">{f"<span class=pn-kind>{T(k)}</span>" if k else ""}<span class="pn-count">{T(patch_counts(t, p, T))}</span></span>'
+            f'{icon_strip(p, prefix, 8)}</a></li>'
+        )
+    if year:
+        rows.append("</ol>" if year == this_year else "</ol></details>")
+    counts = {}
+    for x in ps:
+        counts[x["date"][:4]] = counts.get(x["date"][:4], 0) + 1
+    years = "".join(f'<a href="#y{y}">{y} <span>{n}</span></a>' for y, n in counts.items())
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Deadlock Assist", "item": home},
+            {"@type": "ListItem", "position": 2, "name": c["index_h1"], "item": url},
+        ],
+    }
+    return head(t, url, c["index_title"], c["index_desc"], BASE + PL["patches"]["path"], BASE + EN["patches"]["path"],
+                prefix) + f"""<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}</style>
+</head>
+<body class="dl">
+{sub_header(t, T, prefix, home, BASE + other["patches"]["path"])}
+<main id="main" class="wrap patches pn-index">
+  <h1>{T(c['index_h1'])}</h1>
+  <p class="section-lead">{T(c['index_lead'])}</p>
+  <aside class="pn-nav pn-side"><nav class="pn-toc" aria-label="{T(c['years'])}">{years}</nav>
+    <div class="pn-side-cta"><p>{T(c['cta_index'])}</p>{download_btn(t, T(t['cta_short']), 'btn sm')}</div></aside>
+  {featured}
+  {"".join(rows)}
+  <p class="note">{T(c['updated'].format(date=long_date(PATCHES['date'], lang)))} <a href="{PATCHES['source']}" rel="noopener">{T(c['archive'])}</a></p>
+</main>
+<script>function o(){{var d=document.getElementById(location.hash.slice(1));if(d&&d.tagName==="DETAILS")d.open=true}}addEventListener("hashchange",o);o()</script>
+""" + foot(t, T, BASE + other["patches"]["path"])
+
+
+def patch_page(t, p, older, newer):
+    lang = t["lang"]
+    c = t["patches"]
+    T = lambda s: html.escape(typeset(s, lang), quote=True)  # noqa: E731
+    prefix = "../" * (c["path"].count("/") + 1)
+    url = patch_url(t, p)
+    home = BASE + t["path"]
+    other = EN if lang == "pl" else PL
+    label = patch_label(t, p)
+    counter_slugs = {h["slug"] for h in COUNTERS["heroes"]} if COUNTERS else set()
+
+    def ul(lines):
+        return "<ul>" + "".join(f"<li>{note_line(x)}</li>" for x in lines) + "</ul>"
+
+    sections, toc, jump = [], [], ""
+    # Heroes first: most readers come for their hero; then items, then everything else.
+    if p["heroes"]:
+        cards = []
+        for h in p["heroes"]:
+            hh = PATCHES["heroes"][str(h["id"])]
+            link = (f'<a class="more-link" href="{BASE}{t["counters"]["path"]}{hh["slug"]}/">{T(c["counters"].format(hero=hh["name"]))} →</a>'
+                    if hh["slug"] in counter_slugs else "")
+            body = ul(h["lines"]) if h["lines"] else ""
+            for a in h["abilities"]:
+                if "id" not in a:  # "Gun", "Rocket Jumping": a part of the hero without an ability icon
+                    body += f'<div class="pn-ab pn-part"><h4>{e(a["name"])}</h4>{ul(a["lines"])}</div>'
+                    continue
+                ab = PATCHES["abilities"][str(a["id"])]
+                alt = f' <small lang="pl">{e(ab["pl"])}</small>' if lang == "pl" and ab["pl"] != ab["en"] else ""
+                body += (f'<div class="pn-ab"><h4><img src="{img_src("abilities", a["id"], ab["img"], prefix)}" alt="" width="28" height="28" '
+                         f'loading="lazy" decoding="async">{e(ab["en"])}{alt}</h4>{ul(a["lines"])}</div>')
+            cards.append(f'<article class="pn-card pn-hero" id="hero-{hh["slug"]}"><header>{hero_img(h, prefix, 40)}'
+                         f'<span><h3>{e(hh["name"])}</h3>{link}</span></header>{body}</article>')
+        sections.append(f'<section id="heroes" class="pn-sec"><h2>{T(c["heroes"])}</h2><div class="pn-heroes">{"".join(cards)}</div></section>')
+        toc.append(("heroes", c["heroes"], len(p["heroes"])))
+        if len(p["heroes"]) > 1:
+            jump = f'<nav class="pn-jump" aria-label="{T(c["jump"])}">' + "".join(
+                f'<a href="#hero-{PATCHES["heroes"][str(h["id"])]["slug"]}" title="{e(PATCHES["heroes"][str(h["id"])]["name"])}">'
+                f'{hero_img(h, prefix, 36, e(PATCHES["heroes"][str(h["id"])]["name"]))}</a>' for h in p["heroes"]) + "</nav>"
+    if p["items"]:
+        groups = []
+        for slot in ("weapon", "vitality", "spirit"):
+            cards = []
+            for i in p["items"]:
+                it = PATCHES["items"][str(i["id"])]
+                if it["slot"] != slot:
+                    continue
+                alt = f'<small lang="pl">{e(it["pl"])}</small>' if lang == "pl" and it["pl"] != it["en"] else ""
+                price = f'<small>{cost(it["cost"], lang)} {T(c["souls"])}</small>' if it.get("cost") else ""
+                cards.append(
+                    f'<article class="pn-card slot-{slot}"><header>'
+                    f'<img src="{img_src("items", i["id"], it["img"], prefix)}" alt="" width="44" height="44" loading="lazy" decoding="async">'
+                    f'<span><h4>{e(it["en"])}</h4>{alt}{price}</span></header>{ul(i["lines"])}</article>'
+                )
+            if cards:
+                groups.append(f'<h3 class="pn-slot slot-{slot}">{T(c["slots"][slot])} <span>{len(cards)}</span></h3>'
+                              f'<div class="pn-grid">{"".join(cards)}</div>')
+        sections.append(f'<section id="items" class="pn-sec"><h2>{T(c["items"])}</h2>{"".join(groups)}</section>')
+        toc.append(("items", c["items"], len(p["items"])))
+    if p["general"]:
+        parts = []
+        single = len(p["general"]) == 1
+        for g in p["general"]:
+            h = f"<h3>{e(g['head'])}</h3>" if g["head"] and not single else ""
+            parts.append(h + "".join(ul(x) for x in g["paras"]))
+        sections.append(f'<section id="general" class="pn-sec"><h2>{T(c["general"])}</h2><div class="pn-general">{"".join(parts)}</div></section>')
+        toc.append(("general", c["general"], general_count(p)))
+    toc_html = "".join(f'<a href="#{i}">{T(l)} <span>{n}</span></a>' for i, l, n in toc)
+    source = f'<a href="{e(p["link"])}" rel="noopener">{T(c["source"])}</a> · ' if p.get("link") else ""
+    lang_note = f' {T(c["lang_note"])}' if c["lang_note"] else ""
+    pager = ""
+    if older:
+        pager += f'<a class="pn-prev" href="../{older["slug"]}/"><small>← {T(c["older"])}</small>{patch_label(t, older)}</a>'
+    if newer:
+        pager += f'<a class="pn-next" href="../{newer["slug"]}/"><small>{T(c["newer"])} →</small>{patch_label(t, newer)}</a>'
+    names = [n for _, n in sorted(((hero_count(h), PATCHES["heroes"][str(h["id"])]["name"]) for h in p["heroes"]),
+                                     key=lambda x: (-x[0], x[1]))]  # the most changed first: they make the click
+    names += [n for _, n in sorted(((len(i["lines"]), PATCHES["items"][str(i["id"])]["en"]) for i in p["items"]),
+                                   key=lambda x: (-x[0], x[1]))]
+    names_txt = ", ".join(names[:6]) + ("…" if len(names) > 6 else "") if names else c["general"].lower()
+    plain = label.replace(NB, " ")
+    title = c["title"].format(date=plain)
+    desc = c["desc"].format(date=short_date(p["date"], lang) if lang == "pl" else plain, names=names_txt).replace("….", "…")
+    ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Deadlock Assist", "item": home},
+                {"@type": "ListItem", "position": 2, "name": c["index_h1"], "item": BASE + c["path"]},
+                {"@type": "ListItem", "position": 3, "name": c["h1"].format(date=plain), "item": url},
+            ],
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": title,
+            "description": desc,
+            "datePublished": p["date"],
+            "dateModified": p["date"],
+            "inLanguage": lang,
+            "url": url,
+            "about": {"@type": "VideoGame", "name": "Deadlock", "publisher": "Valve"},
+            "author": {"@type": "Organization", "name": "Deadlock Assist", "url": BASE},
+            "image": BASE + "deadlock-overlay-counters.jpg",
+        },
+    ]
+    robots = '<meta name="robots" content="noindex, follow">\n' if is_thin(p) else ""
+    return head(t, url, title, desc, patch_url(PL, p), patch_url(EN, p), prefix, robots) + f"""<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}</style>
+</head>
+<body class="dl">
+{sub_header(t, T, prefix, home, patch_url(other, p))}
+<main id="main" class="wrap patches patch">
+  <nav class="crumbs" aria-label="breadcrumbs"><a href="../">{T(c['index_h1'])}</a> › {label}</nav>
+  <h1>{T(c['h1'].format(date=label))}</h1>
+  <p class="pn-sum">{T(summary(t, p))}</p>
+  <p class="note pn-src">{source}<a href="{PATCHES['source']}" rel="noopener">{T(c['archive'])}</a>.{lang_note}</p>
+  {f'<div class="pn-nav"><nav class="pn-toc" aria-label="{T(c["on_page"])}">{toc_html}</nav>{jump}</div>' if len(toc) > 1 or jump else ""}
+  {"".join(sections)}
+  <section class="ci-cta"><h2>{T(c['cta_h'])}</h2><p>{T(c['cta_p'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></section>
+  <nav class="pn-pager" aria-label="{T(c['all'])}">{pager}</nav>
+  <p><a class="more-link" href="../">{T(c['all'])} ({len(PATCHES['patches'])}) →</a></p>
+</main>
+<script>(function(){{var j=document.querySelectorAll(".pn-jump a");if(!j.length||!("IntersectionObserver" in window))return;
+var by={{}};j.forEach(function(a){{by[a.hash.slice(1)]=a}});
+var io=new IntersectionObserver(function(es){{es.forEach(function(x){{if(!x.isIntersecting)return;j.forEach(function(a){{a.classList.remove("active")}});if(by[x.target.id])by[x.target.id].classList.add("active")}})}},{{rootMargin:"-30% 0px -60% 0px"}});
+document.querySelectorAll(".pn-hero").forEach(function(h){{io.observe(h)}})}})()</script>
+""" + foot(t, T, patch_url(other, p))
+
+
 def not_found():
     rows = "".join(
         f'<p><a class="btn" href="{BASE}{t["path"]}">{e(t["nf_link"])}</a></p>'
@@ -911,6 +1298,16 @@ def main():
     for t in (PL, EN):
         (out / t["changes"]["path"]).mkdir(parents=True, exist_ok=True)
         (out / t["changes"]["path"] / "index.html").write_text(changes_page(t))
+        if PATCHES:
+            base = out / t["patches"]["path"]
+            base.mkdir(parents=True, exist_ok=True)
+            (base / "index.html").write_text(patches_index(t))
+            ps = PATCHES["patches"]
+            for n, pt in enumerate(ps):
+                (base / pt["slug"]).mkdir(exist_ok=True)
+                older = ps[n + 1] if n + 1 < len(ps) else None
+                newer = ps[n - 1] if n else None
+                (base / pt["slug"] / "index.html").write_text(patch_page(t, pt, older, newer))
         if COUNTERS:
             base = out / t["counters"]["path"]
             base.mkdir(parents=True, exist_ok=True)
@@ -931,6 +1328,9 @@ def main():
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
         + entry("", "en/", CHANGELOG[0]["date"])
         + entry(PL["changes"]["path"], EN["changes"]["path"], CHANGELOG[0]["date"])
+        + (entry(PL["patches"]["path"], EN["patches"]["path"], PATCHES["patches"][0]["date"])
+           + "".join(entry(f'{PL["patches"]["path"]}{p["slug"]}/', f'{EN["patches"]["path"]}{p["slug"]}/', p["date"])
+                     for p in PATCHES["patches"] if not is_thin(p)) if PATCHES else "")
         + (entry(PL["counters"]["path"], EN["counters"]["path"], COUNTERS["date"])
            + "".join(entry(f'{PL["counters"]["path"]}{h["slug"]}/', f'{EN["counters"]["path"]}{h["slug"]}/', COUNTERS["date"])
                      for h in COUNTERS["heroes"]) if COUNTERS else "")
