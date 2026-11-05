@@ -45,18 +45,14 @@ PL = {
     "title": "Deadlock Assist – darmowa nakładka z kontrami i buildami do Deadlocka",
     "description": (
         "Darmowy doradca do Deadlocka dla Windows: kontrprzedmioty pod skład wroga, co kupić teraz, "
-        "timery obozów i Mid Bossa oraz historia meczów z analizą farmy. Bez Overwolf, bez reklam, "
-        "bez czytania pamięci gry."
+        "timery obozów i Mid Bossa oraz analiza farmy po meczu. Bez Overwolf i bez reklam."
     ),
-    "nav": [("#funkcje", "Funkcje"), ("#skutecznosc", "Skuteczność"), ("#bezpieczenstwo", "Bezpieczeństwo"), ("#faq", "FAQ")],
+    "nav": [("#funkcje", "Funkcje"), ("#skutecznosc", "Skuteczność"), ("#bezpieczenstwo", "Bezpieczeństwo"),
+            ("#faq", "FAQ")],
     "switch": ("en/", "English"),
     "eyebrow": "Darmowa nakładka do Deadlocka · Windows 10/11",
-    "h1": "Kontry, buildy i timery w Deadlocku, podpowiadane w trakcie meczu",
-    "lead": (
-        "Deadlock Assist rozpoznaje bohaterów wroga i ich przedmioty, a potem mówi, co kupić, "
-        "żeby ich skontrować. Pilnuje obozów w dżungli i Mid Bossa, a po meczu pokazuje, "
-        "co poprawić. Za darmo i bez Overwolf."
-    ),
+    "h1": "Kontry, buildy i timery w Deadlocku, w trakcie meczu",
+    "lead": "Widzi skład wroga i jego zakupy, a potem mówi, co kupić. Za darmo, bez Overwolf.",
     "cta": "Pobierz dla Windows",
     "cta_note": "Instalator .exe · aktualizuje się sam",
     "cta2": "Zobacz funkcje",
@@ -64,140 +60,72 @@ PL = {
         "Nakładka Deadlock Assist nad grą: kontry na linii, panel Kup teraz z najlepszym przedmiotem "
         "na wroga oraz zegar z timerami obozów i Mid Bossa"
     ),
-    "badges": ["Za darmo", "Bez reklam i konta", "Bez Overwolf", "Nie czyta pamięci gry"],
-    "features_h": "Co robi Deadlock Assist",
-    "features_lead": (
-        "Wszystko, czego zwykle szukasz w przerwie między walkami na stronach z buildami i tier listami, "
-        "masz na ekranie w chwili, gdy jest potrzebne."
-    ),
+    "badges": ["Za darmo", "Bez reklam i konta", "Bez Overwolf", "Nie czyta pamięci gry", "PL / EN"],
+    "features_h": "Funkcje",
+    "features_lead": "",
     "features": [
-        ("counter", "Kontrprzedmioty pod skład wroga",
-         "Rozpoznaje sześciu wrogów z górnego paska i podpowiada przedmioty, które najlepiej na nich działają: "
-         "Healbane na leczenie, Silencer na bohaterów od umiejętności, Spirit Resilience na obrażenia duchowe. "
-         "Przy każdej kontrze widzisz cenę i powód."),
-        ("cart", "„Kup teraz” i następne zakupy",
-         "Plan buildu z tysięcy meczów graczy na Twoim bohaterze, dopasowany do tego, co już masz i na co Cię "
-         "stać. Gdy masz dość dusz, aplikacja pokazuje jeden najlepszy zakup, a nie listę do przewijania."),
-        ("lane", "Kontry na linii",
-         "Do 10. minuty podpowiada tanie przedmioty na rywali z Twojej linii, bo to wtedy wygrywa się "
-         "lub przegrywa farmę."),
-        ("eye", "Zakupy wrogów na bieżąco",
-         "Po wciśnięciu Tab zapamiętuje przedmioty przeciwników. Gdy ktoś kupi np. Leech albo Unstoppable, "
-         "doradca od razu zmienia rady i ostrzega Cię w nakładce."),
-        ("clock", "Zegar, timery obozów i Mid Boss",
-         "Widzi na minimapie, które obozy w dżungli zostały zabite, i odlicza ich odrodzenie. "
-         "Pilnuje też Mid Bossa, wzmocnień i urny dusz, z kierunkiem, w którą stronę iść."),
-        ("chart", "Historia meczów i analiza",
-         "Każdy mecz trafia do historii: wynik, skład, kolejność zakupów i farma minuta po minucie "
-         "w porównaniu z typowym graczem. Na końcu dostajesz krótkie podsumowanie, co poprawić."),
-        ("book", "Dane gry po polsku i angielsku",
-         "Przeglądarka bohaterów i przedmiotów z filtrami typu „co kontruje leczenie” albo „przedmioty "
-         "z wyciszeniem”. Po każdym patchu widzisz, co się zmieniło w Twoich bohaterach i przedmiotach."),
-        ("auto", "Działa sama",
-         "Mecz startuje, gdy zegar gry pokaże pierwszą minutę, a F10 go kończy i zapisuje. Nakładka nie "
-         "przechwytuje myszy, a nowe wersje instalują się jednym kliknięciem."),
+        ("counter", "Kontry na skład wroga", "Healbane na leczenie, Silencer na umiejętności, z ceną i powodem."),
+        ("cart", "„Kup teraz”", "Jeden najlepszy zakup na teraz, dopasowany do Twojego buildu i dusz."),
+        ("eye", "Zakupy wrogów", "Po Tab widzi, co kupił wróg, i od razu zmienia rady."),
+        ("lane", "Kontry na linii", "Do 10. minuty tanie przedmioty na rywali z Twojej linii."),
+        ("clock", "Timery", "Obozy w dżungli, Mid Boss, wzmocnienia i urna, z kierunkiem."),
+        ("chart", "Analiza meczu", "Farma minuta po minucie i co poprawić w kolejnym meczu."),
     ],
     "proof_h": "Czy doradca naprawdę pomaga?",
-    "proof_lead": (
-        "Sprawdziliśmy doradcę na 2020 prawdziwych meczach graczy z wysokich rang (Emissary i wyżej) z ostatnich "
-        "14 dni. Przy każdym z 33 811 zakupów doradca dostał to, co gracz widział w tej chwili: swoje przedmioty, "
-        "skład wroga i jego zakupy z Tab. Statystyki, z których korzysta, pochodzą z wcześniejszych meczów niż te "
-        "sprawdzane."
-    ),
+    "proof_lead": "Test na 2020 meczach z wysokich rang (Emissary+), 33 811 zakupów.",
     "proof": [
-        ("81%", 81, 62, "trafnych kontr",
-         "Tyle podpowiedzi to przedmioty, z którymi gracze przeciw takiemu składowi wroga wygrywają co najmniej "
-         "tak często jak ze środkowego przedmiotu tego samego poziomu, przy wyrównanej farmie.",
-         "poprzednia wersja: 62%"),
-        ("29%", 29, 25, "zgodności z najlepszymi",
-         "W tylu zakupach graczy z wysokich rang kupiony przedmiot był w pierwszej piątce doradcy, choć doradca "
-         "wybiera z ponad 150 przedmiotów.",
-         "poprzednia wersja: 25%"),
-        ("+3,2 pkt", None, None, "częstsze wygrane",
-         "Gracze, których zakup był w pierwszej piątce doradcy, wygrywali o 3,2 punktu procentowego częściej "
-         "niż gracze z taką samą farmą w tej chwili, którzy kupili coś innego.",
-         "porównanie przy tej samej farmie"),
+        ("81%", 81, 62, "trafnych kontr", "Podpowiedzi, które przeciw temu składowi wygrywają częściej niż typowy przedmiot.",
+         "wcześniej 62%"),
+        ("29%", 29, 25, "zgodności z topem", "Zakupów graczy z wysokich rang w pierwszej piątce doradcy.",
+         "wcześniej 25%"),
+        ("+3,2 pkt", None, None, "więcej wygranych", "Gracze z tą samą farmą, którzy kupili coś z pierwszej piątki.",
+         "przy równej farmie"),
     ],
-    "proof_note": (
-        "To wyniki z cudzych meczów, a nie obietnica wygranej: na wynik najbardziej wpływa farma i gra drużyny. "
-        "Wyniki dotyczą trybu „Zrównoważony”, domyślnego od wersji 1.2.6."
-    ),
-    "how_h": "Jak to działa",
+    "proof_note": "Wyniki z cudzych meczów, nie gwarancja wygranej. Tryb „Zrównoważony”, wersja 1.2.6.",
+    "how_h": "Jak zacząć",
     "how": [
-        ("Zainstaluj", "Pobierz instalator, uruchom go i włącz Deadlocka w trybie okna bez ramek (Borderless)."),
-        ("Graj", "Asystent sam wykryje start meczu, rozpozna bohaterów i pokaże kontry w nakładce. "
-                 "Przytrzymaj Tab co jakiś czas, żeby odświeżyć przedmioty wszystkich graczy."),
-        ("Popraw się", "Po meczu (F10) sprawdź w Historii farmę, zakupy i podsumowanie z tym, "
-                       "co zrobić lepiej w kolejnym."),
+        ("Zainstaluj", "Deadlock w trybie okna bez ramek (Borderless)."),
+        ("Graj", "Mecz wykrywa się sam. Co jakiś czas przytrzymaj Tab."),
+        ("Popraw się", "Po meczu (F10) sprawdź podsumowanie w Historii."),
     ],
     "gallery_h": "Jak to wygląda",
     "gallery": [
         ("nakladka-tab.png", "Nakładka po wciśnięciu Tab: przedmioty wszystkich graczy, kontry i timery",
-         "Po Tab: zakupy wszystkich graczy i kontry na nie"),
+         "Tab: zakupy graczy i kontry"),
         ("historia.png", "Historia meczów: wyniki, bohaterowie, przeciwnicy i kolejność zakupów",
-         "Historia: wyniki, przeciwnicy i zakupy z każdego meczu"),
-    ],
-    "why_h": "Dlaczego Deadlock Assist",
-    "why": [
-        ("Osobna aplikacja, nie wtyczka Overwolf", "Lekki program (Tauri), który nie wymaga konta, "
-         "nie wyświetla reklam i nie ładuje dodatkowej platformy w tle."),
-        ("Rady w trakcie meczu, nie w przeglądarce", "Strony z buildami i tier listami są świetne przed meczem. "
-         "Deadlock Assist reaguje na to, co dzieje się teraz: kto jest w drużynie wroga i co właśnie kupił."),
-        ("Twoje dane zostają u Ciebie", "Historia meczów jest zapisywana lokalnie. Zrzuty ekranu służą tylko do "
-         "odczytu i są usuwane po zapisaniu meczu."),
-        ("Po polsku", "Interfejs, rady i opisy przedmiotów są po polsku, a dane gry możesz przełączyć na angielski."),
+         "Historia meczów"),
     ],
     "safe_h": "Bezpieczeństwo",
-    "safe_lead": "Deadlock Assist działa jak program do nagrywania ekranu, a nie jak cheat.",
+    "safe_lead": "Działa jak nagrywanie ekranu, nie jak cheat.",
     "safe": [
-        "Nie czyta pamięci gry, nie wstrzykuje kodu i nie modyfikuje plików Deadlocka.",
-        "Nie wysyła do gry żadnych klawiszy ani kliknięć; nakładka przepuszcza mysz do gry.",
-        "Robi zrzuty ekranu (tym samym mechanizmem co OBS czy Discord) i rozpoznaje na nich obraz.",
-        "Z internetu pobiera tylko publiczne statystyki przedmiotów z deadlock-api.com.",
-        "Każda aktualizacja jest podpisana; aplikacja odrzuca pliki bez ważnego podpisu.",
+        "Nie czyta pamięci gry i nie zmienia jej plików.",
+        "Nie wysyła klawiszy ani kliknięć do gry.",
+        "Pobiera tylko publiczne statystyki z deadlock-api.com.",
+        "Każda aktualizacja jest podpisana.",
     ],
-    "safe_note": (
-        "To nieoficjalne narzędzie fanów. Valve nie publikuje listy dozwolonych programów zewnętrznych, "
-        "więc korzystasz z niego na własną odpowiedzialność."
-    ),
-    "faq_h": "Najczęstsze pytania",
+    "safe_note": "Nieoficjalne narzędzie fanów. Valve nie publikuje listy dozwolonych programów.",
+    "faq_h": "FAQ",
     "faq": [
-        ("Czy za Deadlock Assist można dostać bana?",
-         "Aplikacja nie dotyka procesu gry: nie czyta pamięci, nie wstrzykuje kodu i nie symuluje klawiszy, "
-         "tylko analizuje zrzuty ekranu. Valve nie publikuje jednak listy dozwolonych narzędzi, więc nikt "
-         "nie może dać gwarancji. Korzystasz z niej na własną odpowiedzialność."),
-        ("Czy Deadlock Assist jest darmowy?",
-         "Tak, w całości i bez reklam. Jeśli chcesz wesprzeć rozwój, możesz postawić autorowi kawę na Ko-fi."),
-        ("Jakie są wymagania?",
-         "Windows 10 lub 11 (64-bit) i Deadlock uruchomiony w trybie okna bez ramek (Borderless). "
-         "W trybie pełnoekranowym system nie pokaże nakładki nad grą."),
-        ("Czy działa w każdej rozdzielczości?",
-         "Pozycje elementów są zmierzone na ekranie 1920×1200 i skalowane do wysokości ekranu. Jeśli coś "
-         "nie jest rozpoznawane w Twojej rozdzielczości, zgłoś błąd ze zrzutem ekranu."),
-        ("Skąd aplikacja wie, co kupić?",
-         "Łączy statystyki przedmiotów z publicznego deadlock-api.com (co wygrywa na danym bohaterze i przeciw "
-         "danym wrogom) z tym, co sama odczytuje z ekranu: składem wroga, zakupami przeciwników i Twoimi duszami."),
-        ("Czy jest wersja po angielsku?",
-         "Interfejs jest na razie po polsku. Dane gry, czyli nazwy i opisy bohaterów i przedmiotów, "
-         "są dostępne po polsku i angielsku."),
-        ("Jak zgłosić pomysł albo błąd?",
-         "Kliknij „Zaproponuj zmianę” w aplikacji albo użyj formularzy na GitHubie. Każdy pomysł trafia na "
-         "listę do wdrożenia."),
+        ("Czy można dostać bana?",
+         "Aplikacja nie dotyka procesu gry, tylko analizuje zrzuty ekranu. Valve nie daje jednak gwarancji, "
+         "więc korzystasz na własną odpowiedzialność."),
+        ("Czy jest darmowy?", "Tak, w całości i bez reklam. Rozwój możesz wesprzeć na Ko-fi."),
+        ("Jakie są wymagania?", "Windows 10 lub 11 (64-bit) i Deadlock w trybie okna bez ramek (Borderless)."),
+        ("Skąd wie, co kupić?",
+         "Ze statystyk deadlock-api.com i z tego, co widzi na ekranie: składu wroga, jego zakupów i Twoich dusz."),
+        ("Czy jest po angielsku?", "Tak. Język przełączasz w nagłówku aplikacji (PL / EN)."),
     ],
     "final_h": "Zagraj następny mecz z doradcą",
-    "final_lead": "Instalacja zajmuje minutę. Aplikacja jest i zostanie darmowa.",
+    "final_lead": "Instalacja zajmuje minutę.",
     "kofi": "Wesprzyj na Ko-fi",
     "links": [(IDEA, "Zaproponuj pomysł"), (BUG, "Zgłoś błąd"), (REPO + "/blob/main/SECURITY.md", "Bezpieczeństwo"),
               (REPO + "/releases", "Wszystkie wersje")],
     "footer": (
         "Deadlock jest znakiem towarowym Valve Corporation. Deadlock Assist to nieoficjalny projekt fanów, "
-        "niezwiązany z Valve ani przez nią wspierany. Dane o przedmiotach pochodzą z deadlock-api.com."
+        "niezwiązany z Valve. Dane o przedmiotach: deadlock-api.com."
     ),
     "skip": "Przejdź do treści",
-    "smartscreen": (
-        "Windows może pokazać „System Windows ochronił ten komputer”: kliknij „Więcej informacji”, "
-        "a potem „Uruchom mimo to”."
-    ),
+    "smartscreen": "Ostrzeżenie Windows? Kliknij „Więcej informacji” → „Uruchom mimo to”.",
 }
 
 EN = {
@@ -207,17 +135,13 @@ EN = {
     "title": "Deadlock Assist – free Deadlock overlay for counter items, builds and camp timers",
     "description": (
         "Free Deadlock helper for Windows: counter items for the enemy team, what to buy next, jungle camp "
-        "and Mid Boss timers, and match history with farm analysis. No Overwolf, no ads, no memory reading."
+        "and Mid Boss timers, and post-match farm review. No Overwolf, no ads."
     ),
     "nav": [("#features", "Features"), ("#results", "Results"), ("#safety", "Safety"), ("#faq", "FAQ")],
     "switch": ("../", "Polski"),
     "eyebrow": "Free Deadlock overlay · Windows 10/11",
     "h1": "Deadlock counter items, builds and timers, live in your match",
-    "lead": (
-        "Deadlock Assist recognises the enemy heroes and what they buy, then tells you what to buy to counter "
-        "them. It tracks jungle camps and the Mid Boss, and after the match it shows you what to improve. "
-        "Free, and no Overwolf."
-    ),
+    "lead": "It sees the enemy team and what they buy, then tells you what to buy. Free, no Overwolf.",
     "cta": "Download for Windows",
     "cta_note": ".exe installer · updates itself",
     "cta2": "See features",
@@ -225,140 +149,72 @@ EN = {
         "Deadlock Assist overlay in game: lane counters, the Buy now panel with the best item against the "
         "enemy, and a clock with jungle camp and Mid Boss timers"
     ),
-    "badges": ["Free", "No ads, no account", "No Overwolf", "No memory reading"],
-    "features_h": "What Deadlock Assist does",
-    "features_lead": (
-        "Everything you would normally look up on build and tier list sites between fights is on your screen "
-        "the moment you need it."
-    ),
+    "badges": ["Free", "No ads, no account", "No Overwolf", "No memory reading", "EN / PL"],
+    "features_h": "Features",
+    "features_lead": "",
     "features": [
-        ("counter", "Counter items for the enemy team",
-         "Recognises the six enemies from the top bar and suggests the items that work best against them: "
-         "Healbane against healing, Silencer against ability heroes, Spirit Resilience against spirit damage. "
-         "Each counter shows its price and the reason."),
-        ("cart", "“Buy now” and next purchases",
-         "An item build from thousands of matches on your hero, adjusted to what you already own and what you "
-         "can afford. When you have the souls, it shows the single best purchase, not a list to scroll."),
-        ("lane", "Lane counters",
-         "Until minute 10 it suggests cheap items against your lane opponents, because that is when the farm "
-         "is won or lost."),
-        ("eye", "Enemy purchases, live",
-         "Hold Tab and it remembers what every enemy has bought. When someone buys Leech or Unstoppable, the "
-         "advice changes right away and the overlay warns you."),
-        ("clock", "Clock, jungle camp and Mid Boss timers",
-         "Spots killed jungle camps on the minimap and counts down their respawn. It also tracks the Mid Boss, "
-         "power-ups and the soul urn, with the direction to go."),
-        ("chart", "Match history and review",
-         "Every match goes to your history: result, teams, purchase order and souls per minute compared with a "
-         "typical player. At the end you get a short summary of what to improve."),
-        ("book", "Hero and item browser",
-         "Browse heroes and items with filters like “what counters healing” or “items with silence”. After "
-         "every patch you see what changed for your heroes and items."),
-        ("auto", "Runs by itself",
-         "A match starts when the game clock shows the first minute, and F10 ends and saves it. The overlay "
-         "never captures your mouse, and new versions install in one click."),
+        ("counter", "Counters for the enemy team", "Healbane for healing, Silencer for abilities, with price and reason."),
+        ("cart", "“Buy now”", "The single best purchase right now, fitted to your build and souls."),
+        ("eye", "Enemy purchases", "Hold Tab and it sees what enemies bought, then updates the advice."),
+        ("lane", "Lane counters", "Until minute 10, cheap items against your lane opponents."),
+        ("clock", "Timers", "Jungle camps, Mid Boss, power-ups and the urn, with directions."),
+        ("chart", "Match review", "Farm minute by minute and what to improve next match."),
     ],
     "proof_h": "Does the advisor actually help?",
-    "proof_lead": (
-        "We tested the advisor on 2,020 real high-rank matches (Emissary and above) from the last 14 days. For "
-        "each of 33,811 purchases the advisor got what the player could see at that moment: their own items, the "
-        "enemy team and the enemies' items from Tab. The statistics it relies on come from earlier matches than "
-        "the ones tested."
-    ),
+    "proof_lead": "Tested on 2,020 high-rank matches (Emissary+), 33,811 purchases.",
     "proof": [
-        ("81%", 81, 62, "good counters",
-         "This share of suggestions are items that win at least as often against that enemy team as the middle "
-         "item of the same tier, with the buyers' farm evened out.",
-         "previous version: 62%"),
-        ("29%", 29, 25, "match what top players buy",
-         "In this share of high-rank purchases, the item bought was in the advisor's top 5, picked from over 150 "
-         "items.",
-         "previous version: 25%"),
-        ("+3.2 pts", None, None, "more wins",
-         "Players whose purchase was in the advisor's top 5 won 3.2 percentage points more often than players "
-         "with the same farm at that moment who bought something else.",
-         "compared at equal farm"),
+        ("81%", 81, 62, "good counters", "Suggestions that win more often against that enemy team than a typical item.",
+         "before: 62%"),
+        ("29%", 29, 25, "match top players", "High-rank purchases that were in the advisor's top 5.",
+         "before: 25%"),
+        ("+3.2 pts", None, None, "more wins", "Players with equal farm who bought an item from the top 5.",
+         "at equal farm"),
     ],
-    "proof_note": (
-        "These are results from other players' matches, not a promise of a win: farm and teamwork matter most. "
-        "Results are for the “Balanced” mode, the default since version 1.2.6."
-    ),
-    "how_h": "How it works",
+    "proof_note": "Results from other players' matches, not a guarantee. “Balanced” mode, version 1.2.6.",
+    "how_h": "Get started",
     "how": [
-        ("Install", "Download the installer, run it and set Deadlock to borderless window mode."),
-        ("Play", "The assistant detects the match start, recognises the heroes and shows counters in the "
-                 "overlay. Hold Tab now and then to refresh every player's items."),
-        ("Improve", "After the match (F10), check your farm, purchases and the summary of what to do better "
-                    "in History."),
+        ("Install", "Set Deadlock to borderless window mode."),
+        ("Play", "Matches are detected by themselves. Hold Tab now and then."),
+        ("Improve", "After the match (F10), check the summary in History."),
     ],
     "gallery_h": "What it looks like",
     "gallery": [
         ("nakladka-tab.png", "Overlay with Tab held: every player's items, counters and timers",
-         "With Tab: every player's items and counters to them"),
+         "Tab: player items and counters"),
         ("historia.png", "Match history: results, heroes, opponents and purchase order",
-         "History: results, opponents and purchases from every match"),
-    ],
-    "why_h": "Why Deadlock Assist",
-    "why": [
-        ("A standalone app, not an Overwolf plugin", "A lightweight program (Tauri) with no account, no ads and "
-         "no extra platform running in the background."),
-        ("Advice during the match, not in a browser", "Build sites and tier lists are great before a match. "
-         "Deadlock Assist reacts to what is happening now: who is on the enemy team and what they just bought."),
-        ("Your data stays with you", "Match history is stored locally. Screenshots are only used for reading "
-         "and are deleted once the match is saved."),
-        ("Interface in Polish", "The interface and advice are in Polish for now; game data (hero and item names "
-         "and descriptions) is available in English too."),
+         "Match history"),
     ],
     "safe_h": "Safety",
-    "safe_lead": "Deadlock Assist works like screen recording software, not like a cheat.",
+    "safe_lead": "Works like screen recording, not like a cheat.",
     "safe": [
-        "It does not read game memory, inject code or modify Deadlock's files.",
-        "It sends no keys or clicks to the game; the overlay lets your mouse through.",
-        "It takes screenshots (the same way OBS or Discord do) and recognises what is on them.",
-        "The only thing it downloads is public item statistics from deadlock-api.com.",
-        "Every update is signed, and the app rejects files without a valid signature.",
+        "Does not read game memory or change game files.",
+        "Sends no keys or clicks to the game.",
+        "Downloads only public stats from deadlock-api.com.",
+        "Every update is signed.",
     ],
-    "safe_note": (
-        "This is an unofficial fan tool. Valve does not publish a list of allowed third-party programs, so you "
-        "use it at your own risk."
-    ),
-    "faq_h": "Frequently asked questions",
+    "safe_note": "Unofficial fan tool. Valve does not publish a list of allowed programs.",
+    "faq_h": "FAQ",
     "faq": [
-        ("Can I get banned for using Deadlock Assist?",
-         "The app does not touch the game process: it does not read memory, inject code or simulate keys; it "
-         "only analyses screenshots. Valve does not publish a list of allowed tools, though, so nobody can "
-         "guarantee anything. You use it at your own risk."),
-        ("Is Deadlock Assist free?",
-         "Yes, completely, with no ads. If you want to support development, you can buy the author a coffee on Ko-fi."),
-        ("What are the requirements?",
-         "Windows 10 or 11 (64-bit), with Deadlock in borderless window mode. In exclusive fullscreen Windows "
-         "cannot show an overlay on top of the game."),
-        ("Does it work at any resolution?",
-         "Element positions were measured at 1920×1200 and are scaled to your screen height. If something is not "
-         "recognised at your resolution, report a bug with a screenshot."),
+        ("Can I get banned?",
+         "The app does not touch the game process; it only analyses screenshots. Valve gives no guarantees, "
+         "so you use it at your own risk."),
+        ("Is it free?", "Yes, completely, with no ads. You can support development on Ko-fi."),
+        ("What are the requirements?", "Windows 10 or 11 (64-bit), with Deadlock in borderless window mode."),
         ("How does it know what to buy?",
-         "It combines item statistics from the public deadlock-api.com (what wins on your hero and against "
-         "specific enemies) with what it reads from your screen: the enemy team, their purchases and your souls."),
-        ("Is the app available in English?",
-         "The interface is in Polish for now. Game data, meaning hero and item names and descriptions, is "
-         "available in English and Polish."),
-        ("How do I suggest an idea or report a bug?",
-         "Click “Zaproponuj zmianę” (Suggest a change) in the app or use the forms on GitHub. Every idea goes on "
-         "the list to build."),
+         "From deadlock-api.com stats and what it sees on screen: the enemy team, their purchases and your souls."),
+        ("Is it in English?", "Yes. Switch the language in the app header (PL / EN)."),
     ],
     "final_h": "Play your next match with an advisor",
-    "final_lead": "Installing takes a minute. The app is free and will stay free.",
+    "final_lead": "Installing takes a minute.",
     "kofi": "Support on Ko-fi",
     "links": [(IDEA, "Suggest an idea"), (BUG, "Report a bug"), (REPO + "/blob/main/SECURITY.md", "Security"),
               (REPO + "/releases", "All versions")],
     "footer": (
         "Deadlock is a trademark of Valve Corporation. Deadlock Assist is an unofficial fan project, not "
-        "affiliated with or endorsed by Valve. Item data comes from deadlock-api.com."
+        "affiliated with Valve. Item data: deadlock-api.com."
     ),
     "skip": "Skip to content",
-    "smartscreen": (
-        "Windows may show “Windows protected your PC”: click “More info”, then “Run anyway”."
-    ),
+    "smartscreen": "Windows warning? Click “More info” → “Run anyway”.",
 }
 
 CSS = Path(__file__).with_name("style.css").read_text()
@@ -419,7 +275,6 @@ def page(t):
         )
 
     proof = "".join(stat(*p) for p in t["proof"])
-    why = "".join(f"<li><h3>{e(h)}</h3><p>{e(p)}</p></li>" for h, p in t["why"])
     safe = "".join(f"<li>{e(s)}</li>" for s in t["safe"])
     faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in t["faq"])
     links = "".join(f'<a href="{e(h)}" rel="noopener">{e(l)}</a>' for h, l in t["links"])
@@ -474,7 +329,6 @@ def page(t):
 
 <section id="{feat_id}" class="wrap">
   <h2>{e(t['features_h'])}</h2>
-  <p class="section-lead">{e(t['features_lead'])}</p>
   <div class="grid">{feats}</div>
 </section>
 
@@ -493,11 +347,6 @@ def page(t):
 <section class="wrap">
   <h2>{e(t['gallery_h'])}</h2>
   <div class="gallery">{gallery}</div>
-</section>
-
-<section class="wrap">
-  <h2>{e(t['why_h'])}</h2>
-  <ul class="why">{why}</ul>
 </section>
 
 <section id="{safe_id}" class="wrap safe">
