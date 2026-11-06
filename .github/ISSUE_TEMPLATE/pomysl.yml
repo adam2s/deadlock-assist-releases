@@ -1,21 +1,22 @@
-name: Pomysł
-description: Nowa funkcja albo zmiana działania.
-title: "[Pomysł] "
+name: Idea / Pomysł
+description: A new feature or a change in how something works. / Nowa funkcja albo zmiana działania.
+title: "[Idea] "
 labels: [pomysł]
 body:
   - type: textarea
     id: idea
     attributes:
-      label: Co by się przydało
+      label: What would help / Co by się przydało
+      description: English or Polish.
     validations:
       required: true
   - type: textarea
     id: why
     attributes:
-      label: Po co
-      description: W jakiej sytuacji w grze to pomoże.
+      label: Why / Po co
+      description: In what situation in the game it would help.
   - type: input
     id: version
     attributes:
-      label: Wersja aplikacji
-      description: Widać ją obok nazwy aplikacji, np. 1.2.5.
+      label: App version / Wersja aplikacji
+      description: Shown next to the app name, e.g. 1.2.5.
