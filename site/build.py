@@ -1,4 +1,4 @@
-"""Builds the Deadlock Assist landing page (PL at /, EN at /en/) into <out>/.
+"""Builds the Deadlock Assist landing page (EN at /, PL at /pl/) into <out>/.
 
 Usage: python3 -I site/build.py docs   (edit texts here, then rebuild; GitHub Pages serves docs/)
 The changelog page reads site/changelog.json. The app's release workflow refreshes it with
@@ -81,7 +81,7 @@ def e(s):
 
 PL = {
     "lang": "pl",
-    "path": "",
+    "path": "pl/",
     "locale": "pl_PL",
     "title": "Deadlock Assist – kontry, buildy i timery do Deadlocka (za darmo)",
     "description": (
@@ -92,9 +92,9 @@ PL = {
             "start": "start", "faq": "faq"},
     "nav": [("funkcje", "Funkcje"), ("w-akcji", "W akcji"), ("skutecznosc", "Skuteczność"), ("bezpieczenstwo", "Bezpieczeństwo"),
             ("faq", "FAQ")],
-    "switch": ("en/", "English", "English version"),
+    "switch": ("../", "English", "English version"),
     "counters": {
-        "path": "kontry/", "nav": "Kontry",
+        "path": "pl/kontry/", "nav": "Kontry",
         "index_title": "Kontry na bohaterów Deadlocka – najlepsze przedmioty na każdego",
         "index_desc": "Jakie przedmioty kupić przeciw każdemu bohaterowi Deadlocka. Dane z meczów rang Emissary+ "
                       "z ostatnich 14 dni, odświeżane co tydzień.",
@@ -127,7 +127,7 @@ PL = {
         "souls": "dusz",
     },
     "patches": {
-        "path": "patche/", "nav": "Patche",
+        "path": "pl/patche/", "nav": "Patche",
         "index_title": "Patche i aktualizacje Deadlocka – zmiany bohaterów i przedmiotów (patch notes)",
         "index_desc": "Patch notes Deadlocka w jednym miejscu: każda aktualizacja ze zmianami bohaterów, umiejętności "
                       "i przedmiotów, z ikonami, od najnowszej.",
@@ -156,7 +156,7 @@ PL = {
         "hero_recent": "Ostatnie zmiany bohatera {hero}: {date}", "cta_index": "Co kupić po najnowszym patchu?",
     },
     "changes": {
-        "path": "zmiany/", "nav": "Zmiany", "title": "Lista zmian Deadlock Assist – nowe wersje nakładki do Deadlocka",
+        "path": "pl/zmiany/", "nav": "Zmiany", "title": "Lista zmian Deadlock Assist – nowe wersje nakładki do Deadlocka",
         "description": "Co nowego w każdej wersji Deadlock Assist, nakładki do Deadlocka z kontrami, buildami i timerami.",
         "h1": "Lista zmian", "lead": "Co nowego w każdej wersji.",
         "version": "Wersja", "older": "Starsze wersje", "home": "Strona główna", "latest": "Najnowsza",
@@ -271,7 +271,7 @@ PL = {
 
 EN = {
     "lang": "en",
-    "path": "en/",
+    "path": "",
     "locale": "en_US",
     "title": "Deadlock Counter Items & Build Overlay – Deadlock Assist",
     "description": (
@@ -281,9 +281,9 @@ EN = {
     "ids": {"features": "features", "gallery": "in-action", "results": "results", "safety": "safety",
             "start": "get-started", "faq": "faq"},
     "nav": [("features", "Features"), ("in-action", "In action"), ("results", "Results"), ("safety", "Safety"), ("faq", "FAQ")],
-    "switch": ("../", "Polski", "Wersja polska"),
+    "switch": ("pl/", "Polski", "Wersja polska"),
     "counters": {
-        "path": "en/counters/", "nav": "Counters",
+        "path": "counters/", "nav": "Counters",
         "index_title": "Deadlock Counter Items for Every Hero – Best Items to Buy",
         "index_desc": "Which items to buy against every Deadlock hero. Data from Emissary+ matches of the last 14 days, "
                       "refreshed every week.",
@@ -315,7 +315,7 @@ EN = {
         "souls": "souls",
     },
     "patches": {
-        "path": "en/patch-notes/", "nav": "Patch notes",
+        "path": "patch-notes/", "nav": "Patch notes",
         "index_title": "Deadlock Patch Notes – Every Update, Hero & Item Change",
         "index_desc": "Every Deadlock patch in one place: hero, ability and item changes with icons, newest update first.",
         "index_h1": "Deadlock patch notes",
@@ -343,7 +343,7 @@ EN = {
         "hero_recent": "Last {hero} changes: {date}", "cta_index": "What to buy after the latest patch?",
     },
     "changes": {
-        "path": "en/changes/", "nav": "Changes", "title": "Deadlock Assist Changelog – Overlay Updates & Release Notes",
+        "path": "changes/", "nav": "Changes", "title": "Deadlock Assist Changelog – Overlay Updates & Release Notes",
         "description": "What’s new in every version of Deadlock Assist, the Deadlock overlay with counter items, builds and timers.",
         "h1": "Changelog", "lead": "What's new in every version.",
         "version": "Version", "older": "Older versions", "home": "Home", "latest": "Latest",
@@ -661,7 +661,7 @@ def page(t):
     faq = "".join(f"<details><summary>{T(q)}</summary><p>{T(a)}</p></details>" for q, a in t["faq"])
     cta = download_btn(t, T(t["cta"]))
     preload = f'<link rel="preload" as="image" type="image/webp" href="{prefix}deadlock-overlay-counters.webp" fetchpriority="high">\n'
-    return head(t, url, t["title"], t["description"], BASE, BASE + "en/", prefix, preload) + f"""<script type="application/ld+json">{json.dumps(ld_app, ensure_ascii=False)}</script>
+    return head(t, url, t["title"], t["description"], BASE + PL["path"], BASE + EN["path"], prefix, preload) + f"""<script type="application/ld+json">{json.dumps(ld_app, ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(ld_faq, ensure_ascii=False)}</script>
 <style>{CSS}</style>
 </head>
@@ -755,7 +755,7 @@ def site_header(t, T, prefix, home, switch_url, here=None, sticky=False):
     """Logo and menu of every page. On the home page `home` is "" and the section links stay on the page."""
     other = "en" if t["lang"] == "pl" else "pl"
     links = [(f"{home}#{i}", l, None) for i, l in t["nav"]] if home == "" else [(home, t["changes"]["home"], None)]
-    pages = [(t[k]["path"].removeprefix("en/") if home == "" else BASE + t[k]["path"], t[k]["nav"], k)
+    pages = [(t[k]["path"].removeprefix(t["path"]) if home == "" else BASE + t[k]["path"], t[k]["nav"], k)
              for k in ("counters", "patches", "changes")]
     def a(h, l, k):
         cur = ' aria-current="page"' if k and k == here else ""
@@ -845,7 +845,7 @@ def home_counters(t, prefix, T):
     c = t["counters"]
     hero = max(COUNTERS["heroes"], key=lambda h: h["matches"])
     name = hero["name"]
-    link = c["path"].removeprefix("en/")
+    link = c["path"].removeprefix(t["path"])
     first = COUNTERS["items"][str(hero["items"][0]["id"])]["en"]
     legend = T(c["home_legend"].format(pts="{pts}", hero=name, item=first)).replace(
         "{pts}", f'<strong>{pts(hero["items"][0]["points"], t["lang"])}</strong>', 1)
@@ -1357,10 +1357,10 @@ def not_found():
     rows = "".join(
         f'<p><a class="btn" href="{BASE}{t["path"]}">{e(t["nf_link"])}</a></p>'
         f'<p><a class="btn ghost" href="{BASE}{t["counters"]["path"]}">{e(t["counters"]["index_h1"])}</a></p>'
-        for t in (PL, EN)
+        for t in (EN, PL)
     )
     return f"""<!doctype html>
-<html lang="pl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1372,7 +1372,7 @@ def not_found():
 <body>
 <main class="wrap final" style="padding:96px 0">
   <p class="stat-num">404</p>
-  <h1>{e(PL['nf_h'])} · {e(EN['nf_h'])}</h1>
+  <h1>{e(EN['nf_h'])} · {e(PL['nf_h'])}</h1>
   <div class="actions center" style="margin-top:28px">{rows}</div>
 </main>
 </body>
@@ -1380,12 +1380,48 @@ def not_found():
 """
 
 
+# Old addresses from before English moved to the root (PL was at /, EN at /en/). Search engines and
+# links still know them, so each one stays as a page that sends the visitor on (a permanent redirect
+# for Google: meta refresh at 0 s plus the canonical link).
+MOVED = [("en/", ""), ("en/counters/", "counters/"), ("en/patch-notes/", "patch-notes/"), ("en/changes/", "changes/"),
+         ("kontry/", "pl/kontry/"), ("patche/", "pl/patche/"), ("zmiany/", "pl/zmiany/")]
+
+
+def redirect(url):
+    return f"""<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Deadlock Assist</title>
+<link rel="canonical" href="{url}">
+<meta http-equiv="refresh" content="0; url={url}">
+<script>location.replace("{url}"+location.hash)</script>
+</head>
+<body><a href="{url}">{url}</a></body>
+</html>
+"""
+
+
+def write_redirects(out):
+    slugs = {"en/counters/": [h["slug"] for h in COUNTERS["heroes"]] if COUNTERS else [],
+             "kontry/": [h["slug"] for h in COUNTERS["heroes"]] if COUNTERS else [],
+             "en/patch-notes/": [p["slug"] for p in PATCHES["patches"]] if PATCHES else [],
+             "patche/": [p["slug"] for p in PATCHES["patches"]] if PATCHES else []}
+    for old, new in MOVED:
+        # Also pages left on disk from earlier builds (a hero or patch no longer listed).
+        on_disk = [d.name for d in (out / old).iterdir() if d.is_dir()] if old != "en/" and (out / old).is_dir() else []
+        for sub in ["", *sorted(set(slugs.get(old, [])) | set(on_disk))]:
+            target = BASE + new + (f"{sub}/" if sub else "")
+            (out / old / sub).mkdir(parents=True, exist_ok=True)
+            (out / old / sub / "index.html").write_text(redirect(target))
+
+
 def main():
     global OUT
     out = OUT = Path(sys.argv[1])
-    (out / "en").mkdir(parents=True, exist_ok=True)
-    (out / "index.html").write_text(page(PL))
-    (out / "en" / "index.html").write_text(page(EN))
+    (out / PL["path"]).mkdir(parents=True, exist_ok=True)
+    (out / "index.html").write_text(page(EN))
+    (out / PL["path"] / "index.html").write_text(page(PL))
     (out / "404.html").write_text(not_found())
     for t in (PL, EN):
         (out / t["changes"]["path"]).mkdir(parents=True, exist_ok=True)
@@ -1413,12 +1449,12 @@ def main():
             f'    <xhtml:link rel="alternate" hreflang="en" href="{BASE}{en}"/>\n'
             f'    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE}{en}"/>\n'
         )
-        return "".join(f"  <url>\n    <loc>{BASE}{p}</loc>\n    <lastmod>{day}</lastmod>\n{alt}  </url>\n" for p in (pl, en))
+        return "".join(f"  <url>\n    <loc>{BASE}{p}</loc>\n    <lastmod>{day}</lastmod>\n{alt}  </url>\n" for p in (en, pl))
 
     (out / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
-        + entry("", "en/", CHANGELOG[0]["date"])
+        + entry(PL["path"], EN["path"], CHANGELOG[0]["date"])
         + entry(PL["changes"]["path"], EN["changes"]["path"], CHANGELOG[0]["date"])
         + (entry(PL["patches"]["path"], EN["patches"]["path"], PATCHES["patches"][0]["date"])
            + "".join(entry(f'{PL["patches"]["path"]}{p["slug"]}/', f'{EN["patches"]["path"]}{p["slug"]}/', p["date"])
@@ -1428,6 +1464,7 @@ def main():
                      for h in COUNTERS["heroes"]) if COUNTERS else "")
         + "</urlset>\n"
     )
+    write_redirects(out)
     (out / ".nojekyll").write_text("")
     (out / "CNAME").write_text(DOMAIN + "\n")
     (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")

@@ -1,27 +1,27 @@
-name: Błąd
-description: Coś działa źle albo wcale.
-title: "[Błąd] "
+name: Bug / Błąd
+description: Something works wrong or not at all. / Coś działa źle albo wcale.
+title: "[Bug] "
 labels: [błąd]
 body:
   - type: textarea
     id: what
     attributes:
-      label: Co się stało
-      description: Co zrobiłeś, czego się spodziewałeś i co pokazała aplikacja.
+      label: What happened / Co się stało
+      description: What you did, what you expected and what the app showed. English or Polish.
     validations:
       required: true
   - type: textarea
     id: screen
     attributes:
-      label: Zrzut ekranu
-      description: Przeciągnij tu zrzut gry z nakładką albo okna aplikacji.
+      label: Screenshot / Zrzut ekranu
+      description: Drop a screenshot of the game with the overlay or of the app window here.
   - type: input
     id: version
     attributes:
-      label: Wersja aplikacji
-      description: Widać ją obok nazwy aplikacji, np. 1.2.5.
+      label: App version / Wersja aplikacji
+      description: Shown next to the app name, e.g. 1.2.5.
   - type: input
     id: screen-size
     attributes:
-      label: Rozdzielczość ekranu
-      placeholder: np. 1920×1080
+      label: Screen resolution / Rozdzielczość ekranu
+      placeholder: e.g. 1920×1080

@@ -4,63 +4,69 @@
 
 # Deadlock Assist
 
-**Doradca do Deadlocka, który podpowiada w trakcie meczu, co kupić, i zapisuje Twoją historię gier.**
+**Free Deadlock overlay that tells you what to buy mid-match (counter items vs the enemy team) and keeps your match history.**
 
-[Strona projektu](https://deadlock-assist.com/) · [English](https://deadlock-assist.com/en/)
+[Website](https://deadlock-assist.com/) · [Polski](README.pl.md)
 
-[![Pobierz dla Windows](https://img.shields.io/badge/Pobierz-Windows%20.exe-f2a33a?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/adam2s/deadlock-assist-releases/releases/latest)
+[![Download for Windows](https://img.shields.io/badge/Download-Windows%20.exe-f2a33a?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/adam2s/deadlock-assist-releases/releases/latest)
 
-[![Najnowsza wersja](https://img.shields.io/github/v/release/adam2s/deadlock-assist-releases?label=wersja&color=f2a33a)](https://github.com/adam2s/deadlock-assist-releases/releases/latest)
-[![Pobrania](https://img.shields.io/github/downloads/adam2s/deadlock-assist-releases/total?label=pobrania&color=57c46a)](https://github.com/adam2s/deadlock-assist-releases/releases)
+[![Latest version](https://img.shields.io/github/v/release/adam2s/deadlock-assist-releases?label=version&color=f2a33a)](https://github.com/adam2s/deadlock-assist-releases/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/adam2s/deadlock-assist-releases/total?label=downloads&color=57c46a)](https://github.com/adam2s/deadlock-assist-releases/releases)
 ![Windows 10/11](https://img.shields.io/badge/Windows-10%20%7C%2011-0e1014)
-[![Wesprzyj na Ko-fi](https://img.shields.io/badge/%E2%98%95-Wesprzyj%20na%20Ko--fi-f2c94c)](https://ko-fi.com/deadlockassist)
+[![Support on Ko-fi](https://img.shields.io/badge/%E2%98%95-Support%20on%20Ko--fi-f2c94c)](https://ko-fi.com/deadlockassist)
 
-<img src="docs/deadlock-overlay-counters.jpg" width="820" alt="Nakładka nad grą: kontry na linii, „Kup teraz”, zegar i timery obozów">
+<img src="docs/deadlock-overlay-counters.jpg" width="820" alt="Deadlock overlay: lane counters, “Buy now”, game clock and jungle camp timers">
 
 </div>
 
-## Co robi
+## What it does
 
-- **Kontry pod skład wroga.** Rozpoznaje bohaterów z górnego paska i podpowiada przedmioty, które najlepiej działają na nich, z cenami i tym, na co Cię stać.
-- **„Kup teraz” i następne zakupy.** Plan buildu oparty na statystykach z tysięcy meczów (deadlock-api), dopasowany do tego, co już masz.
-- **Zakupy wrogów.** Po wciśnięciu Tab zapamiętuje przedmioty przeciwników i ostrzega, gdy ktoś kupi np. leczenie.
-- **Zegar i timery.** Mid Boss, obozy w dżungli, wzmocnienia i urna dusz.
-- **Historia meczów.** Wyniki, farma minuta po minucie, kolejność zakupów i podsumowanie z tym, co poprawić.
-- **Działa sama.** Mecz startuje, gdy zegar gry pokaże pierwszą minutę; aplikacja aktualizuje się sama.
+- **Counter items vs the enemy team.** Reads the heroes from the top bar and suggests the items that work best against them, with prices and what you can afford right now.
+- **“Buy now” and next buys.** A build plan based on stats from thousands of matches (deadlock-api), fitted to what you already own.
+- **Enemy purchases.** Hold Tab and it remembers the enemies' items, and warns you when someone buys, say, healing.
+- **Clock and timers.** Mid Boss, jungle camps, power-ups and the soul urn.
+- **Match history.** Results, minute-by-minute farm, buy order and a summary of what to improve.
+- **Runs by itself.** A match starts when the game clock shows the first minute; the app updates itself.
 
 <p align="center">
-  <img src="docs/deadlock-overlay-tab.webp" width="49%" alt="Nakładka po wciśnięciu Tab">
-  <img src="docs/deadlock-match-history@2x.webp" width="49%" alt="Historia meczów">
+  <img src="docs/deadlock-overlay-tab.webp" width="49%" alt="Overlay with Tab held: every player's items and counters">
+  <img src="docs/deadlock-match-history@2x.webp" width="49%" alt="Match history">
 </p>
 
-## Instalacja
+More: [counter items for every hero](https://deadlock-assist.com/counters/) · [Deadlock patch notes](https://deadlock-assist.com/patch-notes/) · [changelog](https://deadlock-assist.com/changes/)
 
-1. Pobierz `Deadlock.Assist_x.y.z_x64-setup.exe` z [najnowszego wydania](https://github.com/adam2s/deadlock-assist-releases/releases/latest).
-2. Uruchom instalator. Jeśli Windows pokaże „System Windows ochronił ten komputer”, kliknij **Więcej informacji → Uruchom mimo to** (instalator nie ma jeszcze płatnego podpisu cyfrowego).
-3. Włącz Deadlocka w trybie **okna bez ramek** (Borderless), żeby nakładka była widoczna nad grą.
+## Install
 
-Kolejne wersje instalują się z poziomu aplikacji: przy nowej wersji pojawi się przycisk „Zaktualizuj i uruchom ponownie”.
+1. Download `Deadlock.Assist_x.y.z_x64-setup.exe` from the [latest release](https://github.com/adam2s/deadlock-assist-releases/releases/latest).
+2. Run the installer. If Windows shows “Windows protected your PC”, click **More info → Run anyway** (the installer does not have a paid code signature yet).
+3. Run Deadlock in **borderless window** mode so the overlay shows on top of the game.
 
-| Skrót | Działanie |
+New versions install from inside the app: when one is out, an “Update and restart” button appears.
+
+The app starts in English; switch to Polish with **PL** in the top right corner.
+
+| Key | Action |
 | --- | --- |
-| `F10` | koniec meczu i zapis w historii |
-| `Tab` (przytrzymany) | odświeżenie przedmiotów wszystkich graczy |
+| `F10` | end the match and save it to history |
+| `Tab` (held) | refresh every player's items |
 
-## Bezpieczeństwo
+## Safety
 
-Deadlock Assist **nie czyta pamięci gry, nie modyfikuje jej plików i nie wysyła do niej żadnych klawiszy**. Robi tylko zrzuty ekranu (tak jak OBS czy Discord) i pobiera publiczne statystyki z [deadlock-api.com](https://deadlock-api.com). Zrzuty zostają na Twoim komputerze i są usuwane po zapisaniu meczu.
+Deadlock Assist **does not read the game's memory, does not modify its files and sends no keys to it**. It only takes screenshots (like OBS or Discord) and downloads public stats from [deadlock-api.com](https://deadlock-api.com). Screenshots stay on your PC and are deleted once the match is saved.
 
-To nieoficjalne narzędzie fanów, niezwiązane z Valve. Valve nie publikuje listy dozwolonych programów zewnętrznych, więc korzystasz z niego na własną odpowiedzialność.
+This is an unofficial fan tool, not affiliated with Valve. Valve does not publish a list of allowed third-party programs, so you use it at your own risk.
 
-## Pomysły i błędy
+## Ideas and bugs
 
-- Masz pomysł? Kliknij **„Zaproponuj zmianę”** w aplikacji albo [zgłoś go tutaj](https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml).
-- Coś nie działa? [Zgłoś błąd](https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml), najlepiej ze zrzutem ekranu.
+- Got an idea? Click **“Suggest a change”** in the app or [post it here](https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml).
+- Something broken? [Report a bug](https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml), ideally with a screenshot.
 
-## Wsparcie
+English or Polish, both are fine.
 
-Aplikacja jest i zostanie darmowa. Jeśli pomaga Ci wygrywać, możesz postawić autorowi kawę na **[ko-fi.com/deadlockassist](https://ko-fi.com/deadlockassist)** albo przyciskiem **„☕ Wesprzyj”** w prawym górnym rogu aplikacji.
+## Support
+
+The app is and will stay free. If it helps you win, you can buy the author a coffee at **[ko-fi.com/deadlockassist](https://ko-fi.com/deadlockassist)** or with the **“☕ Support”** button in the top right corner of the app.
 
 ---
 
-<sub>Deadlock jest znakiem towarowym Valve Corporation. Ten projekt nie jest powiązany z Valve ani przez nią wspierany. Dane o przedmiotach i bohaterach pochodzą z <a href="https://deadlock-api.com">deadlock-api.com</a>.</sub>
+<sub>Deadlock is a trademark of Valve Corporation. This project is not affiliated with or endorsed by Valve. Item and hero data come from <a href="https://deadlock-api.com">deadlock-api.com</a>.</sub>
