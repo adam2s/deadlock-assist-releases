@@ -409,13 +409,64 @@ h2.ci-cap{margin-top:28px}
 .pn-toc,.pn-jump{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:24px}
 }
 @media (max-height:500px){.top nav .menu-links a{min-height:38px}.lb figure{padding:12px 72px}.lb figcaption>span,.lb figcaption .tag{display:none}.lb img{max-height:calc(100dvh - 70px)}}
+.ci-name a,.build b a,.pn-card h4 a{color:inherit;text-decoration:none}
+.ci-name a:hover,.build b a:hover,.pn-card h4 a:hover{color:var(--accent);text-decoration:underline}
+.it-toc{margin:28px 0 12px}
+.it-search{display:grid;gap:6px;margin:0 0 8px;max-width:420px}
+.it-search label{font-size:14px;color:var(--muted)}
+.it-search input{min-height:44px;padding:0 14px;border-radius:var(--r);border:1px solid var(--border-strong);background:var(--panel);color:var(--text);font:inherit}
+.it-search input:focus{border-color:var(--accent);outline:none}
+.it-search .note{margin:4px 0 0}
+html:not(.js) .it-search{display:none}
+.items>.it-slot{max-width:none;padding:12px 0 0}
+.it-slot .pn-slot{font-size:15px;margin:20px 0 4px}
+.it-tier{font-size:13px;font-weight:600;color:var(--muted);margin:14px 0 8px;font-variant-numeric:tabular-nums}
+.it-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.it-grid a{display:flex;align-items:center;gap:10px;height:100%;padding:8px 10px;border:1px solid var(--border);border-left:3px solid var(--slot);border-radius:var(--r);background:var(--panel);color:var(--text);text-decoration:none}
+.it-grid a:hover{border-color:var(--accent);border-left-color:var(--slot)}
+.it-grid img{border-radius:8px;background:var(--panel-2);flex:none}
+.it-grid span{display:flex;flex-direction:column;min-width:0;line-height:1.3}
+.it-grid b{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+.it-grid small{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.it-grid small+small{color:var(--text-2)}
+.it-head img{border:2px solid var(--slot);border-radius:12px}
+.it-alt{margin:2px 0 0;color:var(--text-2)}
+.it-tags{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.it-card{background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--slot);border-radius:var(--r);padding:4px 20px 18px;margin-bottom:8px}
+.it-sec{padding-top:14px}
+.it-sec+.it-sec{border-top:1px solid var(--border);margin-top:14px}
+.it-sec h3{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slot);margin:0 0 6px}
+.it-sec p{margin:0 0 10px;color:var(--text-2);max-width:68ch}
+.it-sec p strong{color:var(--text)}
+.it-dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px 20px;margin:0 0 6px}
+.it-dl div{display:flex;justify-content:space-between;gap:12px;padding:4px 0;border-bottom:1px solid var(--border)}
+.it-dl dt{color:var(--muted);font-size:14px}
+.it-dl dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.it-dl.main dd{color:var(--slot)}
+.it-stats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.it-stats li{display:flex;flex-direction:column;padding:14px 16px;background:var(--panel);border:1px solid var(--border);border-radius:var(--r)}
+.it-stats b{font-size:28px;font-weight:800;line-height:1.1;color:var(--accent);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.it-stats b .u{font-size:.6em}
+.it-stats span{color:var(--muted);font-size:14px;margin-top:4px}
+.it-h img{border-radius:8px}
+.it-chips{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.it-chips a{display:flex;align-items:center;gap:8px;height:100%;padding:6px 10px 6px 6px;border:1px solid var(--border);border-radius:8px;background:var(--panel);color:var(--text);text-decoration:none;font-size:14px;font-weight:600}
+.it-chips li[class^=slot-] a{border-left:3px solid var(--slot)}
+.it-chips a:hover{border-color:var(--accent)}
+.it-chips img{border-radius:6px;background:var(--panel-2);flex:none}
+.it-chips span{display:flex;flex-direction:column;min-width:0;line-height:1.3}
+.it-chips small{color:var(--muted);font-weight:400;font-size:13px;font-variant-numeric:tabular-nums}
+.item h2.ci-cap{margin-top:28px}
+@media (max-width:700px){.it-stats{grid-template-columns:1fr 1fr}.it-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.it-grid a{padding:8px}.it-grid img{width:36px;height:36px}.it-chips{grid-template-columns:repeat(2,minmax(0,1fr))}.it-card{padding:4px 14px 14px}}
+[hidden]{display:none!important}
+.it-chips small{white-space:nowrap}
 </style>
 </head>
 <body class="dl">
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="top wrap">
   <a class="logo" href="https://deadlock-assist.com/pl/"><img src="../../../favicon-32.png" srcset="../../../icon.png 2x" alt="" width="32" height="32">DEADLOCK <span>ASSIST</span></a>
-  <nav aria-label="menu"><a class="btn sm" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener" data-dl>Pobierz</a><button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu-links" aria-label="Menu"><svg class="ico i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button><div class="menu-links" id="menu-links"><a href="https://deadlock-assist.com/pl/">Strona główna</a><span class="menu-sep" aria-hidden="true"></span><a href="https://deadlock-assist.com/pl/kontry/">Kontry</a><a href="https://deadlock-assist.com/pl/patche/" aria-current="page">Patche</a><a href="https://deadlock-assist.com/pl/zmiany/">Zmiany</a><a class="lang" href="https://deadlock-assist.com/patch-notes/2025-03-19/" hreflang="en" lang="en"><span class="long">English</span><span class="short">EN</span></a></div></nav>
+  <nav aria-label="menu"><a class="btn sm" href="https://github.com/adam2s/deadlock-assist-releases/releases/latest" rel="noopener" data-dl>Pobierz</a><button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu-links" aria-label="Menu"><svg class="ico i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button><div class="menu-links" id="menu-links"><a href="https://deadlock-assist.com/pl/">Strona główna</a><span class="menu-sep" aria-hidden="true"></span><a href="https://deadlock-assist.com/pl/kontry/">Kontry</a><a href="https://deadlock-assist.com/pl/przedmioty/">Przedmioty</a><a href="https://deadlock-assist.com/pl/patche/" aria-current="page">Patche</a><a href="https://deadlock-assist.com/pl/zmiany/">Zmiany</a><a class="lang" href="https://deadlock-assist.com/patch-notes/2025-03-19/" hreflang="en" lang="en"><span class="long">English</span><span class="short">EN</span></a></div></nav>
 </header>
 <main id="main" class="wrap patches patch">
   <nav class="crumbs" aria-label="breadcrumbs"><a href="../">Patche i aktualizacje Deadlocka</a> › 19 marca 2025</nav>
@@ -433,7 +484,7 @@ var by={};j.forEach(function(a){by[a.hash.slice(1)]=a});
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;j.forEach(function(a){a.classList.remove("active")});if(by[x.target.id])by[x.target.id].classList.add("active")})},{rootMargin:"-30% 0px -60% 0px"});
 document.querySelectorAll(".pn-hero").forEach(function(h){io.observe(h)})})()</script>
 <footer class="wrap foot">
-  <nav aria-label="links"><a href="https://deadlock-assist.com/pl/kontry/">Kontry na bohaterów Deadlocka</a><a href="https://deadlock-assist.com/pl/patche/">Patche i aktualizacje Deadlocka</a><a href="https://deadlock-assist.com/pl/zmiany/">Lista zmian</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Zaproponuj pomysł</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Zgłoś błąd</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Zgłoś lukę</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">Wszystkie wersje</a><a href="https://deadlock-assist.com/patch-notes/2025-03-19/" hreflang="en">English version</a></nav>
+  <nav aria-label="links"><a href="https://deadlock-assist.com/pl/kontry/">Kontry na bohaterów Deadlocka</a><a href="https://deadlock-assist.com/pl/przedmioty/">Przedmioty w Deadlocku</a><a href="https://deadlock-assist.com/pl/patche/">Patche i aktualizacje Deadlocka</a><a href="https://deadlock-assist.com/pl/zmiany/">Lista zmian</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=pomysl.yml" rel="noopener">Zaproponuj pomysł</a><a href="https://github.com/adam2s/deadlock-assist-releases/issues/new?template=blad.yml" rel="noopener">Zgłoś błąd</a><a href="https://github.com/adam2s/deadlock-assist-releases/blob/main/SECURITY.md" rel="noopener">Zgłoś lukę</a><a href="https://github.com/adam2s/deadlock-assist-releases/releases" rel="noopener">Wszystkie wersje</a><a href="https://deadlock-assist.com/patch-notes/2025-03-19/" hreflang="en">English version</a></nav>
   <p>Deadlock jest znakiem towarowym Valve Corporation. Deadlock Assist to nieoficjalny projekt fanów, niezwiązany z Valve. Dane o przedmiotach: deadlock-api.com.</p>
 </footer>
 <script>(function(){var a=document.querySelectorAll("a[data-dl]");if(!a.length||!window.fetch)return;fetch("https://api.github.com/repos/adam2s/deadlock-assist-releases/releases/latest").then(function(r){return r.ok?r.json():null}).then(function(j){var f=j&&(j.assets||[]).filter(function(x){return /x64-setup\.exe$/.test(x.name)})[0];if(f)for(var i=0;i<a.length;i++)a[i].href=f.browser_download_url}).catch(function(){})})()</script><script>(function(){var b=document.querySelector(".menu-btn"),l=document.getElementById("menu-links");if(!b||!l)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");l.classList.toggle("open",o)}b.addEventListener("click",function(){set(b.getAttribute("aria-expanded")!=="true")});l.addEventListener("click",function(e){if(e.target.closest("a"))set(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&l.classList.contains("open")){set(false);b.focus()}});document.addEventListener("click",function(e){if(!e.target.closest(".top nav"))set(false)});l.addEventListener("focusout",function(e){if(!e.relatedTarget||!e.relatedTarget.closest(".top nav"))set(false)})})()</script>
