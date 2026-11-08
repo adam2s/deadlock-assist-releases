@@ -1,5 +1,19 @@
 [
  {
+  "version": "1.3.4",
+  "date": "2026-11-08",
+  "pl": [
+   "Tab na ekranie śmierci nie „sprzedaje” już Twoich przedmiotów: szara kolumna pozwalała odczytać tylko pierwszą ikonę, więc do odrodzenia doradca polecał przedmioty, które już masz, i tanie przedmioty z poziomów 1-2.",
+   "Aplikacja rozpoznaje Miraża na górnym pasku (wcześniej brała go za Infernusa albo Rem, więc rady liczyły kontry na bohatera spoza meczu).",
+   "Pauza w grze nie kasuje już odczytanych statystyk z Tab (magazynek, szybkostrzelność, odnowienie), więc doradca nie traci ich do końca meczu."
+  ],
+  "en": [
+   "Tab on the death screen no longer “sells” your items: the grey column let only the first icon be read, so until respawn the advisor suggested items you already had and cheap tier 1-2 items.",
+   "Mirage is recognised on the top bar (he used to be taken for Infernus or Rem, so the advice countered a hero who was not in the match).",
+   "A paused game no longer clears the stats read in Tab (magazine, fire rate, cooldown), so the advisor keeps them until the end of the match."
+  ]
+ },
+ {
   "version": "1.3.3",
   "date": "2026-11-05",
   "pl": [
