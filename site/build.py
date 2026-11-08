@@ -126,6 +126,43 @@ PL = {
         "others": "Kontry na innych bohaterów",
         "souls": "dusz",
     },
+    "items": {
+        "path": "pl/przedmioty/", "nav": "Przedmioty",
+        "index_title": "Przedmioty w Deadlocku – lista, opisy, koszt i statystyki",
+        "index_desc": "Wszystkie przedmioty Deadlocka z opisem po polsku, kosztem i statystykami: jak często są kupowane, "
+                      "z jakim skutkiem i na jakich bohaterach. Mecze Emissary+ z 14 dni.",
+        "index_h1": "Przedmioty w Deadlocku",
+        "index_lead": "Wszystkie {n} przedmiotów ze sklepu. Kliknij przedmiot, żeby zobaczyć opis, statystyki "
+                      "i bohaterów, którzy kupują go najczęściej.",
+        "popular_h": "Najczęściej kupowane przedmioty",
+        "popular_note": "Procent: ilu graczy kupuje przedmiot w meczu.",
+        "search": "Szukaj przedmiotu", "search_ph": "np. Healbane, Leczenie…", "none": "Brak przedmiotów o tej nazwie.",
+        "all": "Wszystkie", "tier": "Poziom {n}",
+        "title": "{item} w Deadlocku – opis, statystyki i na kim kupować",
+        "desc": "{item}: {effect} {cost} dusz. Kupuje go {share} graczy, najczęściej {heroes}.",
+        "lead": "{item} to przedmiot z kategorii {slot} za {cost} dusz (poziom {tier}). W ostatnich {days} dniach kupował go "
+                "{share} graczy, najczęściej {heroes}.",
+        "lead_none": "{item} to przedmiot z kategorii {slot} za {cost} dusz (poziom {tier}). W ostatnich {days} dniach kupował "
+                     "go {share} graczy.",
+        "active": "Aktywny", "souls": "dusz",
+        "sections": {"innate": "Statystyki", "passive": "Pasywny", "active": "Aktywny", "": "Opis"},
+        "desc_h": "Co daje {item}",
+        "stats_h": "Statystyki {item}",
+        "st_share": "graczy kupuje", "st_win": "wygranych z nim", "st_buy": "średni czas zakupu",
+        "st_sold": "kupujących sprzedaje",
+        "stats_note": "Mecze Emissary+ z ostatnich {days} dni, {n} zakupów (stan na {date}). Odsetek wygranych liczony "
+                      "dla graczy, którzy kupili przedmiot: droższe przedmioty kupują częściej wygrywający.",
+        "heroes_h": "Na jakich bohaterach {item} jest kupowany najczęściej",
+        "heroes_note": "Procent: ilu graczy danego bohatera kupuje {item}. Obok: jak często ci gracze wygrywają.",
+        "win": "wygr.",
+        "counter_h": "Dobra kontra na", "counter_note": "Bohaterowie, z którymi gracze z {item} wygrywają wyraźnie częściej.",
+        "build_h": "W typowym buildzie",
+        "from_h": "Składa się z", "into_h": "Ulepsza się do",
+        "same_h": "Inne przedmioty: {slot}, {cost} dusz",
+        "cta_h": "Kiedy kupić {item}?", "cta_p": "Doradca w grze widzi skład wroga i Twoje dusze, i mówi, co kupić teraz.",
+        "patch": "Ostatnia zmiana w patchu: {date}",
+        "min": "min",
+    },
     "patches": {
         "path": "pl/patche/", "nav": "Patche",
         "index_title": "Patche i aktualizacje Deadlocka – zmiany bohaterów i przedmiotów (patch notes)",
@@ -314,6 +351,42 @@ EN = {
         "others": "Counters for other heroes",
         "souls": "souls",
     },
+    "items": {
+        "path": "items/", "nav": "Items",
+        "index_title": "Deadlock Items – Every Item, Stats, Cost & Most Bought",
+        "index_desc": "Every Deadlock item with its description, cost and stats: how often it is bought, its win rate "
+                      "and the heroes who buy it most. Emissary+ matches, last 14 days.",
+        "index_h1": "Deadlock items",
+        "index_lead": "All {n} shop items. Open an item to see what it does, its stats and the heroes who buy it most.",
+        "popular_h": "Most bought items",
+        "popular_note": "Percent: how many players buy the item in a match.",
+        "search": "Search items", "search_ph": "e.g. Healbane, Healing…", "none": "No item with that name.",
+        "all": "All", "tier": "Tier {n}",
+        "title": "{item} in Deadlock – Stats, Cost & Best Heroes for {item}",
+        "desc": "{item}: {effect} {cost} souls. Bought by {share} of players, most on {heroes}.",
+        "lead": "{item} is a {slot} item for {cost} souls (tier {tier}). In the last {days} days {share} of players bought it, "
+                "most of all on {heroes}.",
+        "lead_none": "{item} is a {slot} item for {cost} souls (tier {tier}). In the last {days} days {share} of players "
+                     "bought it.",
+        "active": "Active", "souls": "souls",
+        "sections": {"innate": "Stats", "passive": "Passive", "active": "Active", "": "Description"},
+        "desc_h": "What {item} does",
+        "stats_h": "{item} stats",
+        "st_share": "of players buy it", "st_win": "win rate", "st_buy": "average buy time",
+        "st_sold": "of buyers sell it later",
+        "stats_note": "Emissary+ matches of the last {days} days, {n} purchases (as of {date}). Win rate of the players "
+                      "who bought it: pricier items are bought more by players who are ahead.",
+        "heroes_h": "Heroes who buy {item} most",
+        "heroes_note": "Percent: how many players of the hero buy {item}. Next to it: how often they win.",
+        "win": "win",
+        "counter_h": "Good counter to", "counter_note": "Heroes that players with {item} beat clearly more often.",
+        "build_h": "In the typical build of",
+        "from_h": "Built from", "into_h": "Upgrades into",
+        "same_h": "Other {slot} items for {cost} souls",
+        "cta_h": "When to buy {item}?", "cta_p": "The in-game advisor sees the enemy team and your souls and tells you what to buy now.",
+        "patch": "Last changed in the patch of {date}",
+        "min": "min",
+    },
     "patches": {
         "path": "patch-notes/", "nav": "Patch notes",
         "index_title": "Deadlock Patch Notes – Every Update, Hero & Item Change",
@@ -480,7 +553,7 @@ def typeset(s, lang):
 
 def unit(n):
     """Smaller unit after a big stat number: 81<span>%</span>, +3,2<span> p.p.</span>."""
-    return re.sub(r"(%|\u00a0p\.p\.|\u00a0pp)$", r'<span class="u">\1</span>', n)
+    return re.sub(r"(%|\u00a0p\.p\.|\u00a0pp|\u00a0min)$", r'<span class="u">\1</span>', n)
 
 
 CHANGELOG = json.loads(Path(__file__).with_name("changelog.json").read_text())
@@ -575,6 +648,7 @@ def head(t, url, title, desc, pl_url, en_url, prefix, extra=""):
 def foot(t, T, switch_href):
     lang = t["lang"]
     links = f'<a href="{BASE}{t["counters"]["path"]}">{T(t["counters"]["index_h1"])}</a>'
+    links += f'<a href="{BASE}{t["items"]["path"]}">{T(t["items"]["index_h1"])}</a>'
     links += f'<a href="{BASE}{t["patches"]["path"]}">{T(t["patches"]["index_h1"])}</a>'
     links += f'<a href="{BASE}{t["changes"]["path"]}">{T(t["changes"]["h1"])}</a>'
     links += "".join(f'<a href="{e(h)}" rel="noopener">{T(l)}</a>' for h, l in t["links"])
@@ -756,7 +830,7 @@ def site_header(t, T, prefix, home, switch_url, here=None, sticky=False):
     other = "en" if t["lang"] == "pl" else "pl"
     links = [(f"{home}#{i}", l, None) for i, l in t["nav"]] if home == "" else [(home, t["changes"]["home"], None)]
     pages = [(t[k]["path"].removeprefix(t["path"]) if home == "" else BASE + t[k]["path"], t[k]["nav"], k)
-             for k in ("counters", "patches", "changes")]
+             for k in ("counters", "items", "patches", "changes")]
     def a(h, l, k):
         cur = ' aria-current="page"' if k and k == here else ""
         return f'<a href="{h}"{cur}>{T(l)}</a>'
@@ -804,7 +878,7 @@ def build_strip(t, hero, prefix, T):
         it = items[str(b["id"])]
         slot = it.get("slot") or "weapon"
         img = f'<img src="{img_src("items", b["id"], it["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
-        out.append(f'<li class="slot-{slot}">{img}<span class="bt"><b>{e(it["en"])}</b>'
+        out.append(f'<li class="slot-{slot}">{img}<span class="bt"><b>{item_link(t, b["id"], e(it["en"]))}</b>'
                    f'<small>{round(b["min"])}{NB}{c["min"]} · {round(100 * b["share"])}%</small></span></li>')
     return f'<ol class="build">{"".join(out)}</ol>'
 
@@ -823,7 +897,7 @@ def counter_rows(t, hero, prefix, T, start, stop):
         rows.append(
             f'<li class="ci slot-{slot}"><span class="rank">{rank}</span>'
             f'<img src="{img_src("items", i["id"], it["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
-            f'<span class="ci-name"><strong>{e(it["en"])}</strong><small>{T(c["slots"].get(slot, slot))} · {cost(it["cost"], lang)} {T(c["souls"])}{alt}</small></span>'
+            f'<span class="ci-name"><strong>{item_link(t, i["id"], e(it["en"]))}</strong><small>{T(c["slots"].get(slot, slot))} · {cost(it["cost"], lang)} {T(c["souls"])}{alt}</small></span>'
             f'<span class="ci-edge"><b>{pts(i["points"], lang)}</b><i style="width:{max(8, round(100 * i["points"] / top))}%"></i></span></li>'
         )
     return "".join(rows)
@@ -984,6 +1058,306 @@ def counter_page(t, hero):
   <details class="ci-others"><summary><h2>{T(c['others'])} ({n_others})</h2></summary><ul>{others}</ul></details>
 </main>
 """ + foot(t, T, f'{BASE}{other["counters"]["path"]}{hero["slug"]}/')
+
+
+ITEMS_FILE = Path(__file__).with_name("items.json")
+ITEMS = json.loads(ITEMS_FILE.read_text()) if ITEMS_FILE.exists() else None
+ITEM_BY_ID = {i["id"]: i for i in ITEMS["items"]} if ITEMS else {}
+
+
+def item_url(t, item_id):
+    """Address of an item's page, or None when the item has none."""
+    it = ITEM_BY_ID.get(item_id)
+    return f'{BASE}{t["items"]["path"]}{it["slug"]}/' if it else None
+
+
+def item_link(t, item_id, inner):
+    """`inner` as a link to the item's page when it has one."""
+    url = item_url(t, item_id)
+    return f'<a href="{url}">{inner}</a>' if url else inner
+
+
+def pct(x, lang, digits=None):
+    """Share as a percent: one decimal below 10%, none above (unless `digits` says so)."""
+    d = digits if digits is not None else (1 if x < 0.1 else 0)
+    v = f"{100 * x:.{d}f}"
+    return (v.replace(".", ",") if lang == "pl" else v) + "%"
+
+
+def plain(h):
+    return html.unescape(re.sub(r"<[^>]+>", " ", h)).replace("  ", " ").strip()
+
+
+def item_effect(it, lang):
+    """First sentence of the item's tooltip, for the meta description."""
+    for sec in it["text"][lang]:
+        for b in sec["blocks"]:
+            if b["text"]:
+                txt = re.sub(r"\s+", " ", plain(b["text"]))
+                first = re.split(r"(?<=[.!?])\s", txt)[0]
+                return first if first.endswith((".", "!", "?")) else first + "."
+    stats = [x for sec in it["text"][lang] for b in sec["blocks"] for x in b["main"] + b["stats"]][:2]
+    return ", ".join(f"{v} {l.lower()}" for l, v in stats) + "." if stats else ""
+
+
+def pl_alt(i, lang):
+    return f" · {e(i['pl'])}" if lang == "pl" and i["pl"] != i["en"] else ""
+
+
+def items_index(t):
+    lang = t["lang"]
+    c = t["items"]
+    T = lambda s: html.escape(typeset(s, lang), quote=True)  # noqa: E731
+    prefix = "../" * c["path"].count("/")
+    url = BASE + c["path"]
+    home = BASE + t["path"]
+    other = EN if lang == "pl" else PL
+    items = ITEMS["items"]
+    popular = sorted(items, key=lambda i: -i["share"])[:10]
+    top = popular[0]["share"]
+    rows = "".join(
+        f'<li class="ci slot-{i["slot"]}"><span class="rank">{n}</span>'
+        f'<img src="{img_src("items", i["id"], i["img"], prefix)}" alt="" width="40" height="40" loading="lazy" decoding="async">'
+        f'<span class="ci-name"><a href="{i["slug"]}/"><strong>{e(i["en"])}</strong></a>'
+        f'<small>{T(t["counters"]["slots"][i["slot"]])} · {cost(i["cost"], lang)} {T(c["souls"])}'
+        f'{pl_alt(i, lang)}</small></span>'
+        f'<span class="ci-edge"><b>{pct(i["share"], lang)}</b><i style="width:{max(8, round(100 * i["share"] / top))}%"></i></span></li>'
+        for n, i in enumerate(popular, 1)
+    )
+
+    def tile(i):
+        names = f'{i["en"]} {i["pl"]}'.lower()
+        alt = f'<small>{e(i["pl"])}</small>' if lang == "pl" and i["pl"] != i["en"] else ""
+        return (f'<li class="slot-{i["slot"]}" data-n="{e(names)}"><a href="{i["slug"]}/">'
+                f'<img src="{img_src("items", i["id"], i["img"], prefix)}" alt="" width="44" height="44" loading="lazy" decoding="async">'
+                f'<span><b>{e(i["en"])}</b>{alt}<small>{pct(i["share"], lang)}</small></span></a></li>')
+
+    groups = []
+    for slot in ("weapon", "vitality", "spirit"):
+        mine = [i for i in items if i["slot"] == slot]
+        if not mine:
+            continue
+        tiers = []
+        for price in sorted({i["cost"] for i in mine}):
+            row = [i for i in mine if i["cost"] == price]
+            tiers.append(f'<h3 class="it-tier">{cost(price, lang)} {T(c["souls"])}</h3><ul class="it-grid">{"".join(tile(i) for i in row)}</ul>')
+        groups.append(f'<section class="it-slot slot-{slot}" id="{slot}"><h2 class="pn-slot slot-{slot}">'
+                      f'{T(t["counters"]["slots"][slot])} <span>{len(mine)}</span></h2>{"".join(tiers)}</section>')
+    toc = "".join(f'<a href="#{s}">{T(t["counters"]["slots"][s])}</a>' for s in ("weapon", "vitality", "spirit"))
+    n_buys = millions(sum(i["matches"] for i in items), lang)
+    ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Deadlock Assist", "item": home},
+                {"@type": "ListItem", "position": 2, "name": c["index_h1"], "item": url},
+            ],
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": c["popular_h"],
+            "itemListOrder": "https://schema.org/ItemListOrderDescending",
+            "itemListElement": [{"@type": "ListItem", "position": n, "name": i["en"], "url": f"{url}{i['slug']}/"}
+                                for n, i in enumerate(popular, 1)],
+        },
+    ]
+    search = (f'<div class="it-search"><label for="it-q">{T(c["search"])}</label>'
+              f'<input id="it-q" type="search" placeholder="{T(c["search_ph"])}" autocomplete="off">'
+              f'<p class="note" id="it-none" hidden>{T(c["none"])}</p></div>')
+    return head(t, url, c["index_title"], c["index_desc"], BASE + PL["items"]["path"], BASE + EN["items"]["path"],
+                prefix) + f"""<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}</style>
+</head>
+<body>
+{sub_header(t, T, prefix, home, BASE + other["items"]["path"], "items")}
+<main id="main" class="wrap counters items">
+  <h1>{T(c['index_h1'])}</h1>
+  <p class="section-lead">{T(c['index_lead'].format(n=len(items)))}</p>
+  <p class="meta">{T(t['counters']['data'].format(n=n_buys, date=long_date(ITEMS['date'], lang)))}</p>
+  <h2 class="ci-cap">{T(c['popular_h'])}</h2>
+  <ol class="ci-list">{rows}</ol>
+  <p class="note">{T(c['popular_note'])}</p>
+  <nav class="pn-toc it-toc" aria-label="{T(c['index_h1'])}">{toc}</nav>
+  {search}
+  {"".join(groups)}
+  <section class="ci-cta"><h2>{T(t['counters']['cta_h'])}</h2><p>{T(t['counters']['cta_p'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></section>
+</main>
+<script>(function(){{var q=document.getElementById("it-q");if(!q)return;var li=[].slice.call(document.querySelectorAll(".it-grid li")),none=document.getElementById("it-none");
+q.addEventListener("input",function(){{var v=q.value.trim().toLowerCase(),n=0;li.forEach(function(l){{var ok=!v||l.dataset.n.indexOf(v)>=0;l.hidden=!ok;if(ok)n++}});
+document.querySelectorAll(".it-grid").forEach(function(g){{var h=!g.querySelector("li:not([hidden])");g.hidden=h;g.previousElementSibling.hidden=h}});
+document.querySelectorAll(".it-slot").forEach(function(s){{s.hidden=!s.querySelector(".it-grid:not([hidden])")}});none.hidden=n>0}})}})()</script>
+""" + foot(t, T, BASE + other["items"]["path"])
+
+
+def item_chips(t, ids, prefix, extra=None):
+    """Items as small linked tiles; `extra` adds a note per item."""
+    out = []
+    for i in ids:
+        it = ITEM_BY_ID.get(i)
+        if not it:
+            continue
+        note = f"<small>{extra(it)}</small>" if extra else ""
+        out.append(f'<li class="slot-{it["slot"]}"><a href="{BASE}{t["items"]["path"]}{it["slug"]}/">'
+                   f'<img src="{img_src("items", i, it["img"], prefix)}" alt="" width="32" height="32" loading="lazy" decoding="async">'
+                   f'<span>{e(it["en"])}{note}</span></a></li>')
+    return f'<ul class="it-chips">{"".join(out)}</ul>' if out else ""
+
+
+def hero_chips(t, heroes, prefix, note=None):
+    """Heroes as small tiles linking to their counter page."""
+    out = []
+    for h in heroes:
+        small = f"<small>{note(h)}</small>" if note else ""
+        out.append(f'<li><a href="{BASE}{t["counters"]["path"]}{h["slug"]}/">'
+                   f'<img src="{img_src("heroes", h["slug"], h["img"], prefix)}" alt="" width="32" height="32" loading="lazy" decoding="async">'
+                   f'<span>{e(h["name"])}{small}</span></a></li>')
+    return f'<ul class="it-chips">{"".join(out)}</ul>' if out else ""
+
+
+def last_patch(t, item_id, T):
+    if not PATCHES:
+        return ""
+    for p in PATCHES["patches"]:
+        if any(i["id"] == item_id for i in p["items"]):
+            return (f'<p class="pn-recent"><a href="{patch_url(t, p)}#items">'
+                    f'{T(t["items"]["patch"].format(date=patch_label(t, p)))} →</a></p>')
+    return ""
+
+
+def item_page(t, it):
+    lang = t["lang"]
+    c = t["items"]
+    T = lambda s: html.escape(typeset(s, lang), quote=True)  # noqa: E731
+    prefix = "../" * (c["path"].count("/") + 1)
+    path = f'{c["path"]}{it["slug"]}/'
+    url = BASE + path
+    home = BASE + t["path"]
+    other = EN if lang == "pl" else PL
+    name = it["en"]
+    slot = it["slot"]
+    slot_name = t["counters"]["slots"][slot]
+    counter_slugs = {h["slug"] for h in COUNTERS["heroes"]} if COUNTERS else set()
+    heroes = [dict(ITEMS["heroes"][str(h["id"])], **h) for h in it["heroes"]]
+    names3 = [h["name"] for h in heroes[:3]]
+    joined = (", ".join(names3[:-1]) + f" {t['patches']['and']} " + names3[-1]) if len(names3) > 1 else "".join(names3)
+    days = ITEMS["days"]
+    share = pct(it["share"], lang)
+    lead = (c["lead"] if heroes else c["lead_none"]).format(item=name, slot=slot_name.lower(), cost=cost(it["cost"], lang),
+                                                           tier=it["tier"], days=days, share=share, heroes=joined)
+    effect = item_effect(it, lang)
+    desc = c["desc"].format(item=name, effect=effect, cost=cost(it["cost"], lang).replace(NB, " "), share=share,
+                            heroes=", ".join(names3) or "-")
+    if len(desc) > 160 and effect:
+        desc = c["desc"].format(item=name, effect="", cost=cost(it["cost"], lang).replace(NB, " "), share=share,
+                                heroes=", ".join(names3) or "-").replace(":  ", ": ")
+
+    # The tooltip, as in the game.
+    def stats_dl(rows, cls=""):
+        if not rows:
+            return ""
+        return f'<dl class="it-dl{cls}">' + "".join(f"<div><dt>{T(l)}</dt><dd>{T(v)}</dd></div>" for l, v in rows) + "</dl>"
+    secs = []
+    for sec in it["text"][lang]:
+        body = "".join(
+            (f'<p>{typeset(b["text"], lang)}</p>' if b["text"] else "") + stats_dl(b["main"], " main") + stats_dl(b["stats"])
+            for b in sec["blocks"])
+        label = c["sections"].get(sec["type"], sec["type"])
+        secs.append(f'<div class="it-sec it-{sec["type"] or "desc"}"><h3>{T(label)}</h3>{body}</div>')
+
+    tags = [T(slot_name), T(c["tier"].format(n=it["tier"])), f'{cost(it["cost"], lang)} {T(c["souls"])}']
+    if it["active"]:
+        tags.append(T(c["active"]))
+    alt = f'<p class="it-alt" lang="pl">{e(it["pl"])}</p>' if lang == "pl" and it["pl"] != it["en"] else ""
+
+    stat_tiles = [
+        (pct(it["share"], lang), c["st_share"]),
+        (pct(it["win"], lang, 1), c["st_win"]),
+        (f'{round(it["buy"])}{NB}min', c["st_buy"]),
+        (pct(it["sold"], lang), c["st_sold"]),
+    ]
+    tiles = "".join(f'<li><b>{unit(T(v))}</b><span>{T(l)}</span></li>' for v, l in stat_tiles)
+    note = T(c["stats_note"].format(days=days, n=cost(it["matches"], lang), date=long_date(ITEMS["date"], lang)))
+
+    hero_rows = ""
+    if heroes:
+        top = heroes[0]["share"]
+        rows = []
+        for n, h in enumerate(heroes, 1):
+            img = (f'<img src="{img_src("heroes", h["slug"], h["img"], prefix)}" alt="" width="40" height="40" '
+                   f'loading="lazy" decoding="async">')
+            nm = (f'<a href="{BASE}{t["counters"]["path"]}{h["slug"]}/"><strong>{e(h["name"])}</strong></a>'
+                  if h["slug"] in counter_slugs else f'<strong>{e(h["name"])}</strong>')
+            rows.append(f'<li class="ci it-h"><span class="rank">{n}</span>{img}<span class="ci-name">{nm}'
+                        f'<small>{pct(h["win"], lang, 1)} {T(c["win"])}</small></span>'
+                        f'<span class="ci-edge"><b>{pct(h["share"], lang)}</b><i style="width:{max(8, round(100 * h["share"] / top))}%"></i></span></li>')
+        hero_rows = (f'<h2 class="ci-cap" id="heroes">{T(c["heroes_h"].format(item=name))}</h2><ol class="ci-list">{"".join(rows)}</ol>'
+                     f'<p class="note">{T(c["heroes_note"].format(item=name))}</p>')
+
+    extra = ""
+    if COUNTERS:
+        vs = sorted(((x["points"], h) for h in COUNTERS["heroes"] for x in h["items"] if x["id"] == it["id"]),
+                    key=lambda x: -x[0])
+        if vs:
+            extra += (f'<h2 class="ci-cap">{T(c["counter_h"])}</h2>'
+                      + hero_chips(t, [h for _, h in vs], prefix,
+                                   lambda h: next(pts(x["points"], lang) for x in h["items"] if x["id"] == it["id"]))
+                      + f'<p class="note">{T(c["counter_note"].format(item=name))}</p>')
+        builds = [h for h in COUNTERS["heroes"] if any(b["id"] == it["id"] for b in h.get("build", []))]
+        if builds:
+            extra += f'<h2 class="ci-cap">{T(c["build_h"])}</h2>' + hero_chips(t, builds, prefix)
+    if it["from"]:
+        extra += f'<h2 class="ci-cap">{T(c["from_h"])}</h2>' + item_chips(t, it["from"], prefix)
+    if it["into"]:
+        extra += f'<h2 class="ci-cap">{T(c["into_h"])}</h2>' + item_chips(t, it["into"], prefix)
+    same = [i["id"] for i in ITEMS["items"] if i["slot"] == slot and i["cost"] == it["cost"] and i["id"] != it["id"]]
+    if same:
+        extra += (f'<h2 class="ci-cap">{T(c["same_h"].format(slot=slot_name.lower(), cost=cost(it["cost"], lang)))}</h2>'
+                  + item_chips(t, same, prefix, lambda x: pct(x["share"], lang)))
+
+    img = img_src("items", it["id"], it["img"], prefix)
+    ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Deadlock Assist", "item": home},
+                {"@type": "ListItem", "position": 2, "name": c["index_h1"], "item": BASE + c["path"]},
+                {"@type": "ListItem", "position": 3, "name": name, "item": url},
+            ],
+        },
+    ]
+    if heroes:
+        ld.append({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": c["heroes_h"].format(item=name),
+            "itemListOrder": "https://schema.org/ItemListOrderDescending",
+            "itemListElement": [{"@type": "ListItem", "position": n, "name": h["name"]} for n, h in enumerate(heroes, 1)],
+        })
+    pre = f'<link rel="preload" as="image" href="{img}">\n' if img.startswith("/") else ""
+    return head(t, url, c["title"].format(item=name), desc, f'{BASE}{PL["items"]["path"]}{it["slug"]}/',
+                f'{BASE}{EN["items"]["path"]}{it["slug"]}/', prefix, pre) + f"""<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}</style>
+</head>
+<body>
+{sub_header(t, T, prefix, home, f'{BASE}{other["items"]["path"]}{it["slug"]}/', "items")}
+<main id="main" class="wrap counters items item slot-{slot}">
+  <nav class="crumbs" aria-label="breadcrumbs"><a href="../">{T(c['index_h1'])}</a> › {e(name)}</nav>
+  <div class="hero-head it-head"><img src="{img}" alt="{e(name)}" width="64" height="64"><div><h1>{e(name)}</h1>{alt}<p class="it-tags">{' · '.join(tags)}</p></div></div>
+  <p class="section-lead">{T(lead)}</p>{last_patch(t, it["id"], T)}
+  <h2 class="ci-cap">{T(c['desc_h'].format(item=name))}</h2>
+  <div class="it-card">{"".join(secs)}</div>
+  <h2 class="ci-cap">{T(c['stats_h'].format(item=name))}</h2>
+  <ul class="it-stats">{tiles}</ul>
+  <p class="note">{note}</p>
+  {hero_rows}
+  {extra}
+  <section class="ci-cta"><h2>{T(c['cta_h'].format(item=name))}</h2><p>{T(c['cta_p'])}</p><div class="actions">{download_btn(t, T(t['cta']))}</div></section>
+  <p><a class="more-link" href="../">{T(c['index_h1'])} ({len(ITEMS['items'])}) →</a></p>
+</main>
+""" + foot(t, T, f'{BASE}{other["items"]["path"]}{it["slug"]}/')
 
 
 def changes_page(t, shown=4):
@@ -1274,7 +1648,7 @@ def patch_page(t, p, older, newer):
                 cards.append(
                     f'<article class="pn-card slot-{slot}"><header>'
                     f'<img src="{img_src("items", i["id"], it["img"], prefix)}" alt="" width="44" height="44" loading="lazy" decoding="async">'
-                    f'<span><h4>{e(it["en"])}</h4>{alt}{price}</span></header>{ul(i["lines"])}</article>'
+                    f'<span><h4>{item_link(t, i["id"], e(it["en"]))}</h4>{alt}{price}</span></header>{ul(i["lines"])}</article>'
                 )
             if cards:
                 groups.append(f'<h3 class="pn-slot slot-{slot}">{T(c["slots"][slot])} <span>{len(cards)}</span></h3>'
@@ -1436,6 +1810,13 @@ def main():
                 older = ps[n + 1] if n + 1 < len(ps) else None
                 newer = ps[n - 1] if n else None
                 (base / pt["slug"] / "index.html").write_text(patch_page(t, pt, older, newer))
+        if ITEMS:
+            base = out / t["items"]["path"]
+            base.mkdir(parents=True, exist_ok=True)
+            (base / "index.html").write_text(items_index(t))
+            for it in ITEMS["items"]:
+                (base / it["slug"]).mkdir(exist_ok=True)
+                (base / it["slug"] / "index.html").write_text(item_page(t, it))
         if COUNTERS:
             base = out / t["counters"]["path"]
             base.mkdir(parents=True, exist_ok=True)
@@ -1462,6 +1843,9 @@ def main():
         + (entry(PL["counters"]["path"], EN["counters"]["path"], COUNTERS["date"])
            + "".join(entry(f'{PL["counters"]["path"]}{h["slug"]}/', f'{EN["counters"]["path"]}{h["slug"]}/', COUNTERS["date"])
                      for h in COUNTERS["heroes"]) if COUNTERS else "")
+        + (entry(PL["items"]["path"], EN["items"]["path"], ITEMS["date"])
+           + "".join(entry(f'{PL["items"]["path"]}{i["slug"]}/', f'{EN["items"]["path"]}{i["slug"]}/', ITEMS["date"])
+                     for i in ITEMS["items"]) if ITEMS else "")
         + "</urlset>\n"
     )
     write_redirects(out)
