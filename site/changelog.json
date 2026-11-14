@@ -1,5 +1,21 @@
 [
  {
+  "version": "1.3.5",
+  "date": "2026-11-14",
+  "pl": [
+   "Aplikacja działa na każdej proporcji ekranu (16:9, 16:10, 21:9, 4:3): sama sprawdza, gdzie gra rysuje HUD, i czyta go tam.",
+   "Gra w oknie, w oknie bez ramki albo na drugim monitorze: zrzut obejmuje tylko okno gry, a czarne pasy (np. 4:3 na ekranie 16:9) są pomijane.",
+   "Nakładka pokrywa okno gry, a karty kontr i panele przesuwają się razem z HUD.",
+   "Lepszy odczyt w 1080p, 1440p i 4K: zegar, obozy na minimapie i liczby nad duszami."
+  ],
+  "en": [
+   "The app works on every screen shape (16:9, 16:10, 21:9, 4:3): it finds where the game draws its HUD and reads it there.",
+   "The game in a window, a borderless window or on a second monitor: only the game window is captured, and black bars (e.g. 4:3 on a 16:9 screen) are skipped.",
+   "The overlay covers the game window, and the counter cards and panels follow the HUD.",
+   "Better reading at 1080p, 1440p and 4K: the clock, the minimap camps and the numbers above the souls."
+  ]
+ },
+ {
   "version": "1.3.4",
   "date": "2026-11-08",
   "pl": [
