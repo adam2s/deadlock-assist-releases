@@ -1,0 +1,165 @@
+# Builds the Windows installers (NSIS .exe and .msi) from the private app repo
+# adam2s/deadlock-assist and attaches them to a draft release here, so users
+# and the in-app updater can download them. It runs in this public repo because
+# Actions minutes are free here (in the private repo Windows minutes bill double).
+#
+# Started by the app repo's "Windows release" workflow (repository_dispatch with
+# the commit and tag), or by hand from this repo's Actions tab (owner only).
+# Only the owner can start it, since the update is signed with the update key.
+# The build logs are public: they show compiler output, never the source code
+# or the secrets (GitHub masks them).
+#
+# Secrets in this repo:
+#   SOURCE_TOKEN: fine-grained token with Contents: read on adam2s/deadlock-assist
+#   TAURI_SIGNING_PRIVATE_KEY: the update signing key (public key in tauri.conf.json)
+name: Windows build
+
+on:
+  repository_dispatch:
+    types: [windows-build]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Commit, branch or tag of adam2s/deadlock-assist to build"
+        default: main
+      tag:
+        description: "Release tag (empty: v + the version in tauri.conf.json)"
+        default: ""
+
+permissions:
+  contents: write   # the release and the changelog commit
+  actions: write    # starts the counter pages refresh after the changelog commit
+
+concurrency:
+  group: windows-build
+  cancel-in-progress: false
+
+env:
+  APP_REF: ${{ github.event.client_payload.ref || inputs.ref || 'main' }}
+  APP_TAG: ${{ github.event.client_payload.tag || inputs.tag || '' }}
+
+jobs:
+  build:
+    if: github.actor == github.repository_owner
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: adam2s/deadlock-assist
+          ref: ${{ env.APP_REF }}
+          token: ${{ secrets.SOURCE_TOKEN }}
+          # The token is not kept in .git/config of the checked-out code.
+          persist-credentials: false
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec # stable
+
+      - uses: swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2
+        with:
+          workspaces: src-tauri -> target
+
+      - run: npm ci
+
+      - run: npx vitest run
+
+      - id: tauri
+        uses: tauri-apps/tauri-action@84b9d35b5fc46c1e45415bdb6144030364f7ebc5 # v0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ""
+        with:
+          owner: adam2s
+          repo: deadlock-assist-releases
+          # The tag goes on this repo's own main branch.
+          releaseCommitish: main
+          # latest.json points at the NSIS installer the app was installed with.
+          updaterJsonPreferNsis: true
+          tagName: ${{ env.APP_TAG != '' && env.APP_TAG || 'v__VERSION__' }}
+          releaseName: Deadlock Assist __VERSION__
+          releaseBody: |
+            ## Pobierz
+
+            **[Deadlock.Assist___VERSION___x64-setup.exe](https://github.com/adam2s/deadlock-assist-releases/releases/download/v__VERSION__/Deadlock.Assist___VERSION___x64-setup.exe)** (zalecany). Plik `.msi` niżej jest dla instalacji firmowych.
+
+            Masz już aplikację? Zaktualizuje się sama, wystarczy kliknąć „Zaktualizuj i uruchom ponownie”.
+
+            ## Co nowego
+
+            Lista zmian jest w aplikacji, w zakładce **Aktualizacje**.
+
+            ---
+            Windows może pokazać „System Windows ochronił ten komputer”: kliknij **Więcej informacji → Uruchom mimo to**. Pomysły i błędy zgłaszaj przyciskiem **„Zaproponuj zmianę”** w aplikacji albo w [Issues](https://github.com/adam2s/deadlock-assist-releases/issues/new/choose).
+          releaseDraft: true
+          prerelease: false
+
+      # SHA-256 of the installers, as SHA256SUMS.txt on the release and in its
+      # notes, so anyone can check a downloaded file is the original.
+      - name: Checksums
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACTS: ${{ steps.tauri.outputs.artifactPaths }}
+        run: |
+          $version = (Get-Content src-tauri/tauri.conf.json -Raw | ConvertFrom-Json).version
+          $tag = if ($env:APP_TAG) { $env:APP_TAG } else { "v$version" }
+          $files = $env:ARTIFACTS | ConvertFrom-Json | Where-Object { $_ -match '\.(exe|msi)$' }
+          $lines = foreach ($f in $files) {
+            "{0}  {1}" -f (Get-FileHash $f -Algorithm SHA256).Hash.ToLower(), ((Split-Path $f -Leaf) -replace ' ', '.')
+          }
+          $lines | Set-Content SHA256SUMS.txt -Encoding ascii
+          gh release upload $tag SHA256SUMS.txt --clobber --repo adam2s/deadlock-assist-releases
+          $body = (gh release view $tag --json body --jq .body --repo adam2s/deadlock-assist-releases) -join "`n"
+          $sums = "## Sumy kontrolne (SHA-256)`n`n``````text`n" + ($lines -join "`n") + "`n```````n`nSprawdzenie w PowerShell: ``Get-FileHash .\plik.exe``"
+          ($body + "`n`n" + $sums) | Set-Content notes.md -Encoding utf8
+          gh release edit $tag --notes-file notes.md --repo adam2s/deadlock-assist-releases
+
+  # Copies this version's changelog (src/changelog.ts and changelogEn.ts in the
+  # app, the same lists as the in-app "Aktualizacje" tab) to site/changelog.json,
+  # then starts the counter pages workflow, which rebuilds the site. A push made
+  # with this workflow's own token does not start other workflows by itself.
+  site-changelog:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: adam2s/deadlock-assist
+          ref: ${{ env.APP_REF }}
+          token: ${{ secrets.SOURCE_TOKEN }}
+          persist-credentials: false
+          path: app
+          sparse-checkout: src
+
+      - name: Sync the changelog and push
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 -I site/sync_changelog.py app
+          git add site/changelog.json
+          if git diff --cached --quiet; then
+            echo "Changelog on the site is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Site: changelog for $(jq -r ".[0].version" site/changelog.json)"
+          # The daily refresh workflows may have pushed meanwhile.
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              gh workflow run counters.yml --ref main
+              exit 0
+            fi
+            sleep $((i * 5))
+          done
+          exit 1
