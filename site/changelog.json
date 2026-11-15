@@ -1,5 +1,29 @@
 [
  {
+  "version": "1.4.0",
+  "date": "2026-11-14",
+  "pl": [
+   "Wynik meczu sam: połącz profil Steam w Historii, a aplikacja pobierze z deadlock-api wynik, K/D/A, dusze i rangę każdego meczu (zwykle kilka minut po meczu).",
+   "„Ten tydzień” w Historii: mecze, wygrane, dusze w 10. minucie, śmierci i niewydane dusze w porównaniu z poprzednim okresem, plus cel do wyboru.",
+   "Nakładka przypomina o niewydanych duszach, gdy od dłuższej chwili stać Cię na pierwszy przedmiot z „Kup teraz”.",
+   "Tempo farmy: co 5 minut nakładka mówi, ile masz dusz w porównaniu ze średnią graczy na Twoim bohaterze i randze.",
+   "Kolejność umiejętności: w „Dane gry” najczęstsza i najlepiej wygrywająca kolejność na bohaterze, a na nakładce (z Tab albo po śmierci) następne punkty według czasu meczu.",
+   "Analiza śmierci: aplikacja czyta okienko „Otrzymane obrażenia” po śmierci, pokazuje podział duch/broń i kto zabił, a doradca podbija odporność na typ obrażeń, od którego giniesz. W Historii nowa sekcja „Śmierci”. Panel zegara zwija się na ekranie śmierci, żeby nie zasłaniać tego okienka.",
+   "Podpowiedzi głosowe (Ustawienia → Nakładka): nakładka może czytać podpowiedzi głosem systemu Windows, najwyżej raz na wybrany czas.",
+   "Udostępnianie meczu: w szczegółach meczu „Kopiuj obrazek” i „Zapisz PNG” tworzą kartę z wynikiem, K/D/A, duszami, farmą i buildem, gotową do wklejenia na Discordzie."
+  ],
+  "en": [
+   "Match results by themselves: link your Steam profile in History and the app gets each match's result, K/D/A, souls and rank from deadlock-api (usually a few minutes after the match).",
+   "“This week” in History: matches, win rate, souls at 10:00, deaths and unspent souls against the period before, plus a goal of your choice.",
+   "The overlay reminds you of unspent souls when you have been able to afford the first “Buy now” item for a while.",
+   "Farm pace: every 5 minutes the overlay says how your souls compare with the average player on your hero and rank.",
+   "Ability order: “Game data” shows the most common and the best-winning order on the hero, and the overlay (with Tab or dead) the next points by match time.",
+   "Death analysis: the app reads the “Damage taken” panel after a death, shows the spirit/weapon split and who killed you, and the advisor leans to resistance against the damage type that kills you. History gets a “Deaths” section. The timer panel shrinks on the death screen so it no longer covers that panel.",
+   "Spoken hints (Settings → Overlay): the overlay can read hints out with a Windows voice, at most once per chosen interval.",
+   "Share a match: in the match details “Copy picture” and “Save PNG” make a card with the result, K/D/A, souls, farm and build, ready to paste on Discord."
+  ]
+ },
+ {
   "version": "1.3.5",
   "date": "2026-11-14",
   "pl": [
