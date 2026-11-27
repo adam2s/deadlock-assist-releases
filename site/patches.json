@@ -1,5 +1,5 @@
 {
- "date": "2026-11-26",
+ "date": "2026-11-27",
  "source": "https://github.com/deadlock-wiki/deadlock-data",
  "heroes": {
   "1": {
@@ -211,6 +211,16 @@
    "name": "Rat King",
    "slug": "rat-king",
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/ratking_sm.webp"
+  },
+  "85": {
+   "name": "Solomon",
+   "slug": "solomon",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/chessmaster_sm.webp"
+  },
+  "86": {
+   "name": "Violet",
+   "slug": "violet",
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/artist_sm.webp"
   },
   "87": {
    "name": "Nurse Harrow",
@@ -1658,6 +1668,24 @@
    "hero": 11,
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/sumo/sumo_vacuum.webp"
   },
+  "267712790": {
+   "en": "Leech Therapy",
+   "pl": "Terapia Pijawkami",
+   "hero": 87,
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/leech.webp"
+  },
+  "299875845": {
+   "en": "Feed The Birds",
+   "pl": "Nakarm Ptaki",
+   "hero": 88,
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/baba/pigeon_launcher.webp"
+  },
+  "374042410": {
+   "en": "Jettison Fuel",
+   "pl": "Zrzut Paliwa",
+   "hero": 78,
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/deadpack/deadpack_thermalmass.webp"
+  },
   "397010810": {
    "en": "Death Slam",
    "pl": "Grzmotnięcie Śmierci",
@@ -1748,6 +1776,12 @@
    "hero": 58,
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/viper/viper_debuffdagger.webp"
   },
+  "690412829": {
+   "en": "Royal Pestments",
+   "pl": "Królewskie Szmaty",
+   "hero": 84,
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_shield.webp"
+  },
   "715325746": {
    "en": "Essence Bomb",
    "pl": "Bomba Esencji",
@@ -1783,6 +1817,12 @@
    "pl": "Zamach",
    "hero": 3,
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/hornet/hornet_assassinate.webp"
+  },
+  "836615329": {
+   "en": "Living Ink",
+   "pl": "Żywy Tusz",
+   "hero": 86,
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/artist/artist_livingink.webp"
   },
   "911307831": {
    "en": "Consecrating Grenade",
@@ -2210,6 +2250,12 @@
    "hero": 13,
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/haze/haze_smoke_bomb.webp"
   },
+  "2424652896": {
+   "en": "Rook Battery",
+   "pl": "Bateria Wież",
+   "hero": 85,
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/chess/chessmaster_rook.webp"
+  },
   "2460791803": {
    "en": "Serrated Knives",
    "pl": "Noże Ząbkowane",
@@ -2576,6 +2622,12 @@
    "hero": 80,
    "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/werewolf/werewolf_bola.webp"
   },
+  "4011110259": {
+   "en": "Setup Bishop",
+   "pl": "Rozstaw Gońca",
+   "hero": 85,
+   "img": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/chess/chessmaster_bishop.webp"
+  },
   "4072270083": {
    "en": "Siphon Life",
    "pl": "Wysysanie Życia",
@@ -2620,6 +2672,1022 @@
   }
  },
  "patches": [
+  {
+   "slug": "2026-11-26",
+   "date": "2026-11-26",
+   "title": "Minor Update",
+   "link": "https://store.steampowered.com/news/app/1422450/view/1850460852986472",
+   "hero_lab": false,
+   "general": [
+    {
+     "head": null,
+     "paras": [
+      [
+       "For one day a year, the people of New York gather beneath their floating idols to give thanks at Crowley’s Thanksgiving Day Parade."
+      ]
+     ]
+    },
+    {
+     "head": "General",
+     "paras": [
+      [
+       "Hero base health reduced by 8%. The health is redistributed into boons, so total health at max boons is roughly the same.",
+       "Bullet damage growth per boon increased for all heroes by 5% (except for Haze, Holliday, Venator, Vindicta, Warden, Wraith)"
+      ],
+      [
+       "First kill bonus for each player increased from 125 to 175 souls",
+       "Comeback souls from all sources reduced by ~5%",
+       "Players above their own team's average net worth have a portion of their comeback souls redirected to the two poorest teammates. The redirected portion scales from 0% at the team average up to 80% at 20% above it (previously a flat 70% for players above the enemy team's average net worth)",
+       "Unstable Rift: Trailing bonuses (resists, capture speed and trooper count) now reach their max at a 20% net worth deficit instead of 15% (this means it gives less bonuses at smaller gaps)"
+      ],
+      [
+       "Range for troopers to drop a soul orb reduced from 45m to 42m",
+       "Soul orb and healing orbs on the ground now have a 7% reduced pickup range",
+       "Trooper damage against heroes increased by 10%"
+      ],
+      [
+       "Basic crates souls value rescaled from 23 + 1.8/minute to 18 + 2.0/minute",
+       "Heavy crates souls value rescaled from 46 + 3.6/minute to 36 + 4.0/minute",
+       "Floating health snacks respawn time reduced from 180s to 120s",
+       "Floating health snacks pickup range increased from 3m to 3.5m"
+      ],
+      [
+       "Haunts bounty reduced by 5%",
+       "Haunts abilities now do 30% more damage",
+       "Haunts Bullet Resist increased by 5%",
+       "Haunts Spirit Resist increased by 10%",
+       "Haunted Souls secure rate when trailing increased from up to 50% faster to 75% faster (max rate at 20% NW gap vs the enemy average)",
+       "Sinner's Sacrifice damage per hit increased from 80 to 80 + 1% Max HP",
+       "Fixed Haunts briefly taking reduced damage after being knocked into the air",
+       "Fixed Bullet Resist and Spirit Resist reduction not properly reducing the resistances of Haunts (it was only acting as a flat damage increase)"
+      ],
+      [
+       "Midboss health reduced from 15600 + 234/minute to 12500 + 250/minute",
+       "Midboss damage increased by 30%",
+       "Midboss global roar threshold increased from 25% to 30%",
+       "Midboss Fire Rate reductions now have 50% reduced effectiveness against midboss",
+       "Claiming a rejuv crystal now also dispels non-ult debuffs on your hero (before the heal)",
+       "Rejuvenator: Bounty for punching the crystal is now split evenly among the whole team instead of going to the player who punched it"
+      ],
+      [
+       "Permanent Buffs: Bullet Resist increased from 0.5/0.75/1% to 0.5/1/1.5%",
+       "Permanent Buffs: Spirit Resist increased from 0.5/0.75/1% to 0.5/1/1.5%",
+       "Permanent Buffs: Ability Range increased from 0.25/0.5/0.75% to 0.5/0.75/1%",
+       "Permanent Buffs: Move Speed increased from 0.1/0.2/0.3m to 0.1/0.2/0.4m",
+       "Permanent Buffs: Fixed the second and third tier Ability Range buffs not increasing ability radius (only the first tier did)"
+      ],
+      [
+       "Failed air jumps will make your next ground jump have increasing air drag for each consecutive failed jump (combating macro usage for bunnyhops)",
+       "Heavy Melee: Becoming immobilized during the attack now resolves the punch immediately",
+       "Heavy Melee: Being knocked up during the attack now resolves the punch immediately"
+      ],
+      [
+       "Damage amps and damage penalties on the attacker (Rebuttal, Inhibitor, Cheat Death, Curse, Eldritch Shot, etc) now apply to all of their Weapon, Melee and Spirit damage. Previously they missed flat Weapon Damage bonuses, flat damage from items and abilities, the base damage of melee abilities, and abilities that scale with Weapon Damage",
+       "Multiple damage amps now stack diminishingly for all damage types (previously only for abilities)",
+       "Multiple damage penalties now stack diminishingly for all damage types (previously only for abilities)",
+       "Summons now use their owner's current damage amps and penalties rather than the ones active when they were spawned",
+       "Outgoing Spirit Damage Reductions now stack diminishingly with each other (e.g. Silencer and Afterburn's T2)",
+       "Outgoing Spirit Damage Reductions (Silencer, Afterburn's T2) now apply to all Spirit Damage, including flat damage from items",
+       "Fixed Weapon Damage reductions (e.g. Warden's Alchemical Flask) not lowering the damage of abilities that scale with Weapon Damage when the attacker's total Weapon Damage bonus was negative"
+      ],
+      [
+       "Fixed teleport abilities sometimes failing to cast when standing too close to a wall",
+       "Fixed knockbacks slowing, stopping or pulling back targets that were already moving away from the source",
+       "Fixed heroes hiding in steam vents staying untargetable after an enemy hero entered the vent",
+       "Fixed damage over time effects repeatedly revealing you inside Steam Vents",
+       "Fixed a short delay before hopping onto the roof at the top of a rope when grabbing the rope mid-air (e.g. after dropping off a zipline)",
+       "Fixed Quick Cast and Confirm Cast abilities not casting while holding fire when the gun can't shoot (reloading, Viscous Goo Ball, etc.)",
+       "Fixed movement time slows such as Paradox's Kinetic Carbine causing a dash-slide to fail and waste the stamina if slide was pressed during the slow",
+       "Fixed upgrading an ability with Tab + its ability key triggering the ability's recast when one was available (Solomon's pieces, Sinclair's Assistant, etc)",
+       "Fixed some camera issues when near dying Walkers",
+       "Abilities and items that launch a target into the air now break their ledge grab first, instead of the launch being delayed or lost",
+       "Fixed heroes getting stuck in the rope climbing animation after being pulled off a rope (such as by Threadsap or Rescue Beam)"
+      ],
+      [
+       "Added an indicator next to the stamina meter that shows your remaining air jumps and air dashes once you've used one (turns red when you're out)",
+       "Holding the Extra Info key (Alt) now shows your Zipline Boost cooldown next to the minimap",
+       "Unstable Rift: The HUD now shows the trailing team's bonus while the Rift is active"
+      ],
+      [
+       "Added a numeric countdown under each team's Rejuvenator icon in the top bar showing the time remaining on their Rejuvenator",
+       "Rejuv crystals have numbers next to them to make communicating about them a little easier",
+       "Hovering a Rejuvenator icon in the top bar now lists which heroes on that team can still spend a Rejuvenation Credit",
+       "Fixed the Rejuvenator timer ring being wrong after reconnecting",
+       "Fixed the Rejuvenator timer ring restarting whenever another Rejuvenator was picked up"
+      ],
+      [
+       "Weapon Stats panel now shows Bullets per shot for guns that fire multiple pellets",
+       "Weapon Stats panel now shows Secondary Fire stats for Shiv, Yamato and Viscous: bullet damage, bullets per sec, bullets per shot, ammo per shot and explosion radius where applicable",
+       "Weapon Stats panel now shows Charged Shot stats for Deadman Danny: bullet damage, charge time, explosion radius and ammo per shot",
+       "Boon rewards now list Secondary Fire Damage (or Charged Shot Damage) gained per Boon for Shiv, Yamato, Viscous and Deadman Danny",
+       "Item tooltips now show the change to Secondary Fire or Charged Shot damage in the stat preview for Shiv, Yamato, Viscous and Deadman Danny"
+      ],
+      [
+       "Added a few new graphs to the post-match player graph list:",
+       "- Crowd Control Dealt: time you crowd-controlled enemy heroes split by type",
+       "- Crowd Control Received: time enemy heroes crowd-controlled you split by type",
+       "- Damage Mitigated By Source: damage you prevented split by type"
+      ],
+      [
+       "Swapping heroes now loads the incoming hero's saved build and next ability upgrade immediately"
+      ],
+      [
+       "Some minor visual updates to the Custom Match UI"
+      ],
+      [
+       "Sandbox: Added a \"Bot Drills\" section to the Bots++ tab of the Testing Tools, with a \"Select Drill\" dropdown that spawns an enemy bot in front of you to practice against for certain sequences.",
+       "Sandbox: Added an \"Abrams - Bull Rush\" bot drill, where Abrams uses Shoulder Charge at you and follows up with light and heavy melee attacks. Has Superior Duration.",
+       "Sandbox: Added a \"Baba - Granny Rampage\" bot drill, where Baba chases you in Granny Long Legs form while using light and heavy melees at random",
+       "Sandbox: Added a \"Baba - Threadsap Tag\" bot drill, where Baba moves and jumps around while using Threadsap on you",
+       "Sandbox: Added a \"Bebop - Hook Dodge\" bot drill, where Bebop moves and jumps around while repeatedly trying to hook you",
+       "Sandbox: Added a \"Billy - Chain Beatdown\" bot drill, where Billy uses Chain Gang into Bashdown and Rising Ram, then a light and a heavy melee. He has Melee Charge",
+       "Sandbox: Added a \"Danny - Dive Bomb\" bot drill, where Danny takes off in front of you, overheats and then dives at you and repeats.",
+       "Sandbox: Added a \"Graves - Parry Bait\" bot drill, where Graves summons a gravestone and stands in it ready to parry. Bait out her parry, then destroy the gravestone with heavy melees. She has Rebuttal",
+       "Sandbox: Added a \"Grey Talon - Air Raid\" bot drill, where Grey Talon takes to the air with Rain of Arrows and shoots at you, sometimes firing a Charged Shot",
+       "Sandbox: Added a \"Holliday - Keg Drop\" bot drill, where Holliday places a Bounce Pad, launches off it and throws a Powder Keg at you. She has Greater Expansion",
+       "Sandbox: Added a \"Lash - Sky Slam\" bot drill, where Lash uses Grapple to get high, then Death Slam into Ground Strike. He has Stamina Mastery",
+       "Sandbox: Added a \"McGinnis - Wall Barrage\" bot drill, where McGinnis fires a Spectral Wall that deploys behind you, then uses Heavy Barrage on you. She dashes away when you come within 10m of her",
+       "Sandbox: Added a \"Paradox - Carbine Swap\" bot drill, where Paradox moves and jumps around while charging Kinetic Carbine, hitting you and then using Paradoxical Swap",
+       "Sandbox: Added a \"Silver - Wolf Hunt\" bot drill, where Silver chases you in wolf form using her claws, Mauling Leap, Go For The Throat and Tail Whack",
+       "Sandbox: Added a \"Vindicta - Sky Strafe\" bot drill, where Vindicta takes Flight in front of you and strafes side to side.",
+       "Sandbox: Added a \"Viscous - Rolling Goo\" bot drill, where Viscous moves and jumps around, then rolls after you with Goo Ball. He has Superior Duration.",
+       "Sandbox: Added a \"Viscous - Sucker Punch\" bot drill, where Viscous moves and jumps around while using Puddle Punch under you at random intervals"
+      ],
+      [
+       "Sandbox: Fixed No Death, Unlimited Ammo, No Cooldown, Fast Stamina, Legendary Items and Corrupted Variance not working when in a sandbox with a party",
+       "Sandbox: Fixed the Hero Testing bot ability and item cast buttons not working on abilities with charges while they were recharging"
+      ],
+      [
+       "Street Brawl: Final round now reaches the max 35 boons instead of 34",
+       "Street Brawl: Cloak of Opportunity now also blocks Fear",
+       "Street Brawl: The list of items for your hero are now updated dynamically based on the current popular items used, rather than using older item lists system that tends to get outdated (this was released a couple days ago)",
+       "Street Brawl: Fixed Omnicharge Signet preventing Victor's Pain Battery from charging when imbued on it"
+      ]
+     ]
+    },
+    {
+     "head": "Items",
+     "paras": [
+      [
+       "- Danny Jettison Fuel now grants a charge",
+       "- Danny Strix Salvo now grants a charge",
+       "- Doorman Door Recall no longer grants a charge",
+       "- Mina Sanguine Retreat recast now grants charges",
+       "- Nurse Harrow Healing Needles no longer grants a charge",
+       "- Solomon Move King now grants a charge",
+       "- Solomon Move Piece (Bishop, Knight and Queen moves) now grants a charge",
+       "- Venator Ira Domini now grants a charge",
+       "- Violet Living Ink (draw) now grants a charge",
+       "Applied similar fixes to Spellslinger and Radiant Regeneration for the above list"
+      ]
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": 690458959,
+     "lines": [
+      "Secondary Fire Weapon Damage growth per boon reduced by ~10%"
+     ]
+    },
+    {
+     "id": 2152872419,
+     "lines": [
+      "Falloff range reduced from +20% to +18%"
+     ]
+    },
+    {
+     "id": 710436191,
+     "lines": [
+      "Shock damage reduced from 43 to 37",
+      "The tooltip now shows which movement abilities it disables for each enemy hero"
+     ]
+    },
+    {
+     "id": 2226497419,
+     "lines": [
+      "Now shows a build up icon on the target to indicate progress"
+     ]
+    },
+    {
+     "id": 4204808176,
+     "lines": [
+      "Fixed blocking an ability with Counterspell granting Rebuttal's damage buff"
+     ]
+    },
+    {
+     "id": 2059712766,
+     "lines": [
+      "Fixed interaction with the following abilities:"
+     ]
+    },
+    {
+     "id": 3731635960,
+     "lines": [
+      "Cooldown increased from 45s to 52s"
+     ]
+    },
+    {
+     "id": 2956256701,
+     "lines": [
+      "Spirit scaling increased from 1.1 to 1.25"
+     ]
+    },
+    {
+     "id": 600033864,
+     "lines": [
+      "Fixed being able to reactivate the slam down while Cursed"
+     ]
+    },
+    {
+     "id": 3361811174,
+     "lines": [
+      "Cooldown increased from 90s to 105s"
+     ]
+    },
+    {
+     "id": 951866250,
+     "lines": [
+      "Now blocks the pigeon transformation from Feed The Birds"
+     ]
+    },
+    {
+     "id": 1371725689,
+     "lines": [
+      "The tooltip now shows which flying abilities it interrupts for each enemy hero"
+     ]
+    },
+    {
+     "id": 3028234315,
+     "lines": [
+      "Fixed the cooldown reduction being wasted on Ivy's Air Drop and Calico's Ava while they are locked out from taking damage"
+     ]
+    },
+    {
+     "id": 1813726886,
+     "lines": [
+      "The tooltip now shows which movement abilities it disables for each enemy hero"
+     ]
+    },
+    {
+     "id": 3577481646,
+     "lines": [
+      "Now correctly accounts for abilities reduced by Spellbreaker (currently reverbs the damage as if it was never reduced by the item)"
+     ]
+    },
+    {
+     "id": 2417568017,
+     "lines": [
+      "Now shows the instant cast target indicator on the targeted ally"
+     ]
+    },
+    {
+     "id": 343572757,
+     "lines": [
+      "Debuff duration reduced from 8s to 7s"
+     ]
+    },
+    {
+     "id": 1152158042,
+     "lines": [
+      "The tooltip now shows which movement abilities it disables for each enemy hero"
+     ]
+    }
+   ],
+   "heroes": [
+    {
+     "id": 6,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 2824119765,
+       "lines": [
+        "Fixed enemies stunned by the charge not being slowed",
+        "Fixed targets being pulled out of the charge by Hex-Lined Snap Trap"
+       ]
+      },
+      {
+       "id": 509856396,
+       "lines": [
+        "Fixed Paradox's Kinetic Carbine causing the slam to go off in mid-air",
+        "Fixed Bebop's Grapple Arm causing the slam to go off in mid-air when hooked during the dive"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 77,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 725153709,
+       "lines": [
+        "Cooldown reduced from 12s to 11s",
+        "Fixed the cooldown not starting until the T3 recast was used or expired"
+       ]
+      },
+      {
+       "id": 2006773718,
+       "lines": [
+        "Can now be cast during Flawless Advance (cancels the dash, like parrying)",
+        "Pommel Hit on enemy will now knock them up and backwards slightly, applying a 50% slow and preventing stamina usage for 2s (no longer immobilizes, disarms or has any effect on parry state)",
+        "Pommel Hit now does bonus spirit damage on impact (100 + 1.5 spirit scaling)",
+        "Pommel Hit no longer reduces melee resist",
+        "No longer triggers off of bullets (only abilities and items)",
+        "Now reflects all bullets to the attackers during the duration (doesn't trigger riposte)",
+        "Bullets from troopers, haunts and objective bullets now reflect again",
+        "Now deflects all ability damage during the window and lets you target any enemy that hit you to do a Pommel Hit on them (and only them, can no longer pommel hit someone that didn't hit you)",
+        "Enemies who triggered it are now highlighted for Apollo",
+        "T1 increased from -8s Cooldown to -9s",
+        "T2 changed from \"-25% Melee Resist and +0.7s Immobilize Duration\" to \"+100 Damage and +1s debuff duration\""
+       ]
+      },
+      {
+       "id": 147493976,
+       "lines": [
+        "Cooldown increased from 26s to 30s",
+        "Cooldown now starts immediately rather than after the recasts were used or expired"
+       ]
+      },
+      {
+       "id": 494112189,
+       "lines": [
+        "Enemies below the bonus damage health threshold now show a health bar indicator"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 88,
+     "lines": [
+      "Adjustments to the bullet spread",
+      "Spirit resist scaling reduced from 0.05 to 0.02",
+      "Move speed reduced from 6.5m to 6.4m"
+     ],
+     "abilities": [
+      {
+       "id": 1282689113,
+       "lines": [
+        "Duration reduced from 16s to 10s",
+        "T2 duration reduced from +8s to +6s",
+        "Spirit damage per bullet increased from 8 to 12"
+       ]
+      },
+      {
+       "id": 2003165630,
+       "lines": [
+        "Can now be started while riding a zipline",
+        "Brew bar segments are now always colored and show an icon for each brew"
+       ]
+      },
+      {
+       "id": 3122124161,
+       "lines": [
+        "Getting parried now stuns you (like normal melees)",
+        "Heavy Melee now takes less time to play out (0.1s difference)",
+        "Light and Heavy melee cooldown times are now the same as normal melees (a minor nerf to light melee and a minor buff to heavy melee)",
+        "Heavy Melee no longer hits enemies through walls",
+        "Fixed being castable while Rabbit Hexed"
+       ]
+      },
+      {
+       "id": 299875845,
+       "lines": [
+        "Range increased from 18m to 20m",
+        "Max Damage increased from 450 to 650",
+        "Time To Max Stacks increased from 3.5s to 4s",
+        "The pigeon transformation is now blocked if the target is invulnerable or unstoppable when the final pigeon lands (e.g. during Yamato's Shadow Transformation)",
+        "Baba now sees which individual lock-ons are losing line of sight during the channel",
+        "Now shows its range indicator while channeling",
+        "Fixed enemies killed as a pigeon sometimes respawning as a pigeon"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 1928108461,
+       "lines": [
+        "Fixed not counting as a Light Melee for items like Spirit Strike, Spirit Snatch, Melee Lifesteal and Lifestrike (it was getting their full Heavy Melee value)"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 72,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 1792773251,
+       "lines": [
+        "Fixed Paradox's Kinetic Carbine stopping the charge in place (it now resumes once the Time-Stop ends)"
+       ]
+      },
+      {
+       "id": 1841661392,
+       "lines": [
+        "Becoming immobilized during the ability now resolves the slam faster"
+       ]
+      },
+      {
+       "id": 3296031213,
+       "lines": [
+        "Fixed bullet damage amp not working against barriers",
+        "Fixed bullet damage amp only applying to every other bullet at low weapon damage"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 1426567660,
+       "lines": [
+        "Now stops and slashes as soon as it reaches an enemy hero in its path (rather than right after the target)",
+        "T3 increased from +90 Damage to +100",
+        "T3 increased from 50% CD Reduction on Hero Hit to 60%"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 81,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 3443575800,
+       "lines": [
+        "Fixed not hitting enemies hidden in Steam Vents"
+       ]
+      },
+      {
+       "id": 1011349580,
+       "lines": [
+        "Fixed Spirit Damage amp not applying to flat Spirit Damage (Stalker, etc)"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 78,
+     "lines": [
+      "Momentum preservation upon using the jetpack increased slightly",
+      "Somewhat decreased jetpack's ability to switch directions to reduce erratic motion in the air"
+     ],
+     "abilities": [
+      {
+       "id": 2603013853,
+       "lines": [
+        "Cooldown increased from 25s to 26s",
+        "Spirit scaling reduced from 0.681 to 0.62"
+       ]
+      },
+      {
+       "id": 1904698842,
+       "lines": [
+        "Explosion radius reduced from 8m to 6.5m",
+        "Reduced distance that Danny returns to the air after impacting an enemy while overheating"
+       ]
+      },
+      {
+       "id": 374042410,
+       "lines": [
+        "Fixed it not triggering Spellslinger and Radiant Regeneration"
+       ]
+      },
+      {
+       "id": 1026127931,
+       "lines": [
+        "Enemies below the bonus damage health threshold now show a health bar indicator"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 76,
+     "lines": [
+      "Fixed not gaining the Split Shot weapon damage bonus when hitting multiple heroes",
+      "Cycle rate increased by 5% (means fire rate is 5% less)",
+      "Move speed reduced from 6.7m to 6.5m",
+      "Ghouls now do 25% less damage to objectives"
+     ],
+     "abilities": []
+    },
+    {
+     "id": 14,
+     "lines": [
+      "Ammo reduced from 10 to 8",
+      "Bullet damage per boon reduced from 1.144 to 1.05"
+     ],
+     "abilities": [
+      {
+       "id": 4179229681,
+       "lines": [
+        "Spirit scaling reduced from 1.116 to 0.9"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 1,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 491391007,
+       "lines": [
+        "Initial radius increased from 0.5m to 0.75m to help fix some cases where it misses (radius at max range unchanged at 5.5m)"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 20,
+     "lines": [
+      "Health per boon reduced by 6%"
+     ],
+     "abilities": [
+      {
+       "id": 3642273386,
+       "lines": [
+        "T2 changed from \"-25s Cooldown\" to \"+0.75s Stun Duration\"",
+        "T3 changed from \"+0.75s Stun Duration and increased Damage spirit scaling\" to \"-25s CD and increased Damage spirit scaling\"",
+        "T3 spirit scaling reduced from +1.5 to +1.2"
+       ]
+      },
+      {
+       "id": 1247583368,
+       "lines": [
+        "T1 changed from \"300 Barrier to Ivy\" to \"+32% Slow for 3s on enemies hit\"",
+        "T2 changed from \"+32% Slow for 3s on enemies hit\" to \"300 Barrier to Ivy\""
+       ]
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 1963397252,
+       "lines": [
+        "Heroes that break a path piece now also break the adjacent pieces",
+        "Knocked down heroes now break the path pieces they are on",
+        "T3 reduced from 35% Spirit to 30%"
+       ]
+      },
+      {
+       "id": 2351041382,
+       "lines": [
+        "Cooldown increased from 28s to 29s",
+        "Time to max debuff increased from 2s to 2.5s",
+        "Spirit scaling reduced from 0.38 to 0.32",
+        "T2 reduced from +0.6 spirit scaling to +0.5"
+       ]
+      },
+      {
+       "id": 3826390464,
+       "lines": [
+        "Fixed Ricochet triggering when shooting the dome or sloped ground inside it"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 715325746,
+       "lines": [
+        "Spirit scaling reduced from 1.35 to 1.3",
+        "Arm time increased from 0.65s to 0.8s",
+        "Self damage increased from 30% to 50%",
+        "Damage reduced from 90 to 85",
+        "T2 reduced from +50 Damage to +45"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 31,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 519124136,
+       "lines": [
+        "Fixed not hitting enemies hidden in Steam Vents"
+       ]
+      },
+      {
+       "id": 397010810,
+       "lines": [
+        "Lash now sees which individual latches are losing line of sight during the channel",
+        "Fixed enemies standing on certain surfaces (e.g. the bridge in the Patron base) not being lifted",
+        "Fixed enemies near ledges, signs and cliff edges getting caught on geometry during the lift and being slammed in place"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 2142734020,
+       "lines": [
+        "Fixed a recent regression where it could block bullets from dealing damage"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 63,
+     "lines": [
+      "Base health regen reduced from 2 to 1.5"
+     ],
+     "abilities": [
+      {
+       "id": 193508101,
+       "lines": [
+        "Fixed heal on kill not scaling with Heal Amp",
+        "Fixed not hitting enemies hidden in Steam Vents"
+       ]
+      },
+      {
+       "id": 2398133749,
+       "lines": [
+        "T3 reduced from +4m Range to +3m",
+        "Fixed being unable to reload while holding bonus bullets when the magazine wasn't full",
+        "Fixed the 2nd to 3rd cast with the T3 having no recast delay"
+       ]
+      },
+      {
+       "id": 1233782561,
+       "lines": [
+        "Bonus damage spirit scaling reduced from 1.85 to 1.5",
+        "T2 now also increases spirit scaling by +0.35"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 52,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 1336069669,
+       "lines": [
+        "Fixed Paradox's Kinetic Carbine stopping the tornado in place (it now resumes once the Time-Stop ends)",
+        "Fixed the cooldown not starting until the T3 recast was used or expired"
+       ]
+      },
+      {
+       "id": 2604653402,
+       "lines": [
+        "Using Alt-Cast will now target your healing area"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "lines": [
+      "Ammo increased from 20 to 25"
+     ],
+     "abilities": [
+      {
+       "id": 1454278799,
+       "lines": [
+        "Fixed healing from bonus damage triggered by Scorn not counting damage absorbed by barriers"
+       ]
+      },
+      {
+       "id": 2406758797,
+       "lines": [
+        "Now passes under Doorman's Luggage Cart"
+       ]
+      },
+      {
+       "id": 1917840730,
+       "lines": [
+        "Fixed Mo & Krill being flung away when using Combo on a tethered enemy or an enemy on a rope"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 87,
+     "lines": [
+      "Bullet velocity reduced by 30% and gets slower more aggressively over long distances"
+     ],
+     "abilities": [
+      {
+       "id": 267712790,
+       "lines": [
+        "Projectile speed reduced by 15%"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 1128670012,
+       "lines": [
+        "Max damage reduced from 125% to 110%",
+        "T3 Max damage reduced from +55% to +40%"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 84,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 690412829,
+       "lines": [
+        "T2 Bullet Return Chance increased from 15% to 20%",
+        "T3 Fixed not working vs shotgun type weapons dealing over 250 damage"
+       ]
+      },
+      {
+       "id": 1627989937,
+       "lines": [
+        "Move Speed increased from 4m to 5m",
+        "Knockup duration increased by 35%"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 19,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 1458044103,
+       "lines": [
+        "Fixed Paradox's Kinetic Carbine ending the dash early",
+        "T2's \"-4% Spirit Resist\" and T3's \"+50 Impact Damage\" have been swapped"
+       ]
+      },
+      {
+       "id": 1537272748,
+       "lines": [
+        "Fixed bug allowing damage blocked by both Plated Armor and Spellbreaker being added to deferred damage on block"
+       ]
+      },
+      {
+       "id": 1835738020,
+       "lines": [
+        "T3 Enemy Health Threshold reduced from 10% to 8%"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 80,
+     "lines": [
+      "Go For The Throat - Fixed being unable to hit invisible enemies"
+     ],
+     "abilities": [
+      {
+       "id": 2717130900,
+       "lines": [
+        "Fixed Paradox's Kinetic Carbine stopping the leap in place (it now resumes once the Time-Stop ends)"
+       ]
+      },
+      {
+       "id": 3983754897,
+       "lines": [
+        "The tooltip now shows which movement abilities it disables and flying abilities it interrupts for each enemy hero"
+       ]
+      },
+      {
+       "name": "Lycan Claws",
+       "lines": [
+        "Fixed being unable to hit invisible enemies"
+       ]
+      },
+      {
+       "name": "Tail Whack",
+       "lines": [
+        "Fixed not hitting enemies hidden in Steam Vents"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 60,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 3156905386,
+       "lines": [
+        "No longer does reduced damage to objectives"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 85,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 4011110259,
+       "lines": [
+        "Upgrading to T2 with a bishop already deployed now opens the recast window for the second bishop instead of requiring a recall"
+       ]
+      },
+      {
+       "id": 2424652896,
+       "lines": [
+        "Fixed being removed from the world when contacting Violet Living Ink (Draw) or Paradox Time Wall",
+        "Fixed rooks being destroyed when hitting a heavy crate instead of reflecting"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 69,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 109766091,
+       "lines": [
+        "The second door's placement range outline is now shown to Doorman for as long as the first door is waiting for its partner, instead of only while the ability is selected"
+       ]
+      },
+      {
+       "id": 1719512318,
+       "lines": [
+        "Fixed the cart being removed from the world when contacting Paradox Time Wall"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 65,
+     "lines": [
+      "Fixed Melee Resist not including Bullet Resist gained from boons"
+     ],
+     "abilities": [
+      {
+       "id": 911307831,
+       "lines": [
+        "No longer bounces off small ledges like curbs, gutters and stairs"
+       ]
+      },
+      {
+       "id": 1764146857,
+       "lines": [
+        "Cooldown reduced from 23s to 20s",
+        "Hitting an enemy during a ledge grab now breaks the grab before applying knockback",
+        "Fixed being able to wall stun enemies by looking up in certain areas",
+        "Fixed not hitting enemies hidden in Steam Vents"
+       ]
+      },
+      {
+       "id": 11154161,
+       "lines": [
+        "Can no longer be destroyed until it has armed",
+        "No longer bounces off small ledges like curbs, gutters and stairs",
+        "Fixed abilities colliding with the trap before it has armed",
+        "Fixed traps being destroyed by abilities that deal weapon damage",
+        "T3 now amplifies your pure damage"
+       ]
+      },
+      {
+       "id": 2918874166,
+       "lines": [
+        "Fixed getting stuck zoomed in when activating it while zoomed",
+        "Fixed the crosshair disappearing between shots when hero themed crosshairs are disabled"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 86,
+     "lines": [],
+     "abilities": [
+      {
+       "id": 836615329,
+       "lines": [
+        "Fixed Draw strokes causing the Mid-Boss to spawn underground",
+        "Fixed it's bullet damage having falloff",
+        "Melee troopers (allied and enemy) now swing at a drawing that blocks their path, takes 5 hits from a melee trooper to break it (~5.7s)",
+        "Drawing is now cancelled if the stroke being drawn gets broken (previously it kept drawing invisible paint)",
+        "T3 bullet damage increased from +30% to +45%"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 35,
+     "lines": [
+      "Now has 10% headshot resist",
+      "Alt Fire ammo reduced from 5 to 4"
+     ],
+     "abilities": [
+      {
+       "id": 3247040238,
+       "lines": [
+        "No longer bounces off small ledges like curbs, gutters and stairs"
+       ]
+      },
+      {
+       "id": 1020817390,
+       "lines": [
+        "Fixed punches not hitting enemies under low ceilings like bridges and doorways",
+        "Fixed not hitting enemies hidden in Steam Vents"
+       ]
+      },
+      {
+       "id": 4206531918,
+       "lines": [
+        "Fixed sometimes bouncing off a curb like a wall when landing on it"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "lines": [
+      "Health per boon increased by 8%"
+     ],
+     "abilities": [
+      {
+       "id": 2751689917,
+       "lines": [
+        "T1 now also increases the barrier by +50"
+       ]
+      },
+      {
+       "id": 2702908623,
+       "lines": [
+        "Hero Lifesteal increased from 75% to 90%",
+        "Non-Hero Lifesteal increased from 10% to 15%"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "lines": [
+      "Health regen reduced from 2 to 1",
+      "Move speed reduced from 7.2m to 6.8m",
+      "Sprint speed reduced from 1.6m to 1.2m (still scales with spirit power)"
+     ],
+     "abilities": [
+      {
+       "id": 1999680326,
+       "lines": [
+        "Card generation speed reduced by 20%",
+        "Fixed cards flying off into the sky when targeting a dropped Patron (and various issues targeting near a Patron)",
+        "Fixed cards flying over knocked down heroes instead of hitting them (e.g. after a parry)"
+       ]
+      },
+      {
+       "id": 1842576017,
+       "lines": [
+        "T3 spirit scaling reduced from +0.045 to +0.03"
+       ]
+      },
+      {
+       "id": 2981692841,
+       "lines": [
+        "The tooltip now shows which movement abilities it disables for each enemy hero"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 27,
+     "lines": [],
+     "abilities": [
+      {
+       "name": "Shadow Tranformation",
+       "lines": [
+        "Fixed issues casting your other abilities as the transformation ends"
+       ]
+      },
+      {
+       "id": 3319782965,
+       "lines": [
+        "Fixed being able to waste stamina and an air dash while transforming"
+       ]
+      }
+     ]
+    }
+   ]
+  },
   {
    "slug": "2026-11-04",
    "date": "2026-11-04",
